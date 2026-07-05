@@ -21,14 +21,6 @@ const STORES = [
 ];
 
 // ── Helpers ──
-function extractPrice(text) {
-  if (!text) return null;
-  const cleaned = text.replace(/\s+/g, '').replace(',', '.');
-  const m = cleaned.match(/(\d+[.,]?\d*)\s*€/);
-  if (!m) return null;
-  return parseFloat(m[1].replace(',', '.'));
-}
-
 function detectBTU(text) {
   if (!text) return null;
   const t = text.toLowerCase();
@@ -44,34 +36,50 @@ function detectBTU(text) {
 
 function detectStatus(allText) {
   if (!allText) return 'unknown';
-  const t = allText.toLowerCase();
+  // Nettoyer: enlever le texte des boutons ("Ajouter", "Ajouter au panier")
+  const clean = allText.replace(/ajouter\b[^.]*/gi, '');
+  const t = clean.toLowerCase();
   if (t.includes('indisponible') || t.includes('rupture') || t.includes('epuise') ||
       t.includes('non disponible') || t.includes('victime de son succes')) return 'out_of_stock';
   if (t.includes('plus que') || t.includes('derniers') || t.includes('bientot') ||
       t.includes('quantite limitee') || t.includes('stock faible')) return 'low_stock';
   if (t.includes('en stock') || t.includes('disponible') || t.includes('en ligne') ||
-      t.includes('expedie sous') || t.includes('livre') || t.includes('livraison') ||
-      t.includes('chez vous') || t.includes('retrait') || t.includes('ajouter au panier')) return 'in_stock';
+      t.includes('expedie sous') || t.includes('livre chez vous') || t.includes('livraison') ||
+      t.includes('retrait en') || t.includes('click & collect')) return 'in_stock';
   return 'unknown';
 }
 
 function isRealPortableAC(title, price) {
   const t = title.toLowerCase();
-  // Exclure splits muraux
+  // Exclure splits muraux/reversibles
   if (t.includes('split')) return false;
   if (t.includes('mural') && !t.includes('portable') && !t.includes('mobile')) return false;
   if (t.includes('reversible') && !t.includes('portable') && !t.includes('mobile')) return false;
-  // Exclure accessoires
-  if ((t.includes('telecommande') || t.includes('filtre') || t.includes('tuyau') ||
-       t.includes('bouteille') || t.includes('joint') || t.includes('kit')) &&
-      !t.includes('climatiseur')) return false;
+  // Exclure accessoires (strict: titre qui ne mentionne PAS un climatiseur complet)
+  const isAccessory = (
+    t.includes('joint ') || t.includes('tuyau ') || t.includes('kit ') ||
+    t.includes('calfeutrage') || t.includes('etancheite') || t.includes('isolation') ||
+    t.includes('tissu ') || t.includes('rideau') || t.includes('fenetre') ||
+    t.includes('telecommande') || t.includes('filtre ') || t.includes('bouteille ')
+  );
+  const isAC = t.includes('climatiseur') || t.includes('climatisation') || t.includes('air conditionne');
+  if (isAccessory && !(isAC && (t.includes('portable') || t.includes('mobile') || t.includes('btu')))) return false;
   // Exclure mini USB < 80EUR
   if (t.includes('usb') && price && price < 80) return false;
   if ((t.includes('mini') || t.includes('de table') || t.includes('de poche')) && price && price < 80) return false;
-  // Exclure rafraichisseurs sans compresseur
+  // Exclure rafraichisseurs d'air sans compresseur (< 100EUR, pas de BTU)
   if (price && price < 100 && !t.includes('btu') &&
-      (t.includes('rafraichisseur') || t.includes('refroidisseur'))) return false;
+      (t.includes('rafraichisseur') || t.includes('rafraichisseur') || t.includes('refroidisseur'))) return false;
   return true;
+}
+
+function extractPriceFromText(text) {
+  if (!text) return null;
+  // Prend le PREMIER prix en euros trouve (le plus pertinent)
+  const m = text.match(/(\d{2,4}[.,]\d{0,2})\s*€/);
+  if (!m) return null;
+  const price = parseFloat(m[1].replace(',', '.'));
+  return price > 5 && price < 10000 ? price : null;
 }
 
 function cleanUrl(url, baseUrl) {
@@ -116,7 +124,7 @@ async function scrapeStore(page, store) {
     for (const item of items) {
       const title = (item.title || item.fullText.substring(0, 120)).trim();
       const allText = item.fullText;
-      const price = extractPrice(allText);
+      const price = extractPriceFromText(allText);
       const status = detectStatus(allText);
       const url = cleanUrl(item.link, store.baseUrl);
       const btu = detectBTU(allText);
