@@ -1,5 +1,5 @@
 {
-  "scanned_at": "2026-07-05T06:26:44.565Z",
+  "scanned_at": "2026-07-05T08:57:11.130Z",
   "total": 13,
   "in_stock": 0,
   "tours_available": 0,
@@ -18,9 +18,9 @@
       "model": null,
       "btu": "9000 BTU",
       "stock_info": null,
-      "scraped_at": "2026-07-05T06:24:35.125Z",
+      "scraped_at": "2026-07-05T08:54:57.332Z",
       "first_seen_at": "2026-07-05T05:15:31.063Z",
-      "last_seen_at": "2026-07-05T06:24:35.125Z"
+      "last_seen_at": "2026-07-05T08:54:57.332Z"
     },
     {
       "store": "Boulanger",
@@ -35,9 +35,9 @@
       "model": null,
       "btu": "9000 BTU",
       "stock_info": null,
-      "scraped_at": "2026-07-05T06:24:35.125Z",
+      "scraped_at": "2026-07-05T08:54:57.332Z",
       "first_seen_at": "2026-07-05T05:15:31.063Z",
-      "last_seen_at": "2026-07-05T06:24:35.125Z"
+      "last_seen_at": "2026-07-05T08:54:57.332Z"
     },
     {
       "store": "Boulanger",
@@ -52,9 +52,9 @@
       "model": null,
       "btu": null,
       "stock_info": null,
-      "scraped_at": "2026-07-05T06:24:35.125Z",
+      "scraped_at": "2026-07-05T08:54:57.332Z",
       "first_seen_at": "2026-07-05T05:15:31.063Z",
-      "last_seen_at": "2026-07-05T06:24:35.125Z"
+      "last_seen_at": "2026-07-05T08:54:57.332Z"
     },
     {
       "store": "Boulanger",
@@ -69,9 +69,9 @@
       "model": null,
       "btu": null,
       "stock_info": null,
-      "scraped_at": "2026-07-05T06:24:35.125Z",
+      "scraped_at": "2026-07-05T08:54:57.332Z",
       "first_seen_at": "2026-07-05T05:15:31.063Z",
-      "last_seen_at": "2026-07-05T06:24:35.125Z"
+      "last_seen_at": "2026-07-05T08:54:57.332Z"
     },
     {
       "store": "Boulanger",
@@ -86,9 +86,9 @@
       "model": null,
       "btu": null,
       "stock_info": null,
-      "scraped_at": "2026-07-05T06:24:35.125Z",
+      "scraped_at": "2026-07-05T08:54:57.332Z",
       "first_seen_at": "2026-07-05T05:15:31.063Z",
-      "last_seen_at": "2026-07-05T06:24:35.125Z"
+      "last_seen_at": "2026-07-05T08:54:57.332Z"
     },
     {
       "store": "Boulanger",
@@ -103,9 +103,9 @@
       "model": null,
       "btu": null,
       "stock_info": null,
-      "scraped_at": "2026-07-05T06:24:35.125Z",
+      "scraped_at": "2026-07-05T08:54:57.332Z",
       "first_seen_at": "2026-07-05T05:15:31.063Z",
-      "last_seen_at": "2026-07-05T06:24:35.125Z"
+      "last_seen_at": "2026-07-05T08:54:57.332Z"
     },
     {
       "store": "Boulanger",
@@ -120,9 +120,9 @@
       "model": null,
       "btu": null,
       "stock_info": null,
-      "scraped_at": "2026-07-05T06:24:35.124Z",
+      "scraped_at": "2026-07-05T08:54:57.332Z",
       "first_seen_at": "2026-07-05T05:15:31.063Z",
-      "last_seen_at": "2026-07-05T06:24:35.124Z"
+      "last_seen_at": "2026-07-05T08:54:57.332Z"
     },
     {
       "store": "Boulanger",
@@ -137,9 +137,28 @@
       "model": null,
       "btu": "18000 BTU",
       "stock_info": null,
-      "scraped_at": "2026-07-05T06:24:35.125Z",
+      "scraped_at": "2026-07-05T08:54:57.332Z",
       "first_seen_at": "2026-07-05T05:15:31.063Z",
-      "last_seen_at": "2026-07-05T06:24:35.125Z"
+      "last_seen_at": "2026-07-05T08:54:57.332Z"
+    },
+    {
+      "store": "Boulanger",
+      "title": "Climatiseur\n              KOOPER\n              5925929",
+      "price_eur": 1448.99,
+      "url": "https://www.boulanger.com/ref/9000994272",
+      "image": "https://boulanger.scene7.com/is/image/Boulanger/8056159259297_h_f_l_0?wid=120&hei=120&resMode=sharp2&op_usm=1.75,0.3,2,0&fmt=png-alpha",
+      "status": "unknown",
+      "availability_type": "delivery",
+      "delivery_info": null,
+      "brand": null,
+      "model": null,
+      "btu": null,
+      "stock_info": null,
+      "scraped_at": "2026-07-05T08:54:57.331Z",
+      "first_seen_at": "2026-07-05T05:15:31.062Z",
+      "last_seen_at": "2026-07-05T08:54:57.331Z",
+      "status_changed_at": "2026-07-05T08:54:57.331Z",
+      "previous_status": "out_of_stock"
     },
     {
       "store": "Boulanger",
@@ -154,9 +173,9 @@
       "model": null,
       "btu": null,
       "stock_info": null,
-      "scraped_at": "2026-07-05T06:24:35.124Z",
+      "scraped_at": "2026-07-05T08:54:57.331Z",
       "first_seen_at": "2026-07-05T05:15:31.062Z",
-      "last_seen_at": "2026-07-05T06:24:35.124Z"
+      "last_seen_at": "2026-07-05T08:54:57.331Z"
     },
     {
       "store": "Boulanger",
@@ -171,9 +190,28 @@
       "model": null,
       "btu": null,
       "stock_info": null,
-      "scraped_at": "2026-07-05T06:24:35.125Z",
+      "scraped_at": "2026-07-05T08:54:57.332Z",
       "first_seen_at": "2026-07-05T05:15:31.063Z",
-      "last_seen_at": "2026-07-05T06:24:35.125Z"
+      "last_seen_at": "2026-07-05T08:54:57.332Z"
+    },
+    {
+      "store": "Boulanger",
+      "title": "Climatiseur réversible\n              HAIER\n              AM12AA1GAA",
+      "price_eur": 1999.99,
+      "url": "https://www.boulanger.com/ref/9001000518",
+      "image": "https://boulanger.scene7.com/is/image/Boulanger/6924362752718_h_f_l_0?wid=120&hei=120&resMode=sharp2&op_usm=1.75,0.3,2,0&fmt=png-alpha",
+      "status": "unknown",
+      "availability_type": "delivery",
+      "delivery_info": null,
+      "brand": null,
+      "model": null,
+      "btu": "12000 BTU",
+      "stock_info": null,
+      "scraped_at": "2026-07-05T08:54:57.331Z",
+      "first_seen_at": "2026-07-05T05:15:31.062Z",
+      "last_seen_at": "2026-07-05T08:54:57.331Z",
+      "status_changed_at": "2026-07-05T08:54:57.331Z",
+      "previous_status": "out_of_stock"
     },
     {
       "store": "Boulanger",
@@ -188,45 +226,9 @@
       "model": null,
       "btu": null,
       "stock_info": null,
-      "scraped_at": "2026-07-05T06:24:35.124Z",
+      "scraped_at": "2026-07-05T08:54:57.332Z",
       "first_seen_at": "2026-07-05T05:15:31.062Z",
-      "last_seen_at": "2026-07-05T06:24:35.124Z"
-    },
-    {
-      "store": "Boulanger",
-      "title": "Climatiseur\n              KOOPER\n              5925929",
-      "price_eur": 1448.99,
-      "url": "https://www.boulanger.com/ref/9000994272",
-      "image": "https://boulanger.scene7.com/is/image/Boulanger/8056159259297_h_f_l_0?wid=120&hei=120&resMode=sharp2&op_usm=1.75,0.3,2,0&fmt=png-alpha",
-      "status": "out_of_stock",
-      "availability_type": "delivery",
-      "delivery_info": "Retrait indisponible Livraison dès jeudi 09 juillet - offerte",
-      "brand": null,
-      "model": null,
-      "btu": null,
-      "stock_info": "Retrait indisponible Livraison dès jeudi 09 juillet - offerte",
-      "scraped_at": "2026-07-05T06:24:35.124Z",
-      "first_seen_at": "2026-07-05T05:15:31.062Z",
-      "last_seen_at": "2026-07-05T06:24:35.124Z"
-    },
-    {
-      "store": "Boulanger",
-      "title": "Climatiseur réversible\n              HAIER\n              AM12AA1GAA",
-      "price_eur": 1999.99,
-      "url": "https://www.boulanger.com/ref/9001000518",
-      "image": "https://boulanger.scene7.com/is/image/Boulanger/6924362752718_h_f_l_0?wid=120&hei=120&resMode=sharp2&op_usm=1.75,0.3,2,0&fmt=png-alpha",
-      "status": "out_of_stock",
-      "availability_type": "delivery",
-      "delivery_info": "Retrait indisponible Livraison dès jeudi 09 juillet - offerte",
-      "brand": null,
-      "model": null,
-      "btu": "12000 BTU",
-      "stock_info": "Retrait indisponible Livraison dès jeudi 09 juillet - offerte",
-      "scraped_at": "2026-07-05T06:24:35.124Z",
-      "first_seen_at": "2026-07-05T05:15:31.062Z",
-      "last_seen_at": "2026-07-05T06:24:35.124Z",
-      "status_changed_at": "2026-07-05T06:24:35.124Z",
-      "previous_status": "unknown"
+      "last_seen_at": "2026-07-05T08:54:57.332Z"
     }
   ]
 }
