@@ -29,15 +29,17 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '22'
           cache: 'npm'
           cache-dependency-path: scraper/package-lock.json
 
       - name: Install dependencies
-        run: cd scraper && npm ci
+        working-directory: scraper
+        run: npm ci
 
       - name: Run scraper
-        run: cd scraper && npm run scrape
+        working-directory: scraper
+        run: npm run scrape
 
       - name: Commit updated data
         run: |
