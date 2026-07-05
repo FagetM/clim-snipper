@@ -10,14 +10,21 @@ const path = require('path');
 const OUTPUT = path.join(__dirname, '..', 'data', 'stocks.json');
 const TIMEOUT = 25000;
 
-// ── Enseignes (selecteurs simplifies) ──
+// ── Sources (Google Shopping + enseignes + LeBonCoin) ──
 const STORES = [
-  { name: 'Darty', url: 'https://www.darty.com/nav/extra/list?s=climatiseur+portable&cat=21791&o=4', container: '[class*="product"], article, [class*="card"], [class*="item"], li', baseUrl: 'https://www.darty.com', availability_type: 'delivery' },
-  { name: 'Boulanger', url: 'https://www.boulanger.com/resultats?tr=climatiseur+portable', container: '[class*="product"], article, [class*="card"], [class*="item"], li', baseUrl: 'https://www.boulanger.com', availability_type: 'delivery' },
+  { name: 'Google Shopping', url: 'https://www.google.com/search?tbm=shop&q=climatiseur+portable+mobile&hl=fr&gl=FR&num=40', container: '[class*="sh-dgr"], [class*="sh-pr"], [class*="result"]', baseUrl: 'https://www.google.com', availability_type: 'delivery', isGoogle: true },
+  { name: 'LeBonCoin', url: 'https://www.leboncoin.fr/recherche?category=48&text=climatiseur+portable&locations=Tours_37000', container: '[class*="AdCard"], article, [class*="item"], li', baseUrl: 'https://www.leboncoin.fr', availability_type: 'tours' },
+  { name: 'Darty', url: 'https://www.darty.com/nav/extra/list?s=climatiseur+portable&cat=21791&o=4', container: '[class*="product"], article, [class*="card"], li', baseUrl: 'https://www.darty.com', availability_type: 'delivery' },
+  { name: 'Boulanger', url: 'https://www.boulanger.com/resultats?tr=climatiseur+portable', container: '[class*="product"], article, [class*="card"], li', baseUrl: 'https://www.boulanger.com', availability_type: 'delivery' },
   { name: 'Leroy Merlin', url: 'https://www.leroymerlin.fr/produits/climatiseur-portable.html', container: '[class*="product"], article, [class*="card"], li', baseUrl: 'https://www.leroymerlin.fr', availability_type: 'tours' },
   { name: 'Cdiscount', url: 'https://www.cdiscount.com/electromenager/r-climatiseur+portable.html', container: '[class*="prdt"], [class*="product"], article, li', baseUrl: 'https://www.cdiscount.com', availability_type: 'delivery' },
   { name: 'Amazon', url: 'https://www.amazon.fr/s?k=climatiseur+portable+mobile&i=kitchen', container: '[data-component-type="s-search-result"], [class*="s-result-item"]', baseUrl: 'https://www.amazon.fr', availability_type: 'delivery' },
   { name: 'Castorama', url: 'https://www.castorama.fr/search?q=climatiseur+portable', container: '[class*="product"], article, [class*="card"], li', baseUrl: 'https://www.castorama.fr', availability_type: 'tours' },
+  { name: 'Fnac', url: 'https://www.fnac.com/SearchResult/ResultList.aspx?Search=climatiseur+portable', container: '[class*="Article"], [class*="product"], article, li', baseUrl: 'https://www.fnac.com', availability_type: 'delivery' },
+  { name: 'But', url: 'https://www.but.fr/recherche?question=climatiseur+portable', container: '[class*="product"], article, [class*="card"], li', baseUrl: 'https://www.but.fr', availability_type: 'both' },
+  { name: 'Conforama', url: 'https://www.conforama.fr/recherche?q=climatiseur+portable', container: '[class*="product"], article, [class*="card"], li', baseUrl: 'https://www.conforama.fr', availability_type: 'delivery' },
+  { name: 'Electro Depot', url: 'https://www.electrodepot.fr/catalogsearch/result?q=climatiseur+portable', container: '[class*="product"], article, [class*="card"], li', baseUrl: 'https://www.electrodepot.fr', availability_type: 'both' },
+  { name: 'Rakuten', url: 'https://fr.shopping.rakuten.com/s/climatiseur+portable', container: '[class*="product"], article, [class*="card"], li', baseUrl: 'https://fr.shopping.rakuten.com', availability_type: 'delivery' },
 ];
 
 // ── Helpers ──
@@ -148,6 +155,48 @@ async function scrapeStore(page, store) {
   return products;
 }
 
+// ── Scrape Google Shopping (agrege TOUS les marchands) ──
+async function scrapeGoogle(page) {
+  console.log('🔍 Google Shopping…');
+  const products = [];
+  try {
+    await page.goto('https://www.google.com/search?tbm=shop&q=climatiseur+portable+mobile&hl=fr&gl=FR&num=40', {
+      waitUntil: 'domcontentloaded', timeout: TIMEOUT,
+    });
+    await new Promise(r => setTimeout(r, 3000));
+
+    const items = await page.evaluate(() => {
+      const cards = document.querySelectorAll('[class*="sh-dgr"], [class*="sh-pr"], [class*="result"], [class*="KZmu8e"]');
+      return Array.from(cards).map(el => {
+        const fullText = (el.textContent || '').replace(/\s+/g, ' ').trim();
+        const links = Array.from(el.querySelectorAll('a[href]'));
+        const mainLink = links.find(a => a.href.includes('/shopping/product/') || a.href.includes('/url?')) || links[0];
+        const storeEl = el.querySelector('[class*="store"], [class*="merchant"], [class*="seller"], [class*="UI2sFb"]');
+        return {
+          fullText, title: fullText.substring(0, 120),
+          link: mainLink ? mainLink.href : '',
+          store: storeEl ? storeEl.textContent.trim().split(/[-–·]/)[0].trim() : '',
+        };
+      }).filter(item => { const t = item.fullText.toLowerCase(); return t.includes('climatis') && item.link; });
+    });
+
+    for (const item of items) {
+      const price = extractPriceFromText(item.fullText);
+      if (!price) continue;
+      if (!isRealPortableAC(item.fullText, price)) continue;
+      const status = detectStatus(item.fullText);
+      products.push({
+        store: item.store || 'Google Shopping', title: item.title.substring(0, 200),
+        price_eur: price, url: item.link, image: null, status,
+        availability_type: 'delivery', delivery_info: null, brand: null, model: null,
+        btu: detectBTU(item.fullText), stock_info: null, scraped_at: new Date().toISOString(),
+      });
+    }
+  } catch (err) { console.warn('  ⚠️  Google Shopping: ' + err.message); }
+  console.log('  → ' + products.length + ' produits');
+  return products;
+}
+
 // ── Dedup ──
 function deduplicate(products) {
   const seen = new Set();
@@ -196,8 +245,8 @@ function mergeHistory(previous, fresh) {
 
 // ── Main ──
 async function main() {
-  console.log('ClimFinder v3 — Scan Puppeteer');
-  console.log(`🕐 ${new Date().toISOString()}\n`);
+  console.log('ClimFinder v4 — Scan etendu');
+  console.log(new Date().toISOString() + '\n');
 
   const previous = loadPrevious();
 
@@ -205,60 +254,27 @@ async function main() {
   try {
     browser = await puppeteer.launch({
       headless: true,
-      args: [
-        '--no-sandbox',
-        '--disable-setuid-sandbox',
-        '--disable-dev-shm-usage',
-        '--disable-accelerated-2d-canvas',
-        '--disable-gpu',
-        '--window-size=1366,768',
-      ],
+      args: ['--no-sandbox','--disable-setuid-sandbox','--disable-dev-shm-usage','--disable-gpu','--window-size=1366,768'],
     });
-  } catch (err) {
-    console.error('❌ Impossible de lancer le navigateur:', err.message);
-    process.exit(1);
-  }
+  } catch (err) { console.error('Browser:', err.message); process.exit(1); }
 
   const allProducts = [];
-
   try {
     for (const store of STORES) {
       const page = await browser.newPage();
       await page.setViewport({ width: 1366, height: 768 });
-      await page.setUserAgent(
-        'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36'
-      );
-      await page.setExtraHTTPHeaders({
-        'Accept-Language': 'fr-FR,fr;q=0.9,en;q=0.8',
-        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
-      });
-
-      // Bloquer les ressources inutiles pour accélérer
+      await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36');
+      await page.setExtraHTTPHeaders({'Accept-Language':'fr-FR,fr;q=0.9,en;q=0.8','Accept':'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'});
       await page.setRequestInterception(true);
-      page.on('request', req => {
-        const type = req.resourceType();
-        if (['image', 'stylesheet', 'font', 'media'].includes(type)) {
-          req.abort();
-        } else {
-          req.continue();
-        }
-      });
-
+      page.on('request', req => { if (['image','stylesheet','font','media'].includes(req.resourceType())) req.abort(); else req.continue(); });
       try {
-        const products = await scrapeStore(page, store);
+        const products = store.isGoogle ? await scrapeGoogle(page) : await scrapeStore(page, store);
         allProducts.push(...products);
-      } catch (e) {
-        console.warn(`  ❌ ${store.name} erreur: ${e.message}`);
-      } finally {
-        await page.close().catch(() => {});
-      }
-
-      // Petit délai entre les sites
+      } catch (e) { console.warn(store.name + ': ' + e.message); }
+      await page.close().catch(() => {});
       await new Promise(r => setTimeout(r, 2000 + Math.random() * 3000));
     }
-  } finally {
-    await browser.close().catch(() => {});
-  }
+  } finally { await browser.close().catch(() => {}); }
 
   // Post-processing
   let products = deduplicate(allProducts);
