@@ -193,7 +193,7 @@ function mergeHistory(previous, fresh) {
 
 // ── Main ──
 async function main() {
-  console.log('🌬️  Clim\'Finder v2 — Scan Puppeteer');
+  console.log('ClimFinder v3 — Scan Puppeteer');
   console.log(`🕐 ${new Date().toISOString()}\n`);
 
   const previous = loadPrevious();
