@@ -1,197 +1,10 @@
 {
-  "scanned_at": "2026-07-05T05:30:04.840Z",
-  "total": 99,
-  "in_stock": 36,
+  "scanned_at": "2026-07-05T05:33:01.872Z",
+  "total": 73,
+  "in_stock": 13,
   "tours_available": 0,
-  "delivery_available": 99,
+  "delivery_available": 73,
   "products": [
-    {
-      "store": "Cdiscount",
-      "title": "Tissu d'isolation pour fenêtre pivot 2x190 cm (jusqu'à 380 cm) pour climatiseur mobile et sèche-linge5 / 51 avisComposition du lot : 2 tissus de 190 cm chacun (kit)Facile à installer – sans percer",
-      "price_eur": 20.78,
-      "url": "",
-      "image": "https://www.cdiscount.com/pdt2/2/0/3/1/300x300/aaasq80203/rw/tissu-disolationpour-fentre.jpg",
-      "status": "in_stock",
-      "availability_type": "delivery",
-      "delivery_info": "Livraison gratuitei20,78 €Ajouter",
-      "brand": null,
-      "model": null,
-      "btu": null,
-      "stock_info": "Livraison gratuitei20,78 €Ajouter",
-      "scraped_at": "2026-07-05T05:29:34.296Z",
-      "first_seen_at": "2026-07-05T05:23:20.862Z",
-      "last_seen_at": "2026-07-05T05:29:34.296Z"
-    },
-    {
-      "store": "Cdiscount",
-      "title": "Joint de porte pour climatiseur mobile - DEMA - Kit calfeutrage 90x210 cm - Installation facile sans perçageComposition du lot : Joint de porte, velcro avec adhésif puissant, lien zip.Facile à install",
-      "price_eur": 22.03,
-      "url": "",
-      "image": "https://www.cdiscount.com/pdt2/6/4/5/1/300x300/aacwk71645/rw/joint-de-porte-pour.jpg",
-      "status": "in_stock",
-      "availability_type": "delivery",
-      "delivery_info": "Livraison gratuitei22,03 €Ajouter",
-      "brand": null,
-      "model": null,
-      "btu": null,
-      "stock_info": "Livraison gratuitei22,03 €Ajouter",
-      "scraped_at": "2026-07-05T05:29:34.296Z",
-      "first_seen_at": "2026-07-05T05:23:20.861Z",
-      "last_seen_at": "2026-07-05T05:29:34.296Z"
-    },
-    {
-      "store": "Cdiscount",
-      "title": "Joint porte 90x210 cm pour climatiseur mobile sans perçage toutes portes",
-      "price_eur": 22.65,
-      "url": "",
-      "image": "https://www.cdiscount.com/pdt2/8/9/2/1/300x300/aadcb39892/rw/joint-porte-90x210-cm-pour.jpg",
-      "status": "in_stock",
-      "availability_type": "delivery",
-      "delivery_info": "Livraison gratuitei22,65 €Ajouter",
-      "brand": null,
-      "model": null,
-      "btu": null,
-      "stock_info": "Livraison gratuitei22,65 €Ajouter",
-      "scraped_at": "2026-07-05T05:29:34.297Z",
-      "first_seen_at": "2026-07-05T05:23:20.862Z",
-      "last_seen_at": "2026-07-05T05:29:34.297Z"
-    },
-    {
-      "store": "Cdiscount",
-      "title": "Climatiseur Mobile 4 en 1 Avec fonction d'humidification, 9 Vitesses, Veilleuse 7 Couleurs, Minuteur 1-8H, Blanc, Classe A",
-      "price_eur": 31.99,
-      "url": "",
-      "image": "https://www.cdiscount.com/pdt2/2/7/2/1/300x300/aadbj18272/rw/climatiseur-mobile-4-en-1-avec.jpg",
-      "status": "in_stock",
-      "availability_type": "delivery",
-      "delivery_info": "Livraison gratuitei31,99 €Ajouter",
-      "brand": null,
-      "model": null,
-      "btu": null,
-      "stock_info": "Livraison gratuitei31,99 €Ajouter",
-      "scraped_at": "2026-07-05T05:29:34.296Z",
-      "first_seen_at": "2026-07-05T05:15:55.109Z",
-      "last_seen_at": "2026-07-05T05:29:34.296Z"
-    },
-    {
-      "store": "Cdiscount",
-      "title": "Tuyau Climatiseur Mobile Ø 13cm - Évacuation Flexible PVC 3M - Kit pour Climatiseur CLIMATISEUR MOBILE",
-      "price_eur": 31.99,
-      "url": "",
-      "image": "https://www.cdiscount.com/pdt2/0/7/7/1/300x300/aadau94077/rw/tuyau-climatiseur-mobile-.jpg",
-      "status": "in_stock",
-      "availability_type": "delivery",
-      "delivery_info": "Livraison gratuitei31,99 €Ajouter",
-      "brand": null,
-      "model": null,
-      "btu": null,
-      "stock_info": "Livraison gratuitei31,99 €Ajouter",
-      "scraped_at": "2026-07-05T05:29:34.297Z",
-      "first_seen_at": "2026-07-05T05:23:20.862Z",
-      "last_seen_at": "2026-07-05T05:29:34.297Z"
-    },
-    {
-      "store": "Cdiscount",
-      "title": "Kit Calfeutrage Climatiseur Mobile, Joint de Fenêtre pour la Climatisation Mobile, Calfeutrage Fenetre Climatiseur (400CM)",
-      "price_eur": 32.07,
-      "url": "",
-      "image": "https://www.cdiscount.com/pdt2/8/9/5/1/300x300/auc6917503687895/rw/kit-calfeutrage-climatiseur-mobile-joint-de-fenet.jpg",
-      "status": "in_stock",
-      "availability_type": "delivery",
-      "delivery_info": "Livraison gratuiteiPrix de comparaison32,07 €21,57 €Ajouter",
-      "brand": null,
-      "model": null,
-      "btu": null,
-      "stock_info": "Livraison gratuiteiPrix de comparaison32,07 €21,57 €Ajouter",
-      "scraped_at": "2026-07-05T05:29:34.296Z",
-      "first_seen_at": "2026-07-05T05:23:20.862Z",
-      "last_seen_at": "2026-07-05T05:29:34.296Z"
-    },
-    {
-      "store": "Cdiscount",
-      "title": "Joint de fenêtre réglable - Virex® - Universel pour climatiseur mobile - Longueur réglable 55-110 cm - Ouverture 7,5 cm",
-      "price_eur": 35.24,
-      "url": "",
-      "image": "https://www.cdiscount.com/pdt2/5/4/4/1/300x300/aacui16544/rw/joint-de-fentre-rglable--.jpg",
-      "status": "in_stock",
-      "availability_type": "delivery",
-      "delivery_info": "Livraison gratuiteiPrix de comparaison35,24 €23,49 €Ajouter",
-      "brand": null,
-      "model": null,
-      "btu": null,
-      "stock_info": "Livraison gratuiteiPrix de comparaison35,24 €23,49 €Ajouter",
-      "scraped_at": "2026-07-05T05:29:34.296Z",
-      "first_seen_at": "2026-07-05T05:23:20.862Z",
-      "last_seen_at": "2026-07-05T05:29:34.296Z"
-    },
-    {
-      "store": "Cdiscount",
-      "title": "Rideaux - Keeper - Joint de fenêtre pour climatiseur mobile - 300CM",
-      "price_eur": 40.78,
-      "url": "",
-      "image": "https://www.cdiscount.com/pdt2/2/4/9/1/300x300/aabpk80249/rw/rideaux---keeper---joint-de.jpg",
-      "status": "in_stock",
-      "availability_type": "delivery",
-      "delivery_info": "Livraison gratuiteiPrix de comparaison40,78 €23,89 €Ajouter",
-      "brand": null,
-      "model": null,
-      "btu": null,
-      "stock_info": "Livraison gratuiteiPrix de comparaison40,78 €23,89 €Ajouter",
-      "scraped_at": "2026-07-05T05:29:34.296Z",
-      "first_seen_at": "2026-07-05T05:23:20.862Z",
-      "last_seen_at": "2026-07-05T05:29:34.296Z"
-    },
-    {
-      "store": "Cdiscount",
-      "title": "Kit D'étanchéité pour Fenêtres Coulissantes Accessory sur Climatiseur Mobile Convient Aux Ouvertures de Fenêtres de 45 À 160 CM",
-      "price_eur": 44.67,
-      "url": "",
-      "image": "https://www.cdiscount.com/pdt2/8/3/5/1/300x300/auc1102644297835/rw/kit-d-etancheite-pour-fenetres-coulissantes-access.jpg",
-      "status": "in_stock",
-      "availability_type": "delivery",
-      "delivery_info": "Livraison gratuiteiPrix de comparaison44,67 €32,75 €Ajouter",
-      "brand": null,
-      "model": null,
-      "btu": null,
-      "stock_info": "Livraison gratuiteiPrix de comparaison44,67 €32,75 €Ajouter",
-      "scraped_at": "2026-07-05T05:29:34.297Z",
-      "first_seen_at": "2026-07-05T05:23:20.862Z",
-      "last_seen_at": "2026-07-05T05:29:34.297Z"
-    },
-    {
-      "store": "Cdiscount",
-      "title": "Joint de fenêtre - Universel - 560cm - Isolation pour climatiseur mobile",
-      "price_eur": 47.27,
-      "url": "",
-      "image": "https://www.cdiscount.com/pdt2/0/4/6/1/300x300/aabur02046/rw/joint-de-fentre---universel.jpg",
-      "status": "in_stock",
-      "availability_type": "delivery",
-      "delivery_info": "Livraison gratuiteiPrix de comparaison47,27 €31,51 €Ajouter",
-      "brand": null,
-      "model": null,
-      "btu": null,
-      "stock_info": "Livraison gratuiteiPrix de comparaison47,27 €31,51 €Ajouter",
-      "scraped_at": "2026-07-05T05:29:34.296Z",
-      "first_seen_at": "2026-07-05T05:23:20.862Z",
-      "last_seen_at": "2026-07-05T05:29:34.296Z"
-    },
-    {
-      "store": "Cdiscount",
-      "title": "Kit fenêtre pour climatiseur mobile - DRIVENEST - Kit 4 pièces - Étanche - Tuyau Ø13 cm - Joint fenêtre coulissanteComposition du lot : 4 piècesÉtanche",
-      "price_eur": 50.14,
-      "url": "",
-      "image": "https://www.cdiscount.com/pdt2/0/8/7/1/300x300/aacww68087/rw/kit-fentre-climatiseur-mobile.jpg",
-      "status": "in_stock",
-      "availability_type": "delivery",
-      "delivery_info": "Livraison gratuiteiPrix de comparaison50,14 €28,33 €Ajouter",
-      "brand": null,
-      "model": null,
-      "btu": null,
-      "stock_info": "Livraison gratuiteiPrix de comparaison50,14 €28,33 €Ajouter",
-      "scraped_at": "2026-07-05T05:29:34.296Z",
-      "first_seen_at": "2026-07-05T05:23:20.862Z",
-      "last_seen_at": "2026-07-05T05:29:34.296Z"
-    },
     {
       "store": "Cdiscount",
       "title": "Climatiseur Mobile - Multifonction - Batterie Rechargeable - 3 Vitesses - 3 Modes de Brume - SilencieuxType de chauffe : Chaleur douceMixteComposants inclus:Climatiseur Portable",
@@ -205,26 +18,9 @@
       "model": null,
       "btu": null,
       "stock_info": "Livraison gratuiteiPrix de comparaison59,99 €27,19 €Ajouter",
-      "scraped_at": "2026-07-05T05:29:34.296Z",
+      "scraped_at": "2026-07-05T05:32:30.947Z",
       "first_seen_at": "2026-07-05T05:15:55.110Z",
-      "last_seen_at": "2026-07-05T05:29:34.296Z"
-    },
-    {
-      "store": "Cdiscount",
-      "title": "Climatiseur Mural - JOULLI - Modèle Portable - 2000 W - Ventilateur - Réversible1,3 / 514 avis",
-      "price_eur": 60.99,
-      "url": "",
-      "image": "https://www.cdiscount.com/pdt2/1/0/8/1/300x300/jou1723537150108/rw/climatiseur-muralportable-refroidisseur-d-air-et.jpg",
-      "status": "in_stock",
-      "availability_type": "delivery",
-      "delivery_info": "Livraison gratuitei60,99 €Ajouter",
-      "brand": null,
-      "model": null,
-      "btu": "6824 BTU",
-      "stock_info": "Livraison gratuitei60,99 €Ajouter",
-      "scraped_at": "2026-07-05T05:29:34.296Z",
-      "first_seen_at": "2026-07-05T05:23:20.861Z",
-      "last_seen_at": "2026-07-05T05:29:34.296Z"
+      "last_seen_at": "2026-07-05T05:32:30.947Z"
     },
     {
       "store": "Cdiscount",
@@ -239,26 +35,9 @@
       "model": null,
       "btu": null,
       "stock_info": "Livraison gratuiteiSoldes Prix le + bas sur 30j65,42 €-6%60,90 €Ajouter",
-      "scraped_at": "2026-07-05T05:29:34.296Z",
+      "scraped_at": "2026-07-05T05:32:30.947Z",
       "first_seen_at": "2026-07-05T05:15:55.110Z",
-      "last_seen_at": "2026-07-05T05:29:34.296Z"
-    },
-    {
-      "store": "Cdiscount",
-      "title": "Climatiseur Portable - EINNENFFER - Mobile 900ml - Ventilateur d'humidification - Lumière LED - Électrique",
-      "price_eur": 68.95,
-      "url": "",
-      "image": "https://www.cdiscount.com/pdt2/2/6/5/1/300x300/aabiw76265/rw/mini-climatiseur-portable--.jpg",
-      "status": "in_stock",
-      "availability_type": "delivery",
-      "delivery_info": "Livraison gratuiteiPrix de comparaison68,95 €45,97 €Ajouter",
-      "brand": null,
-      "model": null,
-      "btu": null,
-      "stock_info": "Livraison gratuiteiPrix de comparaison68,95 €45,97 €Ajouter",
-      "scraped_at": "2026-07-05T05:29:34.297Z",
-      "first_seen_at": "2026-07-05T05:15:55.110Z",
-      "last_seen_at": "2026-07-05T05:29:34.297Z"
+      "last_seen_at": "2026-07-05T05:32:30.947Z"
     },
     {
       "store": "Cdiscount",
@@ -273,94 +52,9 @@
       "model": null,
       "btu": null,
       "stock_info": "Livraison gratuiteiPrix de comparaison69,98 €51,99 €Ajouter",
-      "scraped_at": "2026-07-05T05:29:34.296Z",
+      "scraped_at": "2026-07-05T05:32:30.947Z",
       "first_seen_at": "2026-07-05T05:15:55.109Z",
-      "last_seen_at": "2026-07-05T05:29:34.296Z"
-    },
-    {
-      "store": "Cdiscount",
-      "title": "Mini climatiseur mobile - ZHUODIKE - 700 ml - 4 vitesses - Portable et léger",
-      "price_eur": 87.21,
-      "url": "",
-      "image": "https://www.cdiscount.com/pdt2/0/9/2/1/300x300/aabus25092/rw/mini-climatiseur-mobile--.jpg",
-      "status": "in_stock",
-      "availability_type": "delivery",
-      "delivery_info": "Livraison gratuiteiPrix de comparaison87,21 €58,14 €Ajouter",
-      "brand": null,
-      "model": null,
-      "btu": null,
-      "stock_info": "Livraison gratuiteiPrix de comparaison87,21 €58,14 €Ajouter",
-      "scraped_at": "2026-07-05T05:29:34.296Z",
-      "first_seen_at": "2026-07-05T05:15:55.110Z",
-      "last_seen_at": "2026-07-05T05:29:34.296Z"
-    },
-    {
-      "store": "Cdiscount",
-      "title": "Climatiseur Mobile Rafraîchisseur d'air Portable 4 en 1,Mini Climatiseur Portable Silencieux avec 90° Oscillation,Modes de BrumeComposition du lot : Composants inclus:Câble de Type C, Climatiseur Mobi",
-      "price_eur": 89.99,
-      "url": "",
-      "image": "https://www.cdiscount.com/pdt2/0/1/6/1/300x300/aaatx67016/rw/climatiseur-mobile.jpg",
-      "status": "in_stock",
-      "availability_type": "delivery",
-      "delivery_info": "Livraison gratuiteiPrix de comparaison89,99 €41,22 €Ajouter",
-      "brand": null,
-      "model": null,
-      "btu": null,
-      "stock_info": "Livraison gratuiteiPrix de comparaison89,99 €41,22 €Ajouter",
-      "scraped_at": "2026-07-05T05:29:34.296Z",
-      "first_seen_at": "2026-07-05T05:15:55.110Z",
-      "last_seen_at": "2026-07-05T05:29:34.296Z"
-    },
-    {
-      "store": "Cdiscount",
-      "title": "Mini Climatiseur Portable Pour Petites Pièces, Mini Climatiseur Mural Sans Conduit Avec Télécommande Et Ventilateur À 3 Vitesses2,3 / 53 avis",
-      "price_eur": 103.99,
-      "url": "",
-      "image": "https://www.cdiscount.com/pdt2/8/6/8/1/300x300/aadcf59868/rw/mini-climatiseur-portable-pour.jpg",
-      "status": "in_stock",
-      "availability_type": "delivery",
-      "delivery_info": "Livraison gratuitei103,99 €Ajouter",
-      "brand": null,
-      "model": null,
-      "btu": null,
-      "stock_info": "Livraison gratuitei103,99 €Ajouter",
-      "scraped_at": "2026-07-05T05:29:34.296Z",
-      "first_seen_at": "2026-07-05T05:23:20.861Z",
-      "last_seen_at": "2026-07-05T05:29:34.296Z"
-    },
-    {
-      "store": "Cdiscount",
-      "title": "Climatiseur Mural Sans Conduit, Portable, Avec Télécommande Et Ventilateur À 3 Vitesses, Idéal Pour La Chambre, La Cuisine - Blanc",
-      "price_eur": 103.99,
-      "url": "",
-      "image": "https://www.cdiscount.com/pdt2/4/4/8/1/300x300/aadey84448/rw/climatiseur-mural-sans.jpg",
-      "status": "in_stock",
-      "availability_type": "delivery",
-      "delivery_info": "Livraison gratuitei103,99 €Ajouter",
-      "brand": null,
-      "model": null,
-      "btu": null,
-      "stock_info": "Livraison gratuitei103,99 €Ajouter",
-      "scraped_at": "2026-07-05T05:29:34.296Z",
-      "first_seen_at": "2026-07-05T05:23:20.861Z",
-      "last_seen_at": "2026-07-05T05:29:34.296Z"
-    },
-    {
-      "store": "Cdiscount",
-      "title": "Mini Climatiseur Portable，Mini Climatiseur Mural Sans Conduit Avec Télécommande Et Ventilateur À 3 Vitesses - Noir1,5 / 52 avis",
-      "price_eur": 103.99,
-      "url": "",
-      "image": "https://www.cdiscount.com/pdt2/8/6/7/1/300x300/aadcf59867/rw/mini-climatiseur-portablemini.jpg",
-      "status": "in_stock",
-      "availability_type": "delivery",
-      "delivery_info": "Livraison gratuitei103,99 €Ajouter",
-      "brand": null,
-      "model": null,
-      "btu": null,
-      "stock_info": "Livraison gratuitei103,99 €Ajouter",
-      "scraped_at": "2026-07-05T05:29:34.296Z",
-      "first_seen_at": "2026-07-05T05:23:20.861Z",
-      "last_seen_at": "2026-07-05T05:29:34.296Z"
+      "last_seen_at": "2026-07-05T05:32:30.947Z"
     },
     {
       "store": "Cdiscount",
@@ -375,43 +69,9 @@
       "model": null,
       "btu": null,
       "stock_info": "Livraison gratuitei108,00 €Ajouter",
-      "scraped_at": "2026-07-05T05:29:34.296Z",
+      "scraped_at": "2026-07-05T05:32:30.947Z",
       "first_seen_at": "2026-07-05T05:23:20.861Z",
-      "last_seen_at": "2026-07-05T05:29:34.296Z"
-    },
-    {
-      "store": "Cdiscount",
-      "title": "Climatiseur Mobile - TRAHOO - Mini Climatiseur USB - Réservoir 900 ml - Silencieux - PortableElectriqueComposition du lot : -",
-      "price_eur": 112.94,
-      "url": "",
-      "image": "https://www.cdiscount.com/pdt2/3/6/6/1/300x300/tra1688184280366/rw/mini-climatiseur-reservoir-d-eau-900-ml-usb-climat.jpg",
-      "status": "in_stock",
-      "availability_type": "delivery",
-      "delivery_info": "Livraison gratuiteiPrix de comparaison112,94 €69,92 €Ajouter",
-      "brand": null,
-      "model": null,
-      "btu": null,
-      "stock_info": "Livraison gratuiteiPrix de comparaison112,94 €69,92 €Ajouter",
-      "scraped_at": "2026-07-05T05:29:34.296Z",
-      "first_seen_at": "2026-07-05T05:15:55.109Z",
-      "last_seen_at": "2026-07-05T05:29:34.296Z"
-    },
-    {
-      "store": "Cdiscount",
-      "title": "®RisingFF Climatiseur portable, refroidisseur d'air silencieux 3 en 1 avec grand réservoir d'eau de 10 L, minuterie de 15 heures1 / 51 avis",
-      "price_eur": 154.96,
-      "url": "",
-      "image": "https://www.cdiscount.com/pdt2/8/9/3/1/300x300/aaazw33893/rw/risingff-climatiseur.jpg",
-      "status": "in_stock",
-      "availability_type": "delivery",
-      "delivery_info": "Livraison gratuitei154,96 €Ajouter",
-      "brand": null,
-      "model": null,
-      "btu": null,
-      "stock_info": "Livraison gratuitei154,96 €Ajouter",
-      "scraped_at": "2026-07-05T05:29:34.296Z",
-      "first_seen_at": "2026-07-05T05:15:55.109Z",
-      "last_seen_at": "2026-07-05T05:29:34.296Z"
+      "last_seen_at": "2026-07-05T05:32:30.947Z"
     },
     {
       "store": "Cdiscount",
@@ -426,43 +86,9 @@
       "model": null,
       "btu": null,
       "stock_info": "Livraison gratuiteiPrix de comparaison159,90 €134,79 €Ajouter",
-      "scraped_at": "2026-07-05T05:29:34.296Z",
+      "scraped_at": "2026-07-05T05:32:30.948Z",
       "first_seen_at": "2026-07-05T05:15:55.110Z",
-      "last_seen_at": "2026-07-05T05:29:34.296Z"
-    },
-    {
-      "store": "Cdiscount",
-      "title": "®RisingFF Rafraichisseur mobile 65W silencieux avec télécommande et réservoir d'eau de 10L 3 vitesses réglables ventilateur",
-      "price_eur": 159.99,
-      "url": "",
-      "image": "https://www.cdiscount.com/pdt2/7/7/6/1/300x300/aabah91776/rw/risingff-rafraichisseur.jpg",
-      "status": "in_stock",
-      "availability_type": "delivery",
-      "delivery_info": "Livraison gratuitei159,99 €Ajouter",
-      "brand": null,
-      "model": null,
-      "btu": null,
-      "stock_info": "Livraison gratuitei159,99 €Ajouter",
-      "scraped_at": "2026-07-05T05:29:34.296Z",
-      "first_seen_at": "2026-07-05T05:23:20.861Z",
-      "last_seen_at": "2026-07-05T05:29:34.296Z"
-    },
-    {
-      "store": "Cdiscount",
-      "title": "Climatiseur Mobile Portable Refroidisseur d'air avec Réservoir 5L 3 Vitesse Refroidisseur par évaporation avec Télécommande,Blanc",
-      "price_eur": 160.99,
-      "url": "",
-      "image": "https://www.cdiscount.com/pdt2/0/0/1/1/300x300/aadgr66001/rw/climatiseur-mobile-portable.jpg",
-      "status": "in_stock",
-      "availability_type": "delivery",
-      "delivery_info": "Livraison gratuitei160,99 €Ajouter",
-      "brand": null,
-      "model": null,
-      "btu": null,
-      "stock_info": "Livraison gratuitei160,99 €Ajouter",
-      "scraped_at": "2026-07-05T05:29:34.296Z",
-      "first_seen_at": "2026-07-05T05:23:20.861Z",
-      "last_seen_at": "2026-07-05T05:29:34.296Z"
+      "last_seen_at": "2026-07-05T05:32:30.948Z"
     },
     {
       "store": "Cdiscount",
@@ -477,9 +103,9 @@
       "model": null,
       "btu": null,
       "stock_info": "Livraison gratuitei179,89 €Ajouter",
-      "scraped_at": "2026-07-05T05:29:34.296Z",
+      "scraped_at": "2026-07-05T05:32:30.947Z",
       "first_seen_at": "2026-07-05T05:15:55.109Z",
-      "last_seen_at": "2026-07-05T05:29:34.296Z"
+      "last_seen_at": "2026-07-05T05:32:30.947Z"
     },
     {
       "store": "Cdiscount",
@@ -494,9 +120,9 @@
       "model": null,
       "btu": null,
       "stock_info": "Livraison gratuitei209,99 €Ajouter",
-      "scraped_at": "2026-07-05T05:29:34.296Z",
+      "scraped_at": "2026-07-05T05:32:30.947Z",
       "first_seen_at": "2026-07-05T05:23:20.861Z",
-      "last_seen_at": "2026-07-05T05:29:34.296Z"
+      "last_seen_at": "2026-07-05T05:32:30.947Z"
     },
     {
       "store": "Cdiscount",
@@ -511,9 +137,9 @@
       "model": null,
       "btu": null,
       "stock_info": "Livraison gratuitei235,99 €Ajouter",
-      "scraped_at": "2026-07-05T05:29:34.296Z",
+      "scraped_at": "2026-07-05T05:32:30.947Z",
       "first_seen_at": "2026-07-05T05:23:20.861Z",
-      "last_seen_at": "2026-07-05T05:29:34.296Z"
+      "last_seen_at": "2026-07-05T05:32:30.947Z"
     },
     {
       "store": "Cdiscount",
@@ -528,9 +154,9 @@
       "model": null,
       "btu": null,
       "stock_info": "Livraison gratuiteiPrix de comparaison259,99 €225,99 €Ajouter",
-      "scraped_at": "2026-07-05T05:29:34.296Z",
+      "scraped_at": "2026-07-05T05:32:30.947Z",
       "first_seen_at": "2026-07-05T05:15:55.109Z",
-      "last_seen_at": "2026-07-05T05:29:34.296Z"
+      "last_seen_at": "2026-07-05T05:32:30.947Z"
     },
     {
       "store": "Cdiscount",
@@ -545,9 +171,9 @@
       "model": null,
       "btu": null,
       "stock_info": "Livraison gratuiteiPrix de comparaison542,61 €329,98 €Ajouter",
-      "scraped_at": "2026-07-05T05:29:34.296Z",
+      "scraped_at": "2026-07-05T05:32:30.947Z",
       "first_seen_at": "2026-07-05T05:15:55.109Z",
-      "last_seen_at": "2026-07-05T05:29:34.296Z"
+      "last_seen_at": "2026-07-05T05:32:30.947Z"
     },
     {
       "store": "Cdiscount",
@@ -562,9 +188,9 @@
       "model": null,
       "btu": "7000 BTU",
       "stock_info": "Livraison gratuitei699,99 €Ajouter",
-      "scraped_at": "2026-07-05T05:29:34.296Z",
+      "scraped_at": "2026-07-05T05:32:30.947Z",
       "first_seen_at": "2026-07-05T05:15:55.109Z",
-      "last_seen_at": "2026-07-05T05:29:34.296Z"
+      "last_seen_at": "2026-07-05T05:32:30.947Z"
     },
     {
       "store": "Cdiscount",
@@ -579,9 +205,9 @@
       "model": null,
       "btu": null,
       "stock_info": "Livraison gratuitei999,99 €Ajouter",
-      "scraped_at": "2026-07-05T05:29:34.296Z",
+      "scraped_at": "2026-07-05T05:32:30.947Z",
       "first_seen_at": "2026-07-05T05:23:20.861Z",
-      "last_seen_at": "2026-07-05T05:29:34.296Z"
+      "last_seen_at": "2026-07-05T05:32:30.947Z"
     },
     {
       "store": "Cdiscount",
@@ -596,60 +222,9 @@
       "model": null,
       "btu": "9000 BTU",
       "stock_info": "Livraison gratuitei1099,99 €Ajouter",
-      "scraped_at": "2026-07-05T05:29:34.296Z",
+      "scraped_at": "2026-07-05T05:32:30.948Z",
       "first_seen_at": "2026-07-05T05:15:55.110Z",
-      "last_seen_at": "2026-07-05T05:29:34.296Z"
-    },
-    {
-      "store": "Cdiscount",
-      "title": "5 en 1 Climatiseur Mobile Wifi 14000BTU 4,1KW R290 COSTWAY-Refroidissement,Ventilation,Déshumidificateur-Kit de Fenêtre-Classe A3,6 / 5612 avisElectriqueComposition du lot : L'emballage comprend :, 1 ",
-      "price_eur": 2199.99,
-      "url": "",
-      "image": "https://www.cdiscount.com/pdt2/6/3/2/1/300x300/cos0794094563632/rw/costway-climatiseur-mobile-chauffage-40-5-en-1-140.jpg",
-      "status": "in_stock",
-      "availability_type": "delivery",
-      "delivery_info": "Livraison gratuiteiPartagez votre avis et gagnez 50€ 2199,99 €Ajouter",
-      "brand": null,
-      "model": null,
-      "btu": "14000 BTU",
-      "stock_info": "Livraison gratuiteiPartagez votre avis et gagnez 50€ 2199,99 €Ajouter",
-      "scraped_at": "2026-07-05T05:29:34.296Z",
-      "first_seen_at": "2026-07-05T05:23:20.862Z",
-      "last_seen_at": "2026-07-05T05:29:34.296Z"
-    },
-    {
-      "store": "Cdiscount",
-      "title": "Joint de Fenetre Climatisation Mobile - AMOUNE - Universel - Blanc - 600 CM Tissu Calfeutrage5 / 51 avis",
-      "price_eur": 29.3,
-      "url": "",
-      "image": "https://www.cdiscount.com/pdt2/6/8/7/1/300x300/amo6901173509687/rw/600-cm-tissu-de-calfeutrage-pour-fenetres-joint-d.jpg",
-      "status": "unknown",
-      "availability_type": "delivery",
-      "delivery_info": null,
-      "brand": null,
-      "model": null,
-      "btu": null,
-      "stock_info": null,
-      "scraped_at": "2026-07-05T05:29:34.296Z",
-      "first_seen_at": "2026-07-05T05:26:24.670Z",
-      "last_seen_at": "2026-07-05T05:29:34.296Z"
-    },
-    {
-      "store": "Cdiscount",
-      "title": "Tuyau Climatiseur Mobile, Tuyau Évacuation Climatiseur Mobile Ø15cm, Flexible en PVC pour Climatiseur Mobile Longueur 3m",
-      "price_eur": 32.97,
-      "url": "",
-      "image": "https://www.cdiscount.com/pdt2/5/3/0/1/300x300/aaaux07530/rw/tuyau-climatiseur-mobile.jpg",
-      "status": "unknown",
-      "availability_type": "delivery",
-      "delivery_info": null,
-      "brand": null,
-      "model": null,
-      "btu": null,
-      "stock_info": null,
-      "scraped_at": "2026-07-05T05:29:34.296Z",
-      "first_seen_at": "2026-07-05T05:23:20.862Z",
-      "last_seen_at": "2026-07-05T05:29:34.296Z"
+      "last_seen_at": "2026-07-05T05:32:30.948Z"
     },
     {
       "store": "Cdiscount",
@@ -664,9 +239,9 @@
       "model": null,
       "btu": null,
       "stock_info": null,
-      "scraped_at": "2026-07-05T05:29:34.296Z",
+      "scraped_at": "2026-07-05T05:32:30.948Z",
       "first_seen_at": "2026-07-05T05:15:55.110Z",
-      "last_seen_at": "2026-07-05T05:29:34.296Z"
+      "last_seen_at": "2026-07-05T05:32:30.948Z"
     },
     {
       "store": "Cdiscount",
@@ -681,9 +256,9 @@
       "model": null,
       "btu": null,
       "stock_info": null,
-      "scraped_at": "2026-07-05T05:29:34.297Z",
+      "scraped_at": "2026-07-05T05:32:30.948Z",
       "first_seen_at": "2026-07-05T05:15:55.110Z",
-      "last_seen_at": "2026-07-05T05:29:34.297Z"
+      "last_seen_at": "2026-07-05T05:32:30.948Z"
     },
     {
       "store": "Cdiscount",
@@ -698,9 +273,9 @@
       "model": null,
       "btu": null,
       "stock_info": null,
-      "scraped_at": "2026-07-05T05:29:34.296Z",
+      "scraped_at": "2026-07-05T05:32:30.948Z",
       "first_seen_at": "2026-07-05T05:23:20.861Z",
-      "last_seen_at": "2026-07-05T05:29:34.296Z"
+      "last_seen_at": "2026-07-05T05:32:30.948Z"
     },
     {
       "store": "Boulanger",
@@ -715,9 +290,9 @@
       "model": null,
       "btu": "9000 BTU",
       "stock_info": null,
-      "scraped_at": "2026-07-05T05:29:10.186Z",
+      "scraped_at": "2026-07-05T05:32:05.584Z",
       "first_seen_at": "2026-07-05T05:15:31.063Z",
-      "last_seen_at": "2026-07-05T05:29:10.186Z"
+      "last_seen_at": "2026-07-05T05:32:05.584Z"
     },
     {
       "store": "Boulanger",
@@ -732,9 +307,9 @@
       "model": null,
       "btu": "9000 BTU",
       "stock_info": null,
-      "scraped_at": "2026-07-05T05:29:10.186Z",
+      "scraped_at": "2026-07-05T05:32:05.584Z",
       "first_seen_at": "2026-07-05T05:15:31.063Z",
-      "last_seen_at": "2026-07-05T05:29:10.186Z"
+      "last_seen_at": "2026-07-05T05:32:05.584Z"
     },
     {
       "store": "Boulanger",
@@ -749,9 +324,9 @@
       "model": null,
       "btu": null,
       "stock_info": null,
-      "scraped_at": "2026-07-05T05:29:10.186Z",
+      "scraped_at": "2026-07-05T05:32:05.584Z",
       "first_seen_at": "2026-07-05T05:15:31.063Z",
-      "last_seen_at": "2026-07-05T05:29:10.186Z"
+      "last_seen_at": "2026-07-05T05:32:05.584Z"
     },
     {
       "store": "Boulanger",
@@ -766,9 +341,9 @@
       "model": null,
       "btu": null,
       "stock_info": null,
-      "scraped_at": "2026-07-05T05:29:10.186Z",
+      "scraped_at": "2026-07-05T05:32:05.584Z",
       "first_seen_at": "2026-07-05T05:15:31.063Z",
-      "last_seen_at": "2026-07-05T05:29:10.186Z"
+      "last_seen_at": "2026-07-05T05:32:05.584Z"
     },
     {
       "store": "Boulanger",
@@ -783,9 +358,9 @@
       "model": null,
       "btu": null,
       "stock_info": null,
-      "scraped_at": "2026-07-05T05:29:10.186Z",
+      "scraped_at": "2026-07-05T05:32:05.584Z",
       "first_seen_at": "2026-07-05T05:15:31.063Z",
-      "last_seen_at": "2026-07-05T05:29:10.186Z"
+      "last_seen_at": "2026-07-05T05:32:05.584Z"
     },
     {
       "store": "Boulanger",
@@ -800,9 +375,9 @@
       "model": null,
       "btu": null,
       "stock_info": null,
-      "scraped_at": "2026-07-05T05:29:10.186Z",
+      "scraped_at": "2026-07-05T05:32:05.583Z",
       "first_seen_at": "2026-07-05T05:15:31.063Z",
-      "last_seen_at": "2026-07-05T05:29:10.186Z"
+      "last_seen_at": "2026-07-05T05:32:05.583Z"
     },
     {
       "store": "Boulanger",
@@ -817,9 +392,9 @@
       "model": null,
       "btu": null,
       "stock_info": null,
-      "scraped_at": "2026-07-05T05:29:10.186Z",
+      "scraped_at": "2026-07-05T05:32:05.583Z",
       "first_seen_at": "2026-07-05T05:15:31.063Z",
-      "last_seen_at": "2026-07-05T05:29:10.186Z"
+      "last_seen_at": "2026-07-05T05:32:05.583Z"
     },
     {
       "store": "Cdiscount",
@@ -834,9 +409,9 @@
       "model": null,
       "btu": null,
       "stock_info": null,
-      "scraped_at": "2026-07-05T05:29:34.296Z",
+      "scraped_at": "2026-07-05T05:32:30.947Z",
       "first_seen_at": "2026-07-05T05:15:55.110Z",
-      "last_seen_at": "2026-07-05T05:29:34.296Z"
+      "last_seen_at": "2026-07-05T05:32:30.947Z"
     },
     {
       "store": "Boulanger",
@@ -851,43 +426,9 @@
       "model": null,
       "btu": "18000 BTU",
       "stock_info": null,
-      "scraped_at": "2026-07-05T05:29:10.186Z",
+      "scraped_at": "2026-07-05T05:32:05.584Z",
       "first_seen_at": "2026-07-05T05:15:31.063Z",
-      "last_seen_at": "2026-07-05T05:29:10.186Z"
-    },
-    {
-      "store": "Boulanger",
-      "title": "\"climatiseur portable\"",
-      "price_eur": 1448.99,
-      "url": "https://www.boulanger.com/",
-      "image": "https://www.boulanger.com/etc.clientlibs/boulanger-site/clientlibs/wpk.app/resources/assets/svg/chevron2.svg",
-      "status": "unknown",
-      "availability_type": "delivery",
-      "delivery_info": "indisponible Retrait en magasin Indisponible Livraison à domicile Indisponible Comparer DUUX Climatiseur DUUX connecté 18000BTU North DXMA12 2,8/5 (9) Revendre votre appareil Refroidir, Air froid jusqu'à : 45 m² maxi Label énergie froid : A, Silencieux (65dB) Label energie chauffage : Non concerné, Wifi L x H x P : 48.",
-      "brand": null,
-      "model": null,
-      "btu": "12000 BTU",
-      "stock_info": "indisponible Retrait en magasin Indisponible Livraison à domicile Indisponible Comparer DUUX Climatiseur DUUX connecté 18000BTU North DXMA12 2,8/5 (9) Revendre votre appareil Refroidir, Air froid jusqu'à : 45 m² maxi Label énergie froid : A, Silencieux (65dB) Label energie chauffage : Non concerné, Wifi L x H x P : 48.",
-      "scraped_at": "2026-07-05T05:29:10.185Z",
-      "first_seen_at": "2026-07-05T05:22:56.199Z",
-      "last_seen_at": "2026-07-05T05:29:10.185Z"
-    },
-    {
-      "store": "Boulanger",
-      "title": "Filtrer",
-      "price_eur": 1448.99,
-      "url": "https://www.boulanger.com/ref/9000994272",
-      "image": "https://www.boulanger.com/etc.clientlibs/boulanger-site/clientlibs/wpk.app/resources/assets/svg/chevron2.svg",
-      "status": "unknown",
-      "availability_type": "delivery",
-      "delivery_info": "indisponible Retrait en magasin Indisponible Livraison à domicile Indisponible Comparer DUUX Climatiseur DUUX connecté 18000BTU North DXMA12 2,8/5 (9) Revendre votre appareil Refroidir, Air froid jusqu'à : 45 m² maxi Label énergie froid : A, Silencieux (65dB) Label energie chauffage : Non concerné, Wifi L x H x P : 48.",
-      "brand": null,
-      "model": null,
-      "btu": "12000 BTU",
-      "stock_info": "indisponible Retrait en magasin Indisponible Livraison à domicile Indisponible Comparer DUUX Climatiseur DUUX connecté 18000BTU North DXMA12 2,8/5 (9) Revendre votre appareil Refroidir, Air froid jusqu'à : 45 m² maxi Label énergie froid : A, Silencieux (65dB) Label energie chauffage : Non concerné, Wifi L x H x P : 48.",
-      "scraped_at": "2026-07-05T05:29:10.185Z",
-      "first_seen_at": "2026-07-05T05:26:02.216Z",
-      "last_seen_at": "2026-07-05T05:29:10.185Z"
+      "last_seen_at": "2026-07-05T05:32:05.584Z"
     },
     {
       "store": "Boulanger",
@@ -902,9 +443,9 @@
       "model": null,
       "btu": null,
       "stock_info": null,
-      "scraped_at": "2026-07-05T05:29:10.186Z",
+      "scraped_at": "2026-07-05T05:32:05.583Z",
       "first_seen_at": "2026-07-05T05:15:31.062Z",
-      "last_seen_at": "2026-07-05T05:29:10.186Z"
+      "last_seen_at": "2026-07-05T05:32:05.583Z"
     },
     {
       "store": "Boulanger",
@@ -919,9 +460,9 @@
       "model": null,
       "btu": null,
       "stock_info": null,
-      "scraped_at": "2026-07-05T05:29:10.186Z",
+      "scraped_at": "2026-07-05T05:32:05.583Z",
       "first_seen_at": "2026-07-05T05:15:31.062Z",
-      "last_seen_at": "2026-07-05T05:29:10.186Z"
+      "last_seen_at": "2026-07-05T05:32:05.583Z"
     },
     {
       "store": "Boulanger",
@@ -936,9 +477,9 @@
       "model": null,
       "btu": null,
       "stock_info": null,
-      "scraped_at": "2026-07-05T05:29:10.186Z",
+      "scraped_at": "2026-07-05T05:32:05.583Z",
       "first_seen_at": "2026-07-05T05:15:31.063Z",
-      "last_seen_at": "2026-07-05T05:29:10.186Z"
+      "last_seen_at": "2026-07-05T05:32:05.583Z"
     },
     {
       "store": "Boulanger",
@@ -953,9 +494,9 @@
       "model": null,
       "btu": "12000 BTU",
       "stock_info": null,
-      "scraped_at": "2026-07-05T05:29:10.186Z",
+      "scraped_at": "2026-07-05T05:32:05.583Z",
       "first_seen_at": "2026-07-05T05:15:31.062Z",
-      "last_seen_at": "2026-07-05T05:29:10.186Z"
+      "last_seen_at": "2026-07-05T05:32:05.583Z"
     },
     {
       "store": "Boulanger",
@@ -970,9 +511,9 @@
       "model": null,
       "btu": null,
       "stock_info": null,
-      "scraped_at": "2026-07-05T05:29:10.186Z",
+      "scraped_at": "2026-07-05T05:32:05.583Z",
       "first_seen_at": "2026-07-05T05:15:31.062Z",
-      "last_seen_at": "2026-07-05T05:29:10.186Z"
+      "last_seen_at": "2026-07-05T05:32:05.583Z"
     },
     {
       "store": "Boulanger",
@@ -987,9 +528,9 @@
       "model": null,
       "btu": null,
       "stock_info": null,
-      "scraped_at": "2026-07-05T05:29:10.185Z",
+      "scraped_at": "2026-07-05T05:32:05.582Z",
       "first_seen_at": "2026-07-05T05:22:56.199Z",
-      "last_seen_at": "2026-07-05T05:29:10.185Z"
+      "last_seen_at": "2026-07-05T05:32:05.582Z"
     },
     {
       "store": "Boulanger",
@@ -1004,9 +545,9 @@
       "model": null,
       "btu": "11942 BTU",
       "stock_info": null,
-      "scraped_at": "2026-07-05T05:29:10.185Z",
+      "scraped_at": "2026-07-05T05:32:05.582Z",
       "first_seen_at": "2026-07-05T05:22:56.200Z",
-      "last_seen_at": "2026-07-05T05:29:10.185Z"
+      "last_seen_at": "2026-07-05T05:32:05.582Z"
     },
     {
       "store": "Boulanger",
@@ -1021,26 +562,9 @@
       "model": null,
       "btu": null,
       "stock_info": null,
-      "scraped_at": "2026-07-05T05:29:10.185Z",
+      "scraped_at": "2026-07-05T05:32:05.582Z",
       "first_seen_at": "2026-07-05T05:22:56.200Z",
-      "last_seen_at": "2026-07-05T05:29:10.185Z"
-    },
-    {
-      "store": "Boulanger",
-      "title": "Clim fixe unité intérieur (1) Climatiseur (7) Climatiseur réversible (7)",
-      "price_eur": null,
-      "url": "https://www.boulanger.com/resultats?tr=climatiseur+portable#",
-      "image": null,
-      "status": "unknown",
-      "availability_type": "delivery",
-      "delivery_info": null,
-      "brand": null,
-      "model": null,
-      "btu": null,
-      "stock_info": null,
-      "scraped_at": "2026-07-05T05:29:10.185Z",
-      "first_seen_at": "2026-07-05T05:22:56.200Z",
-      "last_seen_at": "2026-07-05T05:29:10.185Z"
+      "last_seen_at": "2026-07-05T05:32:05.582Z"
     },
     {
       "store": "Boulanger",
@@ -1055,9 +579,9 @@
       "model": null,
       "btu": null,
       "stock_info": null,
-      "scraped_at": "2026-07-05T05:29:10.185Z",
+      "scraped_at": "2026-07-05T05:32:05.583Z",
       "first_seen_at": "2026-07-05T05:22:56.200Z",
-      "last_seen_at": "2026-07-05T05:29:10.185Z"
+      "last_seen_at": "2026-07-05T05:32:05.583Z"
     },
     {
       "store": "Boulanger",
@@ -1072,9 +596,9 @@
       "model": null,
       "btu": null,
       "stock_info": null,
-      "scraped_at": "2026-07-05T05:29:10.185Z",
+      "scraped_at": "2026-07-05T05:32:05.583Z",
       "first_seen_at": "2026-07-05T05:22:56.200Z",
-      "last_seen_at": "2026-07-05T05:29:10.185Z"
+      "last_seen_at": "2026-07-05T05:32:05.583Z"
     },
     {
       "store": "Boulanger",
@@ -1089,9 +613,9 @@
       "model": null,
       "btu": null,
       "stock_info": null,
-      "scraped_at": "2026-07-05T05:29:10.186Z",
+      "scraped_at": "2026-07-05T05:32:05.583Z",
       "first_seen_at": "2026-07-05T05:22:56.200Z",
-      "last_seen_at": "2026-07-05T05:29:10.186Z"
+      "last_seen_at": "2026-07-05T05:32:05.583Z"
     },
     {
       "store": "Boulanger",
@@ -1106,9 +630,9 @@
       "model": null,
       "btu": null,
       "stock_info": null,
-      "scraped_at": "2026-07-05T05:29:10.186Z",
+      "scraped_at": "2026-07-05T05:32:05.583Z",
       "first_seen_at": "2026-07-05T05:22:56.200Z",
-      "last_seen_at": "2026-07-05T05:29:10.186Z"
+      "last_seen_at": "2026-07-05T05:32:05.583Z"
     },
     {
       "store": "Boulanger",
@@ -1123,9 +647,9 @@
       "model": null,
       "btu": null,
       "stock_info": null,
-      "scraped_at": "2026-07-05T05:29:10.186Z",
+      "scraped_at": "2026-07-05T05:32:05.583Z",
       "first_seen_at": "2026-07-05T05:22:56.200Z",
-      "last_seen_at": "2026-07-05T05:29:10.186Z"
+      "last_seen_at": "2026-07-05T05:32:05.583Z"
     },
     {
       "store": "Boulanger",
@@ -1140,9 +664,9 @@
       "model": null,
       "btu": null,
       "stock_info": null,
-      "scraped_at": "2026-07-05T05:29:10.186Z",
+      "scraped_at": "2026-07-05T05:32:05.583Z",
       "first_seen_at": "2026-07-05T05:22:56.200Z",
-      "last_seen_at": "2026-07-05T05:29:10.186Z"
+      "last_seen_at": "2026-07-05T05:32:05.583Z"
     },
     {
       "store": "Boulanger",
@@ -1157,9 +681,9 @@
       "model": null,
       "btu": null,
       "stock_info": null,
-      "scraped_at": "2026-07-05T05:29:10.186Z",
+      "scraped_at": "2026-07-05T05:32:05.583Z",
       "first_seen_at": "2026-07-05T05:22:56.200Z",
-      "last_seen_at": "2026-07-05T05:29:10.186Z"
+      "last_seen_at": "2026-07-05T05:32:05.583Z"
     },
     {
       "store": "Boulanger",
@@ -1174,9 +698,9 @@
       "model": null,
       "btu": null,
       "stock_info": null,
-      "scraped_at": "2026-07-05T05:29:10.186Z",
+      "scraped_at": "2026-07-05T05:32:05.583Z",
       "first_seen_at": "2026-07-05T05:22:56.200Z",
-      "last_seen_at": "2026-07-05T05:29:10.186Z"
+      "last_seen_at": "2026-07-05T05:32:05.583Z"
     },
     {
       "store": "Boulanger",
@@ -1191,9 +715,9 @@
       "model": null,
       "btu": null,
       "stock_info": null,
-      "scraped_at": "2026-07-05T05:29:10.186Z",
+      "scraped_at": "2026-07-05T05:32:05.583Z",
       "first_seen_at": "2026-07-05T05:22:56.201Z",
-      "last_seen_at": "2026-07-05T05:29:10.186Z"
+      "last_seen_at": "2026-07-05T05:32:05.583Z"
     },
     {
       "store": "Boulanger",
@@ -1208,9 +732,9 @@
       "model": null,
       "btu": null,
       "stock_info": null,
-      "scraped_at": "2026-07-05T05:29:10.186Z",
+      "scraped_at": "2026-07-05T05:32:05.583Z",
       "first_seen_at": "2026-07-05T05:22:56.201Z",
-      "last_seen_at": "2026-07-05T05:29:10.186Z"
+      "last_seen_at": "2026-07-05T05:32:05.583Z"
     },
     {
       "store": "Boulanger",
@@ -1225,9 +749,9 @@
       "model": null,
       "btu": null,
       "stock_info": null,
-      "scraped_at": "2026-07-05T05:29:10.186Z",
+      "scraped_at": "2026-07-05T05:32:05.584Z",
       "first_seen_at": "2026-07-05T05:22:56.201Z",
-      "last_seen_at": "2026-07-05T05:29:10.186Z"
+      "last_seen_at": "2026-07-05T05:32:05.584Z"
     },
     {
       "store": "Boulanger",
@@ -1242,9 +766,9 @@
       "model": null,
       "btu": null,
       "stock_info": null,
-      "scraped_at": "2026-07-05T05:29:10.186Z",
+      "scraped_at": "2026-07-05T05:32:05.584Z",
       "first_seen_at": "2026-07-05T05:22:56.201Z",
-      "last_seen_at": "2026-07-05T05:29:10.186Z"
+      "last_seen_at": "2026-07-05T05:32:05.584Z"
     },
     {
       "store": "Boulanger",
@@ -1259,9 +783,9 @@
       "model": null,
       "btu": null,
       "stock_info": null,
-      "scraped_at": "2026-07-05T05:29:10.186Z",
+      "scraped_at": "2026-07-05T05:32:05.584Z",
       "first_seen_at": "2026-07-05T05:22:56.201Z",
-      "last_seen_at": "2026-07-05T05:29:10.186Z"
+      "last_seen_at": "2026-07-05T05:32:05.584Z"
     },
     {
       "store": "Boulanger",
@@ -1276,9 +800,9 @@
       "model": null,
       "btu": null,
       "stock_info": null,
-      "scraped_at": "2026-07-05T05:29:10.186Z",
+      "scraped_at": "2026-07-05T05:32:05.584Z",
       "first_seen_at": "2026-07-05T05:22:56.201Z",
-      "last_seen_at": "2026-07-05T05:29:10.186Z"
+      "last_seen_at": "2026-07-05T05:32:05.584Z"
     },
     {
       "store": "Boulanger",
@@ -1293,9 +817,9 @@
       "model": null,
       "btu": null,
       "stock_info": null,
-      "scraped_at": "2026-07-05T05:29:10.186Z",
+      "scraped_at": "2026-07-05T05:32:05.584Z",
       "first_seen_at": "2026-07-05T05:22:56.201Z",
-      "last_seen_at": "2026-07-05T05:29:10.186Z"
+      "last_seen_at": "2026-07-05T05:32:05.584Z"
     },
     {
       "store": "Boulanger",
@@ -1310,9 +834,9 @@
       "model": null,
       "btu": null,
       "stock_info": null,
-      "scraped_at": "2026-07-05T05:29:10.186Z",
+      "scraped_at": "2026-07-05T05:32:05.584Z",
       "first_seen_at": "2026-07-05T05:22:56.201Z",
-      "last_seen_at": "2026-07-05T05:29:10.186Z"
+      "last_seen_at": "2026-07-05T05:32:05.584Z"
     },
     {
       "store": "Boulanger",
@@ -1327,9 +851,9 @@
       "model": null,
       "btu": "9000 BTU",
       "stock_info": null,
-      "scraped_at": "2026-07-05T05:29:10.186Z",
+      "scraped_at": "2026-07-05T05:32:05.584Z",
       "first_seen_at": "2026-07-05T05:22:56.201Z",
-      "last_seen_at": "2026-07-05T05:29:10.186Z"
+      "last_seen_at": "2026-07-05T05:32:05.584Z"
     },
     {
       "store": "Boulanger",
@@ -1344,9 +868,9 @@
       "model": null,
       "btu": "9000 BTU",
       "stock_info": null,
-      "scraped_at": "2026-07-05T05:29:10.186Z",
+      "scraped_at": "2026-07-05T05:32:05.584Z",
       "first_seen_at": "2026-07-05T05:22:56.201Z",
-      "last_seen_at": "2026-07-05T05:29:10.186Z"
+      "last_seen_at": "2026-07-05T05:32:05.584Z"
     },
     {
       "store": "Boulanger",
@@ -1361,9 +885,9 @@
       "model": null,
       "btu": null,
       "stock_info": null,
-      "scraped_at": "2026-07-05T05:29:10.186Z",
+      "scraped_at": "2026-07-05T05:32:05.584Z",
       "first_seen_at": "2026-07-05T05:22:56.201Z",
-      "last_seen_at": "2026-07-05T05:29:10.186Z"
+      "last_seen_at": "2026-07-05T05:32:05.584Z"
     },
     {
       "store": "Boulanger",
@@ -1378,9 +902,9 @@
       "model": null,
       "btu": "9000 BTU",
       "stock_info": null,
-      "scraped_at": "2026-07-05T05:29:10.186Z",
+      "scraped_at": "2026-07-05T05:32:05.584Z",
       "first_seen_at": "2026-07-05T05:22:56.201Z",
-      "last_seen_at": "2026-07-05T05:29:10.186Z"
+      "last_seen_at": "2026-07-05T05:32:05.584Z"
     },
     {
       "store": "Boulanger",
@@ -1395,9 +919,9 @@
       "model": null,
       "btu": "9000 BTU",
       "stock_info": null,
-      "scraped_at": "2026-07-05T05:29:10.186Z",
+      "scraped_at": "2026-07-05T05:32:05.584Z",
       "first_seen_at": "2026-07-05T05:22:56.201Z",
-      "last_seen_at": "2026-07-05T05:29:10.186Z"
+      "last_seen_at": "2026-07-05T05:32:05.584Z"
     },
     {
       "store": "Boulanger",
@@ -1412,9 +936,9 @@
       "model": null,
       "btu": null,
       "stock_info": null,
-      "scraped_at": "2026-07-05T05:29:10.186Z",
+      "scraped_at": "2026-07-05T05:32:05.584Z",
       "first_seen_at": "2026-07-05T05:22:56.201Z",
-      "last_seen_at": "2026-07-05T05:29:10.186Z"
+      "last_seen_at": "2026-07-05T05:32:05.584Z"
     },
     {
       "store": "Boulanger",
@@ -1429,9 +953,9 @@
       "model": null,
       "btu": "18000 BTU",
       "stock_info": null,
-      "scraped_at": "2026-07-05T05:29:10.186Z",
+      "scraped_at": "2026-07-05T05:32:05.584Z",
       "first_seen_at": "2026-07-05T05:22:56.201Z",
-      "last_seen_at": "2026-07-05T05:29:10.186Z"
+      "last_seen_at": "2026-07-05T05:32:05.584Z"
     },
     {
       "store": "Cdiscount",
@@ -1446,9 +970,9 @@
       "model": null,
       "btu": null,
       "stock_info": null,
-      "scraped_at": "2026-07-05T05:29:34.296Z",
+      "scraped_at": "2026-07-05T05:32:30.947Z",
       "first_seen_at": "2026-07-05T05:23:20.861Z",
-      "last_seen_at": "2026-07-05T05:29:34.296Z"
+      "last_seen_at": "2026-07-05T05:32:30.947Z"
     },
     {
       "store": "Cdiscount",
@@ -1463,9 +987,9 @@
       "model": null,
       "btu": null,
       "stock_info": null,
-      "scraped_at": "2026-07-05T05:29:34.296Z",
+      "scraped_at": "2026-07-05T05:32:30.947Z",
       "first_seen_at": "2026-07-05T05:23:20.861Z",
-      "last_seen_at": "2026-07-05T05:29:34.296Z"
+      "last_seen_at": "2026-07-05T05:32:30.947Z"
     },
     {
       "store": "Cdiscount",
@@ -1480,9 +1004,9 @@
       "model": null,
       "btu": null,
       "stock_info": null,
-      "scraped_at": "2026-07-05T05:29:34.296Z",
+      "scraped_at": "2026-07-05T05:32:30.948Z",
       "first_seen_at": "2026-07-05T05:23:20.861Z",
-      "last_seen_at": "2026-07-05T05:29:34.296Z"
+      "last_seen_at": "2026-07-05T05:32:30.948Z"
     },
     {
       "store": "Cdiscount",
@@ -1497,9 +1021,9 @@
       "model": null,
       "btu": null,
       "stock_info": null,
-      "scraped_at": "2026-07-05T05:29:34.296Z",
+      "scraped_at": "2026-07-05T05:32:30.948Z",
       "first_seen_at": "2026-07-05T05:23:20.862Z",
-      "last_seen_at": "2026-07-05T05:29:34.296Z"
+      "last_seen_at": "2026-07-05T05:32:30.948Z"
     },
     {
       "store": "Cdiscount",
@@ -1514,9 +1038,9 @@
       "model": null,
       "btu": null,
       "stock_info": null,
-      "scraped_at": "2026-07-05T05:29:34.297Z",
+      "scraped_at": "2026-07-05T05:32:30.948Z",
       "first_seen_at": "2026-07-05T05:23:20.862Z",
-      "last_seen_at": "2026-07-05T05:29:34.297Z"
+      "last_seen_at": "2026-07-05T05:32:30.948Z"
     },
     {
       "store": "Cdiscount",
@@ -1531,9 +1055,9 @@
       "model": null,
       "btu": null,
       "stock_info": null,
-      "scraped_at": "2026-07-05T05:29:34.297Z",
+      "scraped_at": "2026-07-05T05:32:30.948Z",
       "first_seen_at": "2026-07-05T05:23:20.862Z",
-      "last_seen_at": "2026-07-05T05:29:34.297Z"
+      "last_seen_at": "2026-07-05T05:32:30.948Z"
     },
     {
       "store": "Cdiscount",
@@ -1548,9 +1072,9 @@
       "model": null,
       "btu": null,
       "stock_info": null,
-      "scraped_at": "2026-07-05T05:29:34.297Z",
+      "scraped_at": "2026-07-05T05:32:30.948Z",
       "first_seen_at": "2026-07-05T05:23:20.862Z",
-      "last_seen_at": "2026-07-05T05:29:34.297Z"
+      "last_seen_at": "2026-07-05T05:32:30.948Z"
     },
     {
       "store": "Cdiscount",
@@ -1565,9 +1089,9 @@
       "model": null,
       "btu": null,
       "stock_info": null,
-      "scraped_at": "2026-07-05T05:29:34.297Z",
+      "scraped_at": "2026-07-05T05:32:30.948Z",
       "first_seen_at": "2026-07-05T05:23:20.862Z",
-      "last_seen_at": "2026-07-05T05:29:34.297Z"
+      "last_seen_at": "2026-07-05T05:32:30.948Z"
     },
     {
       "store": "Cdiscount",
@@ -1582,9 +1106,9 @@
       "model": null,
       "btu": null,
       "stock_info": null,
-      "scraped_at": "2026-07-05T05:29:34.297Z",
+      "scraped_at": "2026-07-05T05:32:30.948Z",
       "first_seen_at": "2026-07-05T05:23:20.862Z",
-      "last_seen_at": "2026-07-05T05:29:34.297Z"
+      "last_seen_at": "2026-07-05T05:32:30.948Z"
     },
     {
       "store": "Cdiscount",
@@ -1599,9 +1123,9 @@
       "model": null,
       "btu": null,
       "stock_info": null,
-      "scraped_at": "2026-07-05T05:29:34.297Z",
+      "scraped_at": "2026-07-05T05:32:30.948Z",
       "first_seen_at": "2026-07-05T05:23:20.862Z",
-      "last_seen_at": "2026-07-05T05:29:34.297Z"
+      "last_seen_at": "2026-07-05T05:32:30.948Z"
     },
     {
       "store": "Cdiscount",
@@ -1616,9 +1140,9 @@
       "model": null,
       "btu": null,
       "stock_info": null,
-      "scraped_at": "2026-07-05T05:29:34.297Z",
+      "scraped_at": "2026-07-05T05:32:30.948Z",
       "first_seen_at": "2026-07-05T05:23:20.862Z",
-      "last_seen_at": "2026-07-05T05:29:34.297Z"
+      "last_seen_at": "2026-07-05T05:32:30.948Z"
     },
     {
       "store": "Cdiscount",
@@ -1633,9 +1157,9 @@
       "model": null,
       "btu": null,
       "stock_info": null,
-      "scraped_at": "2026-07-05T05:29:34.297Z",
+      "scraped_at": "2026-07-05T05:32:30.948Z",
       "first_seen_at": "2026-07-05T05:23:20.862Z",
-      "last_seen_at": "2026-07-05T05:29:34.297Z"
+      "last_seen_at": "2026-07-05T05:32:30.948Z"
     },
     {
       "store": "Cdiscount",
@@ -1650,9 +1174,9 @@
       "model": null,
       "btu": null,
       "stock_info": null,
-      "scraped_at": "2026-07-05T05:29:34.297Z",
+      "scraped_at": "2026-07-05T05:32:30.948Z",
       "first_seen_at": "2026-07-05T05:23:20.862Z",
-      "last_seen_at": "2026-07-05T05:29:34.297Z"
+      "last_seen_at": "2026-07-05T05:32:30.948Z"
     },
     {
       "store": "Cdiscount",
@@ -1667,9 +1191,9 @@
       "model": null,
       "btu": null,
       "stock_info": null,
-      "scraped_at": "2026-07-05T05:29:34.297Z",
+      "scraped_at": "2026-07-05T05:32:30.948Z",
       "first_seen_at": "2026-07-05T05:23:20.862Z",
-      "last_seen_at": "2026-07-05T05:29:34.297Z"
+      "last_seen_at": "2026-07-05T05:32:30.948Z"
     },
     {
       "store": "Cdiscount",
@@ -1684,9 +1208,47 @@
       "model": null,
       "btu": null,
       "stock_info": null,
-      "scraped_at": "2026-07-05T05:29:34.297Z",
+      "scraped_at": "2026-07-05T05:32:30.948Z",
       "first_seen_at": "2026-07-05T05:23:20.862Z",
-      "last_seen_at": "2026-07-05T05:29:34.297Z"
+      "last_seen_at": "2026-07-05T05:32:30.948Z"
+    },
+    {
+      "store": "Boulanger",
+      "title": "\"climatiseur portable\"",
+      "price_eur": 1448.99,
+      "url": "https://www.boulanger.com/",
+      "image": "https://www.boulanger.com/etc.clientlibs/boulanger-site/clientlibs/wpk.app/resources/assets/svg/chevron2.svg",
+      "status": "out_of_stock",
+      "availability_type": "delivery",
+      "delivery_info": "indisponible Retrait en magasin Indisponible Livraison à domicile Indisponible Comparer DUUX Climatiseur DUUX connecté 18000BTU North DXMA12 2,8/5 (9) Revendre votre appareil Refroidir, Air froid jusqu'à : 45 m² maxi Label énergie froid : A, Silencieux (65dB) Label energie chauffage : Non concerné, Wifi L x H x P : 48.",
+      "brand": null,
+      "model": null,
+      "btu": "12000 BTU",
+      "stock_info": "indisponible Retrait en magasin Indisponible Livraison à domicile Indisponible Comparer DUUX Climatiseur DUUX connecté 18000BTU North DXMA12 2,8/5 (9) Revendre votre appareil Refroidir, Air froid jusqu'à : 45 m² maxi Label énergie froid : A, Silencieux (65dB) Label energie chauffage : Non concerné, Wifi L x H x P : 48.",
+      "scraped_at": "2026-07-05T05:32:05.582Z",
+      "first_seen_at": "2026-07-05T05:22:56.199Z",
+      "last_seen_at": "2026-07-05T05:32:05.582Z",
+      "status_changed_at": "2026-07-05T05:32:05.582Z",
+      "previous_status": "unknown"
+    },
+    {
+      "store": "Boulanger",
+      "title": "Filtrer",
+      "price_eur": 1448.99,
+      "url": "https://www.boulanger.com/ref/9000994272",
+      "image": "https://www.boulanger.com/etc.clientlibs/boulanger-site/clientlibs/wpk.app/resources/assets/svg/chevron2.svg",
+      "status": "out_of_stock",
+      "availability_type": "delivery",
+      "delivery_info": "indisponible Retrait en magasin Indisponible Livraison à domicile Indisponible Comparer DUUX Climatiseur DUUX connecté 18000BTU North DXMA12 2,8/5 (9) Revendre votre appareil Refroidir, Air froid jusqu'à : 45 m² maxi Label énergie froid : A, Silencieux (65dB) Label energie chauffage : Non concerné, Wifi L x H x P : 48.",
+      "brand": null,
+      "model": null,
+      "btu": "12000 BTU",
+      "stock_info": "indisponible Retrait en magasin Indisponible Livraison à domicile Indisponible Comparer DUUX Climatiseur DUUX connecté 18000BTU North DXMA12 2,8/5 (9) Revendre votre appareil Refroidir, Air froid jusqu'à : 45 m² maxi Label énergie froid : A, Silencieux (65dB) Label energie chauffage : Non concerné, Wifi L x H x P : 48.",
+      "scraped_at": "2026-07-05T05:32:05.582Z",
+      "first_seen_at": "2026-07-05T05:26:02.216Z",
+      "last_seen_at": "2026-07-05T05:32:05.582Z",
+      "status_changed_at": "2026-07-05T05:32:05.582Z",
+      "previous_status": "unknown"
     }
   ]
 }
