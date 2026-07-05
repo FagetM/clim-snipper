@@ -36,8 +36,8 @@ function detectBTU(text) {
 
 function detectStatus(allText) {
   if (!allText) return 'unknown';
-  // Nettoyer: enlever le texte des boutons ("Ajouter", "Ajouter au panier")
-  const clean = allText.replace(/ajouter\b[^.]*/gi, '');
+  // Nettoyer: enlever le texte des boutons
+  const clean = allText.replace(/ajouter/gi, '').replace(/partagez votre avis[^€]*/gi, '');
   const t = clean.toLowerCase();
   if (t.includes('indisponible') || t.includes('rupture') || t.includes('epuise') ||
       t.includes('non disponible') || t.includes('victime de son succes')) return 'out_of_stock';
@@ -53,23 +53,22 @@ function isRealPortableAC(title, price) {
   const t = title.toLowerCase();
   // Exclure splits muraux/reversibles
   if (t.includes('split')) return false;
-  if (t.includes('mural') && !t.includes('portable') && !t.includes('mobile')) return false;
+  if (t.includes('mural')) return false;  // "climatiseur mural" = split, pas portable
   if (t.includes('reversible') && !t.includes('portable') && !t.includes('mobile')) return false;
-  // Exclure accessoires (strict: titre qui ne mentionne PAS un climatiseur complet)
-  const isAccessory = (
-    t.includes('joint ') || t.includes('tuyau ') || t.includes('kit ') ||
-    t.includes('calfeutrage') || t.includes('etancheite') || t.includes('isolation') ||
-    t.includes('tissu ') || t.includes('rideau') || t.includes('fenetre') ||
-    t.includes('telecommande') || t.includes('filtre ') || t.includes('bouteille ')
-  );
-  const isAC = t.includes('climatiseur') || t.includes('climatisation') || t.includes('air conditionne');
-  if (isAccessory && !(isAC && (t.includes('portable') || t.includes('mobile') || t.includes('btu')))) return false;
-  // Exclure mini USB < 80EUR
-  if (t.includes('usb') && price && price < 80) return false;
-  if ((t.includes('mini') || t.includes('de table') || t.includes('de poche')) && price && price < 80) return false;
-  // Exclure rafraichisseurs d'air sans compresseur (< 100EUR, pas de BTU)
-  if (price && price < 100 && !t.includes('btu') &&
-      (t.includes('rafraichisseur') || t.includes('rafraichisseur') || t.includes('refroidisseur'))) return false;
+  if (t.includes('fixe') && !t.includes('portable')) return false;
+  // Exclure TOUS les accessoires (strict)
+  const accessoryWords = ['joint', 'tuyau', 'calfeutrage', 'etancheite', 'tissu ', 'rideau',
+    'telecommande ', 'filtre ', 'bouteille ', 'kit ', 'support ', 'telecommandes'];
+  if (accessoryWords.some(w => t.includes(w))) return false;
+  // Exclure mini USB / sans evacuation / moule a glacon = pas un vrai clim
+  if ((t.includes('usb') || t.includes('moule a glac')) && price && price < 150) return false;
+  // Exclure rafraichisseurs evaporatifs (pas de compresseur)
+  if (price && price < 250 && !t.includes('btu') &&
+      (t.includes('rafraichisseur') || t.includes('rafraichisseur') ||
+       t.includes('refroidisseur') || t.includes('sans evacuation') ||
+       t.includes('reservoir') || t.includes('humidification'))) return false;
+  // "mini" < 150€ = pas un vrai clim portable
+  if (t.includes('mini') && price && price < 150) return false;
   return true;
 }
 
