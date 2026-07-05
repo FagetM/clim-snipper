@@ -126,7 +126,7 @@ async function scrapeStore(page, store) {
       const allText = item.fullText;
       const price = extractPriceFromText(allText);
       // Ignorer les entrees sans prix ou sans lien produit valide
-      if (!price || title.length < 12 || !item.link || item.link.length < 20) continue;
+      if (!price || title.length < 12 || !item.link || item.link.length < 15) continue;
       const status = detectStatus(allText);
       const url = cleanUrl(item.link, store.baseUrl);
       const btu = detectBTU(allText);
