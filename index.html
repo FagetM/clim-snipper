@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clim'Finder — Trouve ta clim portable</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>❄️</text></svg>">
+</head>
+<body>
+  <header>
+    <h1>❄️ Clim'Finder</h1>
+    <p class="subtitle">Climatiseurs portables en stock — Tours & livraison</p>
+  </header>
+
+  <main>
+    <section class="status-bar">
+      <span id="lastUpdate">Chargement…</span>
+      <span id="totalCount"></span>
+    </section>
+
+    <section class="filters">
+      <button class="filter-btn active" data-filter="all">Tous</button>
+      <button class="filter-btn" data-filter="stock">✅ En stock</button>
+      <button class="filter-btn" data-filter="tours">📍 Tours</button>
+      <button class="filter-btn" data-filter="livraison">🚚 Livraison</button>
+      <select id="priceSort">
+        <option value="">Trier par prix</option>
+        <option value="asc">Prix ↑</option>
+        <option value="desc">Prix ↓</option>
+      </select>
+    </section>
+
+    <section class="summary-cards" id="summaryCards"></section>
+
+    <section class="products-grid" id="productsGrid">
+      <div class="loading">🔍 Recherche des climatiseurs en cours…</div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Mis à jour automatiquement toutes les heures. Dernière vérification : <span id="footerTime">—</span></p>
+    <p class="sources">Sources : Darty, Boulanger, Leroy Merlin, Castorama, Cdiscount, Amazon, Electro Dépôt</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

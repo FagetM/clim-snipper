@@ -1,0 +1,6 @@
+{
+  "github_pages_url": "https://fagetm.github.io/clim-snipper",
+  "check_interval_minutes": 30,
+  "notify_on_new_stock": true,
+  "notify_on_disappeared": false
+}

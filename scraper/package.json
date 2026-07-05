@@ -1,0 +1,13 @@
+{
+  "name": "clim-finder-scraper",
+  "version": "1.0.0",
+  "description": "Scraper de disponibilité de climatiseurs portables",
+  "main": "index.js",
+  "scripts": {
+    "scrape": "node index.js"
+  },
+  "dependencies": {
+    "axios": "^1.7.0",
+    "cheerio": "^1.0.0"
+  }
+}
