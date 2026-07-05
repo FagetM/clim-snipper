@@ -49,11 +49,12 @@ function detectStatus(allText) {
   return 'unknown';
 }
 
-function isRealPortableAC(title, price) {
-  const t = title.toLowerCase();
-  // Exclure splits muraux/reversibles
+function isRealPortableAC(fullText, price) {
+  const t = fullText.toLowerCase();
+  // Exclure splits muraux/reversibles (pas de clim portables)
   if (t.includes('split')) return false;
-  if (t.includes('mural')) return false;  // "climatiseur mural" = split, pas portable
+  if (t.includes('mural')) return false;
+  // "climatiseur reversible" sans "portable" ni "mobile" = split mural
   if (t.includes('reversible') && !t.includes('portable') && !t.includes('mobile')) return false;
   if (t.includes('fixe') && !t.includes('portable')) return false;
   // Exclure TOUS les accessoires (strict)
@@ -125,11 +126,12 @@ async function scrapeStore(page, store) {
       const allText = item.fullText;
       const price = extractPriceFromText(allText);
       // Ignorer les entrees sans prix ou sans lien produit valide
-      if (!price || title.length < 12 || !item.link || item.link.length < 30) continue;
+      if (!price || title.length < 12 || !item.link || item.link.length < 20) continue;
       const status = detectStatus(allText);
       const url = cleanUrl(item.link, store.baseUrl);
       const btu = detectBTU(allText);
-      if (!isRealPortableAC(title, price)) continue;
+      // Utiliser fullText pour le filtrage (plus complet que le titre extrait)
+      if (!isRealPortableAC(allText, price)) continue;
       let stockInfo = '';
       const stockRegex = /(?:en stock|disponible|indisponible|rupture|livraison|expedi[ée]|retrait|stock)[^.]*\.?/gi;
       const matches = allText.match(stockRegex);
