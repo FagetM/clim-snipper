@@ -1,10 +1,112 @@
 {
-  "scanned_at": "2026-07-06T09:04:23.733Z",
-  "total": 14,
-  "in_stock": 0,
+  "scanned_at": "2026-07-06T13:48:34.210Z",
+  "total": 23,
+  "in_stock": 2,
   "tours_available": 0,
-  "delivery_available": 14,
+  "delivery_available": 23,
   "products": [
+    {
+      "store": "Amazon",
+      "title": "Climatiseur Portable 12000 Btu, Refroidisseur évaporatif Et Chauffage Avec Télécommande – Classe énergétique A Pour Refroidissement Et Chauffage Mobile, Pour Chambre, Bureau, Camping-car, Cold alone",
+      "price_eur": 152.94,
+      "url": "https://www.amazon.fr/Climatiseur-Refroidisseur-%C3%A9vaporatif-Chauffage-T%C3%A9l%C3%A9commande/dp/B0H6WWJK9Z/ref=sr_1_8?dib=eyJ2IjoiMSJ9.g3A5QEyDWF7UVBw9E7bfd3VFiYNn2u6pUh_aPxiAIjyZak5zRa2L5WDG6EQ37rxzU3of2CkA5ok9g0uCcsCLtTP7ukWa1zxSxOl7_g5BmrqUfy01CBdUhUCBNCvyGzjKqYMZwt-iE_T58l245Ote9auxhyBI3ckwOUftM5ZPLi7DMAgHpqtNTWdmeI9iI5wg26eRIkdiBWua5MIkiHTmEumfHbpQOzvFHTF3x9CG3m4.4k1n_lYY1iqap7BC8Oh1-a_MV6MWV9KUGitSlmFWyXY&dib_tag=se&keywords=climatiseur+portable+mobile&qid=1783345622&s=kitchen&sr=1-8",
+      "image": "https://m.media-amazon.com/images/I/61ga6iFTIhL._AC_UY218_.jpg",
+      "status": "in_stock",
+      "availability_type": "delivery",
+      "delivery_info": "Livraison à 20 € 4 - 12 aoûtAjouter au panierClasse d'efficacité énergétique : A",
+      "brand": null,
+      "model": null,
+      "btu": "12000 BTU",
+      "stock_info": "Livraison à 20 € 4 - 12 aoûtAjouter au panierClasse d'efficacité énergétique : A",
+      "scraped_at": "2026-07-06T13:47:06.098Z",
+      "first_seen_at": "2026-07-06T13:47:06.098Z",
+      "last_seen_at": "2026-07-06T13:47:06.098Z"
+    },
+    {
+      "store": "Amazon",
+      "title": "DREAME P-Wind10 7000 BTU Climatiseur portable 3-en-1 : Refroidissement, Déshumidification et Ventilateur, flux d’air 3D, contrôle via appli et télécommande, mode sommeil, installation facile",
+      "price_eur": 299.17,
+      "url": "https://www.amazon.fr/DREAME-P-Wind10-Climatiseur-portable-3-en-1/dp/B0GXYL6QJX/ref=sr_1_5?dib=eyJ2IjoiMSJ9.g3A5QEyDWF7UVBw9E7bfd3VFiYNn2u6pUh_aPxiAIjyZak5zRa2L5WDG6EQ37rxzU3of2CkA5ok9g0uCcsCLtTP7ukWa1zxSxOl7_g5BmrqUfy01CBdUhUCBNCvyGzjKqYMZwt-iE_T58l245Ote9auxhyBI3ckwOUftM5ZPLi7DMAgHpqtNTWdmeI9iI5wg26eRIkdiBWua5MIkiHTmEumfHbpQOzvFHTF3x9CG3m4.4k1n_lYY1iqap7BC8Oh1-a_MV6MWV9KUGitSlmFWyXY&dib_tag=se&keywords=climatiseur+portable+mobile&qid=1783345622&s=kitchen&sr=1-5",
+      "image": "https://m.media-amazon.com/images/I/61fdNibRa8L._AC_UY218_.jpg",
+      "status": "in_stock",
+      "availability_type": "delivery",
+      "delivery_info": "Livraison à 180,66 €Habituellement expédié sous 1 à 2 moisAjouter au panierAA+++DFiche produitEfficacité énergétiqueFiche produit",
+      "brand": null,
+      "model": null,
+      "btu": "7000 BTU",
+      "stock_info": "Livraison à 180,66 €Habituellement expédié sous 1 à 2 moisAjouter au panierAA+++DFiche produitEfficacité énergétiqueFiche produit",
+      "scraped_at": "2026-07-06T13:47:06.098Z",
+      "first_seen_at": "2026-07-06T13:47:06.098Z",
+      "last_seen_at": "2026-07-06T13:47:06.098Z"
+    },
+    {
+      "store": "Amazon",
+      "title": "Climatiseur mobile silencieux,4 vitesses climatiseur portable, climatiseur mobile sans évacuation,réservoir 900 ml,bac à glace, moule à glaçons, 7 LED, idéal maison, bureau et voyage.",
+      "price_eur": 27.88,
+      "url": "https://www.amazon.fr/Climatiseur-silencieux-climatiseur-%C3%A9vacuation-r%C3%A9servoir/dp/B0GXDP3854/ref=sr_1_12?dib=eyJ2IjoiMSJ9.g3A5QEyDWF7UVBw9E7bfd3VFiYNn2u6pUh_aPxiAIjyZak5zRa2L5WDG6EQ37rxzU3of2CkA5ok9g0uCcsCLtTP7ukWa1zxSxOl7_g5BmrqUfy01CBdUhUCBNCvyGzjKqYMZwt-iE_T58l245Ote9auxhyBI3ckwOUftM5ZPLi7DMAgHpqtNTWdmeI9iI5wg26eRIkdiBWua5MIkiHTmEumfHbpQOzvFHTF3x9CG3m4.4k1n_lYY1iqap7BC8Oh1-a_MV6MWV9KUGitSlmFWyXY&dib_tag=se&keywords=climatiseur+portable+mobile&qid=1783345622&s=kitchen&sr=1-12",
+      "image": "https://m.media-amazon.com/images/I/71dk7Js4QGL._AC_UY218_.jpg",
+      "status": "unknown",
+      "availability_type": "delivery",
+      "delivery_info": null,
+      "brand": null,
+      "model": null,
+      "btu": null,
+      "stock_info": null,
+      "scraped_at": "2026-07-06T13:47:06.098Z",
+      "first_seen_at": "2026-07-06T13:47:06.098Z",
+      "last_seen_at": "2026-07-06T13:47:06.098Z"
+    },
+    {
+      "store": "Amazon",
+      "title": "12L Rafraîchisseur d'Air, 3 Vitesses, Climatiseur Mobile avec Télécommande, Minuterie 1-12h, Oscillation 60°, Silencieux Climatiseur Portable avec Réservoir amovible pour Camping Chambre Cuisine",
+      "price_eur": 148,
+      "url": "https://www.amazon.fr/Rafra%C3%AEchisseur-Climatiseur-T%C3%A9l%C3%A9commande-Oscillation-Silencieux/dp/B0H6SG5B65/ref=sr_1_2?dib=eyJ2IjoiMSJ9.g3A5QEyDWF7UVBw9E7bfd3VFiYNn2u6pUh_aPxiAIjyZak5zRa2L5WDG6EQ37rxzU3of2CkA5ok9g0uCcsCLtTP7ukWa1zxSxOl7_g5BmrqUfy01CBdUhUCBNCvyGzjKqYMZwt-iE_T58l245Ote9auxhyBI3ckwOUftM5ZPLi7DMAgHpqtNTWdmeI9iI5wg26eRIkdiBWua5MIkiHTmEumfHbpQOzvFHTF3x9CG3m4.4k1n_lYY1iqap7BC8Oh1-a_MV6MWV9KUGitSlmFWyXY&dib_tag=se&keywords=climatiseur+portable+mobile&qid=1783345622&s=kitchen&sr=1-2",
+      "image": "https://m.media-amazon.com/images/I/71+sFsraCHL._AC_UY218_.jpg",
+      "status": "unknown",
+      "availability_type": "delivery",
+      "delivery_info": null,
+      "brand": null,
+      "model": null,
+      "btu": null,
+      "stock_info": null,
+      "scraped_at": "2026-07-06T13:47:06.098Z",
+      "first_seen_at": "2026-07-06T13:47:06.098Z",
+      "last_seen_at": "2026-07-06T13:47:06.098Z"
+    },
+    {
+      "store": "Amazon",
+      "title": "Climatiseur Mobile 4 en 1, Rafraîchisseur d'Air avec Minuterie 1-12H, 3 Vitesses 4 Modes, Réservoir 6L, Télécommande, Portable, pour Chambre, Salon, Bureau et Maison",
+      "price_eur": 209.99,
+      "url": "https://www.amazon.fr/Climatiseur-Rafra%C3%AEchisseur-Minuterie-R%C3%A9servoir-T%C3%A9l%C3%A9commande/dp/B0GS51DZMR/ref=sr_1_11?dib=eyJ2IjoiMSJ9.g3A5QEyDWF7UVBw9E7bfd3VFiYNn2u6pUh_aPxiAIjyZak5zRa2L5WDG6EQ37rxzU3of2CkA5ok9g0uCcsCLtTP7ukWa1zxSxOl7_g5BmrqUfy01CBdUhUCBNCvyGzjKqYMZwt-iE_T58l245Ote9auxhyBI3ckwOUftM5ZPLi7DMAgHpqtNTWdmeI9iI5wg26eRIkdiBWua5MIkiHTmEumfHbpQOzvFHTF3x9CG3m4.4k1n_lYY1iqap7BC8Oh1-a_MV6MWV9KUGitSlmFWyXY&dib_tag=se&keywords=climatiseur+portable+mobile&qid=1783345622&s=kitchen&sr=1-11",
+      "image": "https://m.media-amazon.com/images/I/61oVZ+s7l5L._AC_UY218_.jpg",
+      "status": "unknown",
+      "availability_type": "delivery",
+      "delivery_info": null,
+      "brand": null,
+      "model": null,
+      "btu": null,
+      "stock_info": null,
+      "scraped_at": "2026-07-06T13:47:06.098Z",
+      "first_seen_at": "2026-07-06T13:47:06.098Z",
+      "last_seen_at": "2026-07-06T13:47:06.098Z"
+    },
+    {
+      "store": "Amazon",
+      "title": "Climatiseur De Tente 2700 BTU 280W Compresseur DC 45 DB CE | 3 modes refroidissement, déshumidification et ventilation, panneau, télécommande, timer 1-12 h, pour camping-car et van",
+      "price_eur": 276.47,
+      "url": "https://www.amazon.fr/WDDEYYDS-Climatiseur-Tente-2700-Compresseur/dp/B0H79P3HZ2/ref=sr_1_16?dib=eyJ2IjoiMSJ9.g3A5QEyDWF7UVBw9E7bfd3VFiYNn2u6pUh_aPxiAIjyZak5zRa2L5WDG6EQ37rxzU3of2CkA5ok9g0uCcsCLtTP7ukWa1zxSxOl7_g5BmrqUfy01CBdUhUCBNCvyGzjKqYMZwt-iE_T58l245Ote9auxhyBI3ckwOUftM5ZPLi7DMAgHpqtNTWdmeI9iI5wg26eRIkdiBWua5MIkiHTmEumfHbpQOzvFHTF3x9CG3m4.4k1n_lYY1iqap7BC8Oh1-a_MV6MWV9KUGitSlmFWyXY&dib_tag=se&keywords=climatiseur+portable+mobile&qid=1783345622&s=kitchen&sr=1-16",
+      "image": "https://m.media-amazon.com/images/I/71le-5kid7L._AC_UY218_.jpg",
+      "status": "unknown",
+      "availability_type": "delivery",
+      "delivery_info": null,
+      "brand": null,
+      "model": null,
+      "btu": "2700 BTU",
+      "stock_info": null,
+      "scraped_at": "2026-07-06T13:47:06.098Z",
+      "first_seen_at": "2026-07-06T13:47:06.098Z",
+      "last_seen_at": "2026-07-06T13:47:06.098Z"
+    },
     {
       "store": "Boulanger",
       "title": "Climatiseur\n              DREAME\n              P-Wind 9K-Camel Gold",
@@ -18,9 +120,9 @@
       "model": null,
       "btu": "9000 BTU",
       "stock_info": null,
-      "scraped_at": "2026-07-06T09:02:01.731Z",
+      "scraped_at": "2026-07-06T13:46:32.433Z",
       "first_seen_at": "2026-07-05T05:15:31.063Z",
-      "last_seen_at": "2026-07-06T09:02:01.731Z"
+      "last_seen_at": "2026-07-06T13:46:32.433Z"
     },
     {
       "store": "Boulanger",
@@ -35,9 +137,9 @@
       "model": null,
       "btu": "9000 BTU",
       "stock_info": null,
-      "scraped_at": "2026-07-06T09:02:01.731Z",
+      "scraped_at": "2026-07-06T13:46:32.433Z",
       "first_seen_at": "2026-07-05T05:15:31.063Z",
-      "last_seen_at": "2026-07-06T09:02:01.731Z"
+      "last_seen_at": "2026-07-06T13:46:32.433Z"
     },
     {
       "store": "Boulanger",
@@ -52,9 +154,9 @@
       "model": null,
       "btu": null,
       "stock_info": null,
-      "scraped_at": "2026-07-06T09:02:01.731Z",
+      "scraped_at": "2026-07-06T13:46:32.433Z",
       "first_seen_at": "2026-07-05T05:15:31.063Z",
-      "last_seen_at": "2026-07-06T09:02:01.731Z"
+      "last_seen_at": "2026-07-06T13:46:32.433Z"
     },
     {
       "store": "Boulanger",
@@ -69,9 +171,9 @@
       "model": null,
       "btu": null,
       "stock_info": null,
-      "scraped_at": "2026-07-06T09:02:01.731Z",
+      "scraped_at": "2026-07-06T13:46:32.433Z",
       "first_seen_at": "2026-07-05T05:15:31.063Z",
-      "last_seen_at": "2026-07-06T09:02:01.731Z"
+      "last_seen_at": "2026-07-06T13:46:32.433Z"
     },
     {
       "store": "Boulanger",
@@ -86,9 +188,9 @@
       "model": null,
       "btu": null,
       "stock_info": null,
-      "scraped_at": "2026-07-06T09:02:01.731Z",
+      "scraped_at": "2026-07-06T13:46:32.433Z",
       "first_seen_at": "2026-07-05T05:15:31.063Z",
-      "last_seen_at": "2026-07-06T09:02:01.731Z"
+      "last_seen_at": "2026-07-06T13:46:32.433Z"
     },
     {
       "store": "Boulanger",
@@ -103,9 +205,9 @@
       "model": null,
       "btu": null,
       "stock_info": null,
-      "scraped_at": "2026-07-06T09:02:01.731Z",
+      "scraped_at": "2026-07-06T13:46:32.433Z",
       "first_seen_at": "2026-07-05T05:15:31.063Z",
-      "last_seen_at": "2026-07-06T09:02:01.731Z"
+      "last_seen_at": "2026-07-06T13:46:32.433Z"
     },
     {
       "store": "Boulanger",
@@ -120,9 +222,26 @@
       "model": null,
       "btu": null,
       "stock_info": null,
-      "scraped_at": "2026-07-06T09:02:01.731Z",
+      "scraped_at": "2026-07-06T13:46:32.433Z",
       "first_seen_at": "2026-07-05T13:41:58.079Z",
-      "last_seen_at": "2026-07-06T09:02:01.731Z"
+      "last_seen_at": "2026-07-06T13:46:32.433Z"
+    },
+    {
+      "store": "Boulanger",
+      "title": "Climatiseur réversible\n              KOOPER\n              BP209H",
+      "price_eur": 899,
+      "url": "https://www.boulanger.com/ref/9000992892",
+      "image": "https://boulanger.scene7.com/is/image/Boulanger/8690842422546_h_f_l_0?wid=120&hei=120&resMode=sharp2&op_usm=1.75,0.3,2,0&fmt=png-alpha",
+      "status": "unknown",
+      "availability_type": "delivery",
+      "delivery_info": null,
+      "brand": null,
+      "model": null,
+      "btu": null,
+      "stock_info": null,
+      "scraped_at": "2026-07-06T13:46:32.432Z",
+      "first_seen_at": "2026-07-06T13:46:32.432Z",
+      "last_seen_at": "2026-07-06T13:46:32.432Z"
     },
     {
       "store": "Boulanger",
@@ -137,9 +256,43 @@
       "model": null,
       "btu": null,
       "stock_info": null,
-      "scraped_at": "2026-07-06T09:02:01.731Z",
+      "scraped_at": "2026-07-06T13:46:32.433Z",
       "first_seen_at": "2026-07-05T05:15:31.063Z",
-      "last_seen_at": "2026-07-06T09:02:01.731Z"
+      "last_seen_at": "2026-07-06T13:46:32.433Z"
+    },
+    {
+      "store": "Boulanger",
+      "title": "Climatiseur réversible\n              ZEPHIR\n              ZPO12000H",
+      "price_eur": 1290,
+      "url": "https://www.boulanger.com/ref/9000998459",
+      "image": "https://boulanger.scene7.com/is/image/Boulanger/8019101726940_h_f_l_0?wid=120&hei=120&resMode=sharp2&op_usm=1.75,0.3,2,0&fmt=png-alpha",
+      "status": "unknown",
+      "availability_type": "delivery",
+      "delivery_info": null,
+      "brand": null,
+      "model": null,
+      "btu": null,
+      "stock_info": null,
+      "scraped_at": "2026-07-06T13:46:32.432Z",
+      "first_seen_at": "2026-07-06T13:46:32.432Z",
+      "last_seen_at": "2026-07-06T13:46:32.432Z"
+    },
+    {
+      "store": "Boulanger",
+      "title": "Climatiseur réversible\n              TESLA\n              TTMYB-12CHW",
+      "price_eur": 1290,
+      "url": "https://www.boulanger.com/ref/9000990340",
+      "image": "https://boulanger.scene7.com/is/image/Boulanger/8606034700859_h_f_l_0?wid=120&hei=120&resMode=sharp2&op_usm=1.75,0.3,2,0&fmt=png-alpha",
+      "status": "unknown",
+      "availability_type": "delivery",
+      "delivery_info": null,
+      "brand": null,
+      "model": null,
+      "btu": null,
+      "stock_info": null,
+      "scraped_at": "2026-07-06T13:46:32.433Z",
+      "first_seen_at": "2026-07-06T13:46:32.433Z",
+      "last_seen_at": "2026-07-06T13:46:32.433Z"
     },
     {
       "store": "Boulanger",
@@ -154,9 +307,9 @@
       "model": null,
       "btu": "18000 BTU",
       "stock_info": null,
-      "scraped_at": "2026-07-06T09:02:01.731Z",
+      "scraped_at": "2026-07-06T13:46:32.433Z",
       "first_seen_at": "2026-07-05T05:15:31.063Z",
-      "last_seen_at": "2026-07-06T09:02:01.731Z"
+      "last_seen_at": "2026-07-06T13:46:32.433Z"
     },
     {
       "store": "Boulanger",
@@ -171,9 +324,9 @@
       "model": null,
       "btu": null,
       "stock_info": null,
-      "scraped_at": "2026-07-06T09:02:01.730Z",
+      "scraped_at": "2026-07-06T13:46:32.432Z",
       "first_seen_at": "2026-07-05T05:15:31.062Z",
-      "last_seen_at": "2026-07-06T09:02:01.730Z"
+      "last_seen_at": "2026-07-06T13:46:32.432Z"
     },
     {
       "store": "Boulanger",
@@ -188,9 +341,9 @@
       "model": null,
       "btu": null,
       "stock_info": null,
-      "scraped_at": "2026-07-06T09:02:01.730Z",
+      "scraped_at": "2026-07-06T13:46:32.433Z",
       "first_seen_at": "2026-07-05T05:15:31.062Z",
-      "last_seen_at": "2026-07-06T09:02:01.730Z"
+      "last_seen_at": "2026-07-06T13:46:32.433Z"
     },
     {
       "store": "Boulanger",
@@ -205,9 +358,9 @@
       "model": null,
       "btu": null,
       "stock_info": null,
-      "scraped_at": "2026-07-06T09:02:01.731Z",
+      "scraped_at": "2026-07-06T13:46:32.433Z",
       "first_seen_at": "2026-07-05T05:15:31.063Z",
-      "last_seen_at": "2026-07-06T09:02:01.731Z"
+      "last_seen_at": "2026-07-06T13:46:32.433Z"
     },
     {
       "store": "Boulanger",
@@ -222,9 +375,9 @@
       "model": null,
       "btu": null,
       "stock_info": null,
-      "scraped_at": "2026-07-06T09:02:01.731Z",
+      "scraped_at": "2026-07-06T13:46:32.433Z",
       "first_seen_at": "2026-07-05T05:15:31.062Z",
-      "last_seen_at": "2026-07-06T09:02:01.731Z"
+      "last_seen_at": "2026-07-06T13:46:32.433Z"
     },
     {
       "store": "Boulanger",
@@ -239,9 +392,9 @@
       "model": null,
       "btu": "12000 BTU",
       "stock_info": null,
-      "scraped_at": "2026-07-06T09:02:01.730Z",
+      "scraped_at": "2026-07-06T13:46:32.433Z",
       "first_seen_at": "2026-07-05T05:15:31.062Z",
-      "last_seen_at": "2026-07-06T09:02:01.730Z"
+      "last_seen_at": "2026-07-06T13:46:32.433Z"
     }
   ]
 }
