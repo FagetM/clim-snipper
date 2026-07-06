@@ -1,0 +1,23 @@
+{
+  "count": 1,
+  "items": [
+    {
+      "store": "Amazon",
+      "title": "DREAME P-Wind10 7000 BTU Climatiseur portable 3-en-1 : Refroidissement, Déshumidification et Ventilateur, flux d’air 3D, contrôle via appli et télécommande, mode sommeil, installation facile",
+      "price_eur": 299.17,
+      "url": "https://www.amazon.fr/DREAME-P-Wind10-Climatiseur-portable-3-en-1/dp/B0GXYL6QJX/ref=sr_1_3?dib=eyJ2IjoiMSJ9.gkO-1ixdC7m4pA8sFdI01lkjHj8pjFoL6PGJzHF6EDTaA5nLtuBvAZOVvrqf5FrNFDgFi3nYrp4MPEmThMJew54l68KMsxpIc8abCqfsI_Rbgda8OIwAwIXFHPI7O_kbbgw7Y-Eu6cpi81PYPflbELoaBx_-61TidnbTOCOORbEnzR2VD2YpdtUMO17RPqsn5oeW81PFBkgeUbuJ5y4fIqC_Og2IzO856Cglt_zHGOE.GLNkbRWyFJcJ2pakP8M5dP2nXdRWVzG99H92XVDH2fc&dib_tag=se&keywords=climatiseur+portable+mobile&qid=1783364208&s=kitchen&sr=1-3",
+      "image": "https://m.media-amazon.com/images/I/61fdNibRa8L._AC_UY218_.jpg",
+      "status": "in_stock",
+      "availability_type": "delivery",
+      "delivery_info": "Livraison à 180,66 €Habituellement expédié sous 1 à 2 moisAjouter au panierAA+++DFiche produitEfficacité énergétiqueFiche produit",
+      "brand": null,
+      "model": null,
+      "btu": "7000 BTU",
+      "stock_info": "Livraison à 180,66 €Habituellement expédié sous 1 à 2 moisAjouter au panierAA+++DFiche produitEfficacité énergétiqueFiche produit",
+      "scraped_at": "2026-07-06T18:56:52.067Z",
+      "first_seen_at": "2026-07-06T18:56:52.067Z",
+      "last_seen_at": "2026-07-06T18:56:52.067Z"
+    }
+  ],
+  "detected_at": "2026-07-06T18:58:15.324Z"
+}
