@@ -307,7 +307,7 @@ async function main() {
   } catch (err) { console.error('Browser:', err.message); process.exit(1); }
 
   const allProducts = [];
-  const CONCURRENCY = 5; // pages en parallele
+  const CONCURRENCY = 3; // pages en parallele
   try {
     // Preparer chaque tache
     const tasks = STORES.map(store => async () => {
@@ -342,7 +342,7 @@ async function main() {
   let products = deduplicate(allProducts);
   
   // Enseignes avec magasins physiques dans les villes -> tagger avec toutes les villes
-  const physicalStoreNames = ['Leroy Merlin','Castorama','Carrefour','Auchan','E.Leclerc','Mr Bricolage','Brico Depot','But','Electro Depot','Intermarché','Magasins U','Brico Marché','GiFi'];
+  const physicalStoreNames = ['Boulanger','Darty','Fnac','Leroy Merlin','Castorama','Carrefour','Auchan','E.Leclerc','Mr Bricolage','Brico Depot','But','Conforama','Electro Depot','Intermarché','Magasins U','Brico Marché','GiFi'];
   const basePhysicalNames = physicalStoreNames.map(n => n.toLowerCase());
   
   products = products.map(p => {

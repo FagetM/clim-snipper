@@ -1,15 +1,15 @@
 {
-  "scanned_at": "2026-07-07T21:25:58.353Z",
+  "scanned_at": "2026-07-07T21:30:44.537Z",
   "total": 21,
   "in_stock": 3,
-  "tours_available": 9,
+  "tours_available": 17,
   "delivery_available": 21,
   "products": [
     {
       "store": "Amazon",
       "title": "12L Rafraîchisseur d'Air, 3 Vitesses, Climatiseur Mobile avec Télécommande, Minuterie 1-12h, Oscillation 60°, Silencieux Climatiseur Portable avec Réservoir amovible pour Camping Chambre Cuisine",
       "price_eur": 154,
-      "url": "https://www.amazon.fr/Rafra%C3%AEchisseur-Climatiseur-T%C3%A9l%C3%A9commande-Oscillation-Silencieux/dp/B0H6SG5B65/ref=sr_1_21_mod_primary_new?dib=eyJ2IjoiMSJ9.3FkEqrNQrjHdccbj5xUX0m32zDVGmlWAwHXEboin9C2z0-A6WvcisZTyADGsTZbpa3Ozmq3bGRLrczLfG90sbTx0AoM4_AGEm7tpAkR8tpPSiGx-NVeR6P2HNzWQiaW8yRWZuHvbGdV9YuJSQauA5wQNN3r8mr9qXienGurDHJ1Pp3ZUOYEQTnYnmxgNnISGD2-5xGbRc8cYtDok_CmIAhUqo9aVK4o0kwflXmkzUj4.eZSCxo6u605sS869UAeF2i290mr7oXh7U8oqTRUWB9s&dib_tag=se&keywords=climatiseur+portable+mobile&qid=1783459493&s=kitchen&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sr=1-21",
+      "url": "https://www.amazon.fr/Rafra%C3%AEchisseur-Climatiseur-T%C3%A9l%C3%A9commande-Oscillation-Silencieux/dp/B0H6SG5B65/ref=sr_1_21_mod_primary_new?dib=eyJ2IjoiMSJ9.3FkEqrNQrjHdccbj5xUX0m32zDVGmlWAwHXEboin9C2z0-A6WvcisZTyADGsTZbpa3Ozmq3bGRLrczLfG90sbTx0AoM4_AGEm7tpAkR8tpPSiGx-NVeR6P2HNzWQiaW8yRWZuHvbGdV9YuJSQauA5wQNN3r8mr9qXienGurDHJ1Pp3ZUOYEQTnYnmxgNnISGD2-5xGbRc8cYtDok_CmIAhUqo9aVK4o0kwflXmkzUj4.DbIdobZMll16-cEPeroHcIOgvZbcGtFPbkMZ9aRXe4w&dib_tag=se&keywords=climatiseur+portable+mobile&qid=1783459758&s=kitchen&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sr=1-21",
       "image": "https://m.media-amazon.com/images/I/71+sFsraCHL._AC_UY218_.jpg",
       "status": "low_stock",
       "availability_type": "delivery",
@@ -19,15 +19,15 @@
       "btu": null,
       "city": null,
       "stock_info": "Livraison GRATUITE 31 juil. | en stock.",
-      "scraped_at": "2026-07-07T21:24:56.340Z",
+      "scraped_at": "2026-07-07T21:29:22.273Z",
       "first_seen_at": "2026-07-07T21:16:32.464Z",
-      "last_seen_at": "2026-07-07T21:24:56.340Z"
+      "last_seen_at": "2026-07-07T21:29:22.273Z"
     },
     {
       "store": "Amazon",
       "title": "DREAME P-Wind10 9000 BTU Climatiseur portable 3-en-1 : Refroidissement, Déshumidification et Ventilateur, flux d’air 3D, contrôle via appli et télécommande, mode sommeil, installation facile",
       "price_eur": 399,
-      "url": "https://www.amazon.fr/DREAME-P-Wind10-Climatiseur-portable-3-en-1/dp/B0GXYPL71B/ref=sr_1_6?dib=eyJ2IjoiMSJ9.3FkEqrNQrjHdccbj5xUX0m32zDVGmlWAwHXEboin9C2z0-A6WvcisZTyADGsTZbpa3Ozmq3bGRLrczLfG90sbTx0AoM4_AGEm7tpAkR8tpPSiGx-NVeR6P2HNzWQiaW8yRWZuHvbGdV9YuJSQauA5wQNN3r8mr9qXienGurDHJ1Pp3ZUOYEQTnYnmxgNnISGD2-5xGbRc8cYtDok_CmIAhUqo9aVK4o0kwflXmkzUj4.eZSCxo6u605sS869UAeF2i290mr7oXh7U8oqTRUWB9s&dib_tag=se&keywords=climatiseur+portable+mobile&qid=1783459493&s=kitchen&sr=1-6",
+      "url": "https://www.amazon.fr/DREAME-P-Wind10-Climatiseur-portable-3-en-1/dp/B0GXYPL71B/ref=sr_1_6?dib=eyJ2IjoiMSJ9.3FkEqrNQrjHdccbj5xUX0m32zDVGmlWAwHXEboin9C2z0-A6WvcisZTyADGsTZbpa3Ozmq3bGRLrczLfG90sbTx0AoM4_AGEm7tpAkR8tpPSiGx-NVeR6P2HNzWQiaW8yRWZuHvbGdV9YuJSQauA5wQNN3r8mr9qXienGurDHJ1Pp3ZUOYEQTnYnmxgNnISGD2-5xGbRc8cYtDok_CmIAhUqo9aVK4o0kwflXmkzUj4.DbIdobZMll16-cEPeroHcIOgvZbcGtFPbkMZ9aRXe4w&dib_tag=se&keywords=climatiseur+portable+mobile&qid=1783459758&s=kitchen&sr=1-6",
       "image": "https://m.media-amazon.com/images/I/61fdNibRa8L._AC_UY218_.jpg",
       "status": "low_stock",
       "availability_type": "delivery",
@@ -37,15 +37,15 @@
       "btu": "9000 BTU",
       "city": null,
       "stock_info": "Livraison GRATUITE 1 - 22 aoûtAjouter au panierAA+++DFiche produitEfficacité énergétiqueFiche produit",
-      "scraped_at": "2026-07-07T21:24:56.332Z",
+      "scraped_at": "2026-07-07T21:29:22.272Z",
       "first_seen_at": "2026-07-07T21:16:32.457Z",
-      "last_seen_at": "2026-07-07T21:24:56.332Z"
+      "last_seen_at": "2026-07-07T21:29:22.272Z"
     },
     {
       "store": "Amazon",
       "title": "De'Longhi Pinguino Compact ES72 YOUNG, Modèle 2022, Climatiseur Mobile Silencieux, 8.300 BTU/h, 2,1 kW, 60m3, Gaz R290, Fonction Déshumidificateur, 24 Heures Timer, Classe Énergétique A, Blanc",
       "price_eur": 419.99,
-      "url": "https://www.amazon.fr/DeLonghi-Climatiseur-Silencieux-D%C3%A9shumidificateur-%C3%89nerg%C3%A9tique/dp/B09XRBLHSV/ref=sr_1_19?dib=eyJ2IjoiMSJ9.3FkEqrNQrjHdccbj5xUX0m32zDVGmlWAwHXEboin9C2z0-A6WvcisZTyADGsTZbpa3Ozmq3bGRLrczLfG90sbTx0AoM4_AGEm7tpAkR8tpPSiGx-NVeR6P2HNzWQiaW8yRWZuHvbGdV9YuJSQauA5wQNN3r8mr9qXienGurDHJ1Pp3ZUOYEQTnYnmxgNnISGD2-5xGbRc8cYtDok_CmIAhUqo9aVK4o0kwflXmkzUj4.eZSCxo6u605sS869UAeF2i290mr7oXh7U8oqTRUWB9s&dib_tag=se&keywords=climatiseur+portable+mobile&qid=1783459493&s=kitchen&sr=1-19",
+      "url": "https://www.amazon.fr/DeLonghi-Climatiseur-Silencieux-D%C3%A9shumidificateur-%C3%89nerg%C3%A9tique/dp/B09XRBLHSV/ref=sr_1_19?dib=eyJ2IjoiMSJ9.3FkEqrNQrjHdccbj5xUX0m32zDVGmlWAwHXEboin9C2z0-A6WvcisZTyADGsTZbpa3Ozmq3bGRLrczLfG90sbTx0AoM4_AGEm7tpAkR8tpPSiGx-NVeR6P2HNzWQiaW8yRWZuHvbGdV9YuJSQauA5wQNN3r8mr9qXienGurDHJ1Pp3ZUOYEQTnYnmxgNnISGD2-5xGbRc8cYtDok_CmIAhUqo9aVK4o0kwflXmkzUj4.DbIdobZMll16-cEPeroHcIOgvZbcGtFPbkMZ9aRXe4w&dib_tag=se&keywords=climatiseur+portable+mobile&qid=1783459758&s=kitchen&sr=1-19",
       "image": "https://m.media-amazon.com/images/I/51xuT4llE+L._AC_UY218_.jpg",
       "status": "low_stock",
       "availability_type": "delivery",
@@ -55,9 +55,9 @@
       "btu": "300 BTU",
       "city": null,
       "stock_info": "Livraison GRATUITEHabituellement expédié sous 1 à 2 moisAjouter au panierAA+++DFiche produitEfficacité énergétiqueFiche produit",
-      "scraped_at": "2026-07-07T21:24:56.340Z",
+      "scraped_at": "2026-07-07T21:29:22.273Z",
       "first_seen_at": "2026-07-07T21:16:32.463Z",
-      "last_seen_at": "2026-07-07T21:24:56.340Z"
+      "last_seen_at": "2026-07-07T21:29:22.273Z"
     },
     {
       "store": "Carrefour",
@@ -71,17 +71,17 @@
       "brand": null,
       "model": null,
       "btu": null,
-      "city": null,
+      "city": "Bressuire, Parthenay, Thouars, Chinon, Cholet",
       "stock_info": null,
-      "scraped_at": "2026-07-07T21:25:36.101Z",
-      "first_seen_at": "2026-07-07T21:25:36.101Z",
-      "last_seen_at": "2026-07-07T21:25:36.101Z"
+      "scraped_at": "2026-07-07T21:29:54.467Z",
+      "first_seen_at": "2026-07-07T21:29:54.467Z",
+      "last_seen_at": "2026-07-07T21:29:54.467Z"
     },
     {
       "store": "Amazon",
       "title": "Climatiseur Mobile 4 en 1, Rafraîchisseur d'Air avec Minuterie 1-12H, 3 Vitesses 4 Modes, Réservoir 6L, Télécommande, Portable, pour Chambre, Salon, Bureau et Maison",
       "price_eur": 219.99,
-      "url": "https://www.amazon.fr/Climatiseur-Rafra%C3%AEchisseur-Minuterie-R%C3%A9servoir-T%C3%A9l%C3%A9commande/dp/B0GS51DZMR/ref=sr_1_11?dib=eyJ2IjoiMSJ9.3FkEqrNQrjHdccbj5xUX0m32zDVGmlWAwHXEboin9C2z0-A6WvcisZTyADGsTZbpa3Ozmq3bGRLrczLfG90sbTx0AoM4_AGEm7tpAkR8tpPSiGx-NVeR6P2HNzWQiaW8yRWZuHvbGdV9YuJSQauA5wQNN3r8mr9qXienGurDHJ1Pp3ZUOYEQTnYnmxgNnISGD2-5xGbRc8cYtDok_CmIAhUqo9aVK4o0kwflXmkzUj4.eZSCxo6u605sS869UAeF2i290mr7oXh7U8oqTRUWB9s&dib_tag=se&keywords=climatiseur+portable+mobile&qid=1783459493&s=kitchen&sr=1-11",
+      "url": "https://www.amazon.fr/Climatiseur-Rafra%C3%AEchisseur-Minuterie-R%C3%A9servoir-T%C3%A9l%C3%A9commande/dp/B0GS51DZMR/ref=sr_1_11?dib=eyJ2IjoiMSJ9.3FkEqrNQrjHdccbj5xUX0m32zDVGmlWAwHXEboin9C2z0-A6WvcisZTyADGsTZbpa3Ozmq3bGRLrczLfG90sbTx0AoM4_AGEm7tpAkR8tpPSiGx-NVeR6P2HNzWQiaW8yRWZuHvbGdV9YuJSQauA5wQNN3r8mr9qXienGurDHJ1Pp3ZUOYEQTnYnmxgNnISGD2-5xGbRc8cYtDok_CmIAhUqo9aVK4o0kwflXmkzUj4.DbIdobZMll16-cEPeroHcIOgvZbcGtFPbkMZ9aRXe4w&dib_tag=se&keywords=climatiseur+portable+mobile&qid=1783459758&s=kitchen&sr=1-11",
       "image": "https://m.media-amazon.com/images/I/61oVZ+s7l5L._AC_UY218_.jpg",
       "status": "unknown",
       "availability_type": "delivery",
@@ -91,9 +91,9 @@
       "btu": null,
       "city": null,
       "stock_info": "Livraison GRATUITE jeu. | livraison accélérée lun.",
-      "scraped_at": "2026-07-07T21:24:56.340Z",
+      "scraped_at": "2026-07-07T21:29:22.272Z",
       "first_seen_at": "2026-07-07T21:16:32.463Z",
-      "last_seen_at": "2026-07-07T21:24:56.340Z"
+      "last_seen_at": "2026-07-07T21:29:22.272Z"
     },
     {
       "store": "Carrefour",
@@ -107,11 +107,11 @@
       "brand": null,
       "model": null,
       "btu": null,
-      "city": null,
+      "city": "Bressuire, Parthenay, Thouars, Chinon, Cholet",
       "stock_info": null,
-      "scraped_at": "2026-07-07T21:25:36.101Z",
-      "first_seen_at": "2026-07-07T21:25:36.101Z",
-      "last_seen_at": "2026-07-07T21:25:36.101Z"
+      "scraped_at": "2026-07-07T21:29:54.467Z",
+      "first_seen_at": "2026-07-07T21:29:54.467Z",
+      "last_seen_at": "2026-07-07T21:29:54.467Z"
     },
     {
       "store": "Carrefour",
@@ -125,11 +125,11 @@
       "brand": null,
       "model": null,
       "btu": "12000 BTU",
-      "city": null,
+      "city": "Bressuire, Parthenay, Thouars, Chinon, Cholet",
       "stock_info": null,
-      "scraped_at": "2026-07-07T21:25:36.100Z",
-      "first_seen_at": "2026-07-07T21:25:36.100Z",
-      "last_seen_at": "2026-07-07T21:25:36.100Z"
+      "scraped_at": "2026-07-07T21:29:54.462Z",
+      "first_seen_at": "2026-07-07T21:29:54.462Z",
+      "last_seen_at": "2026-07-07T21:29:54.462Z"
     },
     {
       "store": "Boulanger",
@@ -138,16 +138,16 @@
       "url": "https://www.boulanger.com/ref/9000602747",
       "image": "https://boulanger.scene7.com/is/image/Boulanger/3701410401551_h_f_l_0?wid=120&hei=120&resMode=sharp2&op_usm=1.75,0.3,2,0&fmt=png-alpha",
       "status": "unknown",
-      "availability_type": "delivery",
+      "availability_type": "both",
       "delivery_info": null,
       "brand": "Optimea",
       "model": null,
       "btu": null,
-      "city": null,
+      "city": "Bressuire, Parthenay, Thouars, Chinon, Cholet",
       "stock_info": null,
-      "scraped_at": "2026-07-07T21:24:59.260Z",
+      "scraped_at": "2026-07-07T21:29:09.155Z",
       "first_seen_at": "2026-07-07T18:28:56.271Z",
-      "last_seen_at": "2026-07-07T21:24:59.260Z"
+      "last_seen_at": "2026-07-07T21:29:09.155Z"
     },
     {
       "store": "Carrefour",
@@ -161,11 +161,11 @@
       "brand": null,
       "model": null,
       "btu": "5200 BTU",
-      "city": null,
+      "city": "Bressuire, Parthenay, Thouars, Chinon, Cholet",
       "stock_info": null,
-      "scraped_at": "2026-07-07T21:25:36.101Z",
-      "first_seen_at": "2026-07-07T21:25:36.101Z",
-      "last_seen_at": "2026-07-07T21:25:36.101Z"
+      "scraped_at": "2026-07-07T21:29:54.467Z",
+      "first_seen_at": "2026-07-07T21:29:54.467Z",
+      "last_seen_at": "2026-07-07T21:29:54.467Z"
     },
     {
       "store": "Carrefour",
@@ -179,11 +179,11 @@
       "brand": null,
       "model": null,
       "btu": "6000 BTU",
-      "city": null,
+      "city": "Bressuire, Parthenay, Thouars, Chinon, Cholet",
       "stock_info": null,
-      "scraped_at": "2026-07-07T21:25:36.101Z",
-      "first_seen_at": "2026-07-07T21:25:36.101Z",
-      "last_seen_at": "2026-07-07T21:25:36.101Z"
+      "scraped_at": "2026-07-07T21:29:54.467Z",
+      "first_seen_at": "2026-07-07T21:29:54.467Z",
+      "last_seen_at": "2026-07-07T21:29:54.467Z"
     },
     {
       "store": "Carrefour",
@@ -197,11 +197,11 @@
       "brand": null,
       "model": null,
       "btu": "7000 BTU",
-      "city": null,
+      "city": "Bressuire, Parthenay, Thouars, Chinon, Cholet",
       "stock_info": null,
-      "scraped_at": "2026-07-07T21:25:36.101Z",
-      "first_seen_at": "2026-07-07T21:25:36.101Z",
-      "last_seen_at": "2026-07-07T21:25:36.101Z"
+      "scraped_at": "2026-07-07T21:29:54.467Z",
+      "first_seen_at": "2026-07-07T21:29:54.467Z",
+      "last_seen_at": "2026-07-07T21:29:54.467Z"
     },
     {
       "store": "Carrefour",
@@ -215,11 +215,11 @@
       "brand": null,
       "model": null,
       "btu": "7500 BTU",
-      "city": null,
+      "city": "Bressuire, Parthenay, Thouars, Chinon, Cholet",
       "stock_info": null,
-      "scraped_at": "2026-07-07T21:25:36.101Z",
-      "first_seen_at": "2026-07-07T21:25:36.101Z",
-      "last_seen_at": "2026-07-07T21:25:36.101Z"
+      "scraped_at": "2026-07-07T21:29:54.467Z",
+      "first_seen_at": "2026-07-07T21:29:54.467Z",
+      "last_seen_at": "2026-07-07T21:29:54.467Z"
     },
     {
       "store": "Boulanger",
@@ -228,16 +228,16 @@
       "url": "https://www.boulanger.com/ref/8008803",
       "image": "https://boulanger.scene7.com/is/image/Boulanger/3497674162894_h_f_l_0?wid=120&hei=120&resMode=sharp2&op_usm=1.75,0.3,2,0&fmt=png-alpha",
       "status": "unknown",
-      "availability_type": "delivery",
+      "availability_type": "both",
       "delivery_info": null,
       "brand": "Essentielb",
       "model": null,
       "btu": null,
-      "city": null,
+      "city": "Bressuire, Parthenay, Thouars, Chinon, Cholet",
       "stock_info": null,
-      "scraped_at": "2026-07-07T21:24:59.260Z",
+      "scraped_at": "2026-07-07T21:29:09.155Z",
       "first_seen_at": "2026-07-07T18:28:56.271Z",
-      "last_seen_at": "2026-07-07T21:24:59.260Z"
+      "last_seen_at": "2026-07-07T21:29:09.155Z"
     },
     {
       "store": "Boulanger",
@@ -246,16 +246,16 @@
       "url": "https://www.boulanger.com/ref/9000256698",
       "image": "https://boulanger.scene7.com/is/image/Boulanger/4026415153205_h_f_l_0?wid=120&hei=120&resMode=sharp2&op_usm=1.75,0.3,2,0&fmt=png-alpha",
       "status": "unknown",
-      "availability_type": "delivery",
+      "availability_type": "both",
       "delivery_info": null,
       "brand": "Remko",
       "model": null,
       "btu": null,
-      "city": null,
+      "city": "Bressuire, Parthenay, Thouars, Chinon, Cholet",
       "stock_info": null,
-      "scraped_at": "2026-07-07T21:24:59.259Z",
+      "scraped_at": "2026-07-07T21:29:09.155Z",
       "first_seen_at": "2026-07-07T18:28:56.270Z",
-      "last_seen_at": "2026-07-07T21:24:59.259Z"
+      "last_seen_at": "2026-07-07T21:29:09.155Z"
     },
     {
       "store": "Carrefour",
@@ -269,11 +269,11 @@
       "brand": null,
       "model": null,
       "btu": "12000 BTU",
-      "city": null,
+      "city": "Bressuire, Parthenay, Thouars, Chinon, Cholet",
       "stock_info": null,
-      "scraped_at": "2026-07-07T21:25:36.101Z",
-      "first_seen_at": "2026-07-07T21:25:36.101Z",
-      "last_seen_at": "2026-07-07T21:25:36.101Z"
+      "scraped_at": "2026-07-07T21:29:54.467Z",
+      "first_seen_at": "2026-07-07T21:29:54.467Z",
+      "last_seen_at": "2026-07-07T21:29:54.467Z"
     },
     {
       "store": "Boulanger",
@@ -282,16 +282,16 @@
       "url": "https://www.boulanger.com/ref/1222281",
       "image": "https://boulanger.scene7.com/is/image/Boulanger/4895251630900_h_f_l_0?wid=120&hei=120&resMode=sharp2&op_usm=1.75,0.3,2,0&fmt=png-alpha",
       "status": "unknown",
-      "availability_type": "delivery",
+      "availability_type": "both",
       "delivery_info": null,
       "brand": "Ecoflow",
       "model": null,
       "btu": null,
-      "city": null,
+      "city": "Bressuire, Parthenay, Thouars, Chinon, Cholet",
       "stock_info": null,
-      "scraped_at": "2026-07-07T21:24:59.259Z",
+      "scraped_at": "2026-07-07T21:29:09.154Z",
       "first_seen_at": "2026-07-07T18:28:56.270Z",
-      "last_seen_at": "2026-07-07T21:24:59.259Z"
+      "last_seen_at": "2026-07-07T21:29:09.154Z"
     },
     {
       "store": "Carrefour",
@@ -305,11 +305,11 @@
       "brand": "Delonghi",
       "model": null,
       "btu": null,
-      "city": null,
+      "city": "Bressuire, Parthenay, Thouars, Chinon, Cholet",
       "stock_info": null,
-      "scraped_at": "2026-07-07T21:25:36.101Z",
-      "first_seen_at": "2026-07-07T21:25:36.101Z",
-      "last_seen_at": "2026-07-07T21:25:36.101Z"
+      "scraped_at": "2026-07-07T21:29:54.467Z",
+      "first_seen_at": "2026-07-07T21:29:54.467Z",
+      "last_seen_at": "2026-07-07T21:29:54.467Z"
     },
     {
       "store": "Boulanger",
@@ -318,16 +318,16 @@
       "url": "https://www.boulanger.com/ref/1155712",
       "image": "https://boulanger.scene7.com/is/image/Boulanger/8716164994193_h_f_l_0?wid=120&hei=120&resMode=sharp2&op_usm=1.75,0.3,2,0&fmt=png-alpha",
       "status": "unknown",
-      "availability_type": "delivery",
+      "availability_type": "both",
       "delivery_info": null,
       "brand": "Duux",
       "model": null,
       "btu": "18000 BTU",
-      "city": null,
+      "city": "Bressuire, Parthenay, Thouars, Chinon, Cholet",
       "stock_info": null,
-      "scraped_at": "2026-07-07T21:24:59.260Z",
+      "scraped_at": "2026-07-07T21:29:09.155Z",
       "first_seen_at": "2026-07-07T18:28:56.271Z",
-      "last_seen_at": "2026-07-07T21:24:59.260Z"
+      "last_seen_at": "2026-07-07T21:29:09.155Z"
     },
     {
       "store": "Boulanger",
@@ -336,16 +336,16 @@
       "url": "https://www.boulanger.com/ref/1242876",
       "image": "https://boulanger.scene7.com/is/image/Boulanger/6979005521190_h_f_l_0?wid=120&hei=120&resMode=sharp2&op_usm=1.75,0.3,2,0&fmt=png-alpha",
       "status": "out_of_stock",
-      "availability_type": "delivery",
+      "availability_type": "both",
       "delivery_info": "indisponible Retrait indisponible Livraison indisponible",
       "brand": "Dreame",
       "model": null,
       "btu": "9000 BTU",
-      "city": null,
+      "city": "Bressuire, Parthenay, Thouars, Chinon, Cholet",
       "stock_info": "indisponible Retrait indisponible Livraison indisponible",
-      "scraped_at": "2026-07-07T21:24:59.260Z",
+      "scraped_at": "2026-07-07T21:29:09.155Z",
       "first_seen_at": "2026-07-07T18:28:56.271Z",
-      "last_seen_at": "2026-07-07T21:24:59.260Z"
+      "last_seen_at": "2026-07-07T21:29:09.155Z"
     },
     {
       "store": "Boulanger",
@@ -354,16 +354,16 @@
       "url": "https://www.boulanger.com/ref/1242875",
       "image": "https://boulanger.scene7.com/is/image/Boulanger/6979005521206_h_f_l_0?wid=120&hei=120&resMode=sharp2&op_usm=1.75,0.3,2,0&fmt=png-alpha",
       "status": "out_of_stock",
-      "availability_type": "delivery",
+      "availability_type": "both",
       "delivery_info": "indisponible Retrait indisponible Livraison indisponible",
       "brand": "Dreame",
       "model": null,
       "btu": "9000 BTU",
-      "city": null,
+      "city": "Bressuire, Parthenay, Thouars, Chinon, Cholet",
       "stock_info": "indisponible Retrait indisponible Livraison indisponible",
-      "scraped_at": "2026-07-07T21:24:59.260Z",
+      "scraped_at": "2026-07-07T21:29:09.155Z",
       "first_seen_at": "2026-07-07T18:28:56.271Z",
-      "last_seen_at": "2026-07-07T21:24:59.260Z"
+      "last_seen_at": "2026-07-07T21:29:09.155Z"
     },
     {
       "store": "Boulanger",
@@ -372,16 +372,16 @@
       "url": "https://www.boulanger.com/",
       "image": "https://www.boulanger.com/etc.clientlibs/boulanger-site/clientlibs/wpk.app/resources/assets/svg/chevron2.svg",
       "status": "out_of_stock",
-      "availability_type": "delivery",
+      "availability_type": "both",
       "delivery_info": "indisponible Retrait indisponible Livraison indisponible Nouveauté Comparer DREAME Climatiseur DREAME P-Wind 9K-Black Gold Revendre votre appareil Refroidir Label énergie froid : A, Silencieux (65dB) Bluetooth L x H x P : 28. | indisponible Retrait indisponible Livraison indisponible Comparer OPTIMEA Climatiseur OPTIMEA OPC-B01-120 Revendre votre appareil Refroidir Label énergie froid : A, Silencieux (63dB) Label energie chauffage : Non concerné L x H x P : 46.",
       "brand": null,
       "model": null,
       "btu": "9000 BTU",
-      "city": null,
+      "city": "Bressuire, Parthenay, Thouars, Chinon, Cholet",
       "stock_info": "indisponible Retrait indisponible Livraison indisponible Nouveauté Comparer DREAME Climatiseur DREAME P-Wind 9K-Black Gold Revendre votre appareil Refroidir Label énergie froid : A, Silencieux (65dB) Bluetooth L x H x P : 28. | indisponible Retrait indisponible Livraison indisponible Comparer OPTIMEA Climatiseur OPTIMEA OPC-B01-120 Revendre votre appareil Refroidir Label énergie froid : A, Silencieux (63dB) Label energie chauffage : Non concerné L x H x P : 46.",
-      "scraped_at": "2026-07-07T21:24:59.259Z",
+      "scraped_at": "2026-07-07T21:29:09.154Z",
       "first_seen_at": "2026-07-07T14:37:05.952Z",
-      "last_seen_at": "2026-07-07T21:24:59.259Z"
+      "last_seen_at": "2026-07-07T21:29:09.154Z"
     }
   ]
 }
