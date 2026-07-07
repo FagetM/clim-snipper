@@ -1,10 +1,6 @@
 {
-  "scanned_at": "2026-07-07T18:31:02.264Z",
-  "total": 9,
-  "in_stock": 6,
-  "tours_available": 0,
-  "delivery_available": 9,
-  "products": [
+  "count": 6,
+  "items": [
     {
       "store": "Boulanger",
       "title": "Climatiseur OPTIMEA OPC-B01-120",
@@ -106,57 +102,7 @@
       "scraped_at": "2026-07-07T18:28:56.271Z",
       "first_seen_at": "2026-07-07T18:28:56.271Z",
       "last_seen_at": "2026-07-07T18:28:56.271Z"
-    },
-    {
-      "store": "Boulanger",
-      "title": "Climatiseur DREAME P-Wind 9K-Camel Gold",
-      "price_eur": 399,
-      "url": "https://www.boulanger.com/ref/1242876",
-      "image": "https://boulanger.scene7.com/is/image/Boulanger/6979005521190_h_f_l_0?wid=120&hei=120&resMode=sharp2&op_usm=1.75,0.3,2,0&fmt=png-alpha",
-      "status": "out_of_stock",
-      "availability_type": "delivery",
-      "delivery_info": "indisponible Retrait indisponible Livraison indisponible",
-      "brand": "Dreame",
-      "model": null,
-      "btu": "9000 BTU",
-      "stock_info": "indisponible Retrait indisponible Livraison indisponible",
-      "scraped_at": "2026-07-07T18:28:56.271Z",
-      "first_seen_at": "2026-07-07T18:28:56.271Z",
-      "last_seen_at": "2026-07-07T18:28:56.271Z"
-    },
-    {
-      "store": "Boulanger",
-      "title": "Climatiseur DREAME P-Wind 9K-Black Gold",
-      "price_eur": 399,
-      "url": "https://www.boulanger.com/ref/1242875",
-      "image": "https://boulanger.scene7.com/is/image/Boulanger/6979005521206_h_f_l_0?wid=120&hei=120&resMode=sharp2&op_usm=1.75,0.3,2,0&fmt=png-alpha",
-      "status": "out_of_stock",
-      "availability_type": "delivery",
-      "delivery_info": "indisponible Retrait indisponible Livraison indisponible",
-      "brand": "Dreame",
-      "model": null,
-      "btu": "9000 BTU",
-      "stock_info": "indisponible Retrait indisponible Livraison indisponible",
-      "scraped_at": "2026-07-07T18:28:56.271Z",
-      "first_seen_at": "2026-07-07T18:28:56.271Z",
-      "last_seen_at": "2026-07-07T18:28:56.271Z"
-    },
-    {
-      "store": "Boulanger",
-      "title": "\"climatiseur portable\"",
-      "price_eur": 899.99,
-      "url": "https://www.boulanger.com/",
-      "image": "https://www.boulanger.com/etc.clientlibs/boulanger-site/clientlibs/wpk.app/resources/assets/svg/chevron2.svg",
-      "status": "out_of_stock",
-      "availability_type": "delivery",
-      "delivery_info": "indisponible Retrait indisponible Livraison indisponible Nouveauté Comparer DREAME Climatiseur DREAME P-Wind 9K-Black Gold Revendre votre appareil Refroidir Label énergie froid : A, Silencieux (65dB) Bluetooth L x H x P : 28. | indisponible Retrait indisponible Livraison indisponible Comparer OPTIMEA Climatiseur OPTIMEA OPC-B01-120 Revendre votre appareil Refroidir Label énergie froid : A, Silencieux (63dB) Label energie chauffage : Non concerné L x H x P : 46.",
-      "brand": null,
-      "model": null,
-      "btu": "9000 BTU",
-      "stock_info": "indisponible Retrait indisponible Livraison indisponible Nouveauté Comparer DREAME Climatiseur DREAME P-Wind 9K-Black Gold Revendre votre appareil Refroidir Label énergie froid : A, Silencieux (65dB) Bluetooth L x H x P : 28. | indisponible Retrait indisponible Livraison indisponible Comparer OPTIMEA Climatiseur OPTIMEA OPC-B01-120 Revendre votre appareil Refroidir Label énergie froid : A, Silencieux (63dB) Label energie chauffage : Non concerné L x H x P : 46.",
-      "scraped_at": "2026-07-07T18:28:56.270Z",
-      "first_seen_at": "2026-07-07T14:37:05.952Z",
-      "last_seen_at": "2026-07-07T18:28:56.270Z"
     }
-  ]
+  ],
+  "detected_at": "2026-07-07T18:31:02.265Z"
 }
