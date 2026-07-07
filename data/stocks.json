@@ -1,5 +1,5 @@
 {
-  "scanned_at": "2026-07-07T21:03:27.331Z",
+  "scanned_at": "2026-07-07T21:13:27.143Z",
   "total": 8,
   "in_stock": 0,
   "tours_available": 0,
@@ -19,11 +19,9 @@
       "btu": null,
       "city": null,
       "stock_info": null,
-      "scraped_at": "2026-07-07T20:58:36.801Z",
+      "scraped_at": "2026-07-07T21:12:21.674Z",
       "first_seen_at": "2026-07-07T18:28:56.271Z",
-      "last_seen_at": "2026-07-07T20:58:36.801Z",
-      "status_changed_at": "2026-07-07T20:58:36.801Z",
-      "previous_status": "in_stock"
+      "last_seen_at": "2026-07-07T21:12:21.674Z"
     },
     {
       "store": "Boulanger",
@@ -39,11 +37,9 @@
       "btu": null,
       "city": null,
       "stock_info": null,
-      "scraped_at": "2026-07-07T20:58:36.801Z",
+      "scraped_at": "2026-07-07T21:12:21.675Z",
       "first_seen_at": "2026-07-07T18:28:56.271Z",
-      "last_seen_at": "2026-07-07T20:58:36.801Z",
-      "status_changed_at": "2026-07-07T20:58:36.801Z",
-      "previous_status": "in_stock"
+      "last_seen_at": "2026-07-07T21:12:21.675Z"
     },
     {
       "store": "Boulanger",
@@ -59,11 +55,9 @@
       "btu": null,
       "city": null,
       "stock_info": null,
-      "scraped_at": "2026-07-07T20:58:36.800Z",
+      "scraped_at": "2026-07-07T21:12:21.674Z",
       "first_seen_at": "2026-07-07T18:28:56.270Z",
-      "last_seen_at": "2026-07-07T20:58:36.800Z",
-      "status_changed_at": "2026-07-07T20:58:36.800Z",
-      "previous_status": "in_stock"
+      "last_seen_at": "2026-07-07T21:12:21.674Z"
     },
     {
       "store": "Boulanger",
@@ -79,11 +73,9 @@
       "btu": null,
       "city": null,
       "stock_info": null,
-      "scraped_at": "2026-07-07T20:58:36.800Z",
+      "scraped_at": "2026-07-07T21:12:21.674Z",
       "first_seen_at": "2026-07-07T18:28:56.270Z",
-      "last_seen_at": "2026-07-07T20:58:36.800Z",
-      "status_changed_at": "2026-07-07T20:58:36.800Z",
-      "previous_status": "in_stock"
+      "last_seen_at": "2026-07-07T21:12:21.674Z"
     },
     {
       "store": "Boulanger",
@@ -99,11 +91,9 @@
       "btu": "18000 BTU",
       "city": null,
       "stock_info": null,
-      "scraped_at": "2026-07-07T20:58:36.801Z",
+      "scraped_at": "2026-07-07T21:12:21.675Z",
       "first_seen_at": "2026-07-07T18:28:56.271Z",
-      "last_seen_at": "2026-07-07T20:58:36.801Z",
-      "status_changed_at": "2026-07-07T20:58:36.801Z",
-      "previous_status": "in_stock"
+      "last_seen_at": "2026-07-07T21:12:21.675Z"
     },
     {
       "store": "Boulanger",
@@ -119,9 +109,9 @@
       "btu": "9000 BTU",
       "city": null,
       "stock_info": "indisponible Retrait indisponible Livraison indisponible",
-      "scraped_at": "2026-07-07T20:58:36.800Z",
+      "scraped_at": "2026-07-07T21:12:21.674Z",
       "first_seen_at": "2026-07-07T18:28:56.271Z",
-      "last_seen_at": "2026-07-07T20:58:36.800Z"
+      "last_seen_at": "2026-07-07T21:12:21.674Z"
     },
     {
       "store": "Boulanger",
@@ -137,9 +127,9 @@
       "btu": "9000 BTU",
       "city": null,
       "stock_info": "indisponible Retrait indisponible Livraison indisponible",
-      "scraped_at": "2026-07-07T20:58:36.801Z",
+      "scraped_at": "2026-07-07T21:12:21.674Z",
       "first_seen_at": "2026-07-07T18:28:56.271Z",
-      "last_seen_at": "2026-07-07T20:58:36.801Z"
+      "last_seen_at": "2026-07-07T21:12:21.674Z"
     },
     {
       "store": "Boulanger",
@@ -155,9 +145,9 @@
       "btu": "9000 BTU",
       "city": null,
       "stock_info": "indisponible Retrait indisponible Livraison indisponible Nouveauté Comparer DREAME Climatiseur DREAME P-Wind 9K-Black Gold Revendre votre appareil Refroidir Label énergie froid : A, Silencieux (65dB) Bluetooth L x H x P : 28. | indisponible Retrait indisponible Livraison indisponible Comparer OPTIMEA Climatiseur OPTIMEA OPC-B01-120 Revendre votre appareil Refroidir Label énergie froid : A, Silencieux (63dB) Label energie chauffage : Non concerné L x H x P : 46.",
-      "scraped_at": "2026-07-07T20:58:36.800Z",
+      "scraped_at": "2026-07-07T21:12:21.674Z",
       "first_seen_at": "2026-07-07T14:37:05.952Z",
-      "last_seen_at": "2026-07-07T20:58:36.800Z"
+      "last_seen_at": "2026-07-07T21:12:21.674Z"
     }
   ]
 }
