@@ -3,46 +3,263 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Clim'Finder — Trouve ta clim portable</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>❄️</text></svg>">
+  <title>❄️ Clim'Finder — Climatiseurs portables</title>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --bg:#0b1120;--card:#111827;--hover:#1a2332;--accent:#38bdf8;--gold:#f59e0b;
+      --green:#22c55e;--red:#ef4444;--orange:#f97316;--text:#e2e8f0;--muted:#94a3b8;
+      --border:#1e293b;--radius:16px;--radius-sm:10px;
+    }
+    body{font-family:system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);min-height:100vh}
+    header{
+      background:linear-gradient(135deg,#0f172a 0%,#1e293b 100%);
+      border-bottom:2px solid var(--accent);padding:2.5rem 1.5rem;text-align:center;
+    }
+    header h1{font-size:2.4rem;font-weight:800;letter-spacing:-1px}
+    header h1 span{color:var(--accent)}
+    .subtitle{color:var(--muted);margin-top:.4rem;font-size:1.05rem}
+    .stats-bar{
+      display:flex;justify-content:center;gap:2rem;padding:1.25rem 1.5rem;
+      background:var(--card);border-bottom:1px solid var(--border);flex-wrap:wrap;
+    }
+    .stat{text-align:center}
+    .stat .num{font-size:1.8rem;font-weight:800}
+    .stat .num.green{color:var(--green)}.stat .num.blue{color:var(--accent)}.stat .num.orange{color:var(--orange)}.stat .num.red{color:var(--red)}
+    .stat .lbl{font-size:.78rem;color:var(--muted);margin-top:.15rem}
+    .filters{
+      display:flex;gap:.6rem;padding:1.2rem 1.5rem;flex-wrap:wrap;align-items:center;
+      background:var(--bg);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:10;
+    }
+    .filter-btn{
+      background:var(--card);border:1px solid var(--border);color:var(--muted);
+      padding:.55rem 1.1rem;border-radius:20px;cursor:pointer;font-size:.82rem;font-weight:600;
+      transition:all .2s;
+    }
+    .filter-btn:hover{border-color:var(--accent);color:var(--text)}
+    .filter-btn.active{background:var(--accent);color:#0b1120;border-color:var(--accent)}
+    .spacer{flex:1}
+    #priceSort{margin-left:auto;background:var(--card);border:1px solid var(--border);color:var(--text);padding:.55rem 1rem;border-radius:20px;font-size:.82rem;cursor:pointer}
+    .last-update{font-size:.78rem;color:var(--muted);padding:0 1.5rem;margin-top:.75rem}
+    .grid{
+      display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));
+      gap:1.25rem;padding:1.5rem;
+    }
+    .card{
+      background:var(--card);border:1px solid var(--border);border-radius:var(--radius);
+      overflow:hidden;transition:transform .2s,border-color .2s,box-shadow .2s;
+      display:flex;flex-direction:column;
+    }
+    .card:hover{transform:translateY(-3px);border-color:var(--accent);box-shadow:0 8px 30px rgba(56,189,248,.1)}
+    .card-img-wrap{position:relative;background:#1a1f2e;height:220px;display:flex;align-items:center;justify-content:center;overflow:hidden}
+    .card-img-wrap img{max-width:100%;max-height:100%;object-fit:contain;padding:1rem}
+    .card-img-wrap .no-img{font-size:3rem;opacity:.3}
+    .card-img-wrap .badge-status{
+      position:absolute;top:12px;left:12px;
+      font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;
+      padding:.25rem .65rem;border-radius:6px;
+    }
+    .badge-status.in-stock{background:rgba(34,197,94,.15);color:var(--green);border:1px solid rgba(34,197,94,.35)}
+    .badge-status.low-stock{background:rgba(249,115,22,.15);color:var(--orange);border:1px solid rgba(249,115,22,.35)}
+    .badge-status.out-of-stock{background:rgba(239,68,68,.15);color:var(--red);border:1px solid rgba(239,68,68,.35)}
+    .badge-status.unknown{background:rgba(148,163,184,.12);color:var(--muted);border:1px solid rgba(148,163,184,.25)}
+    .card-img-wrap .badge-store{
+      position:absolute;top:12px;right:12px;
+      font-size:.65rem;font-weight:800;letter-spacing:.7px;
+      padding:.2rem .55rem;border-radius:5px;
+      background:var(--accent);color:#0b1120;
+    }
+    .card-body{padding:1.15rem;display:flex;flex-direction:column;gap:.5rem;flex:1}
+    .card-body .brand-line{font-size:.72rem;color:var(--accent);font-weight:700;letter-spacing:.5px;text-transform:uppercase}
+    .card-body h3{font-size:.95rem;line-height:1.35;font-weight:600;color:#fff}
+    .card-body .specs{display:flex;gap:.6rem;flex-wrap:wrap;margin:.25rem 0}
+    .card-body .spec{
+      font-size:.72rem;background:rgba(56,189,248,.08);color:var(--accent);
+      padding:.2rem .6rem;border-radius:12px;font-weight:600;
+    }
+    .card-body .spec.gold{background:rgba(245,158,11,.08);color:var(--gold)}
+    .card-body .desc{font-size:.78rem;color:var(--muted);line-height:1.5}
+    .card-footer{display:flex;align-items:center;justify-content:space-between;padding:.75rem 1.15rem;border-top:1px solid var(--border);margin-top:auto}
+    .card-footer .price{font-size:1.5rem;font-weight:800;color:var(--accent)}
+    .card-footer .price small{font-size:.75rem;color:var(--muted);font-weight:400}
+    .card-footer .link-btn{
+      background:var(--accent);color:#0b1120;text-decoration:none;
+      padding:.55rem 1.2rem;border-radius:8px;font-weight:700;font-size:.8rem;
+      transition:opacity .2s;white-space:nowrap;
+    }
+    .card-footer .link-btn:hover{opacity:.85}
+    .card .updated{font-size:.67rem;color:var(--muted);padding:.35rem 1.15rem .75rem}
+    .empty-state{grid-column:1/-1;text-align:center;padding:4rem 2rem}
+    .empty-state .big-emoji{font-size:4rem;margin-bottom:1rem}
+    .empty-state h2{color:var(--muted);margin-bottom:.5rem}
+    .empty-state p{color:var(--muted);font-size:.9rem;max-width:500px;margin:0 auto}
+    footer{text-align:center;padding:2rem;border-top:1px solid var(--border);color:var(--muted);font-size:.75rem}
+    .sources{font-size:.68rem;opacity:.5;margin-top:.4rem}
+    @media(max-width:640px){
+      .grid{grid-template-columns:1fr;padding:1rem}
+      header h1{font-size:1.8rem}
+      .stats-bar{gap:1rem}
+      .filters{flex-direction:column;align-items:stretch}
+      #priceSort{margin-left:0}
+    }
+  </style>
 </head>
 <body>
   <header>
-    <h1>❄️ Clim'Finder</h1>
-    <p class="subtitle">Climatiseurs portables en stock — Tours & livraison</p>
+    <h1>🌬️ <span>Clim'Finder</span></h1>
+    <p class="subtitle">Climatiseurs portables — Tours & livraison</p>
   </header>
 
-  <main>
-    <section class="status-bar">
-      <span id="lastUpdate">Chargement…</span>
-      <span id="totalCount"></span>
-    </section>
+  <div class="stats-bar" id="statsBar"></div>
 
-    <section class="filters">
-      <button class="filter-btn active" data-filter="all">Tous</button>
-      <button class="filter-btn" data-filter="stock">✅ En stock</button>
-      <button class="filter-btn" data-filter="tours">📍 Tours</button>
-      <button class="filter-btn" data-filter="livraison">🚚 Livraison</button>
-      <select id="priceSort">
-        <option value="">Trier par prix</option>
-        <option value="asc">Prix ↑</option>
-        <option value="desc">Prix ↓</option>
-      </select>
-    </section>
+  <div class="filters">
+    <button class="filter-btn active" data-filter="all">📋 Tous</button>
+    <button class="filter-btn" data-filter="in_stock">✅ En stock</button>
+    <button class="filter-btn" data-filter="tours">📍 Tours</button>
+    <button class="filter-btn" data-filter="delivery">🚚 Livraison</button>
+    <button class="filter-btn" data-filter="low_price">💶 -600€</button>
+    <span class="spacer"></span>
+    <select id="priceSort">
+      <option value="">Prix par défaut</option>
+      <option value="asc">Prix croissant ↑</option>
+      <option value="desc">Prix décroissant ↓</option>
+    </select>
+  </div>
 
-    <section class="summary-cards" id="summaryCards"></section>
+  <div class="last-update" id="lastUpdate">Chargement…</div>
 
-    <section class="products-grid" id="productsGrid">
-      <div class="loading">🔍 Recherche des climatiseurs en cours…</div>
-    </section>
-  </main>
+  <div class="grid" id="grid"></div>
 
   <footer>
-    <p>Mis à jour automatiquement toutes les heures. Dernière vérification : <span id="footerTime">—</span></p>
-    <p class="sources">Sources : Darty, Boulanger, Leroy Merlin, Castorama, Cdiscount, Amazon, Electro Dépôt</p>
+    <p>Scan automatique toutes les heures · 7h → 22h</p>
+    <p class="sources">Boulanger · Cdiscount · Darty · Amazon · Leroy Merlin · Castorama · Fnac · But · Rakuten · LeBonCoin · Google Shopping</p>
   </footer>
 
-  <script src="script.js"></script>
+  <script>
+  (function(){
+    'use strict';
+    const DATA_URL='data/stocks.json';
+    let all=[],filter='all';
+
+    const grid=document.getElementById('grid'),lastUpdate=document.getElementById('lastUpdate'),statsBar=document.getElementById('statsBar');
+    const MOIS=['janv.','févr.','mars','avr.','mai','juin','juil.','août','sept.','oct.','nov.','déc.'];
+
+    function fmtDate(iso){
+      if(!iso)return'—';
+      const d=new Date(iso);return d.toLocaleString('fr-FR',{dateStyle:'medium',timeStyle:'short'});
+    }
+    function fmtRelative(iso){
+      if(!iso)return'';
+      const diff=Date.now()-new Date(iso).getTime(),mins=Math.floor(diff/6e4);
+      if(mins<1)return'à l\'instant';if(mins<60)return mins+' min';
+      const hrs=Math.floor(mins/60);if(hrs<24)return hrs+'h';
+      return Math.floor(hrs/24)+'j';
+    }
+    function esc(s){const d=document.createElement('div');d.textContent=s;return d.innerHTML;}
+
+    function getFiltered(){
+      let list=[...all];
+      if(filter==='in_stock') list=list.filter(p=>p.status==='in_stock'||p.status==='low_stock');
+      if(filter==='tours') list=list.filter(p=>p.availability_type==='tours'||p.availability_type==='both');
+      if(filter==='delivery') list=list.filter(p=>p.availability_type==='delivery'||p.availability_type==='both');
+      if(filter==='low_price') list=list.filter(p=>p.price_eur&&p.price_eur<600);
+      const s=document.getElementById('priceSort').value;
+      if(s==='asc') list.sort((a,b)=>(a.price_eur||99999)-(b.price_eur||99999));
+      else if(s==='desc') list.sort((a,b)=>(b.price_eur||0)-(a.price_eur||0));
+      return list;
+    }
+
+    function cleanTitle(t){
+      return t.replace(/\s+/g,' ').replace(/\s{2,}/g,' ').trim();
+    }
+
+    function extractBrand(title){
+      const t=title.toUpperCase();
+      const brands=['DREAME','OPTIMEA','ESSENTIELB','REMKO','ECOFLOW','DUUX','HISENSE','ARGO','ELECTROLUX','DE\'LONGHI','DELONGHI','TCL','HAIER','GREE','SANG','KOOPER','WHIRLPOOL','COMFEE','COSTWAY','BECKEN','SENCOR','EQUATION','Klarstein','OMISOON','MARSEE','TECTAKE'];
+      for(const b of brands){if(t.includes(b.toUpperCase()))return b;}
+      return null;
+    }
+
+    function buildCard(p){
+      const title=cleanTitle(p.title),brand=p.brand||extractBrand(title)||p.store,btu=p.btu||null;
+      const statusLabel={in_stock:'✅ En stock',low_stock:'⚠️ Stock faible',out_of_stock:'❌ Rupture',unknown:'Stock à vérifier'}[p.status]||'?';
+      const statusClass=p.status||'unknown';
+      let imgSrc=p.image||'';
+      // Enlarge Boulanger images
+      if(imgSrc.includes('scene7.com')){
+        imgSrc=imgSrc.replace(/wid=\d+/, 'wid=500').replace(/hei=\d+/, 'hei=500');
+      }
+      const price=p.price_eur!=null?p.price_eur.toLocaleString('fr-FR',{minimumFractionDigits:2}):null;
+      const updated=new Date(p.last_seen_at||p.scraped_at);
+      const seen=fmtRelative(p.last_seen_at||p.scraped_at);
+      const fullDate=fmtDate(p.last_seen_at||p.scraped_at);
+
+      let desc=p.stock_info||p.delivery_info||'';
+      if(!desc&&p.availability_type==='tours')desc='Disponible à Tours — vérifier en magasin';
+      if(!desc&&p.availability_type==='delivery')desc='Livraison disponible';
+      if(p.status==='out_of_stock')desc='Actuellement en rupture';
+
+      return `<div class="card">
+        <div class="card-img-wrap">
+          ${imgSrc?`<img src="${esc(imgSrc)}" alt="${esc(title)}" loading="lazy" onerror="this.parentElement.innerHTML='<span class=\\'no-img\\'>📦</span>'">`:'<span class="no-img">📦</span>'}
+          <span class="badge-status ${statusClass}">${statusLabel}</span>
+          <span class="badge-store">${esc(p.store)}</span>
+        </div>
+        <div class="card-body">
+          ${brand!==p.store?`<span class="brand-line">${esc(brand)}</span>`:''}
+          <h3>${esc(title)}</h3>
+          ${desc?`<p class="desc">${esc(desc.substring(0,160))}</p>`:''}
+          <div class="specs">
+            ${btu?`<span class="spec gold">🔥 ${esc(btu)}</span>`:''}
+            ${p.status==='in_stock'?'<span class="spec">📦 En stock</span>':''}
+            ${p.availability_type==='tours'||p.availability_type==='both'?'<span class="spec">📍 Tours</span>':''}
+          </div>
+        </div>
+        <div class="card-footer">
+          <div class="price">${price?price+'<small> €</small>':'<small>Prix non dispo</small>'}</div>
+          ${p.url?`<a href="${esc(p.url)}" target="_blank" rel="noopener" class="link-btn">Voir →</a>`:''}
+        </div>
+        <div class="updated">🕐 Vu ${seen} · Dernier scan ${fullDate}</div>
+      </div>`;
+    }
+
+    function render(){
+      const filtered=getFiltered();
+      const inStock=all.filter(p=>p.status==='in_stock'||p.status==='low_stock').length;
+      const toursCount=all.filter(p=>p.availability_type==='tours'||p.availability_type==='both').length;
+      const scanDate=all.length>0?all[0].last_seen_at||all[0].scraped_at:null;
+
+      statsBar.innerHTML=`
+        <div class="stat"><div class="num ${inStock>0?'green':'red'}">${inStock}</div><div class="lbl">En stock</div></div>
+        <div class="stat"><div class="num blue">${all.length}</div><div class="lbl">Référencés</div></div>
+        <div class="stat"><div class="num orange">${toursCount}</div><div class="lbl">Dispo Tours</div></div>
+        <div class="stat"><div class="num">${all.length-inStock}</div><div class="lbl">À surveiller</div></div>
+      `;
+      lastUpdate.textContent=scanDate?`📡 Dernier scan : ${fmtDate(scanDate)} (il y a ${fmtRelative(scanDate)})`:'Aucune donnée';
+
+      if(!filtered.length){
+        grid.innerHTML=`<div class="empty-state"><div class="big-emoji">${filter==='in_stock'?'😔':'📡'}</div><h2>${filter==='in_stock'?'Aucune clim en stock pour le moment':'Aucun résultat'}</h2><p>${filter==='in_stock'?'Reviens plus tard, le stock est scanné toutes les heures.':'Essaie un autre filtre.'}</p></div>`;
+        return;
+      }
+      grid.innerHTML=filtered.map(buildCard).join('');
+    }
+
+    document.querySelectorAll('.filter-btn').forEach(btn=>btn.addEventListener('click',()=>{
+      document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
+      btn.classList.add('active');filter=btn.dataset.filter;render();
+    }));
+    document.getElementById('priceSort').addEventListener('change',render);
+
+    async function load(){
+      try{
+        const r=await fetch(DATA_URL+'?t='+Date.now());
+        if(!r.ok)throw new Error('HTTP '+r.status);
+        const d=await r.json();all=d.products||[];
+      }catch(e){console.warn(e);all=[]}
+      render();
+    }
+    load();setInterval(load,10*60*1000);
+  })();
+  </script>
 </body>
 </html>
