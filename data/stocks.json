@@ -1,7 +1,7 @@
 {
-  "scanned_at": "2026-07-07T20:39:23.333Z",
+  "scanned_at": "2026-07-07T21:03:27.331Z",
   "total": 8,
-  "in_stock": 5,
+  "in_stock": 0,
   "tours_available": 0,
   "delivery_available": 8,
   "products": [
@@ -11,16 +11,19 @@
       "price_eur": 479,
       "url": "https://www.boulanger.com/ref/9000602747",
       "image": "https://boulanger.scene7.com/is/image/Boulanger/3701410401551_h_f_l_0?wid=120&hei=120&resMode=sharp2&op_usm=1.75,0.3,2,0&fmt=png-alpha",
-      "status": "in_stock",
+      "status": "unknown",
       "availability_type": "delivery",
       "delivery_info": null,
       "brand": "Optimea",
       "model": null,
       "btu": null,
+      "city": null,
       "stock_info": null,
-      "scraped_at": "2026-07-07T20:35:44.724Z",
+      "scraped_at": "2026-07-07T20:58:36.801Z",
       "first_seen_at": "2026-07-07T18:28:56.271Z",
-      "last_seen_at": "2026-07-07T20:35:44.724Z"
+      "last_seen_at": "2026-07-07T20:58:36.801Z",
+      "status_changed_at": "2026-07-07T20:58:36.801Z",
+      "previous_status": "in_stock"
     },
     {
       "store": "Boulanger",
@@ -28,16 +31,19 @@
       "price_eur": 599.99,
       "url": "https://www.boulanger.com/ref/8008803",
       "image": "https://boulanger.scene7.com/is/image/Boulanger/3497674162894_h_f_l_0?wid=120&hei=120&resMode=sharp2&op_usm=1.75,0.3,2,0&fmt=png-alpha",
-      "status": "in_stock",
+      "status": "unknown",
       "availability_type": "delivery",
       "delivery_info": null,
       "brand": "Essentielb",
       "model": null,
       "btu": null,
+      "city": null,
       "stock_info": null,
-      "scraped_at": "2026-07-07T20:35:44.724Z",
+      "scraped_at": "2026-07-07T20:58:36.801Z",
       "first_seen_at": "2026-07-07T18:28:56.271Z",
-      "last_seen_at": "2026-07-07T20:35:44.724Z"
+      "last_seen_at": "2026-07-07T20:58:36.801Z",
+      "status_changed_at": "2026-07-07T20:58:36.801Z",
+      "previous_status": "in_stock"
     },
     {
       "store": "Boulanger",
@@ -45,16 +51,19 @@
       "price_eur": 649,
       "url": "https://www.boulanger.com/ref/9000256698",
       "image": "https://boulanger.scene7.com/is/image/Boulanger/4026415153205_h_f_l_0?wid=120&hei=120&resMode=sharp2&op_usm=1.75,0.3,2,0&fmt=png-alpha",
-      "status": "in_stock",
+      "status": "unknown",
       "availability_type": "delivery",
       "delivery_info": null,
       "brand": "Remko",
       "model": null,
       "btu": null,
+      "city": null,
       "stock_info": null,
-      "scraped_at": "2026-07-07T20:35:44.723Z",
+      "scraped_at": "2026-07-07T20:58:36.800Z",
       "first_seen_at": "2026-07-07T18:28:56.270Z",
-      "last_seen_at": "2026-07-07T20:35:44.723Z"
+      "last_seen_at": "2026-07-07T20:58:36.800Z",
+      "status_changed_at": "2026-07-07T20:58:36.800Z",
+      "previous_status": "in_stock"
     },
     {
       "store": "Boulanger",
@@ -62,16 +71,19 @@
       "price_eur": 899.99,
       "url": "https://www.boulanger.com/ref/1222281",
       "image": "https://boulanger.scene7.com/is/image/Boulanger/4895251630900_h_f_l_0?wid=120&hei=120&resMode=sharp2&op_usm=1.75,0.3,2,0&fmt=png-alpha",
-      "status": "in_stock",
+      "status": "unknown",
       "availability_type": "delivery",
       "delivery_info": null,
       "brand": "Ecoflow",
       "model": null,
       "btu": null,
+      "city": null,
       "stock_info": null,
-      "scraped_at": "2026-07-07T20:35:44.723Z",
+      "scraped_at": "2026-07-07T20:58:36.800Z",
       "first_seen_at": "2026-07-07T18:28:56.270Z",
-      "last_seen_at": "2026-07-07T20:35:44.723Z"
+      "last_seen_at": "2026-07-07T20:58:36.800Z",
+      "status_changed_at": "2026-07-07T20:58:36.800Z",
+      "previous_status": "in_stock"
     },
     {
       "store": "Boulanger",
@@ -79,16 +91,19 @@
       "price_eur": 1299.99,
       "url": "https://www.boulanger.com/ref/1155712",
       "image": "https://boulanger.scene7.com/is/image/Boulanger/8716164994193_h_f_l_0?wid=120&hei=120&resMode=sharp2&op_usm=1.75,0.3,2,0&fmt=png-alpha",
-      "status": "in_stock",
+      "status": "unknown",
       "availability_type": "delivery",
       "delivery_info": null,
       "brand": "Duux",
       "model": null,
       "btu": "18000 BTU",
+      "city": null,
       "stock_info": null,
-      "scraped_at": "2026-07-07T20:35:44.724Z",
+      "scraped_at": "2026-07-07T20:58:36.801Z",
       "first_seen_at": "2026-07-07T18:28:56.271Z",
-      "last_seen_at": "2026-07-07T20:35:44.724Z"
+      "last_seen_at": "2026-07-07T20:58:36.801Z",
+      "status_changed_at": "2026-07-07T20:58:36.801Z",
+      "previous_status": "in_stock"
     },
     {
       "store": "Boulanger",
@@ -102,10 +117,11 @@
       "brand": "Dreame",
       "model": null,
       "btu": "9000 BTU",
+      "city": null,
       "stock_info": "indisponible Retrait indisponible Livraison indisponible",
-      "scraped_at": "2026-07-07T20:35:44.724Z",
+      "scraped_at": "2026-07-07T20:58:36.800Z",
       "first_seen_at": "2026-07-07T18:28:56.271Z",
-      "last_seen_at": "2026-07-07T20:35:44.724Z"
+      "last_seen_at": "2026-07-07T20:58:36.800Z"
     },
     {
       "store": "Boulanger",
@@ -119,10 +135,11 @@
       "brand": "Dreame",
       "model": null,
       "btu": "9000 BTU",
+      "city": null,
       "stock_info": "indisponible Retrait indisponible Livraison indisponible",
-      "scraped_at": "2026-07-07T20:35:44.724Z",
+      "scraped_at": "2026-07-07T20:58:36.801Z",
       "first_seen_at": "2026-07-07T18:28:56.271Z",
-      "last_seen_at": "2026-07-07T20:35:44.724Z"
+      "last_seen_at": "2026-07-07T20:58:36.801Z"
     },
     {
       "store": "Boulanger",
@@ -136,10 +153,11 @@
       "brand": null,
       "model": null,
       "btu": "9000 BTU",
+      "city": null,
       "stock_info": "indisponible Retrait indisponible Livraison indisponible Nouveauté Comparer DREAME Climatiseur DREAME P-Wind 9K-Black Gold Revendre votre appareil Refroidir Label énergie froid : A, Silencieux (65dB) Bluetooth L x H x P : 28. | indisponible Retrait indisponible Livraison indisponible Comparer OPTIMEA Climatiseur OPTIMEA OPC-B01-120 Revendre votre appareil Refroidir Label énergie froid : A, Silencieux (63dB) Label energie chauffage : Non concerné L x H x P : 46.",
-      "scraped_at": "2026-07-07T20:35:44.723Z",
+      "scraped_at": "2026-07-07T20:58:36.800Z",
       "first_seen_at": "2026-07-07T14:37:05.952Z",
-      "last_seen_at": "2026-07-07T20:35:44.723Z"
+      "last_seen_at": "2026-07-07T20:58:36.800Z"
     }
   ]
 }
