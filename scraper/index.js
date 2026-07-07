@@ -16,7 +16,7 @@ function loadConfig() {
   try { return JSON.parse(fs.readFileSync(CONFIG_PATH, 'utf8')); } catch (_) { return {}; }
 }
 const CONFIG = loadConfig();
-const CITIES = CONFIG.cities || [{ name: 'Tours', postcode: '37000' }];
+const CITIES = CONFIG.cities || [{ name: 'Bressuire', postcode: '79300' }];
 
 // ── Construire la liste finale en fonction des villes ──
 const BASE_STORES = [
