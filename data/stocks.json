@@ -1,27 +1,10 @@
 {
-  "scanned_at": "2026-07-07T14:39:10.051Z",
-  "total": 13,
+  "scanned_at": "2026-07-07T17:18:01.396Z",
+  "total": 10,
   "in_stock": 0,
   "tours_available": 0,
-  "delivery_available": 13,
+  "delivery_available": 10,
   "products": [
-    {
-      "store": "Boulanger",
-      "title": "Climatiseur\n              DREAME\n              P-Wind 9K-Camel Gold",
-      "price_eur": 399,
-      "url": "https://www.boulanger.com/ref/1242876",
-      "image": "https://boulanger.scene7.com/is/image/Boulanger/6979005521190_h_f_l_0?wid=120&hei=120&resMode=sharp2&op_usm=1.75,0.3,2,0&fmt=png-alpha",
-      "status": "unknown",
-      "availability_type": "delivery",
-      "delivery_info": null,
-      "brand": null,
-      "model": null,
-      "btu": "9000 BTU",
-      "stock_info": null,
-      "scraped_at": "2026-07-07T14:37:05.953Z",
-      "first_seen_at": "2026-07-05T05:15:31.063Z",
-      "last_seen_at": "2026-07-07T14:37:05.953Z"
-    },
     {
       "store": "Boulanger",
       "title": "Climatiseur\n              DREAME\n              P-Wind 9K-Black Gold",
@@ -35,9 +18,9 @@
       "model": null,
       "btu": "9000 BTU",
       "stock_info": null,
-      "scraped_at": "2026-07-07T14:37:05.953Z",
+      "scraped_at": "2026-07-07T17:15:51.005Z",
       "first_seen_at": "2026-07-05T05:15:31.063Z",
-      "last_seen_at": "2026-07-07T14:37:05.953Z"
+      "last_seen_at": "2026-07-07T17:15:51.005Z"
     },
     {
       "store": "Boulanger",
@@ -52,9 +35,9 @@
       "model": null,
       "btu": null,
       "stock_info": null,
-      "scraped_at": "2026-07-07T14:37:05.953Z",
+      "scraped_at": "2026-07-07T17:15:51.005Z",
       "first_seen_at": "2026-07-05T05:15:31.063Z",
-      "last_seen_at": "2026-07-07T14:37:05.953Z"
+      "last_seen_at": "2026-07-07T17:15:51.005Z"
     },
     {
       "store": "Boulanger",
@@ -69,9 +52,9 @@
       "model": null,
       "btu": null,
       "stock_info": null,
-      "scraped_at": "2026-07-07T14:37:05.953Z",
+      "scraped_at": "2026-07-07T17:15:51.005Z",
       "first_seen_at": "2026-07-05T05:15:31.063Z",
-      "last_seen_at": "2026-07-07T14:37:05.953Z"
+      "last_seen_at": "2026-07-07T17:15:51.005Z"
     },
     {
       "store": "Boulanger",
@@ -86,9 +69,9 @@
       "model": null,
       "btu": null,
       "stock_info": null,
-      "scraped_at": "2026-07-07T14:37:05.953Z",
+      "scraped_at": "2026-07-07T17:15:51.005Z",
       "first_seen_at": "2026-07-05T05:15:31.063Z",
-      "last_seen_at": "2026-07-07T14:37:05.953Z"
+      "last_seen_at": "2026-07-07T17:15:51.005Z"
     },
     {
       "store": "Boulanger",
@@ -103,9 +86,9 @@
       "model": null,
       "btu": null,
       "stock_info": null,
-      "scraped_at": "2026-07-07T14:37:05.953Z",
+      "scraped_at": "2026-07-07T17:15:51.005Z",
       "first_seen_at": "2026-07-06T20:54:00.352Z",
-      "last_seen_at": "2026-07-07T14:37:05.953Z"
+      "last_seen_at": "2026-07-07T17:15:51.005Z"
     },
     {
       "store": "Boulanger",
@@ -120,9 +103,9 @@
       "model": null,
       "btu": null,
       "stock_info": null,
-      "scraped_at": "2026-07-07T14:37:05.953Z",
+      "scraped_at": "2026-07-07T17:15:51.004Z",
       "first_seen_at": "2026-07-05T05:15:31.063Z",
-      "last_seen_at": "2026-07-07T14:37:05.953Z"
+      "last_seen_at": "2026-07-07T17:15:51.004Z"
     },
     {
       "store": "Boulanger",
@@ -137,9 +120,9 @@
       "model": null,
       "btu": null,
       "stock_info": null,
-      "scraped_at": "2026-07-07T14:37:05.953Z",
+      "scraped_at": "2026-07-07T17:15:51.005Z",
       "first_seen_at": "2026-07-07T14:37:05.953Z",
-      "last_seen_at": "2026-07-07T14:37:05.953Z"
+      "last_seen_at": "2026-07-07T17:15:51.005Z"
     },
     {
       "store": "Boulanger",
@@ -154,77 +137,47 @@
       "model": null,
       "btu": "18000 BTU",
       "stock_info": null,
-      "scraped_at": "2026-07-07T14:37:05.953Z",
+      "scraped_at": "2026-07-07T17:15:51.005Z",
       "first_seen_at": "2026-07-05T05:15:31.063Z",
-      "last_seen_at": "2026-07-07T14:37:05.953Z"
+      "last_seen_at": "2026-07-07T17:15:51.005Z"
+    },
+    {
+      "store": "Boulanger",
+      "title": "Climatiseur\n              DREAME\n              P-Wind 9K-Camel Gold",
+      "price_eur": 399,
+      "url": "https://www.boulanger.com/ref/1242876",
+      "image": "https://boulanger.scene7.com/is/image/Boulanger/6979005521190_h_f_l_0?wid=120&hei=120&resMode=sharp2&op_usm=1.75,0.3,2,0&fmt=png-alpha",
+      "status": "out_of_stock",
+      "availability_type": "delivery",
+      "delivery_info": "indisponible Retrait indisponible Livraison indisponible",
+      "brand": null,
+      "model": null,
+      "btu": "9000 BTU",
+      "stock_info": "indisponible Retrait indisponible Livraison indisponible",
+      "scraped_at": "2026-07-07T17:15:51.005Z",
+      "first_seen_at": "2026-07-05T05:15:31.063Z",
+      "last_seen_at": "2026-07-07T17:15:51.005Z",
+      "status_changed_at": "2026-07-07T17:15:51.005Z",
+      "previous_status": "unknown"
     },
     {
       "store": "Boulanger",
       "title": "\"climatiseur portable\"",
-      "price_eur": 1448.99,
+      "price_eur": 899.99,
       "url": "https://www.boulanger.com/",
       "image": "https://www.boulanger.com/etc.clientlibs/boulanger-site/clientlibs/wpk.app/resources/assets/svg/chevron2.svg",
-      "status": "unknown",
+      "status": "out_of_stock",
       "availability_type": "delivery",
-      "delivery_info": null,
+      "delivery_info": "indisponible Retrait indisponible Livraison indisponible Comparer DREAME Climatiseur DREAME P-Wind 9K-Black Gold Revendre votre appareil Refroidir Label énergie froid : A, Silencieux (65dB) Bluetooth L x H x P : 28.",
       "brand": null,
       "model": null,
-      "btu": "000 BTU",
-      "stock_info": null,
-      "scraped_at": "2026-07-07T14:37:05.952Z",
+      "btu": "9000 BTU",
+      "stock_info": "indisponible Retrait indisponible Livraison indisponible Comparer DREAME Climatiseur DREAME P-Wind 9K-Black Gold Revendre votre appareil Refroidir Label énergie froid : A, Silencieux (65dB) Bluetooth L x H x P : 28.",
+      "scraped_at": "2026-07-07T17:15:51.004Z",
       "first_seen_at": "2026-07-07T14:37:05.952Z",
-      "last_seen_at": "2026-07-07T14:37:05.952Z"
-    },
-    {
-      "store": "Boulanger",
-      "title": "Climatiseur\n              KOOPER\n              5925929",
-      "price_eur": 1448.99,
-      "url": "https://www.boulanger.com/ref/9000994272",
-      "image": "https://boulanger.scene7.com/is/image/Boulanger/8056159259297_h_f_l_0?wid=120&hei=120&resMode=sharp2&op_usm=1.75,0.3,2,0&fmt=png-alpha",
-      "status": "unknown",
-      "availability_type": "delivery",
-      "delivery_info": null,
-      "brand": null,
-      "model": null,
-      "btu": null,
-      "stock_info": null,
-      "scraped_at": "2026-07-07T14:37:05.952Z",
-      "first_seen_at": "2026-07-05T05:15:31.062Z",
-      "last_seen_at": "2026-07-07T14:37:05.952Z"
-    },
-    {
-      "store": "Boulanger",
-      "title": "Climatiseur réversible\n              DAITSU\n              APD_12FCX",
-      "price_eur": 1490,
-      "url": "https://www.boulanger.com/ref/9001000215",
-      "image": "https://boulanger.scene7.com/is/image/Boulanger/8432884626649_h_f_l_0?wid=120&hei=120&resMode=sharp2&op_usm=1.75,0.3,2,0&fmt=png-alpha",
-      "status": "unknown",
-      "availability_type": "delivery",
-      "delivery_info": null,
-      "brand": null,
-      "model": null,
-      "btu": "000 BTU",
-      "stock_info": null,
-      "scraped_at": "2026-07-07T14:37:05.953Z",
-      "first_seen_at": "2026-07-07T11:52:21.292Z",
-      "last_seen_at": "2026-07-07T14:37:05.953Z"
-    },
-    {
-      "store": "Boulanger",
-      "title": "Climatiseur réversible\n              TCL\n              TAC-12CHPBMZWC",
-      "price_eur": 1899.99,
-      "url": "https://www.boulanger.com/ref/9001000519",
-      "image": "https://boulanger.scene7.com/is/image/Boulanger/6955324304003_h_f_l_0?wid=120&hei=120&resMode=sharp2&op_usm=1.75,0.3,2,0&fmt=png-alpha",
-      "status": "unknown",
-      "availability_type": "delivery",
-      "delivery_info": null,
-      "brand": null,
-      "model": null,
-      "btu": null,
-      "stock_info": null,
-      "scraped_at": "2026-07-07T14:37:05.953Z",
-      "first_seen_at": "2026-07-05T05:15:31.063Z",
-      "last_seen_at": "2026-07-07T14:37:05.953Z"
+      "last_seen_at": "2026-07-07T17:15:51.004Z",
+      "status_changed_at": "2026-07-07T17:15:51.004Z",
+      "previous_status": "unknown"
     }
   ]
 }
