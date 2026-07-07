@@ -17,7 +17,6 @@ function loadConfig() {
 }
 const CONFIG = loadConfig();
 const CITIES = CONFIG.cities || [{ name: 'Tours', postcode: '37000' }];
-const SCRAPE_CITIES = CONFIG.scrape_cities !== false;
 
 // ── Construire la liste finale en fonction des villes ──
 const BASE_STORES = [
@@ -29,18 +28,11 @@ const BASE_STORES = [
   { name: 'Rakuten', url: 'https://fr.shopping.rakuten.com/s/climatiseur+portable', container: '[class*="product"], article, [class*="card"], li', baseUrl: 'https://fr.shopping.rakuten.com', availability_type: 'delivery' },
   { name: 'Ubaldi', url: 'https://www.ubaldi.com/recherche?q=climatiseur+portable', container: '[class*="product"], article, [class*="card"], li', baseUrl: 'https://www.ubaldi.com', availability_type: 'delivery' },
   { name: 'ManoMano', url: 'https://www.manomano.fr/cat/climatiseur+mobile+portable', container: '[class*="product"], article, [class*="card"], li', baseUrl: 'https://www.manomano.fr', availability_type: 'delivery' },
-  { name: 'eBay', url: 'https://www.ebay.fr/sch/i.html?_nkw=climatiseur+portable&LH_PrefLoc=2', container: '[class*="s-item"], [class*="srp-results"] li, article', baseUrl: 'https://www.ebay.fr', availability_type: 'delivery' },
-  // Google Shopping (agregateur, pas de filtre ville)
+  // Google Shopping (agregateur)
   { name: 'Google Shopping', url: 'https://www.google.com/search?tbm=shop&q=climatiseur+portable+mobile&hl=fr&gl=FR&num=40', container: '[class*="sh-dgr"], [class*="sh-pr"], [class*="result"]', baseUrl: 'https://www.google.com', availability_type: 'delivery', isGoogle: true },
 ];
 
-// ── Stores avec magasins physiques (un store par ville UNIQUEMENT pour ceux qui filtrent par localisation) ──
-const CITY_STORES = [
-  // LeBonCoin — le seul qui filtre reellement par ville via l'URL
-  { namePattern: 'LeBonCoin', urlTemplate: 'https://www.leboncoin.fr/recherche?category=48&text=climatiseur+portable&locations={CITY}_{PC}', baseUrl: 'https://www.leboncoin.fr', availability_type: 'tours' },
-];
-
-// ── Stores physiques nationaux (une seule passe, pas par ville) ──
+// ── Stores physiques (magasins dans les villes) ──
 const PHYSICAL_STORES = [
   { name: 'Leroy Merlin', url: 'https://www.leroymerlin.fr/produits/climatiseur-portable.html', container: '[class*="product"], article, [class*="card"], li', baseUrl: 'https://www.leroymerlin.fr', availability_type: 'tours' },
   { name: 'Castorama', url: 'https://www.castorama.fr/search?q=climatiseur+portable', container: '[class*="product"], article, [class*="card"], li', baseUrl: 'https://www.castorama.fr', availability_type: 'tours' },
@@ -58,24 +50,9 @@ const PHYSICAL_STORES = [
   { name: 'GiFi', url: 'https://www.gifi.fr/recherche?q=climatiseur+portable', container: '[class*="product"], article, [class*="card"], li', baseUrl: 'https://www.gifi.fr', availability_type: 'both' },
 ];
 
-// Construire la liste finale: BASE_STORES + PHYSICAL_STORES + CITY_STORES x CITIES
+// Construire la liste finale: BASE_STORES + PHYSICAL_STORES
 function buildAllStores() {
-  const all = [...BASE_STORES, ...PHYSICAL_STORES];
-  if (SCRAPE_CITIES) {
-    for (const cityStore of CITY_STORES) {
-      for (const city of CITIES) {
-        all.push({
-          name: cityStore.namePattern + ' ' + city.name,
-          url: cityStore.urlTemplate.replace('{CITY}', city.name).replace('{PC}', city.postcode),
-          container: '[class*="AdCard"], article, [class*="item"], li',
-          baseUrl: cityStore.baseUrl,
-          availability_type: cityStore.availability_type,
-          city: city.name,
-        });
-      }
-    }
-  }
-  return all;
+  return [...BASE_STORES, ...PHYSICAL_STORES];
 }
 
 const STORES = buildAllStores();
@@ -316,7 +293,7 @@ function mergeHistory(previous, fresh) {
 
 // ── Main ──
 async function main() {
-  console.log('ClimFinder v5 — Scan etendu (' + STORES.length + ' stores, ' + CITIES.length + ' villes)');
+  console.log('ClimFinder v5 — ' + STORES.length + ' stores, ' + CITIES.length + ' villes (neuf uniquement)');
   console.log(new Date().toISOString() + '\n');
 
   const previous = loadPrevious();
