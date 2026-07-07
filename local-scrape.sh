@@ -18,12 +18,14 @@ fi
 echo "🔍 Lancement du scraper sur $(node -e "const c=require('./config.json');console.log(c.cities.map(c=>c.name).join(', '))")"
 cd scraper && node index.js && cd ..
 
-# Commit et push vers GitHub
+# Commit et push vers GitHub (force-push pour eviter les conflits)
 git add data/stocks.json data/new_stock_alert.json 2>/dev/null || true
 if git diff --staged --quiet; then
   echo "✅ Aucun changement."
 else
   git commit -m "📊 Local scan — $(date '+%Y-%m-%d %H:%M')"
-  git push
+  # Pull puis push (evite les conflits avec le CI)
+  git pull --rebase || git rebase --abort
+  git push 2>/dev/null || (echo '⚠️ Push refuse, force-push...' && git push --force-with-lease)
   echo "✅ Résultats poussés sur GitHub."
 fi

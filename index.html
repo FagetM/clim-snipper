@@ -7,131 +7,135 @@
   <style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
     :root{
-      --bg:#0b1120;--card:#111827;--hover:#1a2332;--accent:#38bdf8;--gold:#f59e0b;
-      --green:#22c55e;--red:#ef4444;--orange:#f97316;--text:#e2e8f0;--muted:#94a3b8;
-      --border:#1e293b;--radius:16px;--radius-sm:10px;
+      --bg:#0a0f1a;--card:#111827;--accent:#38bdf8;--green:#22c55e;--red:#ef4444;
+      --orange:#f59e0b;--text:#e2e8f0;--muted:#94a3b8;--border:#1e293b;--radius:14px;
     }
     body{font-family:system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);min-height:100vh}
     header{
-      background:linear-gradient(135deg,#0f172a 0%,#1e293b 100%);
-      border-bottom:2px solid var(--accent);padding:2.5rem 1.5rem;text-align:center;
+      background:linear-gradient(135deg,#0f172a,#1a2332);border-bottom:2px solid var(--accent);
+      padding:1.8rem 1.5rem;text-align:center;
     }
-    header h1{font-size:2.4rem;font-weight:800;letter-spacing:-1px}
-    header h1 span{color:var(--accent)}
-    .subtitle{color:var(--muted);margin-top:.4rem;font-size:1.05rem}
-    .stats-bar{
-      display:flex;justify-content:center;gap:2rem;padding:1.25rem 1.5rem;
-      background:var(--card);border-bottom:1px solid var(--border);flex-wrap:wrap;
-    }
+    header h1{font-size:2rem;font-weight:800;letter-spacing:-.5px}
+    header h1 .ico{font-size:2rem}
+    .subtitle{color:var(--muted);font-size:.95rem;margin-top:.3rem}
+
+    /* Stale banner */
+    .stale-banner{display:none;background:rgba(239,68,68,.12);border-bottom:1px solid rgba(239,68,68,.25);color:var(--red);text-align:center;padding:.7rem;font-size:.82rem;font-weight:600}
+    .stale-banner.show{display:block}
+
+    /* Stats row */
+    .stats-row{display:flex;justify-content:center;gap:2rem;padding:1rem 1.5rem;background:var(--card);border-bottom:1px solid var(--border);flex-wrap:wrap}
     .stat{text-align:center}
-    .stat .num{font-size:1.8rem;font-weight:800}
-    .stat .num.green{color:var(--green)}.stat .num.blue{color:var(--accent)}.stat .num.orange{color:var(--orange)}.stat .num.red{color:var(--red)}
-    .stat .lbl{font-size:.78rem;color:var(--muted);margin-top:.15rem}
-    .filters{
-      display:flex;gap:.6rem;padding:1.2rem 1.5rem;flex-wrap:wrap;align-items:center;
-      background:var(--bg);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:10;
+    .stat .n{font-size:1.7rem;font-weight:800}
+    .stat .n.g{color:var(--green)}.stat .n.b{color:var(--accent)}.stat .n.o{color:var(--orange)}.stat .n.r{color:var(--red)}
+    .stat .lbl{font-size:.72rem;color:var(--muted);margin-top:.1rem}
+
+    /* City quick-access bar */
+    .city-bar{display:flex;gap:.5rem;padding:.8rem 1.5rem;background:var(--bg);border-bottom:1px solid var(--border);flex-wrap:wrap;align-items:center}
+    .city-bar .label{font-size:.75rem;color:var(--muted);font-weight:700;margin-right:.5rem}
+    .city-pill{
+      background:var(--card);border:1px solid var(--border);color:var(--muted);
+      padding:.4rem .9rem;border-radius:18px;cursor:pointer;font-size:.78rem;font-weight:600;
+      transition:all .15s;white-space:nowrap;
     }
+    .city-pill:hover{border-color:var(--accent);color:var(--text)}
+    .city-pill.active{background:var(--accent);color:#0a0f1a;border-color:var(--accent)}
+    .city-pill .count{font-size:.65rem;opacity:.7;margin-left:.3rem}
+
+    /* Main filters */
+    .filters{display:flex;gap:.5rem;padding:.8rem 1.5rem;background:var(--bg);flex-wrap:wrap;align-items:center}
     .filter-btn{
       background:var(--card);border:1px solid var(--border);color:var(--muted);
-      padding:.55rem 1.1rem;border-radius:20px;cursor:pointer;font-size:.82rem;font-weight:600;
-      transition:all .2s;
+      padding:.5rem 1rem;border-radius:18px;cursor:pointer;font-size:.78rem;font-weight:600;transition:all .15s;
     }
     .filter-btn:hover{border-color:var(--accent);color:var(--text)}
-    .filter-btn.active{background:var(--accent);color:#0b1120;border-color:var(--accent)}
-    .spacer{flex:1}
-    #priceSort{margin-left:auto;background:var(--card);border:1px solid var(--border);color:var(--text);padding:.55rem 1rem;border-radius:20px;font-size:.82rem;cursor:pointer}
-    .last-update{font-size:.78rem;color:var(--muted);padding:0 1.5rem;margin-top:.75rem}
-    .grid{
-      display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));
-      gap:1.25rem;padding:1.5rem;
-    }
+    .filter-btn.active{background:var(--accent);color:#0a0f1a;border-color:var(--accent)}
+    .sep{flex:1}
+    #priceSort{background:var(--card);border:1px solid var(--border);color:var(--text);padding:.45rem .8rem;border-radius:18px;font-size:.78rem;cursor:pointer}
+    .last-update{font-size:.75rem;color:var(--muted);padding:.6rem 1.5rem}
+
+    /* Grid */
+    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(350px,1fr));gap:1rem;padding:1.2rem}
+    @media(max-width:400px){.grid{grid-template-columns:1fr}}
+
+    /* Card */
     .card{
       background:var(--card);border:1px solid var(--border);border-radius:var(--radius);
       overflow:hidden;transition:transform .2s,border-color .2s,box-shadow .2s;
       display:flex;flex-direction:column;
     }
-    .card:hover{transform:translateY(-3px);border-color:var(--accent);box-shadow:0 8px 30px rgba(56,189,248,.1)}
-    .card-img-wrap{position:relative;background:#1a1f2e;height:220px;display:flex;align-items:center;justify-content:center;overflow:hidden}
-    .card-img-wrap img{max-width:100%;max-height:100%;object-fit:contain;padding:1rem}
-    .card-img-wrap .no-img{font-size:3rem;opacity:.3}
-    .card-img-wrap .badge-status{
-      position:absolute;top:12px;left:12px;
-      font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;
-      padding:.25rem .65rem;border-radius:6px;
+    .card:hover{transform:translateY(-2px);border-color:var(--accent);box-shadow:0 6px 24px rgba(56,189,248,.08)}
+    .card.blocked{opacity:.45;filter:grayscale(.3)}
+    .card .img-zone{background:#1a1f2e;height:200px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+    .card .img-zone img{max-width:100%;max-height:100%;object-fit:contain;padding:.8rem}
+    .card .img-zone .noimg{font-size:3rem;opacity:.2}
+    .card .img-zone .badge{position:absolute;top:10px;font-size:.68rem;font-weight:800;padding:.2rem .55rem;border-radius:5px;letter-spacing:.3px}
+    .card .img-zone .badge.left{left:10px}
+    .card .img-zone .badge.right{right:10px}
+    .badge.stock-ok{background:rgba(34,197,94,.15);color:var(--green);border:1px solid rgba(34,197,94,.3)}
+    .badge.stock-low{background:rgba(245,158,11,.15);color:var(--orange);border:1px solid rgba(245,158,11,.3)}
+    .badge.stock-no{background:rgba(239,68,68,.12);color:var(--red);border:1px solid rgba(239,68,68,.25)}
+    .badge.stock-unk{background:rgba(148,163,184,.1);color:var(--muted);border:1px solid rgba(148,163,184,.2)}
+    .badge.store{background:var(--accent);color:#0a0f1a}
+
+    .card .body{padding:1rem;flex:1;display:flex;flex-direction:column;gap:.45rem}
+    .card .body .brand{font-size:.7rem;color:var(--accent);font-weight:800;letter-spacing:.5px;text-transform:uppercase}
+    .card .body h3{font-size:.92rem;line-height:1.35;font-weight:600}
+    .card .body .tags{display:flex;gap:.4rem;flex-wrap:wrap}
+    .card .body .tags .tag{
+      font-size:.68rem;padding:.15rem .55rem;border-radius:10px;font-weight:700;white-space:nowrap;
     }
-    .badge-status.in-stock{background:rgba(34,197,94,.15);color:var(--green);border:1px solid rgba(34,197,94,.35)}
-    .badge-status.low-stock{background:rgba(249,115,22,.15);color:var(--orange);border:1px solid rgba(249,115,22,.35)}
-    .badge-status.out-of-stock{background:rgba(239,68,68,.15);color:var(--red);border:1px solid rgba(239,68,68,.35)}
-    .badge-status.unknown{background:rgba(148,163,184,.12);color:var(--muted);border:1px solid rgba(148,163,184,.25)}
-    .card-img-wrap .badge-store{
-      position:absolute;top:12px;right:12px;
-      font-size:.65rem;font-weight:800;letter-spacing:.7px;
-      padding:.2rem .55rem;border-radius:5px;
-      background:var(--accent);color:#0b1120;
+    .tag.btu{background:rgba(245,158,11,.1);color:var(--orange)}
+    .tag.city{background:rgba(56,189,248,.1);color:var(--accent)}
+    .tag.more{background:transparent;color:var(--muted);font-weight:400}
+    .card .body .desc{font-size:.74rem;color:var(--muted);line-height:1.4}
+
+    .card .foot{display:flex;align-items:center;justify-content:space-between;padding:.7rem 1rem;border-top:1px solid var(--border);gap:.5rem}
+    .card .foot .price{font-size:1.35rem;font-weight:800;color:var(--accent)}
+    .card .foot .price s{font-size:.75rem;color:var(--muted);font-weight:400}
+    .card .foot .actions{display:flex;gap:.35rem;align-items:center}
+    .card .foot .btn{
+      padding:.4rem .75rem;border-radius:7px;font-size:.73rem;font-weight:700;cursor:pointer;
+      text-decoration:none;border:none;white-space:nowrap;transition:opacity .15s;
     }
-    .card-body{padding:1.15rem;display:flex;flex-direction:column;gap:.5rem;flex:1}
-    .card-body .brand-line{font-size:.72rem;color:var(--accent);font-weight:700;letter-spacing:.5px;text-transform:uppercase}
-    .card-body h3{font-size:.95rem;line-height:1.35;font-weight:600;color:#fff}
-    .card-body .specs{display:flex;gap:.6rem;flex-wrap:wrap;margin:.25rem 0}
-    .card-body .spec{
-      font-size:.72rem;background:rgba(56,189,248,.08);color:var(--accent);
-      padding:.2rem .6rem;border-radius:12px;font-weight:600;
-    }
-    .card-body .spec.gold{background:rgba(245,158,11,.08);color:var(--gold)}
-    .card-body .desc{font-size:.78rem;color:var(--muted);line-height:1.5}
-    .card-footer{display:flex;align-items:center;justify-content:space-between;padding:.75rem 1.15rem;border-top:1px solid var(--border);margin-top:auto}
-    .card-footer .price{font-size:1.5rem;font-weight:800;color:var(--accent)}
-    .card-footer .price small{font-size:.75rem;color:var(--muted);font-weight:400}
-    .card-footer .link-btn{
-      background:var(--accent);color:#0b1120;text-decoration:none;
-      padding:.55rem 1.2rem;border-radius:8px;font-weight:700;font-size:.8rem;
-      transition:opacity .2s;white-space:nowrap;
-    }
-    .card-footer .link-btn:hover{opacity:.85}
-    .card-footer .block-btn{
-      background:transparent;color:var(--muted);border:1px solid var(--border);
-      padding:.5rem .7rem;border-radius:8px;cursor:pointer;font-size:1rem;
-      transition:all .2s;margin-left:.4rem;
-    }
-    .card-footer .block-btn:hover{color:var(--red);border-color:var(--red)}
-    .card-footer .block-btn.active{color:var(--red);border-color:var(--red);background:rgba(239,68,68,.1)}
-    .card-footer .left{display:flex;align-items:center;gap:.5rem}
-    .card .updated{font-size:.67rem;color:var(--muted);padding:.35rem 1.15rem .75rem}
-    .empty-state{grid-column:1/-1;text-align:center;padding:4rem 2rem}
-    .empty-state .big-emoji{font-size:4rem;margin-bottom:1rem}
-    .empty-state h2{color:var(--muted);margin-bottom:.5rem}
-    .empty-state p{color:var(--muted);font-size:.9rem;max-width:500px;margin:0 auto}
-    footer{text-align:center;padding:2rem;border-top:1px solid var(--border);color:var(--muted);font-size:.75rem}
-    .sources{font-size:.68rem;opacity:.5;margin-top:.4rem}
-    @media(max-width:640px){
-      .grid{grid-template-columns:1fr;padding:1rem}
-      header h1{font-size:1.8rem}
-      .stats-bar{gap:1rem}
-      .filters{flex-direction:column;align-items:stretch}
-      #priceSort{margin-left:0}
-    }
+    .btn.go{background:var(--accent);color:#0a0f1a}
+    .btn.go:hover{opacity:.8}
+    .btn.block-btn{background:transparent;color:var(--muted);border:1px solid var(--border);font-size:.85rem;padding:.3rem .5rem}
+    .btn.block-btn:hover{color:var(--red);border-color:var(--red)}
+    .btn.block-btn.on{color:var(--red);border-color:var(--red);background:rgba(239,68,68,.08)}
+    .card .meta{font-size:.67rem;color:var(--muted);padding:.3rem 1rem .7rem}
+
+    .empty{grid-column:1/-1;text-align:center;padding:3rem 2rem}
+    .empty .ge{font-size:3rem;margin-bottom:.8rem}
+    .empty h2{color:var(--muted);margin-bottom:.4rem}
+    .empty p{color:var(--muted);font-size:.85rem;max-width:400px;margin:0 auto}
+
+    footer{text-align:center;padding:1.5rem;border-top:1px solid var(--border);color:var(--muted);font-size:.72rem}
+    footer .src{font-size:.65rem;opacity:.4;margin-top:.3rem}
   </style>
 </head>
 <body>
   <header>
-    <h1>🌬️ <span>Clim'Finder</span></h1>
-    <p class="subtitle">Climatiseurs portables — Tours & livraison</p>
+    <h1><span class="ico">🌬️</span> Clim'Finder</h1>
+    <p class="subtitle">Climatiseurs portables neufs — Bressuire & alentours</p>
   </header>
 
-  <div class="stats-bar" id="statsBar"></div>
+  <div class="stale-banner" id="staleBanner">⚠️ Données de plus de 24h — le prochain scan automatique est à 7h, ou relance manuellement</div>
+
+  <div class="stats-row" id="statsRow"></div>
+
+  <div class="city-bar" id="cityBar">
+    <span class="label">🏙️ Villes :</span>
+  </div>
 
   <div class="filters">
     <button class="filter-btn active" data-filter="all">📋 Tous</button>
     <button class="filter-btn" data-filter="in_stock">✅ En stock</button>
-    <button class="filter-btn" data-filter="tours">📍 Tours</button>
     <button class="filter-btn" data-filter="delivery">🚚 Livraison</button>
     <button class="filter-btn" data-filter="low_price">💶 -600€</button>
-    <span class="spacer"></span>
-    <select id="cityFilter">
-      <option value="">🏙️ Toutes les villes</option>
-    </select>
+    <span class="sep"></span>
     <select id="priceSort">
-      <option value="">Prix par défaut</option>
+      <option value="">🔽 Prix par défaut</option>
       <option value="asc">Prix croissant ↑</option>
       <option value="desc">Prix décroissant ↓</option>
     </select>
@@ -142,174 +146,150 @@
   <div class="grid" id="grid"></div>
 
   <footer>
-    <p>Scan automatique toutes les heures · 7h → 22h · Villes : Bressuire, Parthenay, Thouars, Chinon, Cholet</p>
-    <p class="sources">Boulanger · Darty · Cdiscount · Amazon · Fnac · Rakuten · Ubaldi · ManoMano · Google Shopping · Leroy Merlin · Castorama · Carrefour · Auchan · E.Leclerc · Mr Bricolage · Brico Dépôt · But · Conforama · Electro Dépôt · Intermarché · Magasins U · Brico Marché · GiFi</p>
+    <p>Scan automatique toutes les heures · 7h→22h · Bressuire · Parthenay · Thouars · Chinon · Cholet</p>
+    <p class="src">Boulanger · Darty · Cdiscount · Amazon · Fnac · Rakuten · Ubaldi · ManoMano · Google Shopping · Leroy Merlin · Castorama · Carrefour · Auchan · E.Leclerc · Mr Bricolage · Brico Dépôt · But · Conforama · Electro Dépôt · Intermarché · Magasins U · Brico Marché · GiFi</p>
   </footer>
 
   <script>
   (function(){
     'use strict';
-    const DATA_URL='data/stocks.json';
-    let all=[],filter='all',showBlocked=false,cityFilter='';
+    const D='data/stocks.json',BLK='climf-blk';
+    let all=[],filter='all',cityFilter='',showBlocked=false;
 
-    function productCities(p) {
-      if (!p.city) return [];
-      return p.city.split(',').map(c => c.trim()).filter(Boolean);
-    }
+    // Blacklist
+    function getBl(){try{return new Set(JSON.parse(localStorage.getItem(BLK)||'[]'))}catch(e){return new Set()}}
+    function saveBl(bl){localStorage.setItem(BLK,JSON.stringify([...bl]))}
+    function blKey(p){return p.store+'::'+p.title.substring(0,80)}
+    function blocked(p){return getBl().has(blKey(p))}
+    function toggleBl(p){const bl=getBl(),k=blKey(p);bl.has(k)?bl.delete(k):bl.add(k);saveBl(bl);render()}
 
-    const grid=document.getElementById('grid'),lastUpdate=document.getElementById('lastUpdate'),statsBar=document.getElementById('statsBar');
-    const BL_KEY='clim-finder-blacklist';
-
-    // ── Blacklist (localStorage) ──
-    function getBlacklist(){try{return new Set(JSON.parse(localStorage.getItem(BL_KEY)||'[]'));}catch(e){return new Set();}}
-    function saveBlacklist(bl){localStorage.setItem(BL_KEY,JSON.stringify([...bl]));}
-    function blacklistKey(p){return p.store+'::'+p.title.substring(0,80);}
-    function isBlocked(p){return getBlacklist().has(blacklistKey(p));}
-    function toggleBlock(p){
-      const bl=getBlacklist(),key=blacklistKey(p);
-      if(bl.has(key)) bl.delete(key); else bl.add(key);
-      saveBlacklist(bl);render();
-    }
-
-    function fmtDate(iso){
-      if(!iso)return'—';
-      const d=new Date(iso);return d.toLocaleString('fr-FR',{dateStyle:'medium',timeStyle:'short'});
-    }
-    function fmtRelative(iso){
-      if(!iso)return'';
-      const diff=Date.now()-new Date(iso).getTime(),mins=Math.floor(diff/6e4);
-      if(mins<1)return'à l\'instant';if(mins<60)return mins+' min';
-      const hrs=Math.floor(mins/60);if(hrs<24)return hrs+'h';
-      return Math.floor(hrs/24)+'j';
-    }
-    function esc(s){const d=document.createElement('div');d.textContent=s;return d.innerHTML;}
+    // Helpers
+    function fmtD(iso){if(!iso)return'—';return new Date(iso).toLocaleString('fr-FR',{dateStyle:'medium',timeStyle:'short'})}
+    function fmtR(iso){if(!iso)return'';const m=Math.floor((Date.now()-new Date(iso).getTime())/6e4);if(m<1)return'inst';if(m<60)return m+'min';const h=Math.floor(m/60);if(h<24)return h+'h';return Math.floor(h/24)+'j'}
+    function esc(s){const d=document.createElement('div');d.textContent=s;return d.innerHTML}
+    function pcities(p){if(!p.city)return[];return p.city.split(',').map(c=>c.trim()).filter(Boolean)}
+    function ct(t){return t.replace(/\s+/g,' ').replace(/\s{2,}/g,' ').trim()}
 
     function getFiltered(){
-      let list=[...all];
-      // Filtre blacklist
-      if(!showBlocked){
-        const bl=getBlacklist();
-        list=list.filter(p=>!bl.has(blacklistKey(p)));
-      }
+      let list=[...all];const bl=getBl();
+      if(!showBlocked) list=list.filter(p=>!bl.has(blKey(p)));
       if(filter==='in_stock') list=list.filter(p=>p.status==='in_stock'||p.status==='low_stock');
-      if(filter==='tours') list=list.filter(p=>p.availability_type==='tours'||p.availability_type==='both');
-      if(filter==='delivery') list=list.filter(p=>p.availability_type==='delivery'||p.availability_type==='both');
+      if(filter==='delivery') list=list.filter(p=>p.availability_type!=='tours');
       if(filter==='low_price') list=list.filter(p=>p.price_eur&&p.price_eur<600);
-      if(cityFilter) list=list.filter(p=>productCities(p).includes(cityFilter));
+      if(cityFilter) list=list.filter(p=>pcities(p).includes(cityFilter));
       const s=document.getElementById('priceSort').value;
       if(s==='asc') list.sort((a,b)=>(a.price_eur||99999)-(b.price_eur||99999));
       else if(s==='desc') list.sort((a,b)=>(b.price_eur||0)-(a.price_eur||0));
       return list;
     }
 
-    function cleanTitle(t){return t.replace(/\s+/g,' ').replace(/\s{2,}/g,' ').trim();}
+    function extBrand(t){t=t.toUpperCase();const b=['DREAME','OPTIMEA','ESSENTIELB','REMKO','ECOFLOW','DUUX','HISENSE','ARGO','ELECTROLUX','DE\'LONGHI','DELONGHI','TCL','HAIER','GREE','SANG','KOOPER','WHIRLPOOL','COMFEE','COSTWAY','BECKEN','SENCOR','EQUATION','OMISOON','MARSEE','TECTAKE','XIAOMI','DREO'];for(const x of b){if(t.includes(x.toUpperCase()))return x}return null}
 
-    function extractBrand(title){
-      const t=title.toUpperCase();
-      const brands=['DREAME','OPTIMEA','ESSENTIELB','REMKO','ECOFLOW','DUUX','HISENSE','ARGO','ELECTROLUX','DE\'LONGHI','DELONGHI','TCL','HAIER','GREE','SANG','KOOPER','WHIRLPOOL','COMFEE','COSTWAY','BECKEN','SENCOR','EQUATION','Klarstein','OMISOON','MARSEE','TECTAKE'];
-      for(const b of brands){if(t.includes(b.toUpperCase()))return b;}
-      return null;
-    }
-
-    function buildCard(p){
-      const title=cleanTitle(p.title),brand=p.brand||extractBrand(title)||p.store,btu=p.btu||null;
-      const blocked=isBlocked(p);
-      const statusLabel={in_stock:'✅ En stock',low_stock:'⚠️ Stock faible',out_of_stock:'❌ Rupture',unknown:'Stock à vérifier'}[p.status]||'?';
-      const statusClass=p.status||'unknown';
-      let imgSrc=p.image||'';
-      if(imgSrc.includes('scene7.com')){
-        imgSrc=imgSrc.replace(/wid=\d+/, 'wid=500').replace(/hei=\d+/, 'hei=500');
-      }
+    function card(p){
+      const title=ct(p.title),brand=p.brand||extBrand(title)||p.store,btu=p.btu,blk=blocked(p);
+      const sl={in_stock:'✅ En stock',low_stock:'⚠️ Faible',out_of_stock:'❌ Rupture',unknown:'📦 À vérifier'}[p.status]||'?';
+      const sc=p.status||'unknown';
+      let img=p.image||'';
+      if(img.includes('scene7.com')) img=img.replace(/wid=\d+/,'wid=500').replace(/hei=\d+/,'hei=500');
       const price=p.price_eur!=null?p.price_eur.toLocaleString('fr-FR',{minimumFractionDigits:2}):null;
-      const seen=fmtRelative(p.last_seen_at||p.scraped_at);
-      const fullDate=fmtDate(p.last_seen_at||p.scraped_at);
-
+      const seen=fmtR(p.last_seen_at||p.scraped_at);
+      const fullDate=fmtD(p.last_seen_at||p.scraped_at);
+      const cities=pcities(p);
       let desc=p.stock_info||p.delivery_info||'';
-      if(!desc&&p.availability_type==='tours')desc='Disponible à Tours — vérifier en magasin';
-      if(!desc&&p.availability_type==='delivery')desc='Livraison disponible';
+      if(!desc&&p.availability_type==='tours')desc='Disponible en retrait magasin';
+      if(!desc&&p.availability_type==='delivery')desc='Livraison à domicile';
       if(p.status==='out_of_stock')desc='Actuellement en rupture';
 
-      return `<div class="card" style="${blocked?'opacity:.55':''}">
-        <div class="card-img-wrap">
-          ${imgSrc?`<img src="${esc(imgSrc)}" alt="${esc(title)}" loading="lazy" onerror="this.parentElement.innerHTML='<span class=\\'no-img\\'>📦</span>'">`:'<span class="no-img">📦</span>'}
-          <span class="badge-status ${statusClass}">${statusLabel}</span>
-          <span class="badge-store">${esc(p.store)}</span>
+      return `<div class="card${blk?' blocked':''}">
+        <div class="img-zone">
+          ${img?`<img src="${esc(img)}" alt="" loading="lazy" onerror="this.parentElement.innerHTML='<span class=noimg>📦</span>'">`:'<span class="noimg">📦</span>'}
+          <span class="badge left stock-${sc==='in_stock'?'ok':sc==='low_stock'?'low':sc==='out_of_stock'?'no':'unk'}">${sl}</span>
+          <span class="badge right store">${esc(p.store)}</span>
         </div>
-        <div class="card-body">
-          ${brand!==p.store?`<span class="brand-line">${esc(brand)}</span>`:''}
+        <div class="body">
+          ${brand!==p.store?`<span class="brand">${esc(brand)}</span>`:''}
           <h3>${esc(title)}</h3>
-          ${desc?`<p class="desc">${esc(desc.substring(0,160))}</p>`:''}
-          <div class="specs">
-            ${btu?`<span class="spec gold">🔥 ${esc(btu)}</span>`:''}
-            ${p.status==='in_stock'?'<span class="spec">📦 En stock</span>':''}
-            ${p.availability_type==='tours'||p.availability_type==='both'?'<span class="spec">📍 Local</span>':''}
-            ${p.city?(function(){const cs=productCities(p);return cs.length===1?'<span class="spec">🏙️ '+esc(cs[0])+'</span>':'<span class="spec" title="'+esc(cs.join(', '))+'">🏙️ '+esc(cs[0])+' +'+(cs.length-1)+'</span>';})():''}
+          ${desc?`<p class="desc">${esc(desc.substring(0,140))}</p>`:''}
+          <div class="tags">
+            ${btu?`<span class="tag btu">🔥 ${esc(btu)}</span>`:''}
+            ${cities.length===1?`<span class="tag city">🏙️ ${esc(cities[0])}</span>`:''}
+            ${cities.length>1?cities.slice(0,3).map(c=>`<span class="tag city">🏙️ ${esc(c)}</span>`).join('')+(cities.length>3?`<span class="tag more">+${cities.length-3}</span>`:''):''}
+            ${cities.length===0&&p.availability_type!=='tours'?'<span class="tag">🚚 Livraison</span>':''}
+            ${cities.length===0&&p.availability_type==='tours'?'<span class="tag">📍 Retrait</span>':''}
           </div>
         </div>
-        <div class="card-footer">
-          <div class="left">
-            <div class="price">${price?price+'<small> €</small>':'<small>Prix non dispo</small>'}</div>
-            <button class="block-btn${blocked?' active':''}" onclick="window._toggleBlock('${esc(blacklistKey(p))}')" title="${blocked?'Réafficher ce produit':'Masquer ce produit'}">${blocked?'👁️':'🚫'}</button>
+        <div class="foot">
+          <div class="price">${price?price+'<small> €</small>':'<small>?</small>'}</div>
+          <div class="actions">
+            <button class="btn block-btn${blk?' on':''}" onclick="W.toggleBl('${esc(blKey(p))}')" title="${blk?'Réafficher':'Masquer'}">${blk?'👁':'🚫'}</button>
+            ${p.url?`<a href="${esc(p.url)}" target="_blank" rel="noopener" class="btn go">Voir →</a>`:''}
           </div>
-          ${p.url?`<a href="${esc(p.url)}" target="_blank" rel="noopener" class="link-btn">Voir →</a>`:''}
         </div>
-        <div class="updated">🕐 Vu ${seen} · Dernier scan ${fullDate}</div>
+        <div class="meta">🕐 Vu il y a ${seen} · ${fullDate}</div>
       </div>`;
     }
 
     function render(){
-      const filtered=getFiltered(),bl=getBlacklist();
-      const blockedCount=all.filter(p=>bl.has(blacklistKey(p))).length;
-      const visibleAll=all.filter(p=>!bl.has(blacklistKey(p)));
-      const inStock=visibleAll.filter(p=>p.status==='in_stock'||p.status==='low_stock').length;
-      const toursCount=visibleAll.filter(p=>p.availability_type==='tours'||p.availability_type==='both').length;
-      const scanDate=all.length>0?all[0].last_seen_at||all[0].scraped_at:null;
+      const filtered=getFiltered(),bl=getBl();
+      const visible=all.filter(p=>!bl.has(blKey(p)));
+      const inStock=visible.filter(p=>p.status==='in_stock'||p.status==='low_stock').length;
+      const blockedCount=all.length-visible.length;
+      const allCities=[...new Set(all.flatMap(p=>pcities(p)))].sort();
+      const now=Date.now(),scanTime=all.length>0?new Date(all[0].last_seen_at||all[0].scraped_at).getTime():0;
+      const ageH=scanTime?Math.floor((now-scanTime)/36e5):999;
 
-      // Populate city dropdown from product cities
-      const citySelect=document.getElementById('cityFilter');
-      const currentVal=citySelect.value;
-      const cities=[...new Set(all.flatMap(p=>productCities(p)))].sort();
-      citySelect.innerHTML='<option value="">🏙️ Toutes les villes</option>'+cities.map(c=>`<option value="${esc(c)}"${c===currentVal?' selected':''}>🏙️ ${esc(c)}</option>`).join('');
-
-      statsBar.innerHTML=`
-        <div class="stat"><div class="num ${inStock>0?'green':'red'}">${inStock}</div><div class="lbl">En stock</div></div>
-        <div class="stat"><div class="num blue">${visibleAll.length}</div><div class="lbl">Affichés</div></div>
-        <div class="stat"><div class="num orange">${toursCount}</div><div class="lbl">Dispo Tours</div></div>
-        ${blockedCount>0?`<div class="stat" style="cursor:pointer" onclick="window._toggleShowBlocked()"><div class="num red">${blockedCount}</div><div class="lbl">🚫 Masqués</div></div>`:''}
+      // Stats
+      document.getElementById('statsRow').innerHTML=`
+        <div class="stat"><div class="n ${inStock>0?'g':'r'}">${inStock}</div><div class="lbl">En stock</div></div>
+        <div class="stat"><div class="n b">${visible.length}</div><div class="lbl">Produits</div></div>
+        <div class="stat"><div class="n o">${allCities.length}</div><div class="lbl">Villes couvertes</div></div>
+        ${blockedCount>0?`<div class="stat" style="cursor:pointer" onclick="W.toggleBlocked()"><div class="n r">${blockedCount}</div><div class="lbl">🚫 Masqués</div></div>`:''}
+        ${ageH>24?`<div class="stat"><div class="n r">⚠️</div><div class="lbl">Données ${fmtR(all[0]?.last_seen_at||all[0]?.scraped_at)}</div></div>`:''}
       `;
-      lastUpdate.textContent=scanDate?`📡 Dernier scan : ${fmtDate(scanDate)} (il y a ${fmtRelative(scanDate)})${blockedCount>0?' · '+blockedCount+' produit(s) masqué(s) — clique sur "Masqués" pour les voir':''}`:'Aucune donnée';
 
+      // Stale banner
+      document.getElementById('staleBanner').className='stale-banner'+(ageH>24?' show':'');
+
+      // City bar
+      const cb=document.getElementById('cityBar');
+      cb.innerHTML='<span class="label">🏙️ Villes :</span>'+allCities.map(c=>{
+        const cnt=visible.filter(p=>pcities(p).includes(c)).length;
+        return `<span class="city-pill${c===cityFilter?' active':''}" data-city="${esc(c)}">${esc(c)}<span class="count">${cnt}</span></span>`;
+      }).join('')+(cityFilter?`<span class="city-pill active" style="background:transparent;border:1px dashed var(--border)" onclick="W.clearCity()">✕ Effacer</span>`:'');
+
+      // City pill clicks
+      cb.querySelectorAll('.city-pill[data-city]').forEach(pl=>pl.addEventListener('click',()=>{
+        const c=pl.dataset.city;cityFilter=cityFilter===c?'':c;render();
+      }));
+
+      // Last update
+      document.getElementById('lastUpdate').textContent=all.length?`📡 Dernier scan : ${fmtD(all[0].last_seen_at||all[0].scraped_at)} (${fmtR(all[0].last_seen_at||all[0].scraped_at)})${blockedCount>0?' · '+blockedCount+' masqué(s)':''}${ageH>24?' · ⚠️ Données anciennes':''}`:'Aucune donnée';
+
+      // Grid
       if(!filtered.length){
-        grid.innerHTML=`<div class="empty-state"><div class="big-emoji">${filter==='in_stock'?'😔':'📡'}</div><h2>${filter==='in_stock'?'Aucune clim en stock pour le moment':'Aucun résultat'}</h2><p>${filter==='in_stock'?'Reviens plus tard, le stock est scanné toutes les heures.':'Essaie un autre filtre.'}</p></div>`;
+        document.getElementById('grid').innerHTML=`<div class="empty"><div class="ge">${filter==='in_stock'?'😔':'📡'}</div><h2>${filter==='in_stock'?'Aucune clim en stock':'Aucun résultat'}</h2><p>${filter==='in_stock'?'Le stock est scanné toutes les heures automatiquement.':'Essaie un autre filtre ou une autre ville.'}</p></div>`;
         return;
       }
-      grid.innerHTML=filtered.map(buildCard).join('');
+      document.getElementById('grid').innerHTML=filtered.map(card).join('');
     }
 
-    // ── Global handlers for onclick attributes ──
-    window._toggleBlock=function(key){
-      const p=all.find(x=>blacklistKey(x)===key);
-      if(p) toggleBlock(p);
-    };
-    window._toggleShowBlocked=function(){
-      showBlocked=!showBlocked;
-      if(showBlocked){filter='all';document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));document.querySelector('[data-filter="all"]').classList.add('active');}
-      render();
+    // Global handlers
+    window.W={
+      toggleBl:function(k){const p=all.find(x=>blKey(x)===k);if(p)toggleBl(p)},
+      toggleBlocked:function(){showBlocked=!showBlocked;if(showBlocked){filter='all';document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));document.querySelector('[data-filter="all"]').classList.add('active')}cityFilter='';render()},
+      clearCity:function(){cityFilter='';render()}
     };
 
+    // Filter buttons
     document.querySelectorAll('.filter-btn').forEach(btn=>btn.addEventListener('click',()=>{
       document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
       btn.classList.add('active');filter=btn.dataset.filter;showBlocked=false;render();
     }));
     document.getElementById('priceSort').addEventListener('change',render);
-    document.getElementById('cityFilter').addEventListener('change',function(){cityFilter=this.value;render();});
 
+    // Load
     async function load(){
-      try{
-        const r=await fetch(DATA_URL+'?t='+Date.now());
-        if(!r.ok)throw new Error('HTTP '+r.status);
-        const d=await r.json();all=d.products||[];
-      }catch(e){console.warn(e);all=[]}
+      try{const r=await fetch(D+'?t='+Date.now());if(!r.ok)throw new Error(''+r.status);all=(await r.json()).products||[]}catch(e){all=[]}
       render();
     }
     load();setInterval(load,10*60*1000);
