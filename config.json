@@ -2,5 +2,14 @@
   "github_pages_url": "https://fagetm.github.io/clim-snipper",
   "check_interval_minutes": 30,
   "notify_on_new_stock": true,
-  "notify_on_disappeared": false
+  "notify_on_disappeared": false,
+  "cities": [
+    { "name": "Tours", "postcode": "37000" },
+    { "name": "Bressuire", "postcode": "79300" },
+    { "name": "Parthenay", "postcode": "79200" },
+    { "name": "Thouars", "postcode": "79100" },
+    { "name": "Chinon", "postcode": "37500" },
+    { "name": "Cholet", "postcode": "49300" }
+  ],
+  "scrape_cities": true
 }

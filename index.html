@@ -127,6 +127,9 @@
     <button class="filter-btn" data-filter="delivery">🚚 Livraison</button>
     <button class="filter-btn" data-filter="low_price">💶 -600€</button>
     <span class="spacer"></span>
+    <select id="cityFilter">
+      <option value="">🏙️ Toutes les villes</option>
+    </select>
     <select id="priceSort">
       <option value="">Prix par défaut</option>
       <option value="asc">Prix croissant ↑</option>
@@ -139,15 +142,15 @@
   <div class="grid" id="grid"></div>
 
   <footer>
-    <p>Scan automatique toutes les heures · 7h → 22h</p>
-    <p class="sources">Boulanger · Cdiscount · Darty · Amazon · Leroy Merlin · Castorama · Fnac · But · Rakuten · LeBonCoin · Google Shopping</p>
+    <p>Scan automatique toutes les heures · 7h → 22h · Villes : Tours, Bressuire, Parthenay, Thouars, Chinon, Cholet</p>
+    <p class="sources">Boulanger · Darty · Cdiscount · Amazon · Fnac · Rakuten · Ubaldi · ManoMano · eBay · Leroy Merlin · Castorama · Carrefour · Auchan · E.Leclerc · Mr Bricolage · Brico Dépôt · But · Conforama · Electro Dépôt · Intermarché · Magasins U · Brico Marché · GiFi · LeBonCoin · Google Shopping</p>
   </footer>
 
   <script>
   (function(){
     'use strict';
     const DATA_URL='data/stocks.json';
-    let all=[],filter='all',showBlocked=false;
+    let all=[],filter='all',showBlocked=false,cityFilter='';
 
     const grid=document.getElementById('grid'),lastUpdate=document.getElementById('lastUpdate'),statsBar=document.getElementById('statsBar');
     const BL_KEY='clim-finder-blacklist';
@@ -187,6 +190,7 @@
       if(filter==='tours') list=list.filter(p=>p.availability_type==='tours'||p.availability_type==='both');
       if(filter==='delivery') list=list.filter(p=>p.availability_type==='delivery'||p.availability_type==='both');
       if(filter==='low_price') list=list.filter(p=>p.price_eur&&p.price_eur<600);
+      if(cityFilter) list=list.filter(p=>p.city===cityFilter);
       const s=document.getElementById('priceSort').value;
       if(s==='asc') list.sort((a,b)=>(a.price_eur||99999)-(b.price_eur||99999));
       else if(s==='desc') list.sort((a,b)=>(b.price_eur||0)-(a.price_eur||0));
@@ -234,6 +238,7 @@
             ${btu?`<span class="spec gold">🔥 ${esc(btu)}</span>`:''}
             ${p.status==='in_stock'?'<span class="spec">📦 En stock</span>':''}
             ${p.availability_type==='tours'||p.availability_type==='both'?'<span class="spec">📍 Tours</span>':''}
+            ${p.city?`<span class="spec">🏙️ ${esc(p.city)}</span>`:''}
           </div>
         </div>
         <div class="card-footer">
@@ -254,6 +259,12 @@
       const inStock=visibleAll.filter(p=>p.status==='in_stock'||p.status==='low_stock').length;
       const toursCount=visibleAll.filter(p=>p.availability_type==='tours'||p.availability_type==='both').length;
       const scanDate=all.length>0?all[0].last_seen_at||all[0].scraped_at:null;
+
+      // Populate city dropdown
+      const citySelect=document.getElementById('cityFilter');
+      const currentVal=citySelect.value;
+      const cities=[...new Set(all.map(p=>p.city).filter(Boolean))].sort();
+      citySelect.innerHTML='<option value="">🏙️ Toutes les villes</option>'+cities.map(c=>`<option value="${esc(c)}"${c===currentVal?' selected':''}>🏙️ ${esc(c)}</option>`).join('');
 
       statsBar.innerHTML=`
         <div class="stat"><div class="num ${inStock>0?'green':'red'}">${inStock}</div><div class="lbl">En stock</div></div>
@@ -286,6 +297,7 @@
       btn.classList.add('active');filter=btn.dataset.filter;showBlocked=false;render();
     }));
     document.getElementById('priceSort').addEventListener('change',render);
+    document.getElementById('cityFilter').addEventListener('change',function(){cityFilter=this.value;render();});
 
     async function load(){
       try{

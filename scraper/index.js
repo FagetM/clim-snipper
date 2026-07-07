@@ -8,33 +8,77 @@ const fs = require('fs');
 const path = require('path');
 
 const OUTPUT = path.join(__dirname, '..', 'data', 'stocks.json');
+const CONFIG_PATH = path.join(__dirname, '..', 'config.json');
 const TIMEOUT = 25000;
 
-// ── Sources (Google Shopping + enseignes + LeBonCoin) ──
-const STORES = [
-  { name: 'Google Shopping', url: 'https://www.google.com/search?tbm=shop&q=climatiseur+portable+mobile&hl=fr&gl=FR&num=40', container: '[class*="sh-dgr"], [class*="sh-pr"], [class*="result"]', baseUrl: 'https://www.google.com', availability_type: 'delivery', isGoogle: true },
-  { name: 'LeBonCoin', url: 'https://www.leboncoin.fr/recherche?category=48&text=climatiseur+portable&locations=Tours_37000', container: '[class*="AdCard"], article, [class*="item"], li', baseUrl: 'https://www.leboncoin.fr', availability_type: 'tours' },
-  // Enseignes directes
-  { name: 'Darty', url: 'https://www.darty.com/nav/extra/list?s=climatiseur+portable&cat=21791&o=4', container: '[class*="product"], article, [class*="card"], li', baseUrl: 'https://www.darty.com', availability_type: 'delivery' },
+// Lire les villes depuis config.json
+function loadConfig() {
+  try { return JSON.parse(fs.readFileSync(CONFIG_PATH, 'utf8')); } catch (_) { return {}; }
+}
+const CONFIG = loadConfig();
+const CITIES = CONFIG.cities || [{ name: 'Tours', postcode: '37000' }];
+const SCRAPE_CITIES = CONFIG.scrape_cities !== false;
+
+// ── Construire la liste finale en fonction des villes ──
+const BASE_STORES = [
   { name: 'Boulanger', url: 'https://www.boulanger.com/resultats?tr=climatiseur+portable', container: '[class*="product"], article, [class*="card"], li', baseUrl: 'https://www.boulanger.com', availability_type: 'delivery' },
-  { name: 'Leroy Merlin', url: 'https://www.leroymerlin.fr/produits/climatiseur-portable.html', container: '[class*="product"], article, [class*="card"], li', baseUrl: 'https://www.leroymerlin.fr', availability_type: 'tours' },
+  { name: 'Darty', url: 'https://www.darty.com/nav/extra/list?s=climatiseur+portable&cat=21791&o=4', container: '[class*="product"], article, [class*="card"], li', baseUrl: 'https://www.darty.com', availability_type: 'delivery' },
   { name: 'Cdiscount', url: 'https://www.cdiscount.com/electromenager/r-climatiseur+portable.html', container: '[class*="prdt"], [class*="product"], article, li', baseUrl: 'https://www.cdiscount.com', availability_type: 'delivery' },
   { name: 'Amazon', url: 'https://www.amazon.fr/s?k=climatiseur+portable+mobile&i=kitchen', container: '[data-component-type="s-search-result"], [class*="s-result-item"]', baseUrl: 'https://www.amazon.fr', availability_type: 'delivery' },
-  { name: 'Castorama', url: 'https://www.castorama.fr/search?q=climatiseur+portable', container: '[class*="product"], article, [class*="card"], li', baseUrl: 'https://www.castorama.fr', availability_type: 'tours' },
   { name: 'Fnac', url: 'https://www.fnac.com/SearchResult/ResultList.aspx?Search=climatiseur+portable', container: '[class*="Article"], [class*="product"], article, li', baseUrl: 'https://www.fnac.com', availability_type: 'delivery' },
-  { name: 'But', url: 'https://www.but.fr/recherche?question=climatiseur+portable', container: '[class*="product"], article, [class*="card"], li', baseUrl: 'https://www.but.fr', availability_type: 'both' },
-  { name: 'Conforama', url: 'https://www.conforama.fr/recherche?q=climatiseur+portable', container: '[class*="product"], article, [class*="card"], li', baseUrl: 'https://www.conforama.fr', availability_type: 'delivery' },
-  { name: 'Electro Depot', url: 'https://www.electrodepot.fr/catalogsearch/result?q=climatiseur+portable', container: '[class*="product"], article, [class*="card"], li', baseUrl: 'https://www.electrodepot.fr', availability_type: 'both' },
   { name: 'Rakuten', url: 'https://fr.shopping.rakuten.com/s/climatiseur+portable', container: '[class*="product"], article, [class*="card"], li', baseUrl: 'https://fr.shopping.rakuten.com', availability_type: 'delivery' },
-  // Nouveaux sites ajoutes
   { name: 'Ubaldi', url: 'https://www.ubaldi.com/recherche?q=climatiseur+portable', container: '[class*="product"], article, [class*="card"], li', baseUrl: 'https://www.ubaldi.com', availability_type: 'delivery' },
   { name: 'ManoMano', url: 'https://www.manomano.fr/cat/climatiseur+mobile+portable', container: '[class*="product"], article, [class*="card"], li', baseUrl: 'https://www.manomano.fr', availability_type: 'delivery' },
   { name: 'eBay', url: 'https://www.ebay.fr/sch/i.html?_nkw=climatiseur+portable&LH_PrefLoc=2', container: '[class*="s-item"], [class*="srp-results"] li, article', baseUrl: 'https://www.ebay.fr', availability_type: 'delivery' },
+  // Google Shopping (agregateur, pas de filtre ville)
+  { name: 'Google Shopping', url: 'https://www.google.com/search?tbm=shop&q=climatiseur+portable+mobile&hl=fr&gl=FR&num=40', container: '[class*="sh-dgr"], [class*="sh-pr"], [class*="result"]', baseUrl: 'https://www.google.com', availability_type: 'delivery', isGoogle: true },
+];
+
+// ── Stores avec magasins physiques (un store par ville UNIQUEMENT pour ceux qui filtrent par localisation) ──
+const CITY_STORES = [
+  // LeBonCoin — le seul qui filtre reellement par ville via l'URL
+  { namePattern: 'LeBonCoin', urlTemplate: 'https://www.leboncoin.fr/recherche?category=48&text=climatiseur+portable&locations={CITY}_{PC}', baseUrl: 'https://www.leboncoin.fr', availability_type: 'tours' },
+];
+
+// ── Stores physiques nationaux (une seule passe, pas par ville) ──
+const PHYSICAL_STORES = [
+  { name: 'Leroy Merlin', url: 'https://www.leroymerlin.fr/produits/climatiseur-portable.html', container: '[class*="product"], article, [class*="card"], li', baseUrl: 'https://www.leroymerlin.fr', availability_type: 'tours' },
+  { name: 'Castorama', url: 'https://www.castorama.fr/search?q=climatiseur+portable', container: '[class*="product"], article, [class*="card"], li', baseUrl: 'https://www.castorama.fr', availability_type: 'tours' },
   { name: 'Carrefour', url: 'https://www.carrefour.fr/s?q=climatiseur+portable', container: '[class*="product"], article, [class*="card"], li', baseUrl: 'https://www.carrefour.fr', availability_type: 'both' },
   { name: 'Auchan', url: 'https://www.auchan.fr/recherche?q=climatiseur+portable', container: '[class*="product"], article, [class*="card"], li', baseUrl: 'https://www.auchan.fr', availability_type: 'both' },
+  { name: 'E.Leclerc', url: 'https://www.e.leclerc/recherche?q=climatiseur+portable', container: '[class*="product"], article, [class*="card"], li', baseUrl: 'https://www.e.leclerc', availability_type: 'both' },
   { name: 'Mr Bricolage', url: 'https://www.mr-bricolage.fr/recherche?q=climatiseur+portable', container: '[class*="product"], article, [class*="card"], li', baseUrl: 'https://www.mr-bricolage.fr', availability_type: 'tours' },
   { name: 'Brico Depot', url: 'https://www.bricodepot.fr/recherche?q=climatiseur+portable', container: '[class*="product"], article, [class*="card"], li', baseUrl: 'https://www.bricodepot.fr', availability_type: 'tours' },
+  { name: 'But', url: 'https://www.but.fr/recherche?question=climatiseur+portable', container: '[class*="product"], article, [class*="card"], li', baseUrl: 'https://www.but.fr', availability_type: 'both' },
+  { name: 'Conforama', url: 'https://www.conforama.fr/recherche?q=climatiseur+portable', container: '[class*="product"], article, [class*="card"], li', baseUrl: 'https://www.conforama.fr', availability_type: 'delivery' },
+  { name: 'Electro Depot', url: 'https://www.electrodepot.fr/catalogsearch/result?q=climatiseur+portable', container: '[class*="product"], article, [class*="card"], li', baseUrl: 'https://www.electrodepot.fr', availability_type: 'both' },
+  { name: 'Intermarché', url: 'https://www.intermarche.com/recherche?q=climatiseur+portable', container: '[class*="product"], article, [class*="card"], li', baseUrl: 'https://www.intermarche.com', availability_type: 'both' },
+  { name: 'Magasins U', url: 'https://www.magasins-u.com/recherche?q=climatiseur+portable', container: '[class*="product"], article, [class*="card"], li', baseUrl: 'https://www.magasins-u.com', availability_type: 'both' },
+  { name: 'Brico Marché', url: 'https://www.bricomarche.com/recherche?q=climatiseur+portable', container: '[class*="product"], article, [class*="card"], li', baseUrl: 'https://www.bricomarche.com', availability_type: 'tours' },
+  { name: 'GiFi', url: 'https://www.gifi.fr/recherche?q=climatiseur+portable', container: '[class*="product"], article, [class*="card"], li', baseUrl: 'https://www.gifi.fr', availability_type: 'both' },
 ];
+
+// Construire la liste finale: BASE_STORES + PHYSICAL_STORES + CITY_STORES x CITIES
+function buildAllStores() {
+  const all = [...BASE_STORES, ...PHYSICAL_STORES];
+  if (SCRAPE_CITIES) {
+    for (const cityStore of CITY_STORES) {
+      for (const city of CITIES) {
+        all.push({
+          name: cityStore.namePattern + ' ' + city.name,
+          url: cityStore.urlTemplate.replace('{CITY}', city.name).replace('{PC}', city.postcode),
+          container: '[class*="AdCard"], article, [class*="item"], li',
+          baseUrl: cityStore.baseUrl,
+          availability_type: cityStore.availability_type,
+          city: city.name,
+        });
+      }
+    }
+  }
+  return all;
+}
+
+const STORES = buildAllStores();
 
 // ── Helpers ──
 function detectBTU(text) {
@@ -57,16 +101,15 @@ function detectStatus(allText) {
   // Rupture / indisponible
   if (t.includes('indisponible') || t.includes('rupture') || t.includes('epuise') ||
       t.includes('momentanement') || t.includes('non disponible') || t.includes('victime de son succes') ||
-      t.includes('en cours de reapprovisionnement')) return 'out_of_stock';
+      t.includes('en cours de reapprovisionnement') || t.includes('n est plus') || t.includes('ne peut plus')) return 'out_of_stock';
   // Stock faible
   if (t.includes('plus que') || t.includes('dernier') || t.includes('bientot') ||
       t.includes('quantite limitee') || t.includes('stock faible') || t.includes('presque epuise')) return 'low_stock';
-  // En stock
-  if (t.includes('en stock') || t.includes('disponible') || t.includes('en ligne') ||
-      t.includes('expedie sous') || t.includes('livre chez vous') || t.includes('livraison') ||
-      t.includes('retrait en') || t.includes('click & collect') || t.includes('en magasin')) return 'in_stock';
-  // Boulanger / sites qui affichent un prix = probablement en stock
-  if (allText.match(/\d{2,4}[.,]\d{2}\s*€/)) return 'in_stock';
+  // VERITABLE en stock — besoins de mots-cles specifiques
+  if (t.includes('en stock') || t.includes('en magasin') || t.includes('click & collect') ||
+      t.includes('retrait en 1h') || t.includes('retrait en 2h') || t.includes('disponible en') ||
+      t.includes('expedie sous 24h') || t.includes('livre demain') || t.includes('livraison express')) return 'in_stock';
+  // Par defaut: on ne sait pas = unknown (et NON "in_stock")
   return 'unknown';
 }
 
@@ -174,6 +217,7 @@ async function scrapeStore(page, store) {
         store: store.name, title: title.substring(0, 200), price_eur: price, url,
         image: item.img || null, status, availability_type: store.availability_type,
         delivery_info: stockInfo || null, brand: extractBrand(title), model: null, btu,
+        city: store.city || null,
         stock_info: stockInfo || null, scraped_at: new Date().toISOString(),
       });
     }
@@ -215,7 +259,7 @@ async function scrapeGoogle(page) {
       products.push({
         store: item.store || 'Google Shopping', title: item.title.substring(0, 200),
         price_eur: price, url: item.link, image: null, status,
-        availability_type: 'delivery', delivery_info: null, brand: extractBrand(item.title), model: null,
+        availability_type: 'delivery', delivery_info: null, brand: extractBrand(item.title), model: null, city: null,
         btu: detectBTU(item.fullText), stock_info: null, scraped_at: new Date().toISOString(),
       });
     }
@@ -272,7 +316,7 @@ function mergeHistory(previous, fresh) {
 
 // ── Main ──
 async function main() {
-  console.log('ClimFinder v4 — Scan etendu');
+  console.log('ClimFinder v5 — Scan etendu (' + STORES.length + ' stores, ' + CITIES.length + ' villes)');
   console.log(new Date().toISOString() + '\n');
 
   const previous = loadPrevious();
