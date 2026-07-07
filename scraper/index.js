@@ -307,8 +307,10 @@ async function main() {
   } catch (err) { console.error('Browser:', err.message); process.exit(1); }
 
   const allProducts = [];
+  const CONCURRENCY = 5; // pages en parallele
   try {
-    for (const store of STORES) {
+    // Preparer chaque tache
+    const tasks = STORES.map(store => async () => {
       const page = await browser.newPage();
       await page.setViewport({ width: 1366, height: 768 });
       await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36');
@@ -317,10 +319,22 @@ async function main() {
       page.on('request', req => { if (['image','stylesheet','font','media'].includes(req.resourceType())) req.abort(); else req.continue(); });
       try {
         const products = store.isGoogle ? await scrapeGoogle(page) : await scrapeStore(page, store);
-        allProducts.push(...products);
-      } catch (e) { console.warn(store.name + ': ' + e.message); }
-      await page.close().catch(() => {});
-      await new Promise(r => setTimeout(r, 2000 + Math.random() * 3000));
+        await page.close().catch(() => {});
+        return products;
+      } catch (e) {
+        console.warn(store.name + ': ' + e.message);
+        await page.close().catch(() => {});
+        return [];
+      }
+    });
+
+    // Executer par vagues de CONCURRENCY
+    for (let i = 0; i < tasks.length; i += CONCURRENCY) {
+      const batch = tasks.slice(i, i + CONCURRENCY);
+      const results = await Promise.allSettled(batch.map(fn => fn()));
+      for (const r of results) {
+        if (r.status === 'fulfilled') allProducts.push(...r.value);
+      }
     }
   } finally { await browser.close().catch(() => {}); }
 
