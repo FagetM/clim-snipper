@@ -338,8 +338,24 @@ async function main() {
     }
   } finally { await browser.close().catch(() => {}); }
 
-  // Post-processing
+  // Post-processing: tagger les magasins physiques avec les villes
   let products = deduplicate(allProducts);
+  
+  // Enseignes avec magasins physiques dans les villes -> tagger avec toutes les villes
+  const physicalStoreNames = ['Leroy Merlin','Castorama','Carrefour','Auchan','E.Leclerc','Mr Bricolage','Brico Depot','But','Electro Depot','Intermarché','Magasins U','Brico Marché','GiFi'];
+  const basePhysicalNames = physicalStoreNames.map(n => n.toLowerCase());
+  
+  products = products.map(p => {
+    const storeLower = p.store.toLowerCase();
+    const isPhysical = basePhysicalNames.some(n => storeLower.startsWith(n.toLowerCase()));
+    if (isPhysical && !p.city && CITIES.length > 0) {
+      // Si le store n'a pas deja une ville, lui attribuer toutes les villes (magasins physiques)
+      p.city = CITIES.map(c => c.name).join(', ');
+      p.availability_type = 'both';
+    }
+    return p;
+  });
+  
   products = mergeHistory(previous, products);
 
   const statusOrder = { in_stock: 0, low_stock: 1, unknown: 2, out_of_stock: 3 };

@@ -152,6 +152,11 @@
     const DATA_URL='data/stocks.json';
     let all=[],filter='all',showBlocked=false,cityFilter='';
 
+    function productCities(p) {
+      if (!p.city) return [];
+      return p.city.split(',').map(c => c.trim()).filter(Boolean);
+    }
+
     const grid=document.getElementById('grid'),lastUpdate=document.getElementById('lastUpdate'),statsBar=document.getElementById('statsBar');
     const BL_KEY='clim-finder-blacklist';
 
@@ -190,7 +195,7 @@
       if(filter==='tours') list=list.filter(p=>p.availability_type==='tours'||p.availability_type==='both');
       if(filter==='delivery') list=list.filter(p=>p.availability_type==='delivery'||p.availability_type==='both');
       if(filter==='low_price') list=list.filter(p=>p.price_eur&&p.price_eur<600);
-      if(cityFilter) list=list.filter(p=>p.city===cityFilter);
+      if(cityFilter) list=list.filter(p=>productCities(p).includes(cityFilter));
       const s=document.getElementById('priceSort').value;
       if(s==='asc') list.sort((a,b)=>(a.price_eur||99999)-(b.price_eur||99999));
       else if(s==='desc') list.sort((a,b)=>(b.price_eur||0)-(a.price_eur||0));
@@ -237,8 +242,8 @@
           <div class="specs">
             ${btu?`<span class="spec gold">🔥 ${esc(btu)}</span>`:''}
             ${p.status==='in_stock'?'<span class="spec">📦 En stock</span>':''}
-            ${p.availability_type==='tours'||p.availability_type==='both'?'<span class="spec">📍 Tours</span>':''}
-            ${p.city?`<span class="spec">🏙️ ${esc(p.city)}</span>`:''}
+            ${p.availability_type==='tours'||p.availability_type==='both'?'<span class="spec">📍 Local</span>':''}
+            ${p.city?(function(){const cs=productCities(p);return cs.length===1?'<span class="spec">🏙️ '+esc(cs[0])+'</span>':'<span class="spec" title="'+esc(cs.join(', '))+'">🏙️ '+esc(cs[0])+' +'+(cs.length-1)+'</span>';})():''}
           </div>
         </div>
         <div class="card-footer">
@@ -260,10 +265,10 @@
       const toursCount=visibleAll.filter(p=>p.availability_type==='tours'||p.availability_type==='both').length;
       const scanDate=all.length>0?all[0].last_seen_at||all[0].scraped_at:null;
 
-      // Populate city dropdown
+      // Populate city dropdown from product cities
       const citySelect=document.getElementById('cityFilter');
       const currentVal=citySelect.value;
-      const cities=[...new Set(all.map(p=>p.city).filter(Boolean))].sort();
+      const cities=[...new Set(all.flatMap(p=>productCities(p)))].sort();
       citySelect.innerHTML='<option value="">🏙️ Toutes les villes</option>'+cities.map(c=>`<option value="${esc(c)}"${c===currentVal?' selected':''}>🏙️ ${esc(c)}</option>`).join('');
 
       statsBar.innerHTML=`
