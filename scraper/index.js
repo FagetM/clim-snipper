@@ -14,6 +14,7 @@ const TIMEOUT = 25000;
 const STORES = [
   { name: 'Google Shopping', url: 'https://www.google.com/search?tbm=shop&q=climatiseur+portable+mobile&hl=fr&gl=FR&num=40', container: '[class*="sh-dgr"], [class*="sh-pr"], [class*="result"]', baseUrl: 'https://www.google.com', availability_type: 'delivery', isGoogle: true },
   { name: 'LeBonCoin', url: 'https://www.leboncoin.fr/recherche?category=48&text=climatiseur+portable&locations=Tours_37000', container: '[class*="AdCard"], article, [class*="item"], li', baseUrl: 'https://www.leboncoin.fr', availability_type: 'tours' },
+  // Enseignes directes
   { name: 'Darty', url: 'https://www.darty.com/nav/extra/list?s=climatiseur+portable&cat=21791&o=4', container: '[class*="product"], article, [class*="card"], li', baseUrl: 'https://www.darty.com', availability_type: 'delivery' },
   { name: 'Boulanger', url: 'https://www.boulanger.com/resultats?tr=climatiseur+portable', container: '[class*="product"], article, [class*="card"], li', baseUrl: 'https://www.boulanger.com', availability_type: 'delivery' },
   { name: 'Leroy Merlin', url: 'https://www.leroymerlin.fr/produits/climatiseur-portable.html', container: '[class*="product"], article, [class*="card"], li', baseUrl: 'https://www.leroymerlin.fr', availability_type: 'tours' },
@@ -25,6 +26,14 @@ const STORES = [
   { name: 'Conforama', url: 'https://www.conforama.fr/recherche?q=climatiseur+portable', container: '[class*="product"], article, [class*="card"], li', baseUrl: 'https://www.conforama.fr', availability_type: 'delivery' },
   { name: 'Electro Depot', url: 'https://www.electrodepot.fr/catalogsearch/result?q=climatiseur+portable', container: '[class*="product"], article, [class*="card"], li', baseUrl: 'https://www.electrodepot.fr', availability_type: 'both' },
   { name: 'Rakuten', url: 'https://fr.shopping.rakuten.com/s/climatiseur+portable', container: '[class*="product"], article, [class*="card"], li', baseUrl: 'https://fr.shopping.rakuten.com', availability_type: 'delivery' },
+  // Nouveaux sites ajoutes
+  { name: 'Ubaldi', url: 'https://www.ubaldi.com/recherche?q=climatiseur+portable', container: '[class*="product"], article, [class*="card"], li', baseUrl: 'https://www.ubaldi.com', availability_type: 'delivery' },
+  { name: 'ManoMano', url: 'https://www.manomano.fr/cat/climatiseur+mobile+portable', container: '[class*="product"], article, [class*="card"], li', baseUrl: 'https://www.manomano.fr', availability_type: 'delivery' },
+  { name: 'eBay', url: 'https://www.ebay.fr/sch/i.html?_nkw=climatiseur+portable&LH_PrefLoc=2', container: '[class*="s-item"], [class*="srp-results"] li, article', baseUrl: 'https://www.ebay.fr', availability_type: 'delivery' },
+  { name: 'Carrefour', url: 'https://www.carrefour.fr/s?q=climatiseur+portable', container: '[class*="product"], article, [class*="card"], li', baseUrl: 'https://www.carrefour.fr', availability_type: 'both' },
+  { name: 'Auchan', url: 'https://www.auchan.fr/recherche?q=climatiseur+portable', container: '[class*="product"], article, [class*="card"], li', baseUrl: 'https://www.auchan.fr', availability_type: 'both' },
+  { name: 'Mr Bricolage', url: 'https://www.mr-bricolage.fr/recherche?q=climatiseur+portable', container: '[class*="product"], article, [class*="card"], li', baseUrl: 'https://www.mr-bricolage.fr', availability_type: 'tours' },
+  { name: 'Brico Depot', url: 'https://www.bricodepot.fr/recherche?q=climatiseur+portable', container: '[class*="product"], article, [class*="card"], li', baseUrl: 'https://www.bricodepot.fr', availability_type: 'tours' },
 ];
 
 // ── Helpers ──
