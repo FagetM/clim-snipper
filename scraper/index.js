@@ -43,16 +43,21 @@ function detectBTU(text) {
 
 function detectStatus(allText) {
   if (!allText) return 'unknown';
-  // Nettoyer: enlever le texte des boutons
-  const clean = allText.replace(/ajouter/gi, '').replace(/partagez votre avis[^€]*/gi, '');
+  const clean = allText.replace(/ajouter/gi, '').replace(/partagez votre avis[^€]*/gi, '').replace(/prix de comparaison[^€]*/gi, '');
   const t = clean.toLowerCase();
+  // Rupture / indisponible
   if (t.includes('indisponible') || t.includes('rupture') || t.includes('epuise') ||
-      t.includes('non disponible') || t.includes('victime de son succes')) return 'out_of_stock';
-  if (t.includes('plus que') || t.includes('derniers') || t.includes('bientot') ||
-      t.includes('quantite limitee') || t.includes('stock faible')) return 'low_stock';
+      t.includes('momentanement') || t.includes('non disponible') || t.includes('victime de son succes') ||
+      t.includes('en cours de reapprovisionnement')) return 'out_of_stock';
+  // Stock faible
+  if (t.includes('plus que') || t.includes('dernier') || t.includes('bientot') ||
+      t.includes('quantite limitee') || t.includes('stock faible') || t.includes('presque epuise')) return 'low_stock';
+  // En stock
   if (t.includes('en stock') || t.includes('disponible') || t.includes('en ligne') ||
       t.includes('expedie sous') || t.includes('livre chez vous') || t.includes('livraison') ||
-      t.includes('retrait en') || t.includes('click & collect')) return 'in_stock';
+      t.includes('retrait en') || t.includes('click & collect') || t.includes('en magasin')) return 'in_stock';
+  // Boulanger / sites qui affichent un prix = probablement en stock
+  if (allText.match(/\d{2,4}[.,]\d{2}\s*€/)) return 'in_stock';
   return 'unknown';
 }
 
@@ -82,11 +87,24 @@ function isRealPortableAC(fullText, price) {
 
 function extractPriceFromText(text) {
   if (!text) return null;
-  // Prend le PREMIER prix en euros trouve (le plus pertinent)
   const m = text.match(/(\d{2,4}[.,]\d{0,2})\s*€/);
   if (!m) return null;
   const price = parseFloat(m[1].replace(',', '.'));
   return price > 5 && price < 10000 ? price : null;
+}
+
+function extractBrand(title) {
+  if (!title) return null;
+  const t = title.toUpperCase();
+  const brands = ['DREAME','OPTIMEA','ESSENTIELB','REMKO','ECOFLOW','DUUX','HISENSE','ARGO','ELECTROLUX',
+    'DE\'LONGHI','DELONGHI','TCL','HAIER','GREE','SANG','KOOPER','WHIRLPOOL','COMFEE','COSTWAY',
+    'BECKEN','SENCOR','EQUATION','OMISOON','MARSEE','TECTAKE','TRAHOO','ZHUODIKE','EINNENFFER',
+    'JOULLI','DRIVENEST','KEEPER','VIREX','DEMA','AMOUNE','NOBRAND'];
+  for (const b of brands) {
+    if (t.includes(b.toUpperCase())) return b === 'DE\'LONGHI' ? 'De\'Longhi' :
+      b.charAt(0) + b.slice(1).toLowerCase();
+  }
+  return null;
 }
 
 function cleanUrl(url, baseUrl) {
@@ -129,7 +147,7 @@ async function scrapeStore(page, store) {
       });
     }, store.container);
     for (const item of items) {
-      const title = (item.title || item.fullText.substring(0, 120)).trim();
+      const title = (item.title || item.fullText.substring(0, 120)).trim().replace(/\s+/g, ' ').replace(/\s{2,}/g, ' ').trim();
       const allText = item.fullText;
       const price = extractPriceFromText(allText);
       // Ignorer les entrees sans prix ou sans lien produit valide
@@ -146,7 +164,7 @@ async function scrapeStore(page, store) {
       products.push({
         store: store.name, title: title.substring(0, 200), price_eur: price, url,
         image: item.img || null, status, availability_type: store.availability_type,
-        delivery_info: stockInfo || null, brand: null, model: null, btu,
+        delivery_info: stockInfo || null, brand: extractBrand(title), model: null, btu,
         stock_info: stockInfo || null, scraped_at: new Date().toISOString(),
       });
     }
@@ -188,7 +206,7 @@ async function scrapeGoogle(page) {
       products.push({
         store: item.store || 'Google Shopping', title: item.title.substring(0, 200),
         price_eur: price, url: item.link, image: null, status,
-        availability_type: 'delivery', delivery_info: null, brand: null, model: null,
+        availability_type: 'delivery', delivery_info: null, brand: extractBrand(item.title), model: null,
         btu: detectBTU(item.fullText), stock_info: null, scraped_at: new Date().toISOString(),
       });
     }
