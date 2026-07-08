@@ -32,6 +32,9 @@ else
   # Envoyer email si nouveaux produits détectés
   if [ -f "data/new_stock_alert.json" ]; then
     echo "📧 Envoi de l'alerte email..."
-    python3 send-alert-email.py data/new_stock_alert.json 2>&1 || echo "⚠️ Email non envoyé (vérifie GMAIL_APP_PASSWORD)"
+    if [ -z "$GMAIL_APP_PASSWORD" ] && [ -f "$HOME/.climfinder-gmail" ]; then
+      export GMAIL_APP_PASSWORD="$(cat "$HOME/.climfinder-gmail")"
+    fi
+    python3 send-alert-email.py data/new_stock_alert.json 2>&1 || echo "⚠️ Email non envoyé (vérifie ~/.climfinder-gmail)"
   fi
 fi
