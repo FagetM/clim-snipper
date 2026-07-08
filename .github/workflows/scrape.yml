@@ -1,10 +1,7 @@
-name: Scan Stocks & Deploy
+name: Cloud Scrape (fallback)
 
 on:
-  schedule:
-    # Toutes les heures, de 7h à 22h (heure française = UTC+2)
-    - cron: '0 5-20 * * *'
-  workflow_dispatch:  # permet de lancer manuellement
+  workflow_dispatch:
   push:
     branches: [main]
     paths:

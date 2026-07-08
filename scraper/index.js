@@ -1,6 +1,7 @@
 /**
- * Clim'Finder Scraper v2 — Puppeteer edition
- * Utilise un vrai navigateur headless pour bypasser les anti-bots (Cloudflare, WAF).
+ * Clim'Finder Scraper — Puppeteer multi-store
+ * Instructions: scrape local (IP residentielle) puis push sur GitHub.
+ * Cron: OpenClaw local (7h-22h, toutes les heures).
  */
 
 const puppeteer = require('puppeteer');
