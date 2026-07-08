@@ -1,51 +1,36 @@
 # 🌬️ Clim'Finder
 
-Application de veille pour trouver des climatiseurs portables en stock à Tours ou en livraison.
+Veille automatique de climatiseurs portables neufs en stock dans 5 villes.
 
-## Fonctionnalités
+**Page** : <https://fagetm.github.io/clim-snipper/>
 
-- **Scan automatique** toutes les heures de 7h à 22h (heure française)
-- **7 sites surveillés** : Darty, Boulanger, Leroy Merlin, Castorama, Cdiscount, Amazon, Electro Dépôt, Conforama
-- **Filtres** : en stock / Tours / livraison
-- **Tri par prix**
-- **Historique** : détection des nouveaux produits en stock
-- **Page statique** déployée sur GitHub Pages
-
-## Déploiement
-
-1. Crée un repo GitHub et pousse ce dossier :
-
-```bash
-cd clim-finder
-git init
-git add .
-git commit -m "Initial commit"
-git branch -M main
-git remote add origin git@github.com:TON_COMPTE/clim-finder.git
-git push -u origin main
-```
-
-2. Dans les paramètres du repo GitHub :
-   - **Settings → Pages** → Source : `GitHub Actions`
-   - **Settings → Actions → General** → Workflow permissions : `Read and write permissions`
-
-3. Le premier scan démarre automatiquement. La page sera dispo sur `https://TON_COMPTE.github.io/clim-finder/`
-
-4. Pour tester : **Actions → Scan Stocks & Deploy → Run workflow**
-
-## Structure
+## Architecture
 
 ```
-clim-finder/
-├── index.html          # Page web statique
-├── style.css           # Styles dark mode
-├── script.js           # Logique frontend (filtres, rendu)
-├── data/
-│   └── stocks.json     # Résultats du scan (auto-généré)
+clim-snipper/
+├── index.html          ← Dashboard (tout intégré : HTML/CSS/JS)
+├── config.json         ← Villes, sources
+├── data/stocks.json    ← Résultats auto-générés
+├── local-scrape.sh     ← Script de scan local + push
 ├── scraper/
 │   ├── package.json
-│   └── index.js        # Scraper Node.js
-└── .github/
-    └── workflows/
-        └── scrape.yml  # GitHub Action (scan + déploiement)
+│   └── index.js        ← Scraper Puppeteer (23 stores)
+└── .github/workflows/
+    ├── deploy.yml       ← Déploiement Pages
+    └── scrape.yml       ← Fallback cloud (manuel)
 ```
+
+## Fonctionnement
+
+1. **Scraping local** : `local-scrape.sh` → Puppeteer → 23 stores → `stocks.json`
+2. **Push sur GitHub** → déclenche `deploy.yml` → GitHub Pages
+3. **Cron OpenClaw** : toutes les heures (7h→22h) sur le MacBook
+4. **Dashboard** : recherche, filtres ville/stock/prix, blacklist produit, dark mode
+
+## Villes
+
+Bressuire · Parthenay · Thouars · Chinon · Cholet
+
+## Stores
+
+Boulanger · Darty · Cdiscount · Amazon · Fnac · Rakuten · Ubaldi · ManoMano · Google Shopping · Leroy Merlin · Castorama · Carrefour · Auchan · E.Leclerc · Mr Bricolage · Brico Dépôt · But · Conforama · Electro Dépôt · Intermarché · Magasins U · Brico Marché · GiFi
