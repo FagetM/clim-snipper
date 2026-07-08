@@ -1,15 +1,15 @@
 {
-  "scanned_at": "2026-07-08T12:11:48.994Z",
-  "total": 26,
-  "in_stock": 7,
+  "scanned_at": "2026-07-08T12:50:51.141Z",
+  "total": 25,
+  "in_stock": 6,
   "tours_available": 19,
-  "delivery_available": 26,
+  "delivery_available": 25,
   "products": [
     {
       "store": "Amazon",
       "title": "SponsoriséSponsorisé Vous voyez cette publicité en fonction de la pertinence du produit vis-à-vis à votre recherche.En savoir plus sur cette publicité Rafraîchisseur d'air portable ultra-silencieux, c",
       "price_eur": 88.96,
-      "url": "https://www.amazon.fr/sspa/click?ie=UTF8&spc=MTo2NzAyMjk5MDkwMjEzMDIxOjE3ODM1MTI2MzU6c3BfYXRmOjMwMTE4MDQ3MDMxMjIzMjo6MDo6&url=%2FRafra%25C3%25AEchisseur-ultra-silencieux-climatiseur-ventilateur-refroidissement%2Fdp%2FB0H75H1W2V%2Fref%3Dsr_1_2_sspa%3Fdib%3DeyJ2IjoiMSJ9.TlAMHu1J6srvFiR64Parj_PiRohFzwvSpoeyNiy-NPd9_cbJwlcAUaMpQDChdN1jVsJYhmfaE_lb2aKYFrGr_gkzbiSjoTtmDZ-NxcB3XED2jdjV0bJaOKkK660PXTs-5olsj7L-AlHDV8Vqa-B6XYt_qEmPazLpUCVGuykHUmeUS6s_3jyQ6hfh0IdRxBNrGisioLDyhHERRQdhKTRP_zbc7TxMZ8V1oCobzZjOXIc.9fFTRZL2oSSyuc_bTizDQ9vnyhXSrC-2dyh2ceTWwjY%26dib_tag%3Dse%26keywords%3Dclimatiseur%2Bportable%2Bmobile%26qid%3D1783512635%26s%3Dkitchen%26sr%3D1-2-spons%26aref%3D9KNeF6DoRW%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1&aref=9KNeF6DoRW&sp_cr=ZAZ",
+      "url": "https://www.amazon.fr/sspa/click?ie=UTF8&spc=MTozMzg5MTI2MzI5Mzg0NDY6MTc4MzUxNDk2NzpzcF9hdGY6MzAxMTgwNDcwMzEyMjMyOjowOjo&url=%2FRafra%25C3%25AEchisseur-ultra-silencieux-climatiseur-ventilateur-refroidissement%2Fdp%2FB0H75H1W2V%2Fref%3Dsr_1_2_sspa%3Fdib%3DeyJ2IjoiMSJ9.w7ky0xneqhuiC70LWC4Y5k6ZHD3XECfPC6M-7x0tnmz5ZZfrejD0SqkvAvaP5ljHrqQU7JRj6qqtnJDocyAEAPmnD21_maswJq_ZCq2bgv_1qv3V4o6q7B4TkIOJeLult-rX4O7eFgeO9VHXGphT9i4PBYyfdYJxlIITluSv9GuUs6MpOIZmeIw0sDnDy8HqG4uwCpHpXusZBaOcC6qnXmyyGFusAv9K866l83SpiX0.2aviNTfnrP26tksyZHC4PNUOtudekQdTfH0kOpAMq-Y%26dib_tag%3Dse%26keywords%3Dclimatiseur%2Bportable%2Bmobile%26qid%3D1783514967%26s%3Dkitchen%26sr%3D1-2-spons%26aref%3D9KNeF6DoRW%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1&aref=9KNeF6DoRW&sp_cr=ZAZ",
       "image": "https://m.media-amazon.com/images/I/61R2LrVLFuL._AC_UY218_.jpg",
       "status": "low_stock",
       "availability_type": "delivery",
@@ -19,15 +19,15 @@
       "btu": null,
       "city": null,
       "stock_info": "Livraison GRATUITE 17 - 20 juil.",
-      "scraped_at": "2026-07-08T12:10:39.072Z",
+      "scraped_at": "2026-07-08T12:49:30.812Z",
       "first_seen_at": "2026-07-08T09:04:44.463Z",
-      "last_seen_at": "2026-07-08T12:10:39.072Z"
+      "last_seen_at": "2026-07-08T12:49:30.812Z"
     },
     {
       "store": "Amazon",
       "title": "12L Rafraîchisseur d'Air, 3 Vitesses, Climatiseur Mobile avec Télécommande, Minuterie 1-12h, Oscillation 60°, Silencieux Climatiseur Portable avec Réservoir amovible pour Camping Chambre Cuisine",
       "price_eur": 153,
-      "url": "https://www.amazon.fr/Rafra%C3%AEchisseur-Climatiseur-T%C3%A9l%C3%A9commande-Oscillation-Silencieux/dp/B0H6SG5B65/ref=sr_1_15_mod_primary_new?dib=eyJ2IjoiMSJ9.TlAMHu1J6srvFiR64Parj_PiRohFzwvSpoeyNiy-NPd9_cbJwlcAUaMpQDChdN1jVsJYhmfaE_lb2aKYFrGr_gkzbiSjoTtmDZ-NxcB3XED2jdjV0bJaOKkK660PXTs-5olsj7L-AlHDV8Vqa-B6XYt_qEmPazLpUCVGuykHUmeUS6s_3jyQ6hfh0IdRxBNrGisioLDyhHERRQdhKTRP_zbc7TxMZ8V1oCobzZjOXIc.9fFTRZL2oSSyuc_bTizDQ9vnyhXSrC-2dyh2ceTWwjY&dib_tag=se&keywords=climatiseur+portable+mobile&qid=1783512635&s=kitchen&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sr=1-15",
+      "url": "https://www.amazon.fr/Rafra%C3%AEchisseur-Climatiseur-T%C3%A9l%C3%A9commande-Oscillation-Silencieux/dp/B0H6SG5B65/ref=sr_1_18_mod_primary_new?dib=eyJ2IjoiMSJ9.w7ky0xneqhuiC70LWC4Y5k6ZHD3XECfPC6M-7x0tnmz5ZZfrejD0SqkvAvaP5ljHrqQU7JRj6qqtnJDocyAEAPmnD21_maswJq_ZCq2bgv_1qv3V4o6q7B4TkIOJeLult-rX4O7eFgeO9VHXGphT9i4PBYyfdYJxlIITluSv9GuUs6MpOIZmeIw0sDnDy8HqG4uwCpHpXusZBaOcC6qnXmyyGFusAv9K866l83SpiX0.2aviNTfnrP26tksyZHC4PNUOtudekQdTfH0kOpAMq-Y&dib_tag=se&keywords=climatiseur+portable+mobile&qid=1783514967&s=kitchen&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sr=1-18",
       "image": "https://m.media-amazon.com/images/I/71+sFsraCHL._AC_UY218_.jpg",
       "status": "low_stock",
       "availability_type": "delivery",
@@ -37,33 +37,15 @@
       "btu": null,
       "city": null,
       "stock_info": "Livraison GRATUITE 1 - 7 aoûtAjouter au panierAutres vendeurs sur Amazon140,00 €(9 neufs)Livraison plus rapide Prix, page produit149,00 €149,00€ Ancien : 154,00 €Ancien : 154,00 €154,00€ Livraison GRATUITE 23 - 28 juil.",
-      "scraped_at": "2026-07-08T12:10:39.073Z",
+      "scraped_at": "2026-07-08T12:49:30.813Z",
       "first_seen_at": "2026-07-08T09:04:44.464Z",
-      "last_seen_at": "2026-07-08T12:10:39.073Z"
-    },
-    {
-      "store": "Amazon",
-      "title": "Climatiseur Mobile Portable Rafraîchisseur d'air Silencieux (Améliorée) pour Chambre - Puissance 7,5 m/s, Oscillation 90°, 4 Vitesses, 2 Modes, Minuteur 10H, Télécommande, Sans Lame, Noir Carbone",
-      "price_eur": 199.99,
-      "url": "https://www.amazon.fr/Climatiseur-Portable-Rafra%C3%AEchisseur-Silencieux-Am%C3%A9lior%C3%A9e/dp/B0H1CR19PJ/ref=sr_1_21?dib=eyJ2IjoiMSJ9.TlAMHu1J6srvFiR64Parj_PiRohFzwvSpoeyNiy-NPd9_cbJwlcAUaMpQDChdN1jVsJYhmfaE_lb2aKYFrGr_gkzbiSjoTtmDZ-NxcB3XED2jdjV0bJaOKkK660PXTs-5olsj7L-AlHDV8Vqa-B6XYt_qEmPazLpUCVGuykHUmeUS6s_3jyQ6hfh0IdRxBNrGisioLDyhHERRQdhKTRP_zbc7TxMZ8V1oCobzZjOXIc.9fFTRZL2oSSyuc_bTizDQ9vnyhXSrC-2dyh2ceTWwjY&dib_tag=se&keywords=climatiseur+portable+mobile&qid=1783512635&s=kitchen&sr=1-21",
-      "image": "https://m.media-amazon.com/images/I/71l6RrTaSwL._AC_UY218_.jpg",
-      "status": "low_stock",
-      "availability_type": "delivery",
-      "delivery_info": "Livraison GRATUITE jeu. | livraison accélérée mer.",
-      "brand": null,
-      "model": null,
-      "btu": null,
-      "city": null,
-      "stock_info": "Livraison GRATUITE jeu. | livraison accélérée mer.",
-      "scraped_at": "2026-07-08T12:10:39.073Z",
-      "first_seen_at": "2026-07-08T12:10:39.073Z",
-      "last_seen_at": "2026-07-08T12:10:39.073Z"
+      "last_seen_at": "2026-07-08T12:49:30.813Z"
     },
     {
       "store": "Amazon",
       "title": "Climatiseur Mobile 4 en 1, Rafraîchisseur d'Air avec Minuterie 1-12H, 3 Vitesses 4 Modes, Réservoir 6L, Télécommande, Portable, pour Chambre, Salon, Bureau et Maison",
       "price_eur": 209.99,
-      "url": "https://www.amazon.fr/Climatiseur-Rafra%C3%AEchisseur-Minuterie-R%C3%A9servoir-T%C3%A9l%C3%A9commande/dp/B0GS51DZMR/ref=sr_1_5?dib=eyJ2IjoiMSJ9.TlAMHu1J6srvFiR64Parj_PiRohFzwvSpoeyNiy-NPd9_cbJwlcAUaMpQDChdN1jVsJYhmfaE_lb2aKYFrGr_gkzbiSjoTtmDZ-NxcB3XED2jdjV0bJaOKkK660PXTs-5olsj7L-AlHDV8Vqa-B6XYt_qEmPazLpUCVGuykHUmeUS6s_3jyQ6hfh0IdRxBNrGisioLDyhHERRQdhKTRP_zbc7TxMZ8V1oCobzZjOXIc.9fFTRZL2oSSyuc_bTizDQ9vnyhXSrC-2dyh2ceTWwjY&dib_tag=se&keywords=climatiseur+portable+mobile&qid=1783512635&s=kitchen&sr=1-5",
+      "url": "https://www.amazon.fr/Climatiseur-Rafra%C3%AEchisseur-Minuterie-R%C3%A9servoir-T%C3%A9l%C3%A9commande/dp/B0GS51DZMR/ref=sr_1_6?dib=eyJ2IjoiMSJ9.w7ky0xneqhuiC70LWC4Y5k6ZHD3XECfPC6M-7x0tnmz5ZZfrejD0SqkvAvaP5ljHrqQU7JRj6qqtnJDocyAEAPmnD21_maswJq_ZCq2bgv_1qv3V4o6q7B4TkIOJeLult-rX4O7eFgeO9VHXGphT9i4PBYyfdYJxlIITluSv9GuUs6MpOIZmeIw0sDnDy8HqG4uwCpHpXusZBaOcC6qnXmyyGFusAv9K866l83SpiX0.2aviNTfnrP26tksyZHC4PNUOtudekQdTfH0kOpAMq-Y&dib_tag=se&keywords=climatiseur+portable+mobile&qid=1783514967&s=kitchen&sr=1-6",
       "image": "https://m.media-amazon.com/images/I/61oVZ+s7l5L._AC_UY218_.jpg",
       "status": "low_stock",
       "availability_type": "delivery",
@@ -73,33 +55,33 @@
       "btu": null,
       "city": null,
       "stock_info": "Livraison à 6,99 € mer.",
-      "scraped_at": "2026-07-08T12:10:39.072Z",
+      "scraped_at": "2026-07-08T12:49:30.812Z",
       "first_seen_at": "2026-07-08T12:10:39.072Z",
-      "last_seen_at": "2026-07-08T12:10:39.072Z"
+      "last_seen_at": "2026-07-08T12:49:30.812Z"
     },
     {
       "store": "Amazon",
-      "title": "Climatiseur Mobile Silencieux Portable Rafraîchisseur d'air 360° Oscillation, Sortie d'air Double, 24H Minuteries, 65W, 4 Modes et 3 Vitesses avec Télécommande pour Chambre, Bureau, Cuisine",
-      "price_eur": 259.99,
-      "url": "https://www.amazon.fr/Climatiseur-Silencieux-Rafra%C3%AEchisseur-Oscillation-T%C3%A9l%C3%A9commande/dp/B0G6ZTPCJG/ref=sr_1_19?dib=eyJ2IjoiMSJ9.TlAMHu1J6srvFiR64Parj_PiRohFzwvSpoeyNiy-NPd9_cbJwlcAUaMpQDChdN1jVsJYhmfaE_lb2aKYFrGr_gkzbiSjoTtmDZ-NxcB3XED2jdjV0bJaOKkK660PXTs-5olsj7L-AlHDV8Vqa-B6XYt_qEmPazLpUCVGuykHUmeUS6s_3jyQ6hfh0IdRxBNrGisioLDyhHERRQdhKTRP_zbc7TxMZ8V1oCobzZjOXIc.9fFTRZL2oSSyuc_bTizDQ9vnyhXSrC-2dyh2ceTWwjY&dib_tag=se&keywords=climatiseur+portable+mobile&qid=1783512635&s=kitchen&sr=1-19",
-      "image": "https://m.media-amazon.com/images/I/615PGyCdPhL._AC_UY218_.jpg",
+      "title": "EUHOMY Climatiseur mobile 7000 BTU 2,0 kW (avec télécommande), climatiseur portable quatre en un, fonctionnement silencieux, écran LED, surface couverte 20 m², minuterie 24 heures",
+      "price_eur": 229.99,
+      "url": "https://www.amazon.fr/EUHOMY-Climatiseur-t%C3%A9l%C3%A9commande-climatiseur-fonctionnement/dp/B0DPPX3DBS/ref=sr_1_13?dib=eyJ2IjoiMSJ9.w7ky0xneqhuiC70LWC4Y5k6ZHD3XECfPC6M-7x0tnmz5ZZfrejD0SqkvAvaP5ljHrqQU7JRj6qqtnJDocyAEAPmnD21_maswJq_ZCq2bgv_1qv3V4o6q7B4TkIOJeLult-rX4O7eFgeO9VHXGphT9i4PBYyfdYJxlIITluSv9GuUs6MpOIZmeIw0sDnDy8HqG4uwCpHpXusZBaOcC6qnXmyyGFusAv9K866l83SpiX0.2aviNTfnrP26tksyZHC4PNUOtudekQdTfH0kOpAMq-Y&dib_tag=se&keywords=climatiseur+portable+mobile&qid=1783514967&s=kitchen&sr=1-13",
+      "image": "https://m.media-amazon.com/images/I/71d5JiKQ3ZL._AC_UY218_.jpg",
       "status": "low_stock",
       "availability_type": "delivery",
-      "delivery_info": "Livraison GRATUITE lun. | en stock.",
+      "delivery_info": "Livraison GRATUITE 14 - 24 août Matériaux recyclés +2 de plus Caractéristiques plus durablesCe produit possède des caractéristiques de durabilité reconnues par des labels fiables. | disponiblesAjouter au panierAAGFiche produitEfficacité énergétiqueFiche produit",
       "brand": null,
       "model": null,
-      "btu": null,
+      "btu": "7000 BTU",
       "city": null,
-      "stock_info": "Livraison GRATUITE lun. | en stock.",
-      "scraped_at": "2026-07-08T12:10:39.073Z",
-      "first_seen_at": "2026-07-08T12:10:39.073Z",
-      "last_seen_at": "2026-07-08T12:10:39.073Z"
+      "stock_info": "Livraison GRATUITE 14 - 24 août Matériaux recyclés +2 de plus Caractéristiques plus durablesCe produit possède des caractéristiques de durabilité reconnues par des labels fiables. | disponiblesAjouter au panierAAGFiche produitEfficacité énergétiqueFiche produit",
+      "scraped_at": "2026-07-08T12:49:30.812Z",
+      "first_seen_at": "2026-07-08T12:49:30.812Z",
+      "last_seen_at": "2026-07-08T12:49:30.812Z"
     },
     {
       "store": "Amazon",
       "title": "DREAME P-Wind10 7000 BTU Climatiseur portable 3-en-1 : Refroidissement, Déshumidification et Ventilateur, flux d’air 3D, contrôle via appli et télécommande, mode sommeil, installation facile",
       "price_eur": 359,
-      "url": "https://www.amazon.fr/DREAME-P-Wind10-Climatiseur-portable-3-en-1/dp/B0GXYL6QJX/ref=sr_1_16?dib=eyJ2IjoiMSJ9.TlAMHu1J6srvFiR64Parj_PiRohFzwvSpoeyNiy-NPd9_cbJwlcAUaMpQDChdN1jVsJYhmfaE_lb2aKYFrGr_gkzbiSjoTtmDZ-NxcB3XED2jdjV0bJaOKkK660PXTs-5olsj7L-AlHDV8Vqa-B6XYt_qEmPazLpUCVGuykHUmeUS6s_3jyQ6hfh0IdRxBNrGisioLDyhHERRQdhKTRP_zbc7TxMZ8V1oCobzZjOXIc.9fFTRZL2oSSyuc_bTizDQ9vnyhXSrC-2dyh2ceTWwjY&dib_tag=se&keywords=climatiseur+portable+mobile&qid=1783512635&s=kitchen&sr=1-16",
+      "url": "https://www.amazon.fr/DREAME-P-Wind10-Climatiseur-portable-3-en-1/dp/B0GXYL6QJX/ref=sr_1_19?dib=eyJ2IjoiMSJ9.w7ky0xneqhuiC70LWC4Y5k6ZHD3XECfPC6M-7x0tnmz5ZZfrejD0SqkvAvaP5ljHrqQU7JRj6qqtnJDocyAEAPmnD21_maswJq_ZCq2bgv_1qv3V4o6q7B4TkIOJeLult-rX4O7eFgeO9VHXGphT9i4PBYyfdYJxlIITluSv9GuUs6MpOIZmeIw0sDnDy8HqG4uwCpHpXusZBaOcC6qnXmyyGFusAv9K866l83SpiX0.2aviNTfnrP26tksyZHC4PNUOtudekQdTfH0kOpAMq-Y&dib_tag=se&keywords=climatiseur+portable+mobile&qid=1783514967&s=kitchen&sr=1-19",
       "image": "https://m.media-amazon.com/images/I/61fdNibRa8L._AC_UY218_.jpg",
       "status": "low_stock",
       "availability_type": "delivery",
@@ -109,15 +91,15 @@
       "btu": "7000 BTU",
       "city": null,
       "stock_info": "Livraison GRATUITE 27 juil.",
-      "scraped_at": "2026-07-08T12:10:39.073Z",
+      "scraped_at": "2026-07-08T12:49:30.813Z",
       "first_seen_at": "2026-07-08T11:08:30.055Z",
-      "last_seen_at": "2026-07-08T12:10:39.073Z"
+      "last_seen_at": "2026-07-08T12:49:30.813Z"
     },
     {
       "store": "Amazon",
       "title": "DREAME P-Wind10 9000 BTU Climatiseur portable 3-en-1 : Refroidissement, Déshumidification et Ventilateur, flux d’air 3D, contrôle via appli et télécommande, mode sommeil, installation facile",
       "price_eur": 399,
-      "url": "https://www.amazon.fr/DREAME-P-Wind10-Climatiseur-portable-3-en-1/dp/B0GXYPL71B/ref=sr_1_6?dib=eyJ2IjoiMSJ9.TlAMHu1J6srvFiR64Parj_PiRohFzwvSpoeyNiy-NPd9_cbJwlcAUaMpQDChdN1jVsJYhmfaE_lb2aKYFrGr_gkzbiSjoTtmDZ-NxcB3XED2jdjV0bJaOKkK660PXTs-5olsj7L-AlHDV8Vqa-B6XYt_qEmPazLpUCVGuykHUmeUS6s_3jyQ6hfh0IdRxBNrGisioLDyhHERRQdhKTRP_zbc7TxMZ8V1oCobzZjOXIc.9fFTRZL2oSSyuc_bTizDQ9vnyhXSrC-2dyh2ceTWwjY&dib_tag=se&keywords=climatiseur+portable+mobile&qid=1783512635&s=kitchen&sr=1-6",
+      "url": "https://www.amazon.fr/DREAME-P-Wind10-Climatiseur-portable-3-en-1/dp/B0GXYPL71B/ref=sr_1_5?dib=eyJ2IjoiMSJ9.w7ky0xneqhuiC70LWC4Y5k6ZHD3XECfPC6M-7x0tnmz5ZZfrejD0SqkvAvaP5ljHrqQU7JRj6qqtnJDocyAEAPmnD21_maswJq_ZCq2bgv_1qv3V4o6q7B4TkIOJeLult-rX4O7eFgeO9VHXGphT9i4PBYyfdYJxlIITluSv9GuUs6MpOIZmeIw0sDnDy8HqG4uwCpHpXusZBaOcC6qnXmyyGFusAv9K866l83SpiX0.2aviNTfnrP26tksyZHC4PNUOtudekQdTfH0kOpAMq-Y&dib_tag=se&keywords=climatiseur+portable+mobile&qid=1783514967&s=kitchen&sr=1-5",
       "image": "https://m.media-amazon.com/images/I/61fdNibRa8L._AC_UY218_.jpg",
       "status": "low_stock",
       "availability_type": "delivery",
@@ -127,9 +109,9 @@
       "btu": "9000 BTU",
       "city": null,
       "stock_info": "Livraison GRATUITE 3 - 24 aoûtAjouter au panierAA+++DFiche produitEfficacité énergétiqueFiche produit",
-      "scraped_at": "2026-07-08T12:10:39.072Z",
+      "scraped_at": "2026-07-08T12:49:30.812Z",
       "first_seen_at": "2026-07-07T21:16:32.457Z",
-      "last_seen_at": "2026-07-08T12:10:39.072Z"
+      "last_seen_at": "2026-07-08T12:49:30.812Z"
     },
     {
       "store": "Carrefour",
@@ -145,9 +127,9 @@
       "btu": null,
       "city": "Bressuire, Parthenay, Thouars, Chinon, Cholet",
       "stock_info": null,
-      "scraped_at": "2026-07-08T12:11:02.497Z",
+      "scraped_at": "2026-07-08T12:50:03.127Z",
       "first_seen_at": "2026-07-07T21:29:54.467Z",
-      "last_seen_at": "2026-07-08T12:11:02.497Z"
+      "last_seen_at": "2026-07-08T12:50:03.127Z"
     },
     {
       "store": "Carrefour",
@@ -163,9 +145,9 @@
       "btu": null,
       "city": "Bressuire, Parthenay, Thouars, Chinon, Cholet",
       "stock_info": null,
-      "scraped_at": "2026-07-08T12:11:02.497Z",
+      "scraped_at": "2026-07-08T12:50:03.127Z",
       "first_seen_at": "2026-07-07T21:29:54.467Z",
-      "last_seen_at": "2026-07-08T12:11:02.497Z"
+      "last_seen_at": "2026-07-08T12:50:03.127Z"
     },
     {
       "store": "Carrefour",
@@ -181,9 +163,9 @@
       "btu": "7000 BTU",
       "city": "Bressuire, Parthenay, Thouars, Chinon, Cholet",
       "stock_info": null,
-      "scraped_at": "2026-07-08T12:11:02.497Z",
+      "scraped_at": "2026-07-08T12:50:03.127Z",
       "first_seen_at": "2026-07-08T07:00:53.208Z",
-      "last_seen_at": "2026-07-08T12:11:02.497Z"
+      "last_seen_at": "2026-07-08T12:50:03.127Z"
     },
     {
       "store": "Carrefour",
@@ -199,9 +181,9 @@
       "btu": "7000 BTU",
       "city": "Bressuire, Parthenay, Thouars, Chinon, Cholet",
       "stock_info": null,
-      "scraped_at": "2026-07-08T12:11:02.497Z",
+      "scraped_at": "2026-07-08T12:50:03.127Z",
       "first_seen_at": "2026-07-08T07:00:53.208Z",
-      "last_seen_at": "2026-07-08T12:11:02.497Z"
+      "last_seen_at": "2026-07-08T12:50:03.127Z"
     },
     {
       "store": "Carrefour",
@@ -217,9 +199,9 @@
       "btu": "12000 BTU",
       "city": "Bressuire, Parthenay, Thouars, Chinon, Cholet",
       "stock_info": null,
-      "scraped_at": "2026-07-08T12:11:02.497Z",
+      "scraped_at": "2026-07-08T12:50:03.127Z",
       "first_seen_at": "2026-07-07T21:29:54.462Z",
-      "last_seen_at": "2026-07-08T12:11:02.497Z"
+      "last_seen_at": "2026-07-08T12:50:03.127Z"
     },
     {
       "store": "Boulanger",
@@ -235,9 +217,9 @@
       "btu": null,
       "city": "Bressuire, Parthenay, Thouars, Chinon, Cholet",
       "stock_info": null,
-      "scraped_at": "2026-07-08T12:10:24.856Z",
+      "scraped_at": "2026-07-08T12:49:15.460Z",
       "first_seen_at": "2026-07-07T18:28:56.271Z",
-      "last_seen_at": "2026-07-08T12:10:24.856Z"
+      "last_seen_at": "2026-07-08T12:49:15.460Z"
     },
     {
       "store": "Carrefour",
@@ -253,9 +235,9 @@
       "btu": "5200 BTU",
       "city": "Bressuire, Parthenay, Thouars, Chinon, Cholet",
       "stock_info": null,
-      "scraped_at": "2026-07-08T12:11:02.497Z",
+      "scraped_at": "2026-07-08T12:50:03.127Z",
       "first_seen_at": "2026-07-07T21:29:54.467Z",
-      "last_seen_at": "2026-07-08T12:11:02.497Z"
+      "last_seen_at": "2026-07-08T12:50:03.127Z"
     },
     {
       "store": "Carrefour",
@@ -271,9 +253,9 @@
       "btu": "6000 BTU",
       "city": "Bressuire, Parthenay, Thouars, Chinon, Cholet",
       "stock_info": null,
-      "scraped_at": "2026-07-08T12:11:02.497Z",
+      "scraped_at": "2026-07-08T12:50:03.127Z",
       "first_seen_at": "2026-07-07T21:29:54.467Z",
-      "last_seen_at": "2026-07-08T12:11:02.497Z"
+      "last_seen_at": "2026-07-08T12:50:03.127Z"
     },
     {
       "store": "Carrefour",
@@ -289,9 +271,9 @@
       "btu": "7000 BTU",
       "city": "Bressuire, Parthenay, Thouars, Chinon, Cholet",
       "stock_info": null,
-      "scraped_at": "2026-07-08T12:11:02.497Z",
+      "scraped_at": "2026-07-08T12:50:03.127Z",
       "first_seen_at": "2026-07-07T21:29:54.467Z",
-      "last_seen_at": "2026-07-08T12:11:02.497Z"
+      "last_seen_at": "2026-07-08T12:50:03.127Z"
     },
     {
       "store": "Carrefour",
@@ -307,9 +289,9 @@
       "btu": "7500 BTU",
       "city": "Bressuire, Parthenay, Thouars, Chinon, Cholet",
       "stock_info": null,
-      "scraped_at": "2026-07-08T12:11:02.497Z",
+      "scraped_at": "2026-07-08T12:50:03.127Z",
       "first_seen_at": "2026-07-07T21:29:54.467Z",
-      "last_seen_at": "2026-07-08T12:11:02.497Z"
+      "last_seen_at": "2026-07-08T12:50:03.127Z"
     },
     {
       "store": "Boulanger",
@@ -325,9 +307,9 @@
       "btu": null,
       "city": "Bressuire, Parthenay, Thouars, Chinon, Cholet",
       "stock_info": null,
-      "scraped_at": "2026-07-08T12:10:24.857Z",
+      "scraped_at": "2026-07-08T12:49:15.460Z",
       "first_seen_at": "2026-07-07T18:28:56.271Z",
-      "last_seen_at": "2026-07-08T12:10:24.857Z"
+      "last_seen_at": "2026-07-08T12:49:15.460Z"
     },
     {
       "store": "Boulanger",
@@ -343,9 +325,9 @@
       "btu": null,
       "city": "Bressuire, Parthenay, Thouars, Chinon, Cholet",
       "stock_info": null,
-      "scraped_at": "2026-07-08T12:10:24.856Z",
+      "scraped_at": "2026-07-08T12:49:15.459Z",
       "first_seen_at": "2026-07-07T18:28:56.270Z",
-      "last_seen_at": "2026-07-08T12:10:24.856Z"
+      "last_seen_at": "2026-07-08T12:49:15.459Z"
     },
     {
       "store": "Carrefour",
@@ -361,9 +343,9 @@
       "btu": "12000 BTU",
       "city": "Bressuire, Parthenay, Thouars, Chinon, Cholet",
       "stock_info": null,
-      "scraped_at": "2026-07-08T12:11:02.497Z",
+      "scraped_at": "2026-07-08T12:50:03.127Z",
       "first_seen_at": "2026-07-07T21:29:54.467Z",
-      "last_seen_at": "2026-07-08T12:11:02.497Z"
+      "last_seen_at": "2026-07-08T12:50:03.127Z"
     },
     {
       "store": "Carrefour",
@@ -379,9 +361,9 @@
       "btu": null,
       "city": "Bressuire, Parthenay, Thouars, Chinon, Cholet",
       "stock_info": null,
-      "scraped_at": "2026-07-08T12:11:02.497Z",
+      "scraped_at": "2026-07-08T12:50:03.127Z",
       "first_seen_at": "2026-07-07T21:29:54.467Z",
-      "last_seen_at": "2026-07-08T12:11:02.497Z"
+      "last_seen_at": "2026-07-08T12:50:03.127Z"
     },
     {
       "store": "Boulanger",
@@ -397,9 +379,9 @@
       "btu": "18000 BTU",
       "city": "Bressuire, Parthenay, Thouars, Chinon, Cholet",
       "stock_info": null,
-      "scraped_at": "2026-07-08T12:10:24.857Z",
+      "scraped_at": "2026-07-08T12:49:15.460Z",
       "first_seen_at": "2026-07-07T18:28:56.271Z",
-      "last_seen_at": "2026-07-08T12:10:24.857Z"
+      "last_seen_at": "2026-07-08T12:49:15.460Z"
     },
     {
       "store": "Boulanger",
@@ -415,9 +397,9 @@
       "btu": "9000 BTU",
       "city": "Bressuire, Parthenay, Thouars, Chinon, Cholet",
       "stock_info": "indisponible Retrait indisponible Livraison indisponible",
-      "scraped_at": "2026-07-08T12:10:24.856Z",
+      "scraped_at": "2026-07-08T12:49:15.460Z",
       "first_seen_at": "2026-07-07T18:28:56.271Z",
-      "last_seen_at": "2026-07-08T12:10:24.856Z"
+      "last_seen_at": "2026-07-08T12:49:15.460Z"
     },
     {
       "store": "Boulanger",
@@ -433,9 +415,9 @@
       "btu": "9000 BTU",
       "city": "Bressuire, Parthenay, Thouars, Chinon, Cholet",
       "stock_info": "indisponible Retrait indisponible Livraison indisponible",
-      "scraped_at": "2026-07-08T12:10:24.856Z",
+      "scraped_at": "2026-07-08T12:49:15.460Z",
       "first_seen_at": "2026-07-07T18:28:56.271Z",
-      "last_seen_at": "2026-07-08T12:10:24.856Z"
+      "last_seen_at": "2026-07-08T12:49:15.460Z"
     },
     {
       "store": "Boulanger",
@@ -451,9 +433,9 @@
       "btu": "9000 BTU",
       "city": "Bressuire, Parthenay, Thouars, Chinon, Cholet",
       "stock_info": "Retrait indisponible Livraison indisponible Nouveauté Comparer DREAME Climatiseur DREAME P-Wind 9K-Camel Gold Revendre votre appareil Refroidir Label énergie froid : A, Silencieux (65dB) Wifi L x H x P : 28. | indisponible Retrait indisponible Livraison indisponible Nouveauté Comparer DREAME Climatiseur DREAME P-Wind 9K-Black Gold Revendre votre appareil Refroidir Label énergie froid : A, Silencieux (65dB) Bluetooth L x H x P : 28.",
-      "scraped_at": "2026-07-08T12:10:24.842Z",
+      "scraped_at": "2026-07-08T12:49:15.459Z",
       "first_seen_at": "2026-07-07T14:37:05.952Z",
-      "last_seen_at": "2026-07-08T12:10:24.842Z"
+      "last_seen_at": "2026-07-08T12:49:15.459Z"
     },
     {
       "store": "Boulanger",
@@ -469,11 +451,9 @@
       "btu": null,
       "city": "Bressuire, Parthenay, Thouars, Chinon, Cholet",
       "stock_info": "Retrait indisponible Livraison indisponible",
-      "scraped_at": "2026-07-08T12:10:24.856Z",
+      "scraped_at": "2026-07-08T12:49:15.459Z",
       "first_seen_at": "2026-07-07T18:28:56.270Z",
-      "last_seen_at": "2026-07-08T12:10:24.856Z",
-      "status_changed_at": "2026-07-08T12:10:24.856Z",
-      "previous_status": "unknown"
+      "last_seen_at": "2026-07-08T12:49:15.459Z"
     }
   ]
 }

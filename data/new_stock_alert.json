@@ -1,60 +1,24 @@
 {
-  "count": 3,
+  "count": 1,
   "items": [
     {
       "store": "Amazon",
-      "title": "Climatiseur Mobile Portable Rafraîchisseur d'air Silencieux (Améliorée) pour Chambre - Puissance 7,5 m/s, Oscillation 90°, 4 Vitesses, 2 Modes, Minuteur 10H, Télécommande, Sans Lame, Noir Carbone",
-      "price_eur": 199.99,
-      "url": "https://www.amazon.fr/Climatiseur-Portable-Rafra%C3%AEchisseur-Silencieux-Am%C3%A9lior%C3%A9e/dp/B0H1CR19PJ/ref=sr_1_21?dib=eyJ2IjoiMSJ9.TlAMHu1J6srvFiR64Parj_PiRohFzwvSpoeyNiy-NPd9_cbJwlcAUaMpQDChdN1jVsJYhmfaE_lb2aKYFrGr_gkzbiSjoTtmDZ-NxcB3XED2jdjV0bJaOKkK660PXTs-5olsj7L-AlHDV8Vqa-B6XYt_qEmPazLpUCVGuykHUmeUS6s_3jyQ6hfh0IdRxBNrGisioLDyhHERRQdhKTRP_zbc7TxMZ8V1oCobzZjOXIc.9fFTRZL2oSSyuc_bTizDQ9vnyhXSrC-2dyh2ceTWwjY&dib_tag=se&keywords=climatiseur+portable+mobile&qid=1783512635&s=kitchen&sr=1-21",
-      "image": "https://m.media-amazon.com/images/I/71l6RrTaSwL._AC_UY218_.jpg",
+      "title": "EUHOMY Climatiseur mobile 7000 BTU 2,0 kW (avec télécommande), climatiseur portable quatre en un, fonctionnement silencieux, écran LED, surface couverte 20 m², minuterie 24 heures",
+      "price_eur": 229.99,
+      "url": "https://www.amazon.fr/EUHOMY-Climatiseur-t%C3%A9l%C3%A9commande-climatiseur-fonctionnement/dp/B0DPPX3DBS/ref=sr_1_13?dib=eyJ2IjoiMSJ9.w7ky0xneqhuiC70LWC4Y5k6ZHD3XECfPC6M-7x0tnmz5ZZfrejD0SqkvAvaP5ljHrqQU7JRj6qqtnJDocyAEAPmnD21_maswJq_ZCq2bgv_1qv3V4o6q7B4TkIOJeLult-rX4O7eFgeO9VHXGphT9i4PBYyfdYJxlIITluSv9GuUs6MpOIZmeIw0sDnDy8HqG4uwCpHpXusZBaOcC6qnXmyyGFusAv9K866l83SpiX0.2aviNTfnrP26tksyZHC4PNUOtudekQdTfH0kOpAMq-Y&dib_tag=se&keywords=climatiseur+portable+mobile&qid=1783514967&s=kitchen&sr=1-13",
+      "image": "https://m.media-amazon.com/images/I/71d5JiKQ3ZL._AC_UY218_.jpg",
       "status": "low_stock",
       "availability_type": "delivery",
-      "delivery_info": "Livraison GRATUITE jeu. | livraison accélérée mer.",
+      "delivery_info": "Livraison GRATUITE 14 - 24 août Matériaux recyclés +2 de plus Caractéristiques plus durablesCe produit possède des caractéristiques de durabilité reconnues par des labels fiables. | disponiblesAjouter au panierAAGFiche produitEfficacité énergétiqueFiche produit",
       "brand": null,
       "model": null,
-      "btu": null,
+      "btu": "7000 BTU",
       "city": null,
-      "stock_info": "Livraison GRATUITE jeu. | livraison accélérée mer.",
-      "scraped_at": "2026-07-08T12:10:39.073Z",
-      "first_seen_at": "2026-07-08T12:10:39.073Z",
-      "last_seen_at": "2026-07-08T12:10:39.073Z"
-    },
-    {
-      "store": "Amazon",
-      "title": "Climatiseur Mobile 4 en 1, Rafraîchisseur d'Air avec Minuterie 1-12H, 3 Vitesses 4 Modes, Réservoir 6L, Télécommande, Portable, pour Chambre, Salon, Bureau et Maison",
-      "price_eur": 209.99,
-      "url": "https://www.amazon.fr/Climatiseur-Rafra%C3%AEchisseur-Minuterie-R%C3%A9servoir-T%C3%A9l%C3%A9commande/dp/B0GS51DZMR/ref=sr_1_5?dib=eyJ2IjoiMSJ9.TlAMHu1J6srvFiR64Parj_PiRohFzwvSpoeyNiy-NPd9_cbJwlcAUaMpQDChdN1jVsJYhmfaE_lb2aKYFrGr_gkzbiSjoTtmDZ-NxcB3XED2jdjV0bJaOKkK660PXTs-5olsj7L-AlHDV8Vqa-B6XYt_qEmPazLpUCVGuykHUmeUS6s_3jyQ6hfh0IdRxBNrGisioLDyhHERRQdhKTRP_zbc7TxMZ8V1oCobzZjOXIc.9fFTRZL2oSSyuc_bTizDQ9vnyhXSrC-2dyh2ceTWwjY&dib_tag=se&keywords=climatiseur+portable+mobile&qid=1783512635&s=kitchen&sr=1-5",
-      "image": "https://m.media-amazon.com/images/I/61oVZ+s7l5L._AC_UY218_.jpg",
-      "status": "low_stock",
-      "availability_type": "delivery",
-      "delivery_info": "Livraison à 6,99 € mer.",
-      "brand": null,
-      "model": null,
-      "btu": null,
-      "city": null,
-      "stock_info": "Livraison à 6,99 € mer.",
-      "scraped_at": "2026-07-08T12:10:39.072Z",
-      "first_seen_at": "2026-07-08T12:10:39.072Z",
-      "last_seen_at": "2026-07-08T12:10:39.072Z"
-    },
-    {
-      "store": "Amazon",
-      "title": "Climatiseur Mobile Silencieux Portable Rafraîchisseur d'air 360° Oscillation, Sortie d'air Double, 24H Minuteries, 65W, 4 Modes et 3 Vitesses avec Télécommande pour Chambre, Bureau, Cuisine",
-      "price_eur": 259.99,
-      "url": "https://www.amazon.fr/Climatiseur-Silencieux-Rafra%C3%AEchisseur-Oscillation-T%C3%A9l%C3%A9commande/dp/B0G6ZTPCJG/ref=sr_1_19?dib=eyJ2IjoiMSJ9.TlAMHu1J6srvFiR64Parj_PiRohFzwvSpoeyNiy-NPd9_cbJwlcAUaMpQDChdN1jVsJYhmfaE_lb2aKYFrGr_gkzbiSjoTtmDZ-NxcB3XED2jdjV0bJaOKkK660PXTs-5olsj7L-AlHDV8Vqa-B6XYt_qEmPazLpUCVGuykHUmeUS6s_3jyQ6hfh0IdRxBNrGisioLDyhHERRQdhKTRP_zbc7TxMZ8V1oCobzZjOXIc.9fFTRZL2oSSyuc_bTizDQ9vnyhXSrC-2dyh2ceTWwjY&dib_tag=se&keywords=climatiseur+portable+mobile&qid=1783512635&s=kitchen&sr=1-19",
-      "image": "https://m.media-amazon.com/images/I/615PGyCdPhL._AC_UY218_.jpg",
-      "status": "low_stock",
-      "availability_type": "delivery",
-      "delivery_info": "Livraison GRATUITE lun. | en stock.",
-      "brand": null,
-      "model": null,
-      "btu": null,
-      "city": null,
-      "stock_info": "Livraison GRATUITE lun. | en stock.",
-      "scraped_at": "2026-07-08T12:10:39.073Z",
-      "first_seen_at": "2026-07-08T12:10:39.073Z",
-      "last_seen_at": "2026-07-08T12:10:39.073Z"
+      "stock_info": "Livraison GRATUITE 14 - 24 août Matériaux recyclés +2 de plus Caractéristiques plus durablesCe produit possède des caractéristiques de durabilité reconnues par des labels fiables. | disponiblesAjouter au panierAAGFiche produitEfficacité énergétiqueFiche produit",
+      "scraped_at": "2026-07-08T12:49:30.812Z",
+      "first_seen_at": "2026-07-08T12:49:30.812Z",
+      "last_seen_at": "2026-07-08T12:49:30.812Z"
     }
   ],
-  "detected_at": "2026-07-08T12:11:48.995Z"
+  "detected_at": "2026-07-08T12:50:51.142Z"
 }
