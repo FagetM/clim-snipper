@@ -3,22 +3,22 @@
   "items": [
     {
       "store": "Amazon",
-      "title": "Climatiseur Mobile Portable Rafraîchisseur d'air Silencieux (Améliorée) pour Chambre - Puissance 7,5 m/s, Oscillation 90°, 4 Vitesses, 2 Modes, Minuteur 10H, Télécommande, Sans Lame, Noir Carbone",
-      "price_eur": 199.99,
-      "url": "https://www.amazon.fr/Climatiseur-Portable-Rafra%C3%AEchisseur-Silencieux-Am%C3%A9lior%C3%A9e/dp/B0H1CR19PJ/ref=sr_1_19?dib=eyJ2IjoiMSJ9.w7ky0xneqhuiC70LWC4Y5k6ZHD3XECfPC6M-7x0tnmxvAdErEB-TZWpsYX-D_VcVHQ8a5ye2S7yWsusfO22LMxCQwrlbvdc6drrnF51HYh-O0SDlvgsYZUUkYMbLi3-bCXCzHjkSy9Tf0pyS4XbhBQxtBuShCV-oCaoXH7O-60oR-XsuD5OR-3GSmez1ZIkwp5NIhPDtZSFn0iAjVCQkAfuAgAXtz8wunF6T9AFO-XU.auv3QV1NMdeDMqMN2eI4ASHJJF8DzXNRPC7aEm3ubZI&dib_tag=se&keywords=climatiseur+portable+mobile&qid=1783518605&s=kitchen&sr=1-19",
-      "image": "https://m.media-amazon.com/images/I/71l6RrTaSwL._AC_UY218_.jpg",
+      "title": "DREO climatiseur portable 10 000 BTU pour chambre, refroidissement efficace sans drainage, silencieux, contrôle par application et vocal, minuterie 24 h, ventilateur et déshumidificateur",
+      "price_eur": 499.99,
+      "url": "https://www.amazon.fr/DREO-climatiseur-refroidissement-application-d%C3%A9shumidificateur/dp/B0DTPYY5QL/ref=sr_1_21?dib=eyJ2IjoiMSJ9.w7ky0xneqhuiC70LWC4Y5k6ZHD3XECfPC6M-7x0tnmxvAdErEB-TZWpsYX-D_VcVHQ8a5ye2S7yWsusfO22LMxCQwrlbvdc6drrnF51HYh-O0SDlvgsYZUUkYMbLi3-b-VpSWl_IRCkllsDUr-6IMk2eDQiCT7a9JQYPvWBo4wYR-XsuD5OR-3GSmez1ZIkwYpTfla_wkWe6l-Nw7t3r8VSVCwcLQoZ_fFkvM4Q2ceQ.qvuSLGIHWFiNu10OnGpPQOwWqSIPYtmjOLNoornJ0z4&dib_tag=se&keywords=climatiseur+portable+mobile&qid=1783519233&s=kitchen&sr=1-21",
+      "image": "https://m.media-amazon.com/images/I/7128LH1jDzL._AC_UY218_.jpg",
       "status": "low_stock",
       "availability_type": "delivery",
-      "delivery_info": "Livraison GRATUITE jeu. | livraison accélérée mer.",
+      "delivery_info": "Livraison GRATUITEServices disponiblesAjouter au panierAA+++DFiche produitEfficacité énergétiqueFiche produit",
       "brand": null,
       "model": null,
-      "btu": null,
+      "btu": "000 BTU",
       "city": null,
-      "stock_info": "Livraison GRATUITE jeu. | livraison accélérée mer.",
-      "scraped_at": "2026-07-08T13:50:09.661Z",
-      "first_seen_at": "2026-07-08T13:50:09.661Z",
-      "last_seen_at": "2026-07-08T13:50:09.661Z"
+      "stock_info": "Livraison GRATUITEServices disponiblesAjouter au panierAA+++DFiche produitEfficacité énergétiqueFiche produit",
+      "scraped_at": "2026-07-08T14:00:36.668Z",
+      "first_seen_at": "2026-07-08T14:00:36.668Z",
+      "last_seen_at": "2026-07-08T14:00:36.668Z"
     }
   ],
-  "detected_at": "2026-07-08T13:51:29.500Z"
+  "detected_at": "2026-07-08T14:01:56.908Z"
 }
