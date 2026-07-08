@@ -1,42 +1,24 @@
 {
-  "count": 2,
+  "count": 1,
   "items": [
     {
       "store": "Amazon",
-      "title": "12L Rafraîchisseur d'Air, 3 Vitesses, Climatiseur Mobile avec Télécommande, Minuterie 1-12h, Oscillation 60°, Silencieux Climatiseur Portable avec Réservoir amovible pour Camping Chambre Cuisine",
-      "price_eur": 154,
-      "url": "https://www.amazon.fr/Rafra%C3%AEchisseur-Climatiseur-T%C3%A9l%C3%A9commande-Oscillation-Silencieux/dp/B0H6SG5B65/ref=sr_1_21_mod_primary_new?dib=eyJ2IjoiMSJ9.w7ky0xneqhuiC70LWC4Y5hYKmiLH2IhdPjeGDMftnTVvAdErEB-TZWpsYX-D_VcVALdrPIuef7tJJGh4ctsJu8r1X_sb3Xra1vSyAxIxYUangEy9flLO8PyvVY9mebOzcUdL1XtdMQjsm1lm9q_TEACh5OF4JooLsAemNCJSLNE2OATjZX2HDmfZGK_nW1hzVD4kRH8XpPS6SvVzd0pRzF_gu4Pdqoj3VMzKvneEzYs.EUU3nVyhcg7cSI9_J7xGIdOgV3JEkbhLyLGERg8DSws&dib_tag=se&keywords=climatiseur+portable+mobile&qid=1783501481&s=kitchen&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sr=1-21",
-      "image": "https://m.media-amazon.com/images/I/71+sFsraCHL._AC_UY218_.jpg",
+      "title": "DR.PREPARE Climatiseur Mobile Silencieux 9000 BTU 2,1Kw, Climatiseur Portable 4 en 1, Refroidissement, Déshumidificateur, Ventilateur et Modes Sommeil, Télécommande, Refroidit 30 m², Minuteries 1-24H",
+      "price_eur": 339.99,
+      "url": "https://www.amazon.fr/DR-PREPARE-Climatiseur-Refroidissement-D%C3%A9shumidificateur-T%C3%A9l%C3%A9commande/dp/B0CSK7ZZTZ/ref=sr_1_22?dib=eyJ2IjoiMSJ9.3FkEqrNQrjHdccbj5xUX0m32zDVGmlWAwHXEboin9C35ZZfrejD0SqkvAvaP5ljH8HnoiyvR-n2zfr3RZ_-6-PE9Tt_5vmyeY9hDEjuqnbFNlg5Rs_ZLzUarlDvSGfyveGLOofsVhI6FToLJVOfzUYtxvz3u1-DoKZDuGaG_204PnecB1GWnPwfbGS8ARksrmyhxdf1RX88dQ_PqKZPy-hyG2y3h7aY22PFsjfFfQ3I.krmTONu_E2a7wT3QpWN0WbH4DcMVAF6DbaNu6I_BFKg&dib_tag=se&keywords=climatiseur+portable+mobile&qid=1783505210&s=kitchen&sr=1-22",
+      "image": "https://m.media-amazon.com/images/I/61a3Hf2SvgL._AC_UY218_.jpg",
       "status": "low_stock",
       "availability_type": "delivery",
-      "delivery_info": "Livraison GRATUITE 1 - 7 aoûtAjouter au panierAutres vendeurs sur Amazon140,32 €(5 neufs)Livraison plus rapide Prix, page produit149,00 €149,00€ Ancien : 154,00 €Ancien : 154,00 €154,00€ Livraison GRATUITE 23 - 28 juil.",
+      "delivery_info": null,
       "brand": null,
       "model": null,
-      "btu": null,
+      "btu": "9000 BTU",
       "city": null,
-      "stock_info": "Livraison GRATUITE 1 - 7 aoûtAjouter au panierAutres vendeurs sur Amazon140,32 €(5 neufs)Livraison plus rapide Prix, page produit149,00 €149,00€ Ancien : 154,00 €Ancien : 154,00 €154,00€ Livraison GRATUITE 23 - 28 juil.",
-      "scraped_at": "2026-07-08T09:04:44.464Z",
-      "first_seen_at": "2026-07-08T09:04:44.464Z",
-      "last_seen_at": "2026-07-08T09:04:44.464Z"
-    },
-    {
-      "store": "Amazon",
-      "title": "SponsoriséSponsorisé Vous voyez cette publicité en fonction de la pertinence du produit vis-à-vis à votre recherche.En savoir plus sur cette publicité Climatiseur Mobile, Rafraîchisseur D'Air Portable",
-      "price_eur": 307.94,
-      "url": "https://www.amazon.fr/sspa/click?ie=UTF8&spc=MTo3MjcxMTQ4NzU4MjA2ODA6MTc4MzUwMTQ4MTpzcF9hdGY6MzAxMTg1NTQxNTE5MjMyOjowOjo&url=%2FClimatiseur-Mobile-Rafra%25C3%25AEchisseur-DAir-Portable%2Fdp%2FB0H7JHK23M%2Fref%3Dsr_1_1_sspa%3Fdib%3DeyJ2IjoiMSJ9.w7ky0xneqhuiC70LWC4Y5hYKmiLH2IhdPjeGDMftnTVvAdErEB-TZWpsYX-D_VcVALdrPIuef7tJJGh4ctsJu8r1X_sb3Xra1vSyAxIxYUangEy9flLO8PyvVY9mebOzcUdL1XtdMQjsm1lm9q_TEACh5OF4JooLsAemNCJSLNE2OATjZX2HDmfZGK_nW1hzVD4kRH8XpPS6SvVzd0pRzF_gu4Pdqoj3VMzKvneEzYs.EUU3nVyhcg7cSI9_J7xGIdOgV3JEkbhLyLGERg8DSws%26dib_tag%3Dse%26keywords%3Dclimatiseur%2Bportable%2Bmobile%26qid%3D1783501481%26s%3Dkitchen%26sr%3D1-1-spons%26aref%3D1B3yuTf6vV%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1&aref=1B3yuTf6vV&sp_cr=ZAZ",
-      "image": "https://m.media-amazon.com/images/I/71Ng0EgguBL._AC_UY218_.jpg",
-      "status": "low_stock",
-      "availability_type": "delivery",
-      "delivery_info": "Livraison à 12 € 1 - 6 aoûtAjouter au panier",
-      "brand": null,
-      "model": null,
-      "btu": null,
-      "city": null,
-      "stock_info": "Livraison à 12 € 1 - 6 aoûtAjouter au panier",
-      "scraped_at": "2026-07-08T09:04:44.463Z",
-      "first_seen_at": "2026-07-08T09:04:44.463Z",
-      "last_seen_at": "2026-07-08T09:04:44.463Z"
+      "stock_info": null,
+      "scraped_at": "2026-07-08T10:06:53.973Z",
+      "first_seen_at": "2026-07-08T10:06:53.973Z",
+      "last_seen_at": "2026-07-08T10:06:53.973Z"
     }
   ],
-  "detected_at": "2026-07-08T09:05:53.851Z"
+  "detected_at": "2026-07-08T10:08:14.365Z"
 }
