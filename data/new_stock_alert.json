@@ -1,0 +1,44 @@
+{
+  "count": 2,
+  "items": [
+    {
+      "store": "Amazon",
+      "title": "Climatiseur Mobile 4 en 1, Rafraîchisseur d'Air avec Minuterie 1-12H, 3 Vitesses 4 Modes, Réservoir 6L, Télécommande, Portable, pour Chambre, Salon, Bureau et Maison",
+      "price_eur": 219.99,
+      "url": "https://www.amazon.fr/Climatiseur-Rafra%C3%AEchisseur-Minuterie-R%C3%A9servoir-T%C3%A9l%C3%A9commande/dp/B0GS51DZMR/ref=sr_1_12?dib=eyJ2IjoiMSJ9.w7ky0xneqhuiC70LWC4Y5hYKmiLH2IhdPjeGDMftnTVvAdErEB-TZWpsYX-D_VcVALdrPIuef7tJJGh4ctsJu5svP3mFY49CbGacLVU9Q8T2-l5OeuTHwmnxwvw1jwcpuFgfmgbWhA-lSiNBlJwJdYc7-n1uT50BEHFdrq5RxYhTJ0WmZfyzfXaS1tZ9y2tdRdQ2Q0aerxO4ECnmh8xStc_lweXpIQgk9mQb1TcaIWI.fWTR3zZyuOf-HdlT9AuwKtbJIj59PoaJ0HDMY0skLOo&dib_tag=se&keywords=climatiseur+portable+mobile&qid=1783494025&s=kitchen&sr=1-12",
+      "image": "https://m.media-amazon.com/images/I/61oVZ+s7l5L._AC_UY218_.jpg",
+      "status": "low_stock",
+      "availability_type": "delivery",
+      "delivery_info": "Livraison GRATUITE jeu. | livraison accélérée mer.",
+      "brand": null,
+      "model": null,
+      "btu": null,
+      "city": null,
+      "stock_info": "Livraison GRATUITE jeu. | livraison accélérée mer.",
+      "scraped_at": "2026-07-08T07:00:29.167Z",
+      "first_seen_at": "2026-07-07T21:16:32.463Z",
+      "last_seen_at": "2026-07-08T07:00:29.167Z",
+      "status_changed_at": "2026-07-08T07:00:29.167Z",
+      "previous_status": "unknown"
+    },
+    {
+      "store": "Amazon",
+      "title": "DREO climatiseur portable 10 000 BTU pour chambre, refroidissement efficace sans drainage, silencieux, contrôle par application et vocal, minuterie 24 h, ventilateur et déshumidificateur",
+      "price_eur": 499.99,
+      "url": "https://www.amazon.fr/DREO-climatiseur-refroidissement-application-d%C3%A9shumidificateur/dp/B0DTPYY5QL/ref=sr_1_17?dib=eyJ2IjoiMSJ9.w7ky0xneqhuiC70LWC4Y5hYKmiLH2IhdPjeGDMftnTVvAdErEB-TZWpsYX-D_VcVALdrPIuef7tJJGh4ctsJu5svP3mFY49CbGacLVU9Q8T2-l5OeuTHwmnxwvw1jwcpuFgfmgbWhA-lSiNBlJwJdYc7-n1uT50BEHFdrq5RxYhTJ0WmZfyzfXaS1tZ9y2tdRdQ2Q0aerxO4ECnmh8xStc_lweXpIQgk9mQb1TcaIWI.fWTR3zZyuOf-HdlT9AuwKtbJIj59PoaJ0HDMY0skLOo&dib_tag=se&keywords=climatiseur+portable+mobile&qid=1783494025&s=kitchen&sr=1-17",
+      "image": "https://m.media-amazon.com/images/I/7128LH1jDzL._AC_UY218_.jpg",
+      "status": "low_stock",
+      "availability_type": "delivery",
+      "delivery_info": "Livraison GRATUITEAjouter au panierAA+++DFiche produitEfficacité énergétiqueFiche produit",
+      "brand": null,
+      "model": null,
+      "btu": "000 BTU",
+      "city": null,
+      "stock_info": "Livraison GRATUITEAjouter au panierAA+++DFiche produitEfficacité énergétiqueFiche produit",
+      "scraped_at": "2026-07-08T07:00:29.167Z",
+      "first_seen_at": "2026-07-08T07:00:29.167Z",
+      "last_seen_at": "2026-07-08T07:00:29.167Z"
+    }
+  ],
+  "detected_at": "2026-07-08T07:01:39.888Z"
+}
