@@ -1,24 +1,60 @@
 {
-  "count": 1,
+  "count": 3,
   "items": [
     {
       "store": "Amazon",
-      "title": "DREAME P-Wind10 7000 BTU Climatiseur portable 3-en-1 : Refroidissement, Déshumidification et Ventilateur, flux d’air 3D, contrôle via appli et télécommande, mode sommeil, installation facile",
-      "price_eur": 359,
-      "url": "https://www.amazon.fr/DREAME-P-Wind10-Climatiseur-portable-3-en-1/dp/B0GXYL6QJX/ref=sr_1_17?dib=eyJ2IjoiMSJ9.YUlB0e6CB_Azgn2FR2OjLp9id9wPITV61OXrS3eohfn-Fji3NqQeiEzxDxy93JYTrqQU7JRj6qqtnJDocyAEABdQHLLIlGhN51-PAn68wyFXLTgfI6hatM5i8V8qxyKEFw9pKF4EjAYpce8hE0QXi-7JgONYZZQ0Ghpmn9DwT8CDp3_rAd0mr-OcfmtwtSMa0zoUKe72d6mtC8jqtsMMdNZhWxy6mb_LSr_0gDXof-o.q2sxDIgCEsCcHzPuNeCVOETf6tLg25wI0b3BQomIL3o&dib_tag=se&keywords=climatiseur+portable+mobile&qid=1783508906&s=kitchen&sr=1-17",
-      "image": "https://m.media-amazon.com/images/I/61fdNibRa8L._AC_UY218_.jpg",
+      "title": "Climatiseur Mobile Portable Rafraîchisseur d'air Silencieux (Améliorée) pour Chambre - Puissance 7,5 m/s, Oscillation 90°, 4 Vitesses, 2 Modes, Minuteur 10H, Télécommande, Sans Lame, Noir Carbone",
+      "price_eur": 199.99,
+      "url": "https://www.amazon.fr/Climatiseur-Portable-Rafra%C3%AEchisseur-Silencieux-Am%C3%A9lior%C3%A9e/dp/B0H1CR19PJ/ref=sr_1_21?dib=eyJ2IjoiMSJ9.TlAMHu1J6srvFiR64Parj_PiRohFzwvSpoeyNiy-NPd9_cbJwlcAUaMpQDChdN1jVsJYhmfaE_lb2aKYFrGr_gkzbiSjoTtmDZ-NxcB3XED2jdjV0bJaOKkK660PXTs-5olsj7L-AlHDV8Vqa-B6XYt_qEmPazLpUCVGuykHUmeUS6s_3jyQ6hfh0IdRxBNrGisioLDyhHERRQdhKTRP_zbc7TxMZ8V1oCobzZjOXIc.9fFTRZL2oSSyuc_bTizDQ9vnyhXSrC-2dyh2ceTWwjY&dib_tag=se&keywords=climatiseur+portable+mobile&qid=1783512635&s=kitchen&sr=1-21",
+      "image": "https://m.media-amazon.com/images/I/71l6RrTaSwL._AC_UY218_.jpg",
       "status": "low_stock",
       "availability_type": "delivery",
-      "delivery_info": "Livraison GRATUITE 27 juil.",
-      "brand": "Dreame",
+      "delivery_info": "Livraison GRATUITE jeu. | livraison accélérée mer.",
+      "brand": null,
       "model": null,
-      "btu": "7000 BTU",
+      "btu": null,
       "city": null,
-      "stock_info": "Livraison GRATUITE 27 juil.",
-      "scraped_at": "2026-07-08T11:08:30.055Z",
-      "first_seen_at": "2026-07-08T11:08:30.055Z",
-      "last_seen_at": "2026-07-08T11:08:30.055Z"
+      "stock_info": "Livraison GRATUITE jeu. | livraison accélérée mer.",
+      "scraped_at": "2026-07-08T12:10:39.073Z",
+      "first_seen_at": "2026-07-08T12:10:39.073Z",
+      "last_seen_at": "2026-07-08T12:10:39.073Z"
+    },
+    {
+      "store": "Amazon",
+      "title": "Climatiseur Mobile 4 en 1, Rafraîchisseur d'Air avec Minuterie 1-12H, 3 Vitesses 4 Modes, Réservoir 6L, Télécommande, Portable, pour Chambre, Salon, Bureau et Maison",
+      "price_eur": 209.99,
+      "url": "https://www.amazon.fr/Climatiseur-Rafra%C3%AEchisseur-Minuterie-R%C3%A9servoir-T%C3%A9l%C3%A9commande/dp/B0GS51DZMR/ref=sr_1_5?dib=eyJ2IjoiMSJ9.TlAMHu1J6srvFiR64Parj_PiRohFzwvSpoeyNiy-NPd9_cbJwlcAUaMpQDChdN1jVsJYhmfaE_lb2aKYFrGr_gkzbiSjoTtmDZ-NxcB3XED2jdjV0bJaOKkK660PXTs-5olsj7L-AlHDV8Vqa-B6XYt_qEmPazLpUCVGuykHUmeUS6s_3jyQ6hfh0IdRxBNrGisioLDyhHERRQdhKTRP_zbc7TxMZ8V1oCobzZjOXIc.9fFTRZL2oSSyuc_bTizDQ9vnyhXSrC-2dyh2ceTWwjY&dib_tag=se&keywords=climatiseur+portable+mobile&qid=1783512635&s=kitchen&sr=1-5",
+      "image": "https://m.media-amazon.com/images/I/61oVZ+s7l5L._AC_UY218_.jpg",
+      "status": "low_stock",
+      "availability_type": "delivery",
+      "delivery_info": "Livraison à 6,99 € mer.",
+      "brand": null,
+      "model": null,
+      "btu": null,
+      "city": null,
+      "stock_info": "Livraison à 6,99 € mer.",
+      "scraped_at": "2026-07-08T12:10:39.072Z",
+      "first_seen_at": "2026-07-08T12:10:39.072Z",
+      "last_seen_at": "2026-07-08T12:10:39.072Z"
+    },
+    {
+      "store": "Amazon",
+      "title": "Climatiseur Mobile Silencieux Portable Rafraîchisseur d'air 360° Oscillation, Sortie d'air Double, 24H Minuteries, 65W, 4 Modes et 3 Vitesses avec Télécommande pour Chambre, Bureau, Cuisine",
+      "price_eur": 259.99,
+      "url": "https://www.amazon.fr/Climatiseur-Silencieux-Rafra%C3%AEchisseur-Oscillation-T%C3%A9l%C3%A9commande/dp/B0G6ZTPCJG/ref=sr_1_19?dib=eyJ2IjoiMSJ9.TlAMHu1J6srvFiR64Parj_PiRohFzwvSpoeyNiy-NPd9_cbJwlcAUaMpQDChdN1jVsJYhmfaE_lb2aKYFrGr_gkzbiSjoTtmDZ-NxcB3XED2jdjV0bJaOKkK660PXTs-5olsj7L-AlHDV8Vqa-B6XYt_qEmPazLpUCVGuykHUmeUS6s_3jyQ6hfh0IdRxBNrGisioLDyhHERRQdhKTRP_zbc7TxMZ8V1oCobzZjOXIc.9fFTRZL2oSSyuc_bTizDQ9vnyhXSrC-2dyh2ceTWwjY&dib_tag=se&keywords=climatiseur+portable+mobile&qid=1783512635&s=kitchen&sr=1-19",
+      "image": "https://m.media-amazon.com/images/I/615PGyCdPhL._AC_UY218_.jpg",
+      "status": "low_stock",
+      "availability_type": "delivery",
+      "delivery_info": "Livraison GRATUITE lun. | en stock.",
+      "brand": null,
+      "model": null,
+      "btu": null,
+      "city": null,
+      "stock_info": "Livraison GRATUITE lun. | en stock.",
+      "scraped_at": "2026-07-08T12:10:39.073Z",
+      "first_seen_at": "2026-07-08T12:10:39.073Z",
+      "last_seen_at": "2026-07-08T12:10:39.073Z"
     }
   ],
-  "detected_at": "2026-07-08T11:09:50.977Z"
+  "detected_at": "2026-07-08T12:11:48.995Z"
 }
