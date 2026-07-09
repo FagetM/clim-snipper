@@ -1,0 +1,42 @@
+{
+  "count": 2,
+  "items": [
+    {
+      "store": "Amazon",
+      "title": "Rafraîchisseur d'air portable ultra-silencieux, climatiseur portable pour chambres, ventilateur sans pales avec mode nuit, 3 vitesses, unité de refroidissement compacte pour un sommeil réparateur",
+      "price_eur": 88.96,
+      "url": "https://www.amazon.fr/Rafra%C3%AEchisseur-ultra-silencieux-climatiseur-ventilateur-refroidissement/dp/B0H75H1W2V/ref=sr_1_16?dib=eyJ2IjoiMSJ9.TlAMHu1J6srvFiR64Parj1sreAmJp-CmbH23Dn452VsM3we-k4eFrloMT8yDqp6kf2fWZN8HTZUr1ie2HoVFUfG8gDJb91JLWJD4yfRexQdTOoo09kmWxLsHYk4ZKEAXl1QK_AHQeeLAJyRbtvgQT8Xsx31YS-hyRlTQLomYqR-oqyWcvo_VEFlZ31wADoDDM2_k7lEe-Pj9881RBcTuRGokdsd8axyeeRMHucZ2D9k.xJ7mxyKr0H66IHAhUVBhUNx9xhVCr9T0v_Hw4sTKHW4&dib_tag=se&keywords=climatiseur+portable+mobile&qid=1783594826&s=kitchen&sr=1-16",
+      "image": "https://m.media-amazon.com/images/I/61R2LrVLFuL._AC_UY218_.jpg",
+      "status": "low_stock",
+      "availability_type": "delivery",
+      "delivery_info": "Livraison GRATUITE 20 - 22 juil.",
+      "brand": null,
+      "model": null,
+      "btu": null,
+      "city": null,
+      "stock_info": "Livraison GRATUITE 20 - 22 juil.",
+      "scraped_at": "2026-07-09T11:00:30.184Z",
+      "first_seen_at": "2026-07-09T11:00:30.184Z",
+      "last_seen_at": "2026-07-09T11:00:30.184Z"
+    },
+    {
+      "store": "Amazon",
+      "title": "DREAME P-Wind10 7000 BTU Climatiseur portable 3-en-1 : Refroidissement, Déshumidification et Ventilateur, flux d’air 3D, contrôle via appli et télécommande, mode sommeil, installation facile",
+      "price_eur": 359,
+      "url": "https://www.amazon.fr/DREAME-P-Wind10-Climatiseur-portable-3-en-1/dp/B0GXYL6QJX/ref=sr_1_15?dib=eyJ2IjoiMSJ9.TlAMHu1J6srvFiR64Parj1sreAmJp-CmbH23Dn452VsM3we-k4eFrloMT8yDqp6kf2fWZN8HTZUr1ie2HoVFUfG8gDJb91JLWJD4yfRexQdTOoo09kmWxLsHYk4ZKEAXl1QK_AHQeeLAJyRbtvgQT8Xsx31YS-hyRlTQLomYqR-oqyWcvo_VEFlZ31wADoDDM2_k7lEe-Pj9881RBcTuRGokdsd8axyeeRMHucZ2D9k.xJ7mxyKr0H66IHAhUVBhUNx9xhVCr9T0v_Hw4sTKHW4&dib_tag=se&keywords=climatiseur+portable+mobile&qid=1783594826&s=kitchen&sr=1-15",
+      "image": "https://m.media-amazon.com/images/I/61fdNibRa8L._AC_UY218_.jpg",
+      "status": "low_stock",
+      "availability_type": "delivery",
+      "delivery_info": "Livraison GRATUITE lun.",
+      "brand": "Dreame",
+      "model": null,
+      "btu": "7000 BTU",
+      "city": null,
+      "stock_info": "Livraison GRATUITE lun.",
+      "scraped_at": "2026-07-09T11:00:30.184Z",
+      "first_seen_at": "2026-07-09T11:00:30.184Z",
+      "last_seen_at": "2026-07-09T11:00:30.184Z"
+    }
+  ],
+  "detected_at": "2026-07-09T11:01:49.676Z"
+}
