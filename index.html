@@ -82,6 +82,16 @@ header .target-badge{display:inline-flex;align-items:center;gap:.35rem;margin-to
 .last-update .dot.stale{background:var(--red);animation:none}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
 
+/* ── Price History Chart ── */
+.chart-wrap{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);margin:0 1.5rem 1rem;padding:1.2rem 1.5rem 1rem;box-shadow:var(--shadow);display:none}
+.chart-wrap.show{display:block}
+.chart-wrap h3{font-size:.85rem;font-weight:700;color:var(--muted);margin-bottom:.8rem;display:flex;align-items:center;gap:.4rem}
+.chart-wrap canvas{display:block;width:100%;height:200px}
+.chart-wrap .chart-legend{display:flex;gap:1.2rem;margin-top:.5rem;font-size:.68rem;color:var(--muted2);flex-wrap:wrap}
+.chart-wrap .chart-legend span{display:flex;align-items:center;gap:.3rem}
+.chart-wrap .chart-legend .dot-leg{width:8px;height:8px;border-radius:50%;display:inline-block}
+.chart-wrap .chart-empty{text-align:center;color:var(--muted2);font-size:.78rem;padding:1.5rem 0}
+
 /* ── Product Grid ── */
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(350px,1fr));gap:1rem;padding:1rem 1.5rem 2rem}
 @media(max-width:420px){.grid{grid-template-columns:1fr;padding:1rem .7rem}}
@@ -158,6 +168,17 @@ footer .brand{background:linear-gradient(135deg,var(--accent),var(--accent2));-w
 <div class="stale-banner" id="stale">⚠️ Données de plus de 24 heures — un nouveau scan est recommandé</div>
 
 <div class="stats-row" id="stats"></div>
+
+<div class="chart-wrap" id="chartWrap">
+  <h3>📈 Historique des prix — Midea Portasplit 12 000 BTU</h3>
+  <canvas id="priceChart"></canvas>
+  <div class="chart-legend">
+    <span><span class="dot-leg" style="background:var(--accent)"></span> Prix neuf</span>
+    <span><span class="dot-leg" style="background:var(--orange)"></span> Prix occasion</span>
+    <span id="chartRange"></span>
+  </div>
+  <div class="chart-empty" id="chartEmpty">Aucun historique pour le moment. Les données s'accumuleront à chaque scan.</div>
+</div>
 
 <div class="top-bar">
   <div class="search-wrap">
@@ -363,9 +384,176 @@ footer .brand{background:linear-gradient(135deg,var(--accent),var(--accent2));-w
   function load(){
     showSkeletons();
     fetch(DATA_URL+'?t='+Date.now()).then(function(r){return r.json()}).then(function(d){products=d.products||[];render()}).catch(function(){products=[];render()});
+    loadPriceHistory();
   }
+
+  /* ── Price history chart ── */
+  function loadPriceHistory(){
+    fetch('data/price_history.json?t='+Date.now()).then(function(r){return r.json()}).then(function(d){drawChart(d)}).catch(function(){drawChart({history:[]})});
+  }
+
+  function drawChart(data){
+    var wrap=document.getElementById('chartWrap');
+    var canvas=document.getElementById('priceChart');
+    var empty=document.getElementById('chartEmpty');
+    var range=document.getElementById('chartRange');
+    var h=data.history||[];
+
+    if(!h.length){wrap.className='chart-wrap';empty.style.display='';canvas.style.display='none';return}
+    wrap.className='chart-wrap show';
+    empty.style.display='none';
+    canvas.style.display='';
+
+    var dpr=window.devicePixelRatio||1;
+    var rect=canvas.parentElement.getBoundingClientRect();
+    canvas.width=rect.width*dpr;
+    canvas.height=200*dpr;
+    canvas.style.width=rect.width+'px';
+    canvas.style.height='200px';
+    var ctx=canvas.getContext('2d');
+    ctx.scale(dpr,dpr);
+    var W=rect.width,H=200;
+    ctx.clearRect(0,0,W,H);
+
+    // Padding
+    var pad={top:20,right:20,bottom:30,left:50};
+    var pw=W-pad.left-pad.right,ph=H-pad.top-pad.bottom;
+
+    // Parse data
+    var points=[];
+    for(var i=0;i<h.length;i++){
+      var entry=h[i];
+      var d=new Date(entry.date);
+      if(isNaN(d.getTime()))continue;
+      points.push({date:d,newP:entry.price_new,usedP:entry.price_used});
+    }
+    if(!points.length){wrap.className='chart-wrap';empty.style.display='';canvas.style.display='none';return}
+
+    // Sort by date
+    points.sort(function(a,b){return a.date-b.date});
+
+    // Range
+    var minD=points[0].date,maxD=points[points.length-1].date;
+    range.textContent=new Date(minD).toLocaleDateString('fr-FR')+' → '+new Date(maxD).toLocaleDateString('fr-FR');
+
+    // All prices
+    var allPrices=[];
+    for(var i=0;i<points.length;i++){
+      if(points[i].newP!=null)allPrices.push(points[i].newP);
+      if(points[i].usedP!=null)allPrices.push(points[i].usedP);
+    }
+    if(!allPrices.length) return;
+    var minPrice=Math.min.apply(null,allPrices);
+    var maxPrice=Math.max.apply(null,allPrices);
+    var padding=(maxPrice-minPrice)*0.15||50;
+    minPrice=Math.max(0,minPrice-padding);
+    maxPrice=maxPrice+padding;
+
+    // Scales
+    var xScale=function(d){return pad.left+((d-minD)/(maxD-minD))*pw};
+    var yScale=function(p){return pad.top+ph-((p-minPrice)/(maxPrice-minPrice))*ph};
+
+    // Grid
+    ctx.strokeStyle=getComputedStyle(document.documentElement).getPropertyValue('--border').trim();
+    ctx.lineWidth=.5;
+    var gridLines=4;
+    for(var i=0;i<=gridLines;i++){
+      var y=pad.top+(ph/gridLines)*i;
+      ctx.beginPath();
+      ctx.moveTo(pad.left,y);
+      ctx.lineTo(W-pad.right,y);
+      ctx.stroke();
+      var val=minPrice+((maxPrice-minPrice)/gridLines)*(gridLines-i);
+      ctx.fillStyle=getComputedStyle(document.documentElement).getPropertyValue('--muted2').trim();
+      ctx.font='10px system-ui';
+      ctx.textAlign='right';
+      ctx.fillText(Math.round(val)+'€',pad.left-6,y+3);
+    }
+
+    // X labels
+    ctx.textAlign='center';
+    ctx.fillStyle=getComputedStyle(document.documentElement).getPropertyValue('--muted2').trim();
+    for(var i=0;i<points.length;i+=Math.max(1,Math.floor(points.length/6))){
+      var x=xScale(points[i].date);
+      var label=points[i].date.toLocaleDateString('fr-FR',{day:'numeric',month:'short'});
+      ctx.fillText(label,x,H-pad.bottom+16);
+    }
+
+    // Draw lines
+    var drawLine=function(prices,color,width){
+      ctx.strokeStyle=color;
+      ctx.lineWidth=width;
+      ctx.lineJoin='round';
+      ctx.beginPath();
+      var started=false;
+      for(var i=0;i<points.length;i++){
+        var p=points[i];
+        if(prices[i]==null){started=false;continue}
+        var x=xScale(p.date);
+        var y=yScale(prices[i]);
+        if(!started){ctx.moveTo(x,y);started=true}
+        else ctx.lineTo(x,y);
+      }
+      ctx.stroke();
+    };
+
+    // Area fill new
+    var accentColor=getComputedStyle(document.documentElement).getPropertyValue('--accent').trim();
+    if(points.some(function(p){return p.newP!=null})){
+      ctx.beginPath();
+      var started=false;
+      for(var i=0;i<points.length;i++){
+        var p=points[i];
+        if(p.newP==null)continue;
+        var x=xScale(p.date),y=yScale(p.newP);
+        if(!started){ctx.moveTo(x,y);started=true}
+        else ctx.lineTo(x,y);
+      }
+      // Close area
+      var lastX=xScale(points[points.length-1].date);
+      for(var i=points.length-1;i>=0;i--){
+        var p=points[i];
+        if(p.newP==null)continue;
+        ctx.lineTo(xScale(p.date),H-pad.bottom);
+        break;
+      }
+      ctx.lineTo(xScale(points[0].date),H-pad.bottom);
+      ctx.closePath();
+      var grad=ctx.createLinearGradient(0,pad.top,0,H-pad.bottom);
+      grad.addColorStop(0,accentColor+'40');
+      grad.addColorStop(1,accentColor+'05');
+      ctx.fillStyle=grad;
+      ctx.fill();
+    }
+
+    // Lines
+    drawLine(points.map(function(p){return p.newP}),accentColor,2.5);
+    var orangeColor=getComputedStyle(document.documentElement).getPropertyValue('--orange').trim();
+    drawLine(points.map(function(p){return p.usedP}),orangeColor,2);
+
+    // Dots
+    for(var i=0;i<points.length;i++){
+      var p=points[i];
+      if(p.newP!=null){
+        ctx.beginPath();
+        ctx.arc(xScale(p.date),yScale(p.newP),4,0,Math.PI*2);
+        ctx.fillStyle=accentColor;
+        ctx.fill();
+        ctx.strokeStyle='#fff';
+        ctx.lineWidth=1.5;
+        ctx.stroke();
+      }
+      if(p.usedP!=null){
+        ctx.beginPath();
+        ctx.arc(xScale(p.date),yScale(p.usedP),3.5,0,Math.PI*2);
+        ctx.fillStyle=orangeColor;
+        ctx.fill();
+      }
+    }
+  }
+
   load();
-  setInterval(load,15*60*1000);
+  setInterval(function(){load();loadPriceHistory()},15*60*1000);
 })();
 </script>
 </body>
