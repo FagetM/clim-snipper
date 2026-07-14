@@ -2,7 +2,31 @@
   "product": "Midea Portasplit 12000 BTU",
   "currency": "EUR",
   "history": [
-    {"date": "2026-07-09", "price_new": null, "price_used": null, "stores": [], "note": "Début du tracking ciblé"},
-    {"date": "2026-07-14", "price_new": null, "price_used": 1300, "stores": ["Leboncoin"], "note": "1 annonce occasion Leboncoin 1300€"}
+    {
+      "date": "2026-07-09",
+      "price_new": null,
+      "price_used": null,
+      "stores": [],
+      "note": "Début du tracking ciblé"
+    },
+    {
+      "date": "2026-07-14",
+      "price_new": null,
+      "price_used": 1300,
+      "stores": [
+        "Leboncoin"
+      ],
+      "note": "",
+      "prices": [
+        {
+          "store": "Amazon.de",
+          "price_eur": 999,
+          "status": "unknown",
+          "delivery": "unknown"
+        }
+      ],
+      "lowest_new": 999,
+      "lowest_store": "Amazon.de"
+    }
   ]
 }
