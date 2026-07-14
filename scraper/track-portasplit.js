@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 /**
  * Midea PortaSplit 12000 BTU — Targeted price tracker
- * Checks Amazon.de and MediaMarkt.de every run, logs to price_history.json
+ * Checks Amazon.de, MediaMarkt.de, Leroy Merlin FR, Idealo.de
+ * Logs to price_history.json
  */
 const puppeteer = require('puppeteer');
 const fs = require('fs');
@@ -117,6 +118,41 @@ const TARGETS = [
         price_eur: data[0] ? parseFloat(data[0].price) : null,
         stock_info: data.length > 0 ? `${data.length} offres > 900€` : 'no offers',
         delivery_info: data.slice(0, 3).map(o => `${o.store}: ${o.price}€`).join(' | ').substring(0, 200)
+      };
+    }
+  },
+  {
+    name: 'Leroy Merlin FR',
+    url: 'https://www.leroymerlin.fr/produits/climatiseur-split-mobile-reversible-portasplit-midea-par-optimea-93857579.html',
+    handler: async (page) => {
+      await page.setExtraHTTPHeaders({ 'Accept-Language': 'fr-FR,fr;q=0.9' });
+      const resp = await page.goto('https://www.leroymerlin.fr/produits/climatiseur-split-mobile-reversible-portasplit-midea-par-optimea-93857579.html', { waitUntil: 'domcontentloaded', timeout: 30000 });
+      await new Promise(r => setTimeout(r, 4000));
+
+      const status = resp.status();
+      if (status === 404) {
+        return { title: 'Page 404 - produit retiré', price_eur: null, stock_info: 'Produit indisponible / retiré du catalogue', delivery_info: '' };
+      }
+
+      const data = await page.evaluate(() => {
+        const title = document.querySelector('h1')?.textContent?.trim() || '';
+        const priceEl = document.querySelector('[class*="price"], [data-test="product-price"], .product-price');
+        let price = null;
+        if (priceEl) {
+          const raw = priceEl.textContent.replace(/[^0-9,.]/g, '').replace(',', '.');
+          price = parseFloat(raw);
+        }
+        const stockEl = document.querySelector('.stock-info, .availability, [class*="stock"], [class*="disponibilit"]');
+        const stock = stockEl ? stockEl.textContent.trim() : '';
+        const btnText = document.querySelector('button[class*="cart"], button[class*="ajouter"], button[class*="panier"]')?.textContent?.trim() || '';
+        return { title, price, stock, btnText };
+      });
+
+      return {
+        title: data.title || 'Leroy Merlin PortaSplit',
+        price_eur: data.price || null,
+        stock_info: data.stock + (data.btnText ? ' | ' + data.btnText : '') || 'Check page',
+        delivery_info: data.btnText || ''
       };
     }
   }
