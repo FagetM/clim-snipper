@@ -82,6 +82,24 @@ header .target-badge{display:inline-flex;align-items:center;gap:.35rem;margin-to
 .last-update .dot.stale{background:var(--red);animation:none}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
 
+/* ── Tracker Status Panel ── */
+.tracker-panel{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);margin:0 1.5rem 1rem;padding:1rem 1.5rem;box-shadow:var(--shadow)}
+.tracker-panel h3{font-size:.82rem;font-weight:700;color:var(--text);margin-bottom:.7rem;display:flex;align-items:center;gap:.4rem}
+.tracker-panel h3 .dot-live{width:8px;height:8px;border-radius:50%;background:var(--green);animation:pulse 1.5s infinite}
+.tracker-table{width:100%;border-collapse:collapse;font-size:.74rem}
+.tracker-table th{text-align:left;padding:.4rem .6rem;color:var(--muted2);font-weight:600;font-size:.68rem;text-transform:uppercase;letter-spacing:.3px;border-bottom:1px solid var(--border)}
+.tracker-table td{padding:.5rem .6rem;border-bottom:1px solid var(--border);color:var(--muted);vertical-align:top}
+.tracker-table tr:last-child td{border-bottom:none}
+.tracker-table a{color:var(--accent);text-decoration:none;font-size:.69rem}
+.tracker-table a:hover{text-decoration:underline}
+.tracker-table .status-ok{color:var(--green);font-weight:700}
+.tracker-table .status-ko{color:var(--red);font-weight:700}
+.tracker-table .status-warn{color:var(--orange);font-weight:700}
+.tracker-table .ping-time{font-size:.64rem;color:var(--muted2)}
+.tracker-panel .toggle-row{text-align:right;margin-bottom:.4rem}
+.tracker-panel .toggle-btn{background:transparent;border:1px solid var(--border2);color:var(--muted);font-size:.68rem;padding:.2rem .55rem;border-radius:10px;cursor:pointer;font-family:var(--font)}
+.tracker-panel .toggle-btn:hover{color:var(--text);border-color:var(--accent)}
+
 /* ── Price History Chart ── */
 .chart-wrap{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);margin:0 1.5rem 1rem;padding:1.2rem 1.5rem 1rem;box-shadow:var(--shadow);display:none}
 .chart-wrap.show{display:block}
@@ -178,6 +196,16 @@ footer .brand{background:linear-gradient(135deg,var(--accent),var(--accent2));-w
     <span id="chartRange"></span>
   </div>
   <div class="chart-empty" id="chartEmpty">Aucun historique pour le moment. Les données s'accumuleront à chaque scan.</div>
+</div>
+
+<div class="tracker-panel" id="trackerPanel">
+  <div class="toggle-row"><button class="toggle-btn" id="trackerToggle">▲ Masquer</button></div>
+  <h3><span class="dot-live"></span> Surveillance — 5 sources</h3>
+  <table class="tracker-table" id="trackerTable">
+    <thead><tr><th>Source</th><th>Lien</th><th>Prix normal</th><th>Statut</th></tr></thead>
+    <tbody id="trackerBody"></tbody>
+  </table>
+  <div style="margin-top:.6rem;font-size:.66rem;color:var(--muted2)" id="trackerFooter"></div>
 </div>
 
 <div class="top-bar">
@@ -385,6 +413,7 @@ footer .brand{background:linear-gradient(135deg,var(--accent),var(--accent2));-w
     showSkeletons();
     fetch(DATA_URL+'?t='+Date.now()).then(function(r){return r.json()}).then(function(d){products=d.products||[];render()}).catch(function(){products=[];render()});
     loadPriceHistory();
+    loadPingStatus();
   }
 
   /* ── Price history chart ── */
@@ -553,7 +582,48 @@ footer .brand{background:linear-gradient(135deg,var(--accent),var(--accent2));-w
   }
 
   load();
-  setInterval(function(){load();loadPriceHistory()},15*60*1000);
+  setInterval(function(){load();loadPriceHistory();loadPingStatus()},15*60*1000);
+
+  /* ── Ping status tracker ── */
+  var TRACKED = [
+    {id:'leroymerlin',name:'Leroy Merlin FR',url:'https://www.leroymerlin.fr/produits/climatiseur-split-mobile-reversible-portasplit-midea-par-optimea-93857579.html',normalPrice:'999\u202f\u20ac',method:'HTTP ping / 30 min',note:'Produit r\xe9f\xe9renc\xe9 via Optimea, rupture actuelle'},
+    {id:'optimea_fr',name:'Optimea.fr (officiel)',url:'https://www.optimea.fr/product/climatiseur-split-mobile-midea/',normalPrice:'999\u202f\u20ac',method:'HTTP ping / 30 min',note:'Distributeur officiel, page catalogue uniquement'},
+    {id:'amazon_de',name:'Amazon.de',url:'https://www.amazon.de/dp/B0D3PP64JS',normalPrice:'~800\u202f\u20ac',method:'HTTP ping / 30 min',note:'Vendeurs tiers, prix sp\xe9culatif'},
+    {id:'amazon_fr',name:'Amazon.fr',url:'https://www.amazon.fr/dp/B0CY2YW8BT',normalPrice:'~999\u202f\u20ac',method:'HTTP ping / 30 min',note:'Vendeur 7 Perplex, 2999\u20ac actuellement'},
+    {id:'idealo_de',name:'Idealo.de',url:'https://www.idealo.de/preisvergleich/OffersOfProduct/210669898_-portasplit-e-12000-btu-midea.html',normalPrice:'1699\u202f\u20ac',method:'HTTP ping / 30 min',note:'Comparateur allemand, meilleur prix actuel'}
+  ];
+
+  function loadPingStatus(){
+    fetch('data/.ping_state.json?t='+Date.now()).then(function(r){return r.json()}).then(function(state){renderTracker(state)}).catch(function(){renderTracker({})});
+  }
+
+  function renderTracker(state){
+    var tb=document.getElementById('trackerBody');
+    var ft=document.getElementById('trackerFooter');
+    if(!tb)return;
+    var h='',lt='';
+    for(var i=0;i<TRACKED.length;i++){
+      var s=TRACKED[i],st=state[s.id]||{},av=st.available,re=st.reason||'—',ck=st.checkedAt||'';
+      if(ck>lt)lt=ck;
+      var ic='\u26a0\ufe0f',cl='status-warn';
+      if(av===true){cl='status-ok';ic='\uD83D\uDFE2';}
+      else if(av===false&&(re.indexOf('403')!==-1||re.indexOf('503')!==-1)){cl='status-ko';ic='\uD83D\uDEAB';}
+      else if(av===false){ic='\uD83D\uDD34';}
+      h+='<tr>'+
+        '<td><strong>'+esc(s.name)+'</strong><br><span class="ping-time">'+esc(s.method)+'</span></td>'+
+        '<td><a href="'+esc(s.url)+'" target="_blank" rel="noopener">\uD83D\uDD17 Voir</a><br><span class="ping-time">'+esc(s.note)+'</span></td>'+
+        '<td style="white-space:nowrap">'+esc(s.normalPrice)+'</td>'+
+        '<td><span class="'+cl+'">'+ic+' '+esc(re)+'</span><br><span class="ping-time">'+esc(ck?fmtDate(ck):'—')+'</span></td>'+
+      '</tr>';
+    }
+    tb.innerHTML=h;
+    if(lt)ft.textContent='\uD83C\uDFD3 Dernier ping : '+fmtDate(lt)+' · toutes les 30 min';
+    else ft.textContent='\uD83C\uDFD3 En attente du premier ping…';
+  }
+
+  var tt=document.getElementById('trackerToggle');
+  var tTbl=document.getElementById('trackerTable');
+  if(tt){tt.onclick=function(){var hh=tTbl.style.display==='none';tTbl.style.display=hh?'':'none';this.textContent=hh?'\u25B2 Masquer':'\u25BC Afficher'};}
 })();
 </script>
 </body>
