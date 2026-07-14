@@ -26,7 +26,22 @@
         }
       ],
       "lowest_new": 999,
-      "lowest_store": "Amazon.de"
+      "lowest_store": "Amazon.de",
+      "checkedAt": "2026-07-14T15:37:11.989Z",
+      "sources": [
+        {
+          "store": "Leroy Merlin FR",
+          "available": false,
+          "detail": "Page inaccessible ou produit retiré",
+          "httpStatus": 403
+        },
+        {
+          "store": "Amazon.de",
+          "available": false,
+          "detail": "Statut incertain",
+          "httpStatus": 200
+        }
+      ]
     }
   ]
 }
