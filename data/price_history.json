@@ -16,7 +16,7 @@
       "stores": [
         "Leboncoin"
       ],
-      "note": "Changement détecté",
+      "note": "",
       "prices": [
         {
           "store": "Amazon.de",
@@ -27,7 +27,7 @@
       ],
       "lowest_new": 999,
       "lowest_store": "Amazon.de",
-      "checkedAt": "2026-07-14T16:04:27.058Z",
+      "checkedAt": "2026-07-14T16:08:15.027Z",
       "sources": [
         {
           "store": "Leroy Merlin FR",
