@@ -6,172 +6,79 @@
 <title>PortaSplit 12000 BTU — Tracker</title>
 <style>
 :root{
-  --bg:#0a0e17; --bg2:#0d1321; --card:#111827; --cardH:#1a2332; --accent:#38bdf8; --accent2:#818cf8;
+  --bg:#0a0e17; --card:#111827; --cardH:#1a2332; --accent:#38bdf8;
   --green:#22c55e; --red:#ef4444; --orange:#f59e0b; --text:#e5e7eb; --muted:#94a3b8; --muted2:#64748b;
-  --border:#1e293b; --border2:#334155;
-  --font:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  --border:#1e293b; --border2:#334155; --font:system-ui,-apple-system,sans-serif;
 }
 .light{
-  --bg:#f1f5f9; --bg2:#e2e8f0; --card:#ffffff; --cardH:#f8fafc; --accent:#2563eb; --accent2:#7c3aed;
+  --bg:#f1f5f9; --card:#ffffff; --cardH:#f8fafc; --accent:#2563eb;
   --green:#059669; --red:#dc2626; --orange:#d97706; --text:#0f172a; --muted:#475569; --muted2:#64748b;
   --border:#e2e8f0; --border2:#cbd5e1;
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-body{font-family:var(--font);background:var(--bg);color:var(--text);min-height:100vh;line-height:1.5;-webkit-font-smoothing:antialiased}
+body{font-family:var(--font);background:var(--bg);color:var(--text);min-height:100vh;line-height:1.5}
 
-/* Theme toggle */
-.theme-btn{position:fixed;top:1rem;right:1rem;background:var(--card);border:1px solid var(--border2);color:var(--muted);padding:.45rem .7rem;border-radius:10px;cursor:pointer;font-size:.85rem;z-index:100;transition:all .2s;box-shadow:0 1px 3px rgba(0,0,0,.2)}
-.theme-btn:hover{color:var(--text);border-color:var(--accent);transform:translateY(-1px)}
+.theme-btn{position:fixed;top:1rem;right:1rem;background:var(--card);border:1px solid var(--border2);color:var(--muted);padding:.4rem .6rem;border-radius:8px;cursor:pointer;font-size:.85rem;z-index:100}
+.theme-btn:hover{color:var(--text)}
 
-/* Header */
-header{
-  background:linear-gradient(160deg,var(--bg2),var(--card));border-bottom:1px solid var(--border2);
-  padding:1.3rem 1.5rem;text-align:center;position:relative;overflow:hidden;
-}
-header::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 50% 120%,rgba(56,189,248,.06),transparent);pointer-events:none}
-header h1{font-size:1.5rem;font-weight:800;letter-spacing:-.5px}
-header .sub{font-size:.8rem;color:var(--muted);margin-top:.15rem}
-header .badge{display:inline-flex;align-items:center;gap:.3rem;margin-top:.4rem;background:rgba(56,189,248,.1);border:1px solid rgba(56,189,248,.25);color:var(--accent);font-size:.72rem;font-weight:700;padding:.25rem .65rem;border-radius:18px}
+header{padding:1.5rem;text-align:center;background:linear-gradient(160deg,var(--bg),var(--card));border-bottom:1px solid var(--border2)}
+header h1{font-size:1.4rem;font-weight:800}
+header .sub{font-size:.78rem;color:var(--muted);margin-top:.15rem}
 
-/* Hero */
-.hero{max-width:900px;margin:1.2rem auto;padding:0 1rem;display:grid;grid-template-columns:220px 1fr;gap:1rem;align-items:start}
-.hero .img-box{background:var(--card);border:1px solid var(--border);border-radius:12px;display:flex;align-items:center;justify-content:center;padding:.5rem;height:180px;overflow:hidden}
-.hero .img-box img{max-width:100%;max-height:100%;object-fit:contain}
-.hero .img-box .no-img{font-size:4rem;opacity:.12}
-.hero .info{padding-top:.3rem}
-.hero .info h2{font-size:1.05rem;line-height:1.3;margin-bottom:.35rem}
-.hero .info .row{font-size:.76rem;color:var(--muted);margin:.12rem 0}
-.hero .info .row strong{color:var(--text)}
-.hero .price-tag{display:inline-block;background:var(--accent);color:var(--bg);font-size:1.2rem;font-weight:800;padding:.25rem .7rem;border-radius:8px;margin-top:.25rem}
-@media(max-width:600px){.hero{grid-template-columns:1fr}.hero .img-box{height:150px}}
+.hero{max-width:800px;margin:1rem auto;padding:0 1rem;display:grid;grid-template-columns:180px 1fr;gap:1rem;align-items:center}
+.hero img{width:100%;border-radius:10px;background:var(--card)}
+@media(max-width:550px){.hero{grid-template-columns:1fr}.hero img{max-height:150px;width:auto;margin:0 auto}}
 
-/* Table */
-.table-wrap{max-width:900px;margin:0 auto 2rem;padding:0 1rem}
-.table-wrap h2{font-size:.88rem;font-weight:700;color:var(--muted);margin-bottom:.5rem;display:flex;align-items:center;gap:.4rem;justify-content:space-between}
-.table-wrap h2 .l{display:flex;align-items:center;gap:.4rem}
-.table-wrap h2 .dot{width:8px;height:8px;border-radius:50%;background:var(--green);animation:pulse 2s infinite}
-@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
-.add-btn{background:var(--accent);color:var(--bg);border:none;padding:.3rem .7rem;border-radius:16px;font-size:.7rem;font-weight:700;cursor:pointer;font-family:var(--font);transition:opacity .2s}
-.add-btn:hover{opacity:.8}
-
-table{width:100%;border-collapse:collapse;font-size:.76rem}
-thead th{text-align:left;padding:.5rem .6rem;color:var(--muted2);font-size:.64rem;font-weight:700;text-transform:uppercase;letter-spacing:.3px;border-bottom:1px solid var(--border2);background:var(--card);position:sticky;top:0}
-tbody td{padding:.5rem .6rem;border-bottom:1px solid var(--border);vertical-align:top}
-tbody tr{transition:background .15s}
+.table-wrap{max-width:800px;margin:0 auto 2rem;padding:0 1rem}
+.table-wrap h2{font-size:.85rem;font-weight:700;color:var(--muted);margin-bottom:.5rem;display:flex;align-items:center;gap:.3rem}
+table{width:100%;border-collapse:collapse;font-size:.74rem}
+thead th{text-align:left;padding:.5rem;color:var(--muted2);font-size:.64rem;font-weight:700;text-transform:uppercase;letter-spacing:.3px;border-bottom:2px solid var(--border2)}
+tbody td{padding:.55rem .5rem;border-bottom:1px solid var(--border)}
 tbody tr:hover{background:var(--cardH)}
-.store-name{font-weight:700;color:var(--text);white-space:nowrap}
-.store-name .flag{font-size:.75rem}
-.note{font-size:.66rem;color:var(--muted2)}
-.price-cell{font-weight:800;color:var(--accent);white-space:nowrap;font-size:.82rem}
-.link-cell a{color:var(--accent);text-decoration:none;font-size:.74rem;font-weight:600;display:inline-flex;align-items:center;gap:.15rem}
-.link-cell a:hover{text-decoration:underline}
-.status-badge{display:inline-flex;align-items:center;gap:.2rem;font-weight:700;font-size:.7rem;padding:.15rem .45rem;border-radius:5px}
-.status-badge.ok{background:rgba(34,197,94,.1);color:var(--green);border:1px solid rgba(34,197,94,.2)}
-.status-badge.ko{background:rgba(239,68,68,.08);color:var(--red);border:1px solid rgba(239,68,68,.15)}
-.status-badge.warn{background:rgba(245,158,11,.08);color:var(--orange);border:1px solid rgba(245,158,11,.15)}
-.ping-time{font-size:.64rem;color:var(--muted2)}
-.del-btn{background:transparent;border:1px solid var(--border2);color:var(--muted2);cursor:pointer;font-size:.65rem;padding:.1rem .4rem;border-radius:4px;font-family:var(--font)}
-.del-btn:hover{color:var(--red);border-color:var(--red)}
-.last-seen{font-size:.64rem}
-.last-seen.ok{color:var(--green)}
-.last-seen.warn{color:var(--orange)}
+.name{font-weight:700;color:var(--text)}
+.status{display:inline-flex;align-items:center;gap:.2rem;font-weight:700;font-size:.7rem;padding:.15rem .4rem;border-radius:5px}
+.status.ok{background:rgba(34,197,94,.1);color:var(--green)}
+.status.ko{background:rgba(239,68,68,.08);color:var(--red)}
+.link a{color:var(--accent);text-decoration:none;font-size:.72rem;font-weight:600}
+.link a:hover{text-decoration:underline}
+.time{font-size:.64rem;color:var(--muted2)}
 
-/* Modal */
-.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:200;align-items:center;justify-content:center}
-.modal-overlay.show{display:flex}
-.modal{background:var(--card);border:1px solid var(--border2);border-radius:12px;padding:1.5rem;max-width:440px;width:90%;box-shadow:0 8px 40px rgba(0,0,0,.5)}
-.modal h3{font-size:.95rem;margin-bottom:1rem}
-.modal label{display:block;font-size:.72rem;font-weight:600;color:var(--muted);margin:.6rem 0 .2rem}
-.modal input{width:100%;background:var(--bg);border:1px solid var(--border2);color:var(--text);padding:.45rem .6rem;border-radius:8px;font-size:.78rem;font-family:var(--font)}
-.modal input:focus{border-color:var(--accent);outline:none}
-.modal .btns{display:flex;gap:.5rem;justify-content:flex-end;margin-top:1rem}
-.modal .btns button{padding:.4rem .9rem;border-radius:8px;font-size:.75rem;font-weight:700;cursor:pointer;font-family:var(--font)}
-.modal .btns .save{background:var(--accent);color:var(--bg);border:none}
-.modal .btns .cancel{background:transparent;color:var(--muted);border:1px solid var(--border2)}
-
-/* Chart */
-.chart-wrap{max-width:900px;margin:1rem auto;padding:0 1rem;display:none}
-.chart-wrap.show{display:block}
-.chart-wrap h3{font-size:.8rem;font-weight:700;color:var(--muted);margin-bottom:.5rem}
-.chart-wrap canvas{display:block;width:100%;height:160px;background:var(--card);border:1px solid var(--border);border-radius:10px}
-.chart-empty{text-align:center;color:var(--muted2);font-size:.72rem;padding:1rem}
-
-/* Footer */
-.footer-bar{max-width:900px;margin:0 auto 1.5rem;padding:0 1rem;display:flex;justify-content:space-between;align-items:center;font-size:.68rem;color:var(--muted2);flex-wrap:wrap;gap:.4rem}
-.footer-bar .refresh{cursor:pointer;color:var(--accent);font-weight:600}
-.footer-bar .refresh:hover{text-decoration:underline}
+.footer-bar{max-width:800px;margin:0 auto 1rem;padding:0 1rem;display:flex;justify-content:space-between;align-items:center;font-size:.66rem;color:var(--muted2)}
 </style>
 </head>
 <body>
 <button class="theme-btn" id="theme" title="Thème">🌙</button>
-
 <header>
   <h1>Midea PortaSplit 12000 BTU</h1>
-  <p class="sub">Tracker de disponibilité — neuf, livrable en France</p>
-  <div class="badge">🎯 MMCS-12HRN8-QRDO · 3.5 kW · A++</div>
+  <p class="sub">Vérification Puppeteer toutes les 2h · Leroy Merlin · Optimea · ManoMano</p>
 </header>
 
-<div class="hero" id="hero">
-  <div class="img-box">
-    <img src="https://www.optimea.fr/wp-content/uploads/2024/05/MMCS-12HRN8-QRDO-1.webp" alt="Midea PortaSplit" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
-    <span class="no-img" style="display:none">❄️</span>
+<div class="hero">
+  <img src="https://www.optimea.fr/wp-content/uploads/2024/05/MMCS-12HRN8-QRDO-1.webp" alt="PortaSplit" onerror="this.style.display='none'">
+  <div>
+    <p style="font-size:.82rem;color:var(--muted)">Climatiseur split mobile réversible · 12 000 BTU · 3.5 kW · 39 dB(A) · A++</p>
+    <p style="font-size:.72rem;color:var(--muted2);margin-top:.3rem">Prix normal : <strong style="color:var(--accent);font-size:1.1rem">999 €</strong></p>
   </div>
-  <div class="info">
-    <h2>Climatiseur split mobile réversible</h2>
-    <div class="row">🔥 <strong>12 000 BTU</strong> · 3.5 kW · Pièces jusqu'à 40 m²</div>
-    <div class="row">🔇 <strong>39 dB(A)</strong> mode silencieux · Chauffage & Clim</div>
-    <div class="row">📦 <strong>Pas d'installation</strong> · Kit fenêtre inclus</div>
-    <div class="row">💰 Prix normal : <span class="price-tag">999 €</span></div>
-  </div>
-</div>
-
-<div class="chart-wrap" id="chartWrap">
-  <h3>📈 Historique des prix</h3>
-  <canvas id="priceChart"></canvas>
-  <div class="chart-empty" id="chartEmpty">Données insuffisantes — le graphique se remplira au fil des jours.</div>
 </div>
 
 <div class="table-wrap">
-  <h2>
-    <span class="l"><span class="dot"></span> Surveillance — <span id="srcCount">0</span> sources</span>
-    <button class="add-btn" id="addSourceBtn">＋ Ajouter</button>
-  </h2>
+  <h2>🛒 Disponibilité</h2>
   <table>
-    <thead><tr><th>Source</th><th>Prix</th><th>Statut</th><th>Lien</th><th>Dernière dispo</th><th></th></tr></thead>
-    <tbody id="tracks"></tbody>
+    <thead><tr><th>Magasin</th><th>Statut</th><th>Lien</th><th>Dernier check</th></tr></thead>
+    <tbody id="tracks"><tr><td colspan="4" style="color:var(--muted2);text-align:center">Chargement…</td></tr></tbody>
   </table>
 </div>
 
 <div class="footer-bar">
-  <span id="footerTime">🏓 Chargement…</span>
-  <span class="refresh" onclick="location.reload()">🔄 Actualiser</span>
-</div>
-
-<!-- Add Source Modal -->
-<div class="modal-overlay" id="modalOverlay">
-  <div class="modal">
-    <h3>＋ Ajouter une source</h3>
-    <label for="mf-name">Nom</label>
-    <input type="text" id="mf-name" placeholder="ex: Darty, Fnac…">
-    <label for="mf-url">URL produit</label>
-    <input type="text" id="mf-url" placeholder="https://…">
-    <label for="mf-price">Prix normal (optionnel)</label>
-    <input type="text" id="mf-price" placeholder="ex: 999 €">
-    <div class="btns">
-      <button class="cancel" id="modalCancel">Annuler</button>
-      <button class="save" id="modalSave">Ajouter</button>
-    </div>
-  </div>
+  <span id="footerTime">🏓 —</span>
+  <span>email alert si dispo · mickael.faget@gmail.com</span>
 </div>
 
 <script>
 (function(){
-  var PING_DATA='data/.ping_state.json';
-  var HIST_DATA='data/price_history.json';
-  var PRODUCT_IMG='https://www.optimea.fr/wp-content/uploads/2024/05/MMCS-12HRN8-QRDO-1.webp';
+  var DATA='data/.availability_status.json';
   var theme='dark';
 
-  /* Theme */
   function setTheme(t){
     theme=t;document.documentElement.className=t==='light'?'light':'';
     document.getElementById('theme').textContent=t==='light'?'☀️':'🌙';
@@ -181,169 +88,38 @@ tbody tr:hover{background:var(--cardH)}
   setTheme(theme);
   document.getElementById('theme').onclick=function(){setTheme(theme==='dark'?'light':'dark')};
 
-  function esc(s){var d=document.createElement('div');d.textContent=s;return d.innerHTML}
-  function fmt(iso){if(!iso)return'—';return new Date(iso).toLocaleString('fr-FR',{dateStyle:'medium',timeStyle:'short'})}
-  function fmtShort(iso){if(!iso)return'—';var d=new Date(iso);return d.toLocaleDateString('fr-FR',{day:'numeric',month:'short',year:'2-digit'})}
-  function ago(iso){if(!iso)return'';var m=Math.floor((Date.now()-new Date(iso))/6e4);if(m<1)return'\u00e0 l\u2019instant';if(m<60)return m+' min';var h=Math.floor(m/60);if(h<24)return h+'h';return Math.floor(h/24)+'j'}
-
-  /* Default sources */
-  var DEFAULT_SOURCES = [
-    {id:'leroymerlin',name:'Leroy Merlin',flag:'🇫🇷',price:'999 €',note:'Via Optimea · indisponible',url:'https://www.leroymerlin.fr/produits/climatiseur-split-mobile-reversible-portasplit-midea-par-optimea-93857579.html'},
-    {id:'manomano_fr',name:'ManoMano',flag:'🇫🇷',price:'?',note:'Ajouté 14/07',url:'https://www.manomano.fr/p/midea-climatiseur-split-mobile-reversible-froid-chaud-3500w12000btu-wifi-deshumidificateur-ventilateur-jusqua-40m2-kit-fenetre-inclus-83810402'},
-    {id:'optimea_fr',name:'Optimea',flag:'🇫🇷',price:'999 €',note:'Distributeur officiel · pas de vente en ligne',url:'https://www.optimea.fr/product/climatiseur-split-mobile-midea/'},
-    {id:'amazon_fr',name:'Amazon FR',flag:'🇫🇷',price:'999 €',note:'Vendeur tiers 7 Perplex · 2 999 €',url:'https://www.amazon.fr/dp/B0CY2YW8BT'},
-    {id:'amazon_de',name:'Amazon DE',flag:'🇩🇪',price:'~800 €',note:'Vendeurs tiers · livraison France',url:'https://www.amazon.de/dp/B0D3PP64JS'},
-    {id:'idealo_de',name:'Idealo',flag:'🇩🇪',price:'1 699 €',note:'Comparateur · meilleur prix DE',url:'https://www.idealo.de/preisvergleich/OffersOfProduct/210669898_-portasplit-e-12000-btu-midea.html'}
+  var STORES=[
+    {id:'leroymerlin',name:'Leroy Merlin',url:'https://www.leroymerlin.fr/produits/climatiseur-split-mobile-reversible-portasplit-midea-par-optimea-93857579.html',price:'999\u202f\u20ac'},
+    {id:'optimea',name:'Optimea',url:'https://www.optimea.fr/product/climatiseur-split-mobile-midea/',price:'999\u202f\u20ac'},
+    {id:'manomano',name:'ManoMano',url:'https://www.manomano.fr/p/midea-climatiseur-split-mobile-reversible-froid-chaud-3500w12000btu-wifi-deshumidificateur-ventilateur-jusqua-40m2-kit-fenetre-inclus-83810402',price:'\u2014'}
   ];
 
-  /* Load custom sources from localStorage */
-  function getCustomSources(){
-    try{return JSON.parse(localStorage.getItem('cf-sources')||'[]')}catch(e){return[]}
-  }
-  function saveCustomSources(arr){localStorage.setItem('cf-sources',JSON.stringify(arr))}
+  function esc(s){var d=document.createElement('div');d.textContent=s;return d.innerHTML}
+  function fmt(iso){if(!iso)return'\u2014';return new Date(iso).toLocaleString('fr-FR',{dateStyle:'medium',timeStyle:'short'})}
+  function ago(iso){if(!iso)return'';var m=Math.floor((Date.now()-new Date(iso))/6e4);if(m<1)return'\u00e0 l\u2019instant';if(m<60)return m+' min';var h=Math.floor(m/60);if(h<24)return h+'h';return Math.floor(h/24)+'j'}
 
-  function getAllSources(){
-    return DEFAULT_SOURCES.concat(getCustomSources());
-  }
-
-  /* Last-seen-available tracking */
-  function getLastSeen(){
-    try{return JSON.parse(localStorage.getItem('cf-lastseen')||'{}')}catch(e){return{}}
-  }
-  function updateLastSeen(state){
-    var ls=getLastSeen(),now=new Date().toISOString();
-    for(var k in state){
-      if(state[k]&&state[k].available===true)ls[k]=now;
-    }
-    localStorage.setItem('cf-lastseen',JSON.stringify(ls));
-  }
-
-  function render(state){
-    var sources=getAllSources();
-    var ls=getLastSeen();
-    var h='',latest='';
-    for(var i=0;i<sources.length;i++){
-      var s=sources[i],st=state[s.id]||{},av=st.available,re=st.reason||'—',ck=st.checkedAt||'';
-      if(ck>latest)latest=ck;
-      var badge='',cls='';
-      if(av===true){badge='🟢 Dispo';cls='ok'}
-      else if(av===false&&(re.indexOf('403')!==-1||re.indexOf('503')!==-1)){badge='🚫 Bloqué';cls='ko'}
-      else if(av===false&&re.indexOf('404')!==-1){badge='🚫 404';cls='ko'}
-      else if(av===false){badge='🔴 Non dispo';cls='warn'}
-      else{badge='⚠️ '+esc(re);cls='warn'}
-
-      var lastSeenTxt='—',lastSeenCls='';
-      if(ls[s.id]){lastSeenTxt=fmtShort(ls[s.id]);lastSeenCls='ok'}
-      else if(av===true){lastSeenTxt='maintenant';lastSeenCls='ok'}
-      else{lastSeenTxt='jamais';lastSeenCls='warn'}
-
-      var isCustom=sources.length>DEFAULT_SOURCES.length&&i>=DEFAULT_SOURCES.length;
-      var delBtn=isCustom?' <button class="del-btn" onclick="C.delSrc('+i+')">✕</button>':'';
-
+  function render(data){
+    var stores=data.stores||[],h='',latest='';
+    for(var i=0;i<STORES.length;i++){
+      var s=STORES[i],st=stores.find(function(x){return x.store===s.name})||{};
+      if(st.checkedAt>latest)latest=st.checkedAt;
+      var avail=st.available,reason=st.reason||'\u2014';
       h+='<tr>'+
-        '<td><div class="store-name">'+esc(s.flag||'🏪')+' '+esc(s.name)+'</div><div class="note">'+esc(s.note||'')+'</div></td>'+
-        '<td class="price-cell">'+esc(s.price||'?')+'</td>'+
-        '<td><span class="status-badge '+cls+'">'+badge+'</span><br><span class="ping-time">'+esc(ck?ago(ck):'—')+'</span></td>'+
-        '<td class="link-cell"><a href="'+esc(s.url)+'" target="_blank" rel="noopener">🔗 Voir</a></td>'+
-        '<td><span class="last-seen '+lastSeenCls+'">'+lastSeenTxt+'</span>'+delBtn+'</td>'+
+        '<td><span class="name">'+esc(s.name)+'</span><br><span class="time">Prix normal '+esc(s.price)+'</span></td>'+
+        '<td><span class="status '+(avail?'ok':'ko')+'">'+(avail?'\uD83D\uDFE2 DISPONIBLE':'\uD83D\uDD34 '+esc(reason))+'</span></td>'+
+        '<td class="link"><a href="'+esc(s.url)+'" target="_blank" rel="noopener">\uD83D\uDD17 Produit</a></td>'+
+        '<td class="time">'+esc(st.checkedAt?fmt(st.checkedAt)+' ('+ago(st.checkedAt)+')':'\u2014')+'</td>'+
       '</tr>';
     }
     document.getElementById('tracks').innerHTML=h;
-    document.getElementById('srcCount').textContent=sources.length;
-    document.getElementById('footerTime').innerHTML='🏓 Dernier ping : '+(latest?fmt(latest)+' ('+ago(latest)+')':'—')+' · toutes les 30 min';
-    updateLastSeen(state);
+    document.getElementById('footerTime').innerHTML='\uD83C\uDFD3 Dernier check : '+(latest?fmt(latest)+' ('+ago(latest)+')':'\u2014')+' \u00b7 toutes les 2h';
   }
 
-  /* Add source modal */
-  document.getElementById('addSourceBtn').onclick=function(){
-    document.getElementById('modalOverlay').classList.add('show');
-    document.getElementById('mf-name').focus();
-  };
-  document.getElementById('modalCancel').onclick=function(){
-    document.getElementById('modalOverlay').classList.remove('show');
-  };
-  document.getElementById('modalSave').onclick=function(){
-    var name=document.getElementById('mf-name').value.trim();
-    var url=document.getElementById('mf-url').value.trim();
-    var price=document.getElementById('mf-price').value.trim()||'?';
-    if(!name||!url)return;
-    var id='custom_'+Date.now();
-    var custom=getCustomSources();
-    custom.push({id:id,name:name,flag:'🏪',price:price,note:'Ajouté manuellement',url:url});
-    saveCustomSources(custom);
-    document.getElementById('modalOverlay').classList.remove('show');
-    document.getElementById('mf-name').value='';
-    document.getElementById('mf-url').value='';
-    document.getElementById('mf-price').value='';
-    loadPing();
-  };
-  // Close modal on overlay click
-  document.getElementById('modalOverlay').onclick=function(e){if(e.target===this)this.classList.remove('show')};
-
-  /* Delete source */
-  window.C={delSrc:function(idx){
-    var custom=getCustomSources();
-    var ci=idx-DEFAULT_SOURCES.length;
-    if(ci>=0&&ci<custom.length){custom.splice(ci,1);saveCustomSources(custom);loadPing()}
-  }};
-
-  /* Load data */
-  function loadPing(){
-    fetch(PING_DATA+'?t='+Date.now()).then(function(r){return r.json()}).then(render).catch(function(){render({})});
-    fetch(HIST_DATA+'?t='+Date.now()).then(function(r){return r.json()}).then(drawChart).catch(function(){});
+  function load(){
+    fetch(DATA+'?t='+Date.now()).then(function(r){return r.json()}).then(render).catch(function(){render({stores:[]})});
   }
-
-  /* Chart */
-  function drawChart(data){
-    var hist=(data&&data.history)||[];
-    var wrap=document.getElementById('chartWrap'),canvas=document.getElementById('priceChart'),empty=document.getElementById('chartEmpty');
-    var points=[];
-    for(var i=0;i<hist.length;i++){
-      var h=hist[i];if(!h.lowest_new||h.lowest_new<400)continue;
-      var d=new Date(h.date);if(isNaN(d.getTime()))continue;
-      points.push({date:d,price:h.lowest_new,store:h.lowest_store||''});
-    }
-    if(!points.length){wrap.className='chart-wrap';empty.style.display='';canvas.style.display='none';return}
-    wrap.className='chart-wrap show';empty.style.display='none';canvas.style.display='';
-
-    var dpr=window.devicePixelRatio||1,W=canvas.parentElement.clientWidth,H=160;
-    canvas.width=W*dpr;canvas.height=H*dpr;canvas.style.width=W+'px';canvas.style.height=H+'px';
-    var ctx=canvas.getContext('2d');ctx.scale(dpr,dpr);
-    var pad={t:15,r:20,b:28,l:60},pw=W-pad.l-pad.r,ph=H-pad.t-pad.b;
-    points.sort(function(a,b){return a.date-b.date});
-    var allP=points.map(function(p){return p.price});
-    var minP=Math.min.apply(null,allP),maxP=Math.max.apply(null,allP);
-    var range=maxP-minP||100;minP=Math.max(0,minP-range*.2);maxP=maxP+range*.2;
-
-    function x(d){return pad.l+((d-points[0].date)/(points[points.length-1].date-points[0].date))*pw}
-    function y(p){return pad.t+ph-((p-minP)/(maxP-minP))*ph}
-
-    ctx.strokeStyle=getComputedStyle(document.documentElement).getPropertyValue('--border2').trim();ctx.lineWidth=.5;
-    for(var i=0;i<=3;i++){var yy=pad.t+(ph/3)*i;ctx.beginPath();ctx.moveTo(pad.l,yy);ctx.lineTo(W-pad.r,yy);ctx.stroke()}
-    ctx.fillStyle=getComputedStyle(document.documentElement).getPropertyValue('--muted2').trim();ctx.font='9px system-ui';ctx.textAlign='right';
-    for(var i=0;i<=3;i++){var val=minP+((maxP-minP)/3)*(3-i);ctx.fillText(Math.round(val)+'€',pad.l-6,pad.t+(ph/3)*i+3)}
-
-    ctx.strokeStyle=getComputedStyle(document.documentElement).getPropertyValue('--accent').trim();ctx.lineWidth=2.5;ctx.lineJoin='round';
-    ctx.beginPath();
-    for(var i=0;i<points.length;i++){var px=x(points[i].date),py=y(points[i].price);i===0?ctx.moveTo(px,py):ctx.lineTo(px,py)}
-    ctx.stroke();
-
-    for(var i=0;i<points.length;i++){
-      var px=x(points[i].date),py=y(points[i].price);
-      ctx.beginPath();ctx.arc(px,py,3.5,0,Math.PI*2);
-      ctx.fillStyle=getComputedStyle(document.documentElement).getPropertyValue('--accent').trim();ctx.fill();
-      ctx.fillStyle='#fff';ctx.beginPath();ctx.arc(px,py,1.5,0,Math.PI*2);ctx.fill();
-    }
-
-    ctx.textAlign='center';ctx.fillStyle=getComputedStyle(document.documentElement).getPropertyValue('--muted2').trim();
-    var step=Math.max(1,Math.floor(points.length/4));
-    for(var i=0;i<points.length;i+=step){
-      ctx.fillText(points[i].date.toLocaleDateString('fr-FR',{day:'numeric',month:'short'}),x(points[i].date),H-pad.b+14);
-    }
-  }
-
-  loadPing();
-  setInterval(loadPing,5*60*1000);
+  load();
+  setInterval(load,5*60*1000);
 })();
 </script>
 </body>

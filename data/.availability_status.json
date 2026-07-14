@@ -1,0 +1,26 @@
+{
+  "checkedAt": "2026-07-14T21:54:00.807Z",
+  "stores": [
+    {
+      "store": "Leroy Merlin",
+      "reason": "❌ Pas de panier",
+      "checkedAt": "2026-07-14T21:54:00.807Z"
+    },
+    {
+      "store": "Optimea",
+      "available": false,
+      "reason": "❌ Pas de panier",
+      "checkedAt": "2026-07-14T21:54:00.807Z"
+    },
+    {
+      "store": "ManoMano",
+      "reason": "❌ Pas de panier",
+      "checkedAt": "2026-07-14T21:54:00.807Z"
+    }
+  ],
+  "summary": {
+    "available": 0,
+    "total": 3,
+    "stores": []
+  }
+}
