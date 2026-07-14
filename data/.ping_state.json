@@ -2,21 +2,26 @@
   "leroymerlin": {
     "available": false,
     "reason": "Page inaccessible ou produit retiré",
-    "checkedAt": "2026-07-14T15:54:49.941Z"
+    "checkedAt": "2026-07-14T16:04:27.058Z"
   },
   "amazon_de": {
     "available": false,
     "reason": "Statut incertain",
-    "checkedAt": "2026-07-14T15:54:49.941Z"
+    "checkedAt": "2026-07-14T16:04:27.058Z"
   },
   "amazon_fr": {
     "available": false,
     "reason": "Statut incertain",
-    "checkedAt": "2026-07-14T15:54:49.941Z"
+    "checkedAt": "2026-07-14T16:04:27.058Z"
   },
   "idealo_de": {
     "available": false,
     "reason": "HTTP 503",
-    "checkedAt": "2026-07-14T15:54:49.941Z"
+    "checkedAt": "2026-07-14T16:04:27.058Z"
+  },
+  "optimea_fr": {
+    "available": false,
+    "reason": "Statut inconnu",
+    "checkedAt": "2026-07-14T16:04:27.058Z"
   }
 }

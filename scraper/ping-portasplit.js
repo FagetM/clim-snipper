@@ -80,6 +80,24 @@ const TARGETS = [
       if (hasOffers) return { available: true, reason: 'Offres trouvées' };
       return { available: false, reason: 'Pas d\'offre ou page inaccessible' };
     }
+  },
+  {
+    id: 'optimea_fr',
+    label: 'Optimea.fr (distributeur officiel)',
+    url: 'https://www.optimea.fr/product/climatiseur-split-mobile-midea/',
+    check: (html, status) => {
+      if (status !== 200) return { available: false, reason: `HTTP ${status}` };
+      const hasAddToCart = /ajouter au panier|add-to-cart|add_to_cart|single_add_to_cart_button/i.test(html);
+      const hasStock = /in_stock|en stock|disponible/i.test(html) && !/rupture|indisponible|out.of.stock/i.test(html);
+      const hasPrice = /999[.,]\d{2}\s*€/i.test(html) || /"price":\s*"?999/i.test(html);
+      const hasFavorites = /ajouter à la liste|favoris/i.test(html);
+      const has10Days = /10 jours/i.test(html);
+      if (hasAddToCart && hasStock) return { available: true, reason: 'En stock — ajout panier dispo' };
+      if (hasFavorites && !hasAddToCart) return { available: false, reason: 'Page catalogue, pas de vente directe' };
+      if (hasPrice && has10Days) return { available: false, reason: 'Prix visible, livraison 10 jours' };
+      if (hasPrice) return { available: false, reason: 'Prix visible, statut incertain' };
+      return { available: false, reason: 'Statut inconnu' };
+    }
   }
 ];
 
