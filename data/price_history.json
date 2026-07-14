@@ -27,7 +27,7 @@
       ],
       "lowest_new": 999,
       "lowest_store": "Amazon.de",
-      "checkedAt": "2026-07-14T16:08:15.027Z",
+      "checkedAt": "2026-07-14T16:37:44.703Z",
       "sources": [
         {
           "store": "Leroy Merlin FR",
@@ -52,6 +52,12 @@
           "available": false,
           "detail": "HTTP 503",
           "httpStatus": 503
+        },
+        {
+          "store": "ManoMano.fr",
+          "available": false,
+          "detail": "HTTP 403",
+          "httpStatus": 403
         },
         {
           "store": "Optimea.fr (distributeur officiel)",
