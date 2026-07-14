@@ -82,6 +82,21 @@ const TARGETS = [
     }
   },
   {
+    id: 'manomano_fr',
+    label: 'ManoMano.fr',
+    url: 'https://www.manomano.fr/p/midea-climatiseur-split-mobile-reversible-froid-chaud-3500w12000btu-wifi-deshumidificateur-ventilateur-jusqua-40m2-kit-fenetre-inclus-83810402',
+    check: (html, status) => {
+      if (status !== 200) return { available: false, reason: `HTTP ${status}` };
+      const hasAddToCart = /ajouter au panier|add-to-cart|add_to_cart/i.test(html);
+      const hasPrice = /\d{3,4}[.,]\d{2}\s*€/i.test(html);
+      const hasIndisponible = /indisponible|rupture/i.test(html);
+      if (hasAddToCart && !hasIndisponible) return { available: true, reason: 'En stock — ajout panier dispo' };
+      if (hasPrice && !hasIndisponible) return { available: true, reason: 'Prix visible' };
+      if (hasIndisponible) return { available: false, reason: 'Indisponible' };
+      return { available: false, reason: 'Statut incertain' };
+    }
+  },
+  {
     id: 'optimea_fr',
     label: 'Optimea.fr (distributeur officiel)',
     url: 'https://www.optimea.fr/product/climatiseur-split-mobile-midea/',

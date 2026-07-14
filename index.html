@@ -3,627 +3,232 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>❄️ Clim'Finder — Midea Portasplit 12000 BTU</title>
+<title>PortaSplit 12000 BTU — Tracker</title>
 <style>
 :root{
-  --bg:#080d16; --bg2:#0d1321; --card:#111827; --cardH:#161f30; --accent:#38bdf8; --accent2:#818cf8;
+  --bg:#0a0e17; --card:#111827; --cardH:#1a2332; --accent:#38bdf8; --accent2:#818cf8;
   --green:#22c55e; --red:#ef4444; --orange:#f59e0b; --text:#e5e7eb; --muted:#94a3b8; --muted2:#64748b;
-  --border:#1e293b; --border2:#334155; --radius:16px; --radiusSm:10px;
-  --shadow:0 1px 3px rgba(0,0,0,.3),0 2px 8px rgba(0,0,0,.15);
-  --shadowH:0 4px 20px rgba(56,189,248,.08),0 1px 3px rgba(0,0,0,.4);
+  --border:#1e293b; --border2:#334155;
   --font:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
 }
-:root.light{
-  --bg:#f1f5f9; --bg2:#e2e8f0; --card:#ffffff; --cardH:#f8fafc; --accent:#2563eb; --accent2:#7c3aed;
-  --green:#059669; --red:#dc2626; --orange:#d97706; --text:#0f172a; --muted:#475569; --muted2:#64748b;
-  --border:#e2e8f0; --border2:#cbd5e1; --shadow:0 1px 3px rgba(0,0,0,.06); --shadowH:0 4px 16px rgba(37,99,235,.08);
-}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
 body{font-family:var(--font);background:var(--bg);color:var(--text);min-height:100vh;line-height:1.5;-webkit-font-smoothing:antialiased}
 
-/* ── Header ── */
-header{position:relative;overflow:hidden;background:linear-gradient(160deg,#0b1121,#0f1a34,#0c1528);border-bottom:1px solid var(--border2);padding:2rem 1.5rem 1.5rem;text-align:center}
-header::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 50% 120%,rgba(56,189,248,.08),transparent);pointer-events:none}
-header .logo{display:inline-flex;align-items:center;gap:.6rem;margin-bottom:.5rem}
-header .logo .icon{font-size:2.5rem;filter:drop-shadow(0 0 12px rgba(56,189,248,.25))}
-header h1{font-size:2.2rem;font-weight:800;letter-spacing:-.5px;background:linear-gradient(135deg,var(--text),var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-header .tagline{font-size:.88rem;color:var(--muted);margin-top:.2rem;max-width:520px;margin-left:auto;margin-right:auto}
-header .target-badge{display:inline-flex;align-items:center;gap:.35rem;margin-top:.7rem;background:rgba(56,189,248,.1);border:1px solid rgba(56,189,248,.25);color:var(--accent);font-size:.78rem;font-weight:700;padding:.35rem .9rem;border-radius:20px}
-.light header .target-badge{background:rgba(37,99,235,.08);border-color:rgba(37,99,235,.2)}
+header{
+  background:linear-gradient(160deg,#0b1121,#0f1a34);border-bottom:1px solid var(--border2);
+  padding:1.5rem;text-align:center;position:relative;overflow:hidden;
+}
+header::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 50% 120%,rgba(56,189,248,.06),transparent);pointer-events:none}
+header h1{font-size:1.6rem;font-weight:800;letter-spacing:-.5px}
+header .sub{font-size:.82rem;color:var(--muted);margin-top:.2rem}
+header .badge{display:inline-flex;align-items:center;gap:.3rem;margin-top:.5rem;background:rgba(56,189,248,.1);border:1px solid rgba(56,189,248,.25);color:var(--accent);font-size:.74rem;font-weight:700;padding:.3rem .75rem;border-radius:20px}
 
-/* ── Stale Banner ── */
-.stale-banner{display:none;background:rgba(239,68,68,.1);border-bottom:1px solid rgba(239,68,68,.2);color:var(--red);text-align:center;padding:.55rem 1rem;font-size:.78rem;font-weight:600;letter-spacing:.2px}
-.stale-banner.show{display:block;animation:slideIn .3s ease}
-@keyframes slideIn{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:translateY(0)}}
+/* Product hero */
+.hero{
+  max-width:900px;margin:1.5rem auto;padding:0 1rem;
+  display:grid;grid-template-columns:200px 1fr;gap:1.2rem;align-items:center;
+}
+.hero .img-box{
+  background:var(--card);border:1px solid var(--border);border-radius:12px;
+  display:flex;align-items:center;justify-content:center;padding:1rem;height:160px;
+}
+.hero .img-box img{max-width:100%;max-height:100%;object-fit:contain}
+.hero .info h2{font-size:1.1rem;line-height:1.3;margin-bottom:.4rem}
+.hero .info .row{font-size:.78rem;color:var(--muted);margin:.15rem 0}
+.hero .info .row strong{color:var(--text)}
+.hero .price-tag{display:inline-block;background:var(--accent);color:var(--bg);font-size:1.3rem;font-weight:800;padding:.3rem .8rem;border-radius:8px;margin-top:.3rem}
+@media(max-width:600px){.hero{grid-template-columns:1fr}.hero .img-box{height:140px}}
 
-/* ── Stats ── */
-.stats-row{display:flex;justify-content:center;gap:1.5rem;padding:1rem 1.5rem;background:var(--bg2);border-bottom:1px solid var(--border);flex-wrap:wrap}
-.stat{text-align:center;padding:.4rem 1.2rem;border-radius:var(--radiusSm);transition:transform .2s,background .2s}
-.stat:hover{transform:translateY(-1px);background:var(--cardH)}
-.stat .n{font-size:1.8rem;font-weight:800;letter-spacing:-.5px;transition:color .3s}
-.stat .n.up{animation:popIn .4s cubic-bezier(.34,1.56,.64,1)}
-@keyframes popIn{from{transform:scale(.7);opacity:.3}to{transform:scale(1);opacity:1}}
-.stat .lbl{font-size:.7rem;color:var(--muted);margin-top:.05rem;font-weight:600;text-transform:uppercase;letter-spacing:.5px}
-
-/* ── Top Bar ── */
-.top-bar{display:flex;gap:.6rem;padding:.8rem 1.5rem;flex-wrap:wrap;align-items:center}
-.search-wrap{position:relative;flex:1;max-width:360px}
-.search-wrap input{width:100%;background:var(--card);border:1px solid var(--border2);color:var(--text);padding:.6rem 2.4rem .6rem 1rem;border-radius:24px;font-size:.82rem;outline:none;transition:all .2s;box-shadow:var(--shadow)}
-.search-wrap input:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(56,189,248,.1)}
-.search-wrap input::placeholder{color:var(--muted2)}
-.search-wrap button{position:absolute;right:6px;top:50%;transform:translateY(-50%);background:var(--border);border:none;color:var(--muted);cursor:pointer;width:28px;height:28px;border-radius:50%;display:none;align-items:center;justify-content:center;font-size:.75rem;transition:all .2s}
-.search-wrap button.show{display:flex}
-.search-wrap button:hover{background:var(--red);color:#fff}
-.theme-btn{background:var(--card);border:1px solid var(--border2);color:var(--muted);padding:.45rem .65rem;border-radius:var(--radiusSm);cursor:pointer;font-size:.9rem;transition:all .2s;box-shadow:var(--shadow)}
-.theme-btn:hover{border-color:var(--accent);color:var(--text);transform:translateY(-1px)}
-
-/* ── City Bar ── */
-.city-bar{display:flex;gap:.45rem;padding:.7rem 1.5rem;border-bottom:1px solid var(--border);flex-wrap:wrap;align-items:center}
-.city-bar .lbl{font-size:.73rem;color:var(--muted);font-weight:700;margin-right:.5rem;white-space:nowrap}
-.city-pill{background:var(--card);border:1px solid var(--border2);color:var(--muted);padding:.4rem .85rem;border-radius:20px;cursor:pointer;font-size:.74rem;font-weight:600;transition:all .2s;white-space:nowrap;box-shadow:var(--shadow)}
-.city-pill:hover{border-color:var(--accent);color:var(--text);transform:translateY(-1px)}
-.city-pill.on{background:var(--accent);color:var(--bg);border-color:var(--accent);box-shadow:0 0 16px rgba(56,189,248,.2)}
-.city-pill .cnt{font-size:.62rem;opacity:.7;margin-left:.25rem;font-weight:500}
-
-/* ── Filters ── */
-.filters{display:flex;gap:.45rem;padding:.7rem 1.5rem;flex-wrap:wrap;align-items:center}
-.filter-btn{background:var(--card);border:1px solid var(--border2);color:var(--muted);padding:.45rem .95rem;border-radius:20px;cursor:pointer;font-size:.74rem;font-weight:600;transition:all .2s;box-shadow:var(--shadow)}
-.filter-btn:hover{border-color:var(--accent);color:var(--text);transform:translateY(-1px)}
-.filter-btn.on{background:var(--accent);color:var(--bg);border-color:var(--accent);box-shadow:0 0 12px rgba(56,189,248,.18)}
-.spc{flex:1}
-.sort-select{background:var(--card);border:1px solid var(--border2);color:var(--text);padding:.45rem .8rem;border-radius:20px;font-size:.74rem;cursor:pointer;box-shadow:var(--shadow);outline:none}
-.sort-select:focus{border-color:var(--accent)}
-
-/* ── Update info ── */
-.last-update{font-size:.72rem;color:var(--muted2);padding:.4rem 1.5rem .6rem;display:flex;align-items:center;gap:.4rem;flex-wrap:wrap}
-.last-update .dot{width:6px;height:6px;border-radius:50%;background:var(--green);animation:pulse 2s infinite}
-.last-update .dot.old{background:var(--orange);animation:none}
-.last-update .dot.stale{background:var(--red);animation:none}
+/* Table */
+.table-wrap{max-width:900px;margin:0 auto 2rem;padding:0 1rem}
+.table-wrap h2{font-size:.9rem;font-weight:700;color:var(--muted);margin-bottom:.6rem;display:flex;align-items:center;gap:.4rem}
+.table-wrap h2 .dot{width:8px;height:8px;border-radius:50%;background:var(--green);animation:pulse 2s infinite}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
 
-/* ── Tracker Status Panel ── */
-.tracker-panel{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);margin:0 1.5rem 1rem;padding:1rem 1.5rem;box-shadow:var(--shadow)}
-.tracker-panel h3{font-size:.82rem;font-weight:700;color:var(--text);margin-bottom:.7rem;display:flex;align-items:center;gap:.4rem}
-.tracker-panel h3 .dot-live{width:8px;height:8px;border-radius:50%;background:var(--green);animation:pulse 1.5s infinite}
-.tracker-table{width:100%;border-collapse:collapse;font-size:.74rem}
-.tracker-table th{text-align:left;padding:.4rem .6rem;color:var(--muted2);font-weight:600;font-size:.68rem;text-transform:uppercase;letter-spacing:.3px;border-bottom:1px solid var(--border)}
-.tracker-table td{padding:.5rem .6rem;border-bottom:1px solid var(--border);color:var(--muted);vertical-align:top}
-.tracker-table tr:last-child td{border-bottom:none}
-.tracker-table a{color:var(--accent);text-decoration:none;font-size:.69rem}
-.tracker-table a:hover{text-decoration:underline}
-.tracker-table .status-ok{color:var(--green);font-weight:700}
-.tracker-table .status-ko{color:var(--red);font-weight:700}
-.tracker-table .status-warn{color:var(--orange);font-weight:700}
-.tracker-table .ping-time{font-size:.64rem;color:var(--muted2)}
-.tracker-panel .toggle-row{text-align:right;margin-bottom:.4rem}
-.tracker-panel .toggle-btn{background:transparent;border:1px solid var(--border2);color:var(--muted);font-size:.68rem;padding:.2rem .55rem;border-radius:10px;cursor:pointer;font-family:var(--font)}
-.tracker-panel .toggle-btn:hover{color:var(--text);border-color:var(--accent)}
+table{width:100%;border-collapse:collapse;font-size:.78rem}
+thead th{
+  text-align:left;padding:.55rem .7rem;color:var(--muted2);font-size:.66rem;
+  font-weight:700;text-transform:uppercase;letter-spacing:.3px;border-bottom:1px solid var(--border2);
+  background:var(--card);position:sticky;top:0
+}
+tbody td{padding:.6rem .7rem;border-bottom:1px solid var(--border);vertical-align:top}
+tbody tr{transition:background .15s}
+tbody tr:hover{background:var(--cardH)}
 
-/* ── Price History Chart ── */
-.chart-wrap{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);margin:0 1.5rem 1rem;padding:1.2rem 1.5rem 1rem;box-shadow:var(--shadow);display:none}
+.store-name{font-weight:700;color:var(--text);white-space:nowrap}
+.store-name .flag{font-size:.75rem}
+.price-cell{font-weight:800;font-size:.9rem;color:var(--accent);white-space:nowrap}
+.price-cell.stale{color:var(--red)}
+.link-cell a{color:var(--accent);text-decoration:none;font-size:.76rem;font-weight:600}
+.link-cell a:hover{text-decoration:underline}
+.status-badge{display:inline-flex;align-items:center;gap:.25rem;font-weight:700;font-size:.72rem;padding:.2rem .5rem;border-radius:6px}
+.status-badge.ok{background:rgba(34,197,94,.1);color:var(--green);border:1px solid rgba(34,197,94,.2)}
+.status-badge.ko{background:rgba(239,68,68,.08);color:var(--red);border:1px solid rgba(239,68,68,.15)}
+.status-badge.warn{background:rgba(245,158,11,.08);color:var(--orange);border:1px solid rgba(245,158,11,.15)}
+.ping-time{font-size:.66rem;color:var(--muted2)}
+
+.footer-bar{max-width:900px;margin:0 auto 1.5rem;padding:0 1rem;display:flex;justify-content:space-between;align-items:center;font-size:.7rem;color:var(--muted2);flex-wrap:wrap;gap:.5rem}
+.footer-bar .refresh{cursor:pointer;color:var(--accent);font-weight:600}
+.footer-bar .refresh:hover{text-decoration:underline}
+
+/* Chart */
+.chart-wrap{max-width:900px;margin:1rem auto;padding:0 1rem;display:none}
 .chart-wrap.show{display:block}
-.chart-wrap h3{font-size:.85rem;font-weight:700;color:var(--muted);margin-bottom:.8rem;display:flex;align-items:center;gap:.4rem}
-.chart-wrap canvas{display:block;width:100%;height:200px}
-.chart-wrap .chart-legend{display:flex;gap:1.2rem;margin-top:.5rem;font-size:.68rem;color:var(--muted2);flex-wrap:wrap}
-.chart-wrap .chart-legend span{display:flex;align-items:center;gap:.3rem}
-.chart-wrap .chart-legend .dot-leg{width:8px;height:8px;border-radius:50%;display:inline-block}
-.chart-wrap .chart-empty{text-align:center;color:var(--muted2);font-size:.78rem;padding:1.5rem 0}
+.chart-wrap h3{font-size:.82rem;font-weight:700;color:var(--muted);margin-bottom:.6rem}
+.chart-wrap canvas{display:block;width:100%;height:160px;background:var(--card);border:1px solid var(--border);border-radius:10px}
+.chart-empty{text-align:center;color:var(--muted2);font-size:.74rem;padding:1rem}
 
-/* ── Product Grid ── */
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(350px,1fr));gap:1rem;padding:1rem 1.5rem 2rem}
-@media(max-width:420px){.grid{grid-template-columns:1fr;padding:1rem .7rem}}
-
-.card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;transition:all .25s cubic-bezier(.4,0,.2,1);display:flex;flex-direction:column;box-shadow:var(--shadow);position:relative}
-.card:hover{transform:translateY(-3px);border-color:var(--accent);box-shadow:var(--shadowH)}
-.card.blocked{opacity:.35;filter:grayscale(.6)}
-.card .img-wrap{background:linear-gradient(135deg,var(--bg2),var(--card));height:200px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;padding:1rem}
-.card .img-wrap img{max-width:85%;max-height:90%;object-fit:contain;transition:transform .3s}
-.card:hover .img-wrap img{transform:scale(1.05)}
-.card .img-wrap .no-img{font-size:3.2rem;opacity:.1}
-
-/* Card badges */
-.badge{position:absolute;font-size:.64rem;font-weight:800;padding:.2rem .6rem;border-radius:6px;letter-spacing:.3px;text-transform:uppercase}
-.badge.tl{top:10px;left:10px}
-.badge.tr{top:10px;right:10px}
-.badge.stock-ok{background:rgba(34,197,94,.12);color:var(--green);border:1px solid rgba(34,197,94,.25)}
-.badge.stock-low{background:rgba(245,158,11,.12);color:var(--orange);border:1px solid rgba(245,158,11,.25)}
-.badge.stock-out{background:rgba(239,68,68,.1);color:var(--red);border:1px solid rgba(239,68,68,.2)}
-.badge.stock-unknown{background:rgba(148,163,184,.08);color:var(--muted);border:1px solid rgba(148,163,184,.15)}
-.badge.store{background:var(--accent);color:var(--bg);border:1px solid transparent}
-
-/* Card body */
-.card-body{padding:1rem 1rem .5rem;flex:1;display:flex;flex-direction:column;gap:.4rem}
-.card-body .brand{font-size:.67rem;color:var(--accent);font-weight:800;text-transform:uppercase;letter-spacing:.6px}
-.card-body h3{font-size:.88rem;line-height:1.35;font-weight:600;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
-.card-body .info{font-size:.73rem;color:var(--muted);line-height:1.4}
-.tags{display:flex;gap:.3rem;flex-wrap:wrap;margin-top:.15rem}
-.tag{font-size:.66rem;padding:.15rem .5rem;border-radius:8px;font-weight:700;transition:transform .15s}
-.tag:hover{transform:scale(1.05)}
-.tag-btu{background:rgba(245,158,11,.1);color:var(--orange)}
-.tag-city{background:rgba(129,140,248,.1);color:var(--accent2)}
-.tag-dlv{background:rgba(34,197,94,.08);color:var(--green);font-weight:500}
-
-/* Card footer */
-.card-foot{display:flex;align-items:center;justify-content:space-between;padding:.7rem 1rem;border-top:1px solid var(--border);gap:.5rem}
-.card-foot .price{font-size:1.35rem;font-weight:800;color:var(--accent);letter-spacing:-.5px}
-.card-foot .price .cur{font-size:.8rem;font-weight:500}
-.card-foot .actions{display:flex;gap:.3rem;align-items:center}
-.btn{display:inline-flex;align-items:center;gap:.3rem;padding:.4rem .75rem;border-radius:8px;font-size:.72rem;font-weight:700;cursor:pointer;text-decoration:none;border:none;white-space:nowrap;transition:all .2s;font-family:var(--font)}
-.btn-go{background:var(--accent);color:var(--bg)}
-.btn-go:hover{opacity:.85;transform:translateY(-1px)}
-.btn-blk{background:transparent;color:var(--muted2);border:1px solid var(--border2);font-size:.85rem;padding:.3rem .5rem;border-radius:8px}
-.btn-blk:hover{color:var(--red);border-color:var(--red)}
-.btn-blk.on{color:var(--red);border-color:var(--red);background:rgba(239,68,68,.08)}
-.card .meta{font-size:.64rem;color:var(--muted2);padding:.15rem 1rem .7rem;display:flex;align-items:center;gap:.3rem}
-
-/* ── Empty State ── */
-.empty{grid-column:1/-1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:3rem 1.5rem;text-align:center}
-.empty .emoji{font-size:3.5rem;margin-bottom:.8rem;animation:float 3s ease-in-out infinite}
-@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
-.empty h2{font-size:1.1rem;color:var(--muted);margin-bottom:.3rem}
-.empty p{color:var(--muted2);font-size:.8rem;max-width:400px;line-height:1.5}
-
-/* ── Skeleton ── */
-.sk-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
-.sk-card .sk-img{height:200px;animation:shim 1.8s infinite ease-in-out;background:linear-gradient(100deg,var(--card) 30%,var(--cardH) 50%,var(--card) 70%);background-size:300% 100%}
-.sk-card .sk-body{padding:1rem;display:flex;flex-direction:column;gap:.5rem}
-.sk-card .sk-body .sk-line{height:.75rem;border-radius:6px;animation:shim 1.8s infinite ease-in-out;background:linear-gradient(100deg,var(--card) 30%,var(--cardH) 50%,var(--card) 70%);background-size:300% 100%}
-@keyframes shim{0%{background-position:100% 0}100%{background-position:0 0}}
-
-/* ── Footer ── */
-footer{text-align:center;padding:1.5rem;border-top:1px solid var(--border);color:var(--muted2);font-size:.7rem;line-height:1.6}
-footer .brand{background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-weight:700}
+/* Dark toggle */
+.theme-btn{position:fixed;top:1rem;right:1rem;background:var(--card);border:1px solid var(--border2);color:var(--muted);padding:.4rem .6rem;border-radius:8px;cursor:pointer;font-size:.85rem;z-index:100}
+.theme-btn:hover{color:var(--text);border-color:var(--accent)}
 </style>
 </head>
 <body>
+<button class="theme-btn" id="theme" title="Thème">🌙</button>
+
 <header>
-  <div class="logo"><span class="icon">🌬️</span><h1>Clim'Finder</h1></div>
-  <p class="tagline">Veille de disponibilité — Bressuire · Parthenay · Thouars · Chinon · Cholet</p>
-  <div class="target-badge">🎯 Midea Portasplit 12 000 BTU · 3.5 kW</div>
+  <h1>❄️ Midea PortaSplit 12000 BTU</h1>
+  <p class="sub">Tracker de disponibilité — neuf, livrable en France</p>
+  <div class="badge">🎯 MMCS-12HRN8-QRDO · 3.5 kW · A++</div>
 </header>
 
-<div class="stale-banner" id="stale">⚠️ Données de plus de 24 heures — un nouveau scan est recommandé</div>
-
-<div class="stats-row" id="stats"></div>
+<div class="hero" id="hero">
+  <div class="img-box"><span style="font-size:4rem;opacity:.15">❄️</span></div>
+  <div class="info">
+    <h2>Climatiseur split mobile réversible</h2>
+    <div class="row">🔥 <strong>12&#8239;000 BTU</strong> · 3.5 kW · Pièces jusqu'à 40 m²</div>
+    <div class="row">🔇 <strong>39 dB(A)</strong> mode silencieux · Chauffage & Clim</div>
+    <div class="row">📦 <strong>Pas d'installation</strong> · Kit fenêtre inclus</div>
+    <div class="row">💰 Prix normal : <span class="price-tag">999 €</span></div>
+  </div>
+</div>
 
 <div class="chart-wrap" id="chartWrap">
-  <h3>📈 Historique des prix — Midea Portasplit 12 000 BTU</h3>
+  <h3>📈 Historique des prix</h3>
   <canvas id="priceChart"></canvas>
-  <div class="chart-legend">
-    <span><span class="dot-leg" style="background:var(--accent)"></span> Prix neuf</span>
-    <span><span class="dot-leg" style="background:var(--orange)"></span> Prix occasion</span>
-    <span id="chartRange"></span>
-  </div>
-  <div class="chart-empty" id="chartEmpty">Aucun historique pour le moment. Les données s'accumuleront à chaque scan.</div>
+  <div class="chart-empty" id="chartEmpty">Données insuffisantes — le graphique se remplira au fil des jours.</div>
 </div>
 
-<div class="tracker-panel" id="trackerPanel">
-  <div class="toggle-row"><button class="toggle-btn" id="trackerToggle">▲ Masquer</button></div>
-  <h3><span class="dot-live"></span> Surveillance — 5 sources</h3>
-  <table class="tracker-table" id="trackerTable">
-    <thead><tr><th>Source</th><th>Lien</th><th>Prix normal</th><th>Statut</th></tr></thead>
-    <tbody id="trackerBody"></tbody>
+<div class="table-wrap">
+  <h2><span class="dot"></span> Surveillance — <span id="srcCount">0</span> sources</h2>
+  <table>
+    <thead><tr><th>Source</th><th>Prix normal</th><th>Statut</th><th>Lien</th></tr></thead>
+    <tbody id="tracks"></tbody>
   </table>
-  <div style="margin-top:.6rem;font-size:.66rem;color:var(--muted2)" id="trackerFooter"></div>
 </div>
 
-<div class="top-bar">
-  <div class="search-wrap">
-    <input type="text" id="q" placeholder="Marque, modèle, BTU…" autocomplete="off" aria-label="Rechercher un produit">
-    <button id="qc" aria-label="Effacer la recherche">✕</button>
-  </div>
-  <button class="theme-btn" id="theme" title="Thème clair/sombre" aria-label="Changer le thème">🌙</button>
+<div class="footer-bar">
+  <span id="footerTime">🏓 Chargement…</span>
+  <span class="refresh" onclick="location.reload()">🔄 Actualiser</span>
 </div>
-
-<div class="city-bar" id="cities"><span class="lbl">📍 Villes :</span></div>
-
-<div class="filters">
-  <button class="filter-btn on" data-f="all">📋 Tous</button>
-  <button class="filter-btn" data-f="in_stock">✅ En stock</button>
-  <button class="filter-btn" data-f="delivery">🚚 Livraison</button>
-  <button class="filter-btn" data-f="low_price">💶 −600 €</button>
-  <span class="spc"></span>
-  <select class="sort-select" id="sort" aria-label="Trier les produits">
-    <option value="">🔽 Défaut</option>
-    <option value="asc">Prix ↑</option>
-    <option value="desc">Prix ↓</option>
-  </select>
-</div>
-
-<div class="last-update" id="upd">Chargement…</div>
-
-<div class="grid" id="grid"></div>
-
-<footer>
-  <p><span class="brand">Clim'Finder</span> · scan local via Puppeteer · 23 enseignes</p>
-  <p>Produit cible : Midea Portasplit 12 000 BTU (3.5 kW) · neuf uniquement · <a href="https://github.com/FagetM/clim-snipper" style="color:var(--muted2)">GitHub</a></p>
-</footer>
 
 <script>
 (function(){
-  var DATA_URL='data/stocks.json';
-  var products=[], selFilter='all', selCity='', showBlocked=false, searchQuery='', theme='dark';
+  var DATA='data/.ping_state.json';
+  var HIST='data/price_history.json';
+  var theme='dark';
 
-  /* ── Theme ── */
   function setTheme(t){
-    theme=t;
-    document.documentElement.className=t==='light'?'light':'';
+    theme=t;document.documentElement.className=t==='light'?'light':'';
     document.getElementById('theme').textContent=t==='light'?'☀️':'🌙';
-    try{localStorage.setItem('cf-theme',t)}catch(e){}
+    try{localStorage.setItem('cf-th',t)}catch(e){}
   }
-  try{theme=localStorage.getItem('cf-theme')||'dark'}catch(e){}
+  try{theme=localStorage.getItem('cf-th')||'dark'}catch(e){}
   setTheme(theme);
   document.getElementById('theme').onclick=function(){setTheme(theme==='dark'?'light':'dark')};
 
-  /* ── Blacklist ── */
-  function getBl(){try{return JSON.parse(localStorage.getItem('cf-bl')||'[]')}catch(e){return[]}}
-  function saveBl(b){localStorage.setItem('cf-bl',JSON.stringify(b))}
-  function blkId(p){return p.store+'::'+p.title.substring(0,80)}
-  function isBlocked(p){return getBl().indexOf(blkId(p))!==-1}
-  function toggleBlk(p){var b=getBl(),k=blkId(p),i=b.indexOf(k);i===-1?b.push(k):b.splice(i,1);saveBl(b);render()}
-
-  /* ── Helpers ── */
-  function fmtDate(iso){if(!iso)return'—';return new Date(iso).toLocaleString('fr-FR',{dateStyle:'medium',timeStyle:'short'})}
-  function timeAgo(iso){if(!iso)return'';var m=Math.floor((Date.now()-new Date(iso))/6e4);if(m<1)return'à l\'instant';if(m<60)return m+' min';var h=Math.floor(m/60);if(h<24)return h+'h';return Math.floor(h/24)+' j'}
   function esc(s){var d=document.createElement('div');d.textContent=s;return d.innerHTML}
-  function cities(p){if(!p.city)return[];return p.city.split(',').map(function(c){return c.trim()}).filter(Boolean)}
-  function clean(t){return t.replace(/Sponsorisé/g,'').replace(/\s+/g,' ').trim()}
+  function fmt(iso){if(!iso)return'—';return new Date(iso).toLocaleString('fr-FR',{dateStyle:'medium',timeStyle:'short'})}
+  function ago(iso){if(!iso)return'';var m=Math.floor((Date.now()-new Date(iso))/6e4);if(m<1)return'à l\\'instant';if(m<60)return m+' min';var h=Math.floor(m/60);if(h<24)return h+'h';return Math.floor(h/24)+'j'}
 
-  /* ── Filtering ── */
-  function getFiltered(){
-    var list=products.slice(),bl=getBl();
-    if(!showBlocked) list=list.filter(function(p){return bl.indexOf(blkId(p))===-1});
-    if(selFilter==='in_stock') list=list.filter(function(p){return p.status==='in_stock'||p.status==='low_stock'});
-    if(selFilter==='delivery') list=list.filter(function(p){return p.availability_type!=='tours'});
-    if(selFilter==='low_price') list=list.filter(function(p){return p.price_eur&&p.price_eur<600});
-    if(selCity) list=list.filter(function(p){return cities(p).indexOf(selCity)!==-1});
-    if(searchQuery){var q=searchQuery;list=list.filter(function(p){return clean(p.title).toLowerCase().indexOf(q)!==-1||(p.brand||'').toLowerCase().indexOf(q)!==-1||p.store.toLowerCase().indexOf(q)!==-1||(p.btu||'').toLowerCase().indexOf(q)!==-1})}
-    var s=document.getElementById('sort').value;
-    if(s==='asc') list.sort(function(a,b){return(a.price_eur||99999)-(b.price_eur||99999)});
-    else if(s==='desc') list.sort(function(a,b){return(b.price_eur||0)-(a.price_eur||0)});
-    return list;
-  }
-
-  /* ── Brand extraction ── */
-  function extractBrand(t){var brands=['DREAME','OPTIMEA','ESSENTIELB','REMKO','ECOFLOW','DUUX','HISENSE','ARGO','ELECTROLUX','DELONGHI','DE LONGHI','TCL','HAIER','GREE','SANG','KOOPER','WHIRLPOOL','COMFEE','COSTWAY','BECKEN','SENCOR','EQUATION','OMISOON','MARSEE','TECTAKE','XIAOMI','DREO','MIDEA','TAURUS','FINLUX','EUHOMY','FULMO','CECOTEC','OLIMPIA'];t=t.toUpperCase();for(var i=0;i<brands.length;i++){if(t.indexOf(brands[i].toUpperCase())!==-1)return brands[i]}return null}
-
-  /* ── Card HTML ── */
-  function cardHTML(p){
-    var t=clean(p.title),brand=p.brand||extractBrand(t),btu=p.btu,blk=isBlocked(p);
-    var statusLabels={in_stock:'✅ En stock',low_stock:'⚠️ Faible',out_of_stock:'❌ Rupture',unknown:'📦 Vérifier'};
-    var st=p.status||'unknown';
-    var img=p.image||'';
-    if(img.indexOf('scene7.com')!==-1) img=img.replace(/wid=\d+/,'wid=600').replace(/hei=\d+/,'hei=600');
-    var price=p.price_eur!=null?p.price_eur.toLocaleString('fr-FR',{minimumFractionDigits:2}):null;
-    var seen=timeAgo(p.last_seen_at||p.scraped_at);
-    var fullDate=fmtDate(p.last_seen_at||p.scraped_at);
-    var cs=cities(p);
-    var info='';
-    if(p.availability_type==='tours') info='🏪 Retrait en magasin';
-    else if(p.delivery_info) info=p.delivery_info.substring(0,110);
-    else info='🚚 Livraison à domicile';
-    if(p.status==='out_of_stock') info='Actuellement en rupture';
-
-    // City tags
-    var cityTags='';
-    if(cs.length===1) cityTags='<span class="tag tag-city">🏙️ '+esc(cs[0])+'</span>';
-    else if(cs.length>1){
-      cityTags=cs.slice(0,3).map(function(c){return'<span class="tag tag-city">🏙️ '+esc(c)+'</span>'}).join('');
-      if(cs.length>3) cityTags+='<span class="tag">+'+ (cs.length-3) +'</span>';
-    }
-
-    return '<div class="card'+(blk?' blocked':'')+'">'+
-      '<div class="img-wrap">'+
-        (img?'<img src="'+esc(img)+'" alt="'+esc(brand||t)+'" loading="lazy" onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'block\'"><span class="no-img" style="display:none">📦</span>':'<span class="no-img">📦</span>')+
-        '<span class="badge tl stock-'+st.replace('_','-')+'">'+statusLabels[st]+'</span>'+
-        '<span class="badge tr store">'+esc(p.store)+'</span>'+
-      '</div>'+
-      '<div class="card-body">'+
-        (brand&&brand!==p.store?'<span class="brand">'+esc(brand)+'</span>':'')+
-        '<h3>'+esc(t)+'</h3>'+
-        (info?'<p class="info">'+esc(info)+'</p>':'')+
-        '<div class="tags">'+
-          (btu?'<span class="tag tag-btu">🔥 '+esc(btu)+'</span>':'')+
-          cityTags+
-          (p.availability_type==='delivery'&&cs.length===0?'<span class="tag tag-dlv">🚚 Livraison</span>':'')+
-        '</div>'+
-      '</div>'+
-      '<div class="card-foot">'+
-        '<div class="price">'+(price?price+' <span class="cur">€</span>':'? <span class="cur">€</span>')+'</div>'+
-        '<div class="actions">'+
-          '<button class="btn btn-blk'+(blk?' on':'')+'" onclick="C.blk(\''+esc(blkId(p))+'\')" title="'+(blk?'Afficher':'Masquer')+'">'+(blk?'👁':'🚫')+'</button>'+
-          (p.url?'<a href="'+esc(p.url)+'" target="_blank" rel="noopener noreferrer" class="btn btn-go">Voir →</a>':'')+
-        '</div>'+
-      '</div>'+
-      '<div class="meta">🕐 '+esc(seen)+' · '+esc(fullDate)+'</div>'+
-    '</div>';
-  }
-
-  /* ── Render ── */
-  function render(){
-    var filtered=getFiltered(),bl=getBl();
-    var visible=products.filter(function(p){return bl.indexOf(blkId(p))===-1});
-    var inStock=visible.filter(function(p){return p.status==='in_stock'||p.status==='low_stock'}).length;
-    var hiddenCount=products.length-visible.length;
-    var allCities=[];products.forEach(function(p){var c=cities(p);for(var i=0;i<c.length;i++){if(allCities.indexOf(c[i])===-1)allCities.push(c[i])}});allCities.sort();
-    var scanTime=products.length>0?new Date(products[0].last_seen_at||products[0].scraped_at).getTime():0;
-    var ageH=scanTime?Math.floor((Date.now()-scanTime)/36e5):999;
-
-    document.getElementById('stats').innerHTML=
-      '<div class="stat"><div class="n" style="color:'+(inStock>0?'var(--green)':'var(--red)')+'">'+inStock+'</div><div class="lbl">En stock</div></div>'+
-      '<div class="stat"><div class="n" style="color:var(--accent)">'+visible.length+'</div><div class="lbl">Produits</div></div>'+
-      '<div class="stat"><div class="n" style="color:var(--orange)">'+allCities.length+'</div><div class="lbl">Villes</div></div>'+
-      (hiddenCount>0?'<div class="stat" style="cursor:pointer" onclick="C.toggleBlocked()" title="Afficher/masquer les produits exclus"><div class="n" style="color:var(--red)">'+hiddenCount+'</div><div class="lbl">🚫 Masqués</div></div>':'');
-
-    document.getElementById('stale').className='stale-banner'+(ageH>24?' show':'');
-
-    // City pills
-    var cb=document.getElementById('cities');
-    cb.innerHTML='<span class="lbl">📍 Villes :</span>';
-    for(var i=0;i<allCities.length;i++){
-      var c=allCities[i],cnt=visible.filter(function(p){return cities(p).indexOf(c)!==-1}).length;
-      cb.innerHTML+='<span class="city-pill'+(c===selCity?' on':'')+'" data-c="'+esc(c)+'">'+esc(c)+'<span class="cnt">'+cnt+'</span></span>';
-    }
-    if(selCity) cb.innerHTML+='<span class="city-pill" style="background:transparent;border:1px dashed var(--border2)" onclick="selCity=\'\';render()">✕ Tout</span>';
-
-    var pills=cb.querySelectorAll('.city-pill[data-c]');
-    for(var j=0;j<pills.length;j++){(function(c){pills[j].onclick=function(){selCity=selCity===c?'':c;render()}})(pills[j].dataset.c)}
-
-    // Update line
-    var dotCls=ageH>24?'stale':(ageH>6?'old':'');
-    document.getElementById('upd').innerHTML='<span class="dot'+ (dotCls?' '+dotCls:'') +'"></span> '+(products.length?'Dernier scan : '+fmtDate(products[0].last_seen_at||products[0].scraped_at)+' · '+timeAgo(products[0].last_seen_at||products[0].scraped_at)+(hiddenCount>0?' · '+hiddenCount+' masqué(s)':'')+(ageH>24?' · ⚠️ Ancien':''):'Aucune donnée chargée');
-
-    // Grid
-    if(!filtered.length){
-      var emoji=selFilter==='in_stock'?'😔':'📡';
-      var title=selFilter==='in_stock'?'Aucune clim en stock':'Aucun résultat';
-      var msg=selFilter==='in_stock'?'Nouveau scan automatique à la prochaine heure.'+(selCity?' Essaye sans filtre de ville.':'')+'':'Essaie un autre filtre ou une autre ville.';
-      document.getElementById('grid').innerHTML='<div class="empty"><div class="emoji">'+emoji+'</div><h2>'+title+'</h2><p>'+msg+'</p></div>';
-      return;
-    }
-    document.getElementById('grid').innerHTML=filtered.map(cardHTML).join('');
-  }
-
-  /* ── Loading skeletons ── */
-  function showSkeletons(){
-    var h='';
-    for(var i=0;i<6;i++) h+='<div class="sk-card"><div class="sk-img"></div><div class="sk-body"><div class="sk-line" style="width:55%"></div><div class="sk-line" style="width:85%"></div><div class="sk-line" style="width:35%"></div></div></div>';
-    document.getElementById('grid').innerHTML=h;
-  }
-
-  /* ── Global API ── */
-  window.C={
-    blk:function(k){var p=products.find(function(x){return blkId(x)===k});if(p)toggleBlk(p)},
-    toggleBlocked:function(){showBlocked=!showBlocked;if(showBlocked){selFilter='all';var btns=document.querySelectorAll('.filter-btn');for(var i=0;i<btns.length;i++)btns[i].classList.remove('on');document.querySelector('[data-f="all"]').classList.add('on')}selCity='';render()}
-  };
-
-  /* ── Filter buttons ── */
-  var fButtons=document.querySelectorAll('.filter-btn');
-  for(var i=0;i<fButtons.length;i++){fButtons[i].onclick=function(){var btns=document.querySelectorAll('.filter-btn');for(var j=0;j<btns.length;j++)btns[j].classList.remove('on');this.classList.add('on');selFilter=this.dataset.f;showBlocked=false;render()}}
-  document.getElementById('sort').onchange=render;
-
-  /* ── Search ── */
-  var qInp=document.getElementById('q'),qClr=document.getElementById('qc');
-  qInp.oninput=function(){searchQuery=this.value.trim().toLowerCase();qClr.className=searchQuery?'show':'';render()};
-  qClr.onclick=function(){qInp.value='';searchQuery='';this.className='';render();qInp.focus()};
-
-  /* ── Data loading ── */
-  function load(){
-    showSkeletons();
-    fetch(DATA_URL+'?t='+Date.now()).then(function(r){return r.json()}).then(function(d){products=d.products||[];render()}).catch(function(){products=[];render()});
-    loadPriceHistory();
-    loadPingStatus();
-  }
-
-  /* ── Price history chart ── */
-  function loadPriceHistory(){
-    fetch('data/price_history.json?t='+Date.now()).then(function(r){return r.json()}).then(function(d){drawChart(d)}).catch(function(){drawChart({history:[]})});
-  }
-
-  function drawChart(data){
-    var wrap=document.getElementById('chartWrap');
-    var canvas=document.getElementById('priceChart');
-    var empty=document.getElementById('chartEmpty');
-    var range=document.getElementById('chartRange');
-    var h=data.history||[];
-
-    if(!h.length){wrap.className='chart-wrap';empty.style.display='';canvas.style.display='none';return}
-    wrap.className='chart-wrap show';
-    empty.style.display='none';
-    canvas.style.display='';
-
-    var dpr=window.devicePixelRatio||1;
-    var rect=canvas.parentElement.getBoundingClientRect();
-    canvas.width=rect.width*dpr;
-    canvas.height=200*dpr;
-    canvas.style.width=rect.width+'px';
-    canvas.style.height='200px';
-    var ctx=canvas.getContext('2d');
-    ctx.scale(dpr,dpr);
-    var W=rect.width,H=200;
-    ctx.clearRect(0,0,W,H);
-
-    // Padding
-    var pad={top:20,right:20,bottom:30,left:50};
-    var pw=W-pad.left-pad.right,ph=H-pad.top-pad.bottom;
-
-    // Parse data
-    var points=[];
-    for(var i=0;i<h.length;i++){
-      var entry=h[i];
-      var d=new Date(entry.date);
-      if(isNaN(d.getTime()))continue;
-      points.push({date:d,newP:entry.price_new,usedP:entry.price_used});
-    }
-    if(!points.length){wrap.className='chart-wrap';empty.style.display='';canvas.style.display='none';return}
-
-    // Sort by date
-    points.sort(function(a,b){return a.date-b.date});
-
-    // Range
-    var minD=points[0].date,maxD=points[points.length-1].date;
-    range.textContent=new Date(minD).toLocaleDateString('fr-FR')+' → '+new Date(maxD).toLocaleDateString('fr-FR');
-
-    // All prices
-    var allPrices=[];
-    for(var i=0;i<points.length;i++){
-      if(points[i].newP!=null)allPrices.push(points[i].newP);
-      if(points[i].usedP!=null)allPrices.push(points[i].usedP);
-    }
-    if(!allPrices.length) return;
-    var minPrice=Math.min.apply(null,allPrices);
-    var maxPrice=Math.max.apply(null,allPrices);
-    var padding=(maxPrice-minPrice)*0.15||50;
-    minPrice=Math.max(0,minPrice-padding);
-    maxPrice=maxPrice+padding;
-
-    // Scales
-    var xScale=function(d){return pad.left+((d-minD)/(maxD-minD))*pw};
-    var yScale=function(p){return pad.top+ph-((p-minPrice)/(maxPrice-minPrice))*ph};
-
-    // Grid
-    ctx.strokeStyle=getComputedStyle(document.documentElement).getPropertyValue('--border').trim();
-    ctx.lineWidth=.5;
-    var gridLines=4;
-    for(var i=0;i<=gridLines;i++){
-      var y=pad.top+(ph/gridLines)*i;
-      ctx.beginPath();
-      ctx.moveTo(pad.left,y);
-      ctx.lineTo(W-pad.right,y);
-      ctx.stroke();
-      var val=minPrice+((maxPrice-minPrice)/gridLines)*(gridLines-i);
-      ctx.fillStyle=getComputedStyle(document.documentElement).getPropertyValue('--muted2').trim();
-      ctx.font='10px system-ui';
-      ctx.textAlign='right';
-      ctx.fillText(Math.round(val)+'€',pad.left-6,y+3);
-    }
-
-    // X labels
-    ctx.textAlign='center';
-    ctx.fillStyle=getComputedStyle(document.documentElement).getPropertyValue('--muted2').trim();
-    for(var i=0;i<points.length;i+=Math.max(1,Math.floor(points.length/6))){
-      var x=xScale(points[i].date);
-      var label=points[i].date.toLocaleDateString('fr-FR',{day:'numeric',month:'short'});
-      ctx.fillText(label,x,H-pad.bottom+16);
-    }
-
-    // Draw lines
-    var drawLine=function(prices,color,width){
-      ctx.strokeStyle=color;
-      ctx.lineWidth=width;
-      ctx.lineJoin='round';
-      ctx.beginPath();
-      var started=false;
-      for(var i=0;i<points.length;i++){
-        var p=points[i];
-        if(prices[i]==null){started=false;continue}
-        var x=xScale(p.date);
-        var y=yScale(prices[i]);
-        if(!started){ctx.moveTo(x,y);started=true}
-        else ctx.lineTo(x,y);
-      }
-      ctx.stroke();
-    };
-
-    // Area fill new
-    var accentColor=getComputedStyle(document.documentElement).getPropertyValue('--accent').trim();
-    if(points.some(function(p){return p.newP!=null})){
-      ctx.beginPath();
-      var started=false;
-      for(var i=0;i<points.length;i++){
-        var p=points[i];
-        if(p.newP==null)continue;
-        var x=xScale(p.date),y=yScale(p.newP);
-        if(!started){ctx.moveTo(x,y);started=true}
-        else ctx.lineTo(x,y);
-      }
-      // Close area
-      var lastX=xScale(points[points.length-1].date);
-      for(var i=points.length-1;i>=0;i--){
-        var p=points[i];
-        if(p.newP==null)continue;
-        ctx.lineTo(xScale(p.date),H-pad.bottom);
-        break;
-      }
-      ctx.lineTo(xScale(points[0].date),H-pad.bottom);
-      ctx.closePath();
-      var grad=ctx.createLinearGradient(0,pad.top,0,H-pad.bottom);
-      grad.addColorStop(0,accentColor+'40');
-      grad.addColorStop(1,accentColor+'05');
-      ctx.fillStyle=grad;
-      ctx.fill();
-    }
-
-    // Lines
-    drawLine(points.map(function(p){return p.newP}),accentColor,2.5);
-    var orangeColor=getComputedStyle(document.documentElement).getPropertyValue('--orange').trim();
-    drawLine(points.map(function(p){return p.usedP}),orangeColor,2);
-
-    // Dots
-    for(var i=0;i<points.length;i++){
-      var p=points[i];
-      if(p.newP!=null){
-        ctx.beginPath();
-        ctx.arc(xScale(p.date),yScale(p.newP),4,0,Math.PI*2);
-        ctx.fillStyle=accentColor;
-        ctx.fill();
-        ctx.strokeStyle='#fff';
-        ctx.lineWidth=1.5;
-        ctx.stroke();
-      }
-      if(p.usedP!=null){
-        ctx.beginPath();
-        ctx.arc(xScale(p.date),yScale(p.usedP),3.5,0,Math.PI*2);
-        ctx.fillStyle=orangeColor;
-        ctx.fill();
-      }
-    }
-  }
-
-  load();
-  setInterval(function(){load();loadPriceHistory();loadPingStatus()},15*60*1000);
-
-  /* ── Ping status tracker ── */
-  var TRACKED = [
-    {id:'leroymerlin',name:'Leroy Merlin FR',url:'https://www.leroymerlin.fr/produits/climatiseur-split-mobile-reversible-portasplit-midea-par-optimea-93857579.html',normalPrice:'999\u202f\u20ac',method:'HTTP ping / 30 min',note:'Produit r\xe9f\xe9renc\xe9 via Optimea, rupture actuelle'},
-    {id:'optimea_fr',name:'Optimea.fr (officiel)',url:'https://www.optimea.fr/product/climatiseur-split-mobile-midea/',normalPrice:'999\u202f\u20ac',method:'HTTP ping / 30 min',note:'Distributeur officiel, page catalogue uniquement'},
-    {id:'amazon_de',name:'Amazon.de',url:'https://www.amazon.de/dp/B0D3PP64JS',normalPrice:'~800\u202f\u20ac',method:'HTTP ping / 30 min',note:'Vendeurs tiers, prix sp\xe9culatif'},
-    {id:'amazon_fr',name:'Amazon.fr',url:'https://www.amazon.fr/dp/B0CY2YW8BT',normalPrice:'~999\u202f\u20ac',method:'HTTP ping / 30 min',note:'Vendeur 7 Perplex, 2999\u20ac actuellement'},
-    {id:'idealo_de',name:'Idealo.de',url:'https://www.idealo.de/preisvergleich/OffersOfProduct/210669898_-portasplit-e-12000-btu-midea.html',normalPrice:'1699\u202f\u20ac',method:'HTTP ping / 30 min',note:'Comparateur allemand, meilleur prix actuel'}
+  var SOURCES = [
+    {id:'leroymerlin',name:'Leroy Merlin',flag:'🇫🇷',price:'999 €',note:'Via Optimea · indisponible',url:'https://www.leroymerlin.fr/produits/climatiseur-split-mobile-reversible-portasplit-midea-par-optimea-93857579.html'},
+    {id:'manomano_fr',name:'ManoMano',flag:'🇫🇷',price:'?',note:'Ajouté 14/07',url:'https://www.manomano.fr/p/midea-climatiseur-split-mobile-reversible-froid-chaud-3500w12000btu-wifi-deshumidificateur-ventilateur-jusqua-40m2-kit-fenetre-inclus-83810402'},
+    {id:'optimea_fr',name:'Optimea',flag:'🇫🇷',price:'999 €',note:'Distributeur officiel · pas de vente en ligne',url:'https://www.optimea.fr/product/climatiseur-split-mobile-midea/'},
+    {id:'amazon_fr',name:'Amazon FR',flag:'🇫🇷',price:'999 €',note:'Vendeur tiers 7 Perplex · 2 999 €',url:'https://www.amazon.fr/dp/B0CY2YW8BT'},
+    {id:'amazon_de',name:'Amazon DE',flag:'🇩🇪',price:'~800 €',note:'Vendeurs tiers · livraison France O/N',url:'https://www.amazon.de/dp/B0D3PP64JS'},
+    {id:'idealo_de',name:'Idealo',flag:'🇩🇪',price:'1 699 €',note:'Comparateur · meilleur prix DE',url:'https://www.idealo.de/preisvergleich/OffersOfProduct/210669898_-portasplit-e-12000-btu-midea.html'}
   ];
 
-  function loadPingStatus(){
-    fetch('data/.ping_state.json?t='+Date.now()).then(function(r){return r.json()}).then(function(state){renderTracker(state)}).catch(function(){renderTracker({})});
-  }
-
-  function renderTracker(state){
-    var tb=document.getElementById('trackerBody');
-    var ft=document.getElementById('trackerFooter');
-    if(!tb)return;
-    var h='',lt='';
-    for(var i=0;i<TRACKED.length;i++){
-      var s=TRACKED[i],st=state[s.id]||{},av=st.available,re=st.reason||'—',ck=st.checkedAt||'';
-      if(ck>lt)lt=ck;
-      var ic='\u26a0\ufe0f',cl='status-warn';
-      if(av===true){cl='status-ok';ic='\uD83D\uDFE2';}
-      else if(av===false&&(re.indexOf('403')!==-1||re.indexOf('503')!==-1)){cl='status-ko';ic='\uD83D\uDEAB';}
-      else if(av===false){ic='\uD83D\uDD34';}
+  function render(state){
+    var h='',latest='';
+    for(var i=0;i<SOURCES.length;i++){
+      var s=SOURCES[i],st=state[s.id]||{},av=st.available,re=st.reason||'—',ck=st.checkedAt||'';
+      if(ck>latest)latest=ck;
+      var badge='',cls='';
+      if(av===true){badge='🟢 En stock';cls='ok'}
+      else if(av===false&&(re.indexOf('403')!==-1||re.indexOf('503')!==-1)){badge='🚫 Bloqué';cls='ko'}
+      else if(av===false&&re.indexOf('404')!==-1){badge='🚫 404';cls='ko'}
+      else if(av===false){badge='🔴 Indisponible';cls='warn'}
+      else{badge='⚠️ '+esc(re);cls='warn'}
       h+='<tr>'+
-        '<td><strong>'+esc(s.name)+'</strong><br><span class="ping-time">'+esc(s.method)+'</span></td>'+
-        '<td><a href="'+esc(s.url)+'" target="_blank" rel="noopener">\uD83D\uDD17 Voir</a><br><span class="ping-time">'+esc(s.note)+'</span></td>'+
-        '<td style="white-space:nowrap">'+esc(s.normalPrice)+'</td>'+
-        '<td><span class="'+cl+'">'+ic+' '+esc(re)+'</span><br><span class="ping-time">'+esc(ck?fmtDate(ck):'—')+'</span></td>'+
+        '<td><div class="store-name">'+esc(s.flag)+' '+esc(s.name)+'</div><div class="ping-time">'+esc(s.note)+'</div></td>'+
+        '<td class="price-cell'+(av===false&&s.price.indexOf('?')===-1?'':'')+'">'+esc(s.price)+'</td>'+
+        '<td><span class="status-badge '+cls+'">'+badge+'</span><br><span class="ping-time">'+esc(ck?ago(ck):'—')+'</span></td>'+
+        '<td class="link-cell"><a href="'+esc(s.url)+'" target="_blank" rel="noopener">🔗 Page produit</a></td>'+
       '</tr>';
     }
-    tb.innerHTML=h;
-    if(lt)ft.textContent='\uD83C\uDFD3 Dernier ping : '+fmtDate(lt)+' · toutes les 30 min';
-    else ft.textContent='\uD83C\uDFD3 En attente du premier ping…';
+    document.getElementById('tracks').innerHTML=h;
+    document.getElementById('srcCount').textContent=SOURCES.length;
+    document.getElementById('footerTime').innerHTML='🏓 Dernier ping : '+(latest?fmt(latest)+' ('+ago(latest)+')':'—')+' · toutes les 30 min';
   }
 
-  var tt=document.getElementById('trackerToggle');
-  var tTbl=document.getElementById('trackerTable');
-  if(tt){tt.onclick=function(){var hh=tTbl.style.display==='none';tTbl.style.display=hh?'':'none';this.textContent=hh?'\u25B2 Masquer':'\u25BC Afficher'};}
+  function loadPing(){
+    fetch(DATA+'?t='+Date.now()).then(function(r){return r.json()}).then(render).catch(function(){render({})});
+    fetch(HIST+'?t='+Date.now()).then(function(r){return r.json()}).then(drawChart).catch(function(){});
+  }
+
+  /* Chart */
+  function drawChart(data){
+    var hist=(data&&data.history)||[];
+    var wrap=document.getElementById('chartWrap'),canvas=document.getElementById('priceChart'),empty=document.getElementById('chartEmpty');
+    var points=[];
+    for(var i=0;i<hist.length;i++){
+      var h=hist[i];if(!h.lowest_new)continue;
+      var d=new Date(h.date);if(isNaN(d.getTime()))continue;
+      points.push({date:d,price:h.lowest_new,store:h.lowest_store||''});
+    }
+    if(!points.length){wrap.className='chart-wrap';empty.style.display='';canvas.style.display='none';return}
+    wrap.className='chart-wrap show';empty.style.display='none';canvas.style.display='';
+
+    var dpr=window.devicePixelRatio||1,W=canvas.parentElement.clientWidth,H=160;
+    canvas.width=W*dpr;canvas.height=H*dpr;canvas.style.width=W+'px';canvas.style.height=H+'px';
+    var ctx=canvas.getContext('2d');ctx.scale(dpr,dpr);
+    var pad={t:15,r:20,b:25,l:55},pw=W-pad.l-pad.r,ph=H-pad.t-pad.b;
+    points.sort(function(a,b){return a.date-b.date});
+    var allP=points.map(function(p){return p.price});
+    var minP=Math.min.apply(null,allP),maxP=Math.max.apply(null,allP);
+    var range=maxP-minP||100;minP=Math.max(0,minP-range*.2);maxP=maxP+range*.2;
+
+    function x(d){return pad.l+((d-points[0].date)/(points[points.length-1].date-points[0].date))*pw}
+    function y(p){return pad.t+ph-((p-minP)/(maxP-minP))*ph}
+
+    ctx.strokeStyle=getComputedStyle(document.documentElement).getPropertyValue('--border2').trim();ctx.lineWidth=.5;
+    for(var i=0;i<=3;i++){var yy=pad.t+(ph/3)*i;ctx.beginPath();ctx.moveTo(pad.l,yy);ctx.lineTo(W-pad.r,yy);ctx.stroke()}
+    ctx.fillStyle=getComputedStyle(document.documentElement).getPropertyValue('--muted2').trim();ctx.font='9px system-ui';ctx.textAlign='right';
+    for(var i=0;i<=3;i++){var val=minP+((maxP-minP)/3)*(3-i);ctx.fillText(Math.round(val)+'€',pad.l-6,pad.t+(ph/3)*i+3)}
+
+    ctx.strokeStyle=getComputedStyle(document.documentElement).getPropertyValue('--accent').trim();ctx.lineWidth=2.5;ctx.lineJoin='round';
+    ctx.beginPath();
+    for(var i=0;i<points.length;i++){var px=x(points[i].date),py=y(points[i].price);i===0?ctx.moveTo(px,py):ctx.lineTo(px,py)}
+    ctx.stroke();
+
+    for(var i=0;i<points.length;i++){
+      var px=x(points[i].date),py=y(points[i].price);
+      ctx.beginPath();ctx.arc(px,py,3.5,0,Math.PI*2);
+      ctx.fillStyle=getComputedStyle(document.documentElement).getPropertyValue('--accent').trim();ctx.fill();
+      ctx.fillStyle='#fff';ctx.beginPath();ctx.arc(px,py,1.5,0,Math.PI*2);ctx.fill();
+    }
+
+    ctx.textAlign='center';ctx.fillStyle=getComputedStyle(document.documentElement).getPropertyValue('--muted2').trim();
+    var step=Math.max(1,Math.floor(points.length/4));
+    for(var i=0;i<points.length;i+=step){
+      ctx.fillText(points[i].date.toLocaleDateString('fr-FR',{day:'numeric',month:'short'}),x(points[i].date),H-pad.b+14);
+    }
+  }
+
+  loadPing();
+  setInterval(loadPing,5*60*1000);
 })();
 </script>
 </body>
