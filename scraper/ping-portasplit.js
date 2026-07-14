@@ -36,16 +36,49 @@ const TARGETS = [
     url: 'https://www.amazon.de/dp/B0D3PP64JS',
     check: (html, status) => {
       if (status !== 200) return { available: false, reason: `HTTP ${status}` };
-      // Check for add-to-cart button or price
       const hasBuyBox = /add-to-cart-button|buybox|buy-box|submit\.add-to-cart/i.test(html);
       const hasOutOfStock = /currently unavailable|derzeit nicht verfügbar|out of stock/i.test(html);
       const hasPrice = /(?:EUR|€)\s*[\d.,]+\s*(?:€|EUR)/i.test(html) || /priceblock/i.test(html);
-      
       if (hasBuyBox && !hasOutOfStock) return { available: true, reason: 'Buy box dispo' };
       if (hasPrice && !hasOutOfStock) return { available: true, reason: 'Prix visible' };
       if (hasPrice && hasOutOfStock) return { available: false, reason: 'Prix visible mais pas de stock' };
       if (hasOutOfStock) return { available: false, reason: 'Indisponible' };
       return { available: false, reason: 'Statut incertain' };
+    }
+  },
+  {
+    id: 'amazon_fr',
+    label: 'Amazon.fr',
+    url: 'https://www.amazon.fr/Climatiseur-Climatisation-rafra%C3%AEchisseur-d%C3%A9shumidificateur-ventilateur/dp/B0CY2YW8BT',
+    check: (html, status) => {
+      if (status !== 200) return { available: false, reason: `HTTP ${status}` };
+      const hasBuyBox = /add-to-cart-button|buybox|buy-box|submit\.add-to-cart|acheter/i.test(html);
+      const hasOutOfStock = /actuellement indisponible|indisponible|hors stock|rupture|out of stock/i.test(html);
+      const hasPrice = /(?:EUR|€)\s*[\d.,]+\s*(?:€|EUR)/i.test(html) || /priceblock/i.test(html);
+      const hasAucuneOffre = /aucune offre/i.test(html);
+      if (hasAucuneOffre) return { available: false, reason: 'Aucune offre en vedette' };
+      if (hasBuyBox && !hasOutOfStock) return { available: true, reason: 'Buy box dispo' };
+      if (hasPrice && !hasOutOfStock && !hasAucuneOffre) return { available: true, reason: 'Offre dispo' };
+      if (hasOutOfStock || hasAucuneOffre) return { available: false, reason: 'Pas de stock' };
+      return { available: false, reason: 'Statut incertain' };
+    }
+  },
+  {
+    id: 'idealo_de',
+    label: 'Idealo.de',
+    url: 'https://www.idealo.de/preisvergleich/OffersOfProduct/210669898_-portasplit-e-12000-btu-midea.html',
+    check: (html, status) => {
+      if (status !== 200) return { available: false, reason: `HTTP ${status}` };
+      const hasOffers = /offerList-item|productOffers-listItem|preisvergleich/i.test(html);
+      const hasNoOffers = /keine angebote|no offers|aucune offre/i.test(html);
+      // Extract lowest price if present
+      const priceMatch = html.match(/(\d{3,4})[.,](\d{2})\s*€/);
+      if (hasOffers && !hasNoOffers && priceMatch) {
+        const price = parseFloat(priceMatch[1] + '.' + priceMatch[2]);
+        return { available: true, reason: `${price}€ — idealo.de` };
+      }
+      if (hasOffers) return { available: true, reason: 'Offres trouvées' };
+      return { available: false, reason: 'Pas d\'offre ou page inaccessible' };
     }
   }
 ];
