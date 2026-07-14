@@ -139,7 +139,7 @@ tbody tr:hover{background:var(--cardH)}
 
   function esc(s){var d=document.createElement('div');d.textContent=s;return d.innerHTML}
   function fmt(iso){if(!iso)return'—';return new Date(iso).toLocaleString('fr-FR',{dateStyle:'medium',timeStyle:'short'})}
-  function ago(iso){if(!iso)return'';var m=Math.floor((Date.now()-new Date(iso))/6e4);if(m<1)return'à l\\'instant';if(m<60)return m+' min';var h=Math.floor(m/60);if(h<24)return h+'h';return Math.floor(h/24)+'j'}
+  function ago(iso){if(!iso)return'';var m=Math.floor((Date.now()-new Date(iso))/6e4);if(m<1)return'\u00e0 l\'instant';if(m<60)return m+' min';var h=Math.floor(m/60);if(h<24)return h+'h';return Math.floor(h/24)+'j'}
 
   var SOURCES = [
     {id:'leroymerlin',name:'Leroy Merlin',flag:'🇫🇷',price:'999 €',note:'Via Optimea · indisponible',url:'https://www.leroymerlin.fr/produits/climatiseur-split-mobile-reversible-portasplit-midea-par-optimea-93857579.html'},
